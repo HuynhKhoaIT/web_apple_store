@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="header-cart">
-                    <a href="">
+                    <a href="./pages/cart/cart.jsp">
                         <div class="sec-icon">
                             <i class="ti-shopping-cart"></i>
                             <div class="icon-text">Giỏ hàng của bạn</div>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="header-user">
-                    <a href="" class="user">
+                    <a href="./pages/user/user.jsp" class="user">
                         <div class="sec-icon">
                             <i class="ti-user"></i>
                             <div class="icon-text">Account</div>
