@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple-Store</title>
     <link rel="stylesheet" href="../../asset/style.css">
+    <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="asset/font/themify-icons/themify-icons.css">
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"

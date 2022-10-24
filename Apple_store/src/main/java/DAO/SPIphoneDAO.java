@@ -37,8 +37,6 @@ public class SPIphoneDAO
 	public static void main(String[] args) {
         SPIphoneDAO iphonedao = new SPIphoneDAO();
         List<SPIphone> list = iphonedao.getAlliphone();
-        
-
         for (SPIphone o : list) {
             System.out.println(o);
         }
