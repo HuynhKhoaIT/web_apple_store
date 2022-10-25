@@ -26,7 +26,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="../../index.jsp">Trang chủ</a>
+                    <a href="http://localhost:8080/Apple_store">Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">iPhone</li>
             </ol>

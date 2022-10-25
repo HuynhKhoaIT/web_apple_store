@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <div id="header">
   <div id="header-top">
     <div class="container">
       <div class="header-logo">
-        <a href="../../index.jsp">
-          <img src="../../asset/img/logo.webp" alt="logo" class="max-width">
+        <a href="${root}index.jsp">
+          <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
         </a>
       </div>
 
@@ -27,7 +29,7 @@
       </div>
 
       <div class="header-user">
-        <a href="../user/user.jsp" class="user">
+        <a href="${root}user/user.jsp" class="user">
           <div class="sec-icon">
             <i class="ti-user"></i>
             <div class="icon-text">Account</div>
@@ -42,11 +44,11 @@
       <div class="header-nav">
         <div class="header-item">
           <ul>
-            <li><a href="iphone.jsp" class="nav-sub">iPhone</a></li>
-            <li><a href="ipad.jsp" class="nav-sub">iPad</a></li>
-            <li><a href="mac.jsp" class="nav-sub">Mac</a></li>
-            <li><a href="apple_watch.jsp" class="nav-sub">Apple Watch</a></li>
-            <li><a href="phu_kien.jsp" class="nav-sub">Phụ Kiện</a></li>
+            <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
+            <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
+            <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
+            <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
+            <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
             <li><a href="#" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
           </ul>
           <div class="header-call">

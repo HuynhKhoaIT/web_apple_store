@@ -1,31 +1,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <div id="footer">
   <div id="footer-top">
     <div class="container">
       <ul>
         <li>
-          <img src="../../asset/img/like.webp" alt="" class="top-img">
+          <img src="${root}asset/img/like.webp" alt="" class="top-img">
           <div class="group-text">
             <div class="group-title">Thương hiệu đảm bảo</div>
             <div class="group-desc">Sản phẩm chính hãng Apple </div>
           </div>
         </li>
         <li>
-          <img src="../../asset/img/shield.webp" alt="" class="top-img">
+          <img src="${root}asset/img/shield.webp" alt="" class="top-img">
           <div class="group-text">
             <div class="group-title">Bảo hành chính hãng</div>
             <div class="group-desc">Bảo hành theo chính sách Apple</div>
           </div>
         </li>
         <li>
-          <img src="../../asset/img/deli.webp" alt="" class="top-img">
+          <img src="${root}asset/img/deli.webp" alt="" class="top-img">
           <div class="group-text">
             <div class="group-title">Giao hàng tận nơi</div>
             <div class="group-desc">Tại 63 tỉnh thành</div>
           </div>
         </li>
         <li>
-          <img src="../../asset/img/crown.webp" alt="" class="top-img">
+          <img src="${root}asset/img/crown.webp" alt="" class="top-img">
           <div class="group-text">
             <div class="group-title">Trải nghiệm Premium</div>
             <div class="group-desc">Không gian trải nghiệm cao cấp</div>
@@ -62,7 +64,7 @@
           </div>
 
           <div class="img">
-            <img src="../../asset/img/item.webp" alt="">
+            <img src="${root}asset/img/item.webp" alt="">
           </div>
         </div>
 
