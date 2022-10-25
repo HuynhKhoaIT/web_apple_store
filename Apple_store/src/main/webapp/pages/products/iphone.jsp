@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple-Store</title>
-    <link rel="stylesheet" href="../../asset/style.css">
-    <link rel="stylesheet" href="asset/style.css">
-    <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="${root}asset/style.css">
+    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -38,14 +37,14 @@
                         <div class="menu">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <a href="#" class="swiper-slide active">Tất cả</a>
-                                    <a href="#" class="swiper-slide">iphone 14 Pro Max</a>
-                                    <a href="#" class="swiper-slide">iphone 14 Pro</a>
-                                    <a href="#" class="swiper-slide">iphone 14 Plus</a>
-                                    <a href="#" class="swiper-slide">iphone 14</a>
-                                    <a href="#" class="swiper-slide">iphone 13 Pro Max</a>
-                                    <a href="#" class="swiper-slide">iphone 13 Pro</a>
-                                    <a href="#" class="swiper-slide">iphone 13</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone" class="swiper-slide active">Tất cả</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphone14" class="swiper-slide">iphone 14 </a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphone13" class="swiper-slide">iphone 13</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphone12" class="swiper-slide">iphone 12</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphone11" class="swiper-slide">iphone 11</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphonex" class="swiper-slide">iphone X</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphonese" class="swiper-slide">iphone SE</a>
+                                    <a href="http://localhost:8080/Apple_store/iphone/iphone8" class="swiper-slide">iphone 8</a>
                                 </div>
                             </div>
                             <div class="swiper-button-next sw-button">
@@ -74,7 +73,7 @@
                         		<div class="product">
                                 <div class="product-img">
                                     <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
+                                        <img src="${root}asset/img/ip14-s.webp" alt="">
                                     </a>
                                 </div>
                                 <div class="product-info">
@@ -85,7 +84,7 @@
                                         <span style="background-color:#675E6F"></span>
                                     </div>
                                     <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
+                                        <div class="text">${o.tensp}</div>
                                     </h3>
                                     <div class="product-memory js-select">
                                         <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -103,7 +102,7 @@
                                     </div>
                                     <div class="product-price">
                                         <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
+                                        <div class="price">${o.giaban}đ</div>
                                     </div>
                                 </div>
                                 <div class="product-detai">

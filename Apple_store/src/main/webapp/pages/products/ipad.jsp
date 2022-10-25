@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple-Store</title>
-    <link rel="stylesheet" href="../../asset/style.css">
-    <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="${root}asset/style.css">
+    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -35,14 +37,12 @@
                         <div class="menu">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <a href="/" class="swiper-slide active">Tất cả</a>
-                                    <a href="/" class="swiper-slide">iphone 14 Pro Max</a>
-                                    <a href="/" class="swiper-slide">iphone 14 Pro</a>
-                                    <a href="/" class="swiper-slide">iphone 14 Plus</a>
-                                    <a href="/" class="swiper-slide">iphone 14</a>
-                                    <a href="/" class="swiper-slide">iphone 13 Pro Max</a>
-                                    <a href="/" class="swiper-slide">iphone 13 Pro</a>
-                                    <a href="/" class="swiper-slide">iphone 13</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad" class="swiper-slide active">Tất cả</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad/ipadpro" class="swiper-slide">iPad Pro</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad/ipadair" class="swiper-slide">iPad Air</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad/ipadmini" class="swiper-slide">iPad mini</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad/ipad9thgen" class="swiper-slide">iPad 9th Gen</a>
+                                  
                                 </div>
                             </div>
                             <div class="swiper-button-next sw-button">
@@ -67,341 +67,50 @@
                     </div>
                     <div class="tab-pane">
                         <div class="product-list">
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
+                            <c:forEach items="${listIpad}" var="o" >
+                                <div class="product">
+                                    <div class="product-img">
+                                        <a href="" class="img-a">
+                                            <img src="${root}asset/img/ip14-s.webp" alt="">
+                                        </a>
                                     </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
+                                    <div class="product-info">
+                                        <div class="product-color">
+                                            <span style="background-color:#51504E"></span>
+                                            <span style="background-color:#F1F3F2"></span>
+                                            <span style="background-color:#F4E8CE"></span>
+                                            <span style="background-color:#675E6F"></span>
                                         </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
+                                        <h3 class="product-name">
+                                            <div class="text">${o.tensp}</div>
+                                        </h3>
+                                        <div class="product-memory js-select">
+                                            <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
+                                                <strong>128GB</strong>
+                                             </div>
+                                            <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
+                                                <strong>256GB</strong>
+                                            </div>
+                                            <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
+                                                <strong>512GB</strong>
+                                            </div>
+                                            <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
+                                                <strong>1TB</strong>
+                                            </div>
                                         </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
+                                        <div class="product-price">
+                                            <div class="text">Giá chỉ</div>
+                                            <div class="price">${o.giaban}đ</div>
                                         </div>
                                     </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
+                                    <div class="product-detai">
+                                        <button class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
                                     </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
 
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
                                 </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
+                                </c:forEach>
 
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="" class="img-a">
-                                        <img src="../../asset/img/ip14-s.webp" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-color">
-                                        <span style="background-color:#51504E"></span>
-                                        <span style="background-color:#F1F3F2"></span>
-                                        <span style="background-color:#F4E8CE"></span>
-                                        <span style="background-color:#675E6F"></span>
-                                    </div>
-                                    <h3 class="product-name">
-                                        <div class="text">iPhone 14 Pro Max</div>
-                                    </h3>
-                                    <div class="product-memory js-select">
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
-                                            <strong>128GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42726" data-cate="iphone">
-                                            <strong>256GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42727" data-cate="iphone">
-                                            <strong>512GB</strong>
-                                        </div>
-                                        <div class="product-memory-item item btnchangegroup btnchangegroup-267 " data-group="267" data-product="42728" data-cate="iphone">
-                                            <strong>1TB</strong>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <div class="text">Giá chỉ</div>
-                                        <div class="price">33.990.000đ</div>
-                                    </div>
-                                </div>
-                                <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
-                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
-                                    </a>
-                                </div>
-
+                            
                             </div>
                         </div>
                     </div>

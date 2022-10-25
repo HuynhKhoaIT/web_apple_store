@@ -54,11 +54,11 @@
                 <div class="header-nav">
                     <div class="header-item">
                         <ul>
-                            <li><a href="pages/products/iphone.jsp" class="nav-sub">iPhone</a></li>
-                            <li><a href="pages/products/ipad.jsp" class="nav-sub">iPad</a></li>
-                            <li><a href="pages/products/mac.jsp" class="nav-sub">Mac</a></li>
-                            <li><a href="pages/products/apple_watch.jsp" class="nav-sub">Apple Watch</a></li>
-                            <li><a href="pages/products/phu_kien.jsp" class="nav-sub">Phụ Kiện</a></li>
+                            <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
+                            <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
+                            <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
+                            <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
+                            <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
                             <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
                         </ul>
                         <div class="header-call">

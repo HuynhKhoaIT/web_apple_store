@@ -11,27 +11,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPIphoneDAO;
 import Model.SPIphone;
-
-@WebServlet(urlPatterns = {"/iphone"})
-public class SPIphoneControl extends HttpServlet{	
-	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+@WebServlet(urlPatterns = {"/iphone/iphone11"})
+public class SPIphone11Control extends HttpServlet{
+	protected void iphone11Request(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
         SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SPIphone> list = iphonedao.getAlliphone();
+        List<SPIphone> listiphone11 = iphonedao.getAlliphone11();
         
         
-        request.setAttribute("listIphone", list);
+        request.setAttribute("listIphone", listiphone11);
         request.getRequestDispatcher("/pages/products/iphone.jsp").forward(request, response);
         
     }
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		processRequest(req, resp);
+		iphone11Request(req, resp);
 	}
-//	@Override
-//	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		processRequest(req, resp);
-//	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		iphone11Request(req, resp);
+	}
 }

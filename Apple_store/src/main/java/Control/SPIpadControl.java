@@ -9,29 +9,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.SPIphoneDAO;
-import Model.SPIphone;
+import DAO.SPIpadDAO;
+import Model.SPIpad;
 
-@WebServlet(urlPatterns = {"/iphone"})
-public class SPIphoneControl extends HttpServlet{	
+@WebServlet(urlPatterns = {"/ipad"})
+public class SPIpadControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
-        SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SPIphone> list = iphonedao.getAlliphone();
+        SPIpadDAO ipaddao = new SPIpadDAO();
+        List<SPIpad> list = ipaddao.getAllipad();
         
         
-        request.setAttribute("listIphone", list);
-        request.getRequestDispatcher("/pages/products/iphone.jsp").forward(request, response);
+        request.setAttribute("listIpad", list);
+        request.getRequestDispatcher("/pages/products/ipad.jsp").forward(request, response);
         
     }
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		processRequest(req, resp);
 	}
-//	@Override
-//	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		processRequest(req, resp);
-//	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		processRequest(req, resp);
+	}
 }
