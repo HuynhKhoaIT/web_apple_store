@@ -255,7 +255,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Apple_store_war_exploded/pages/ad_adds/add_blog.jsp" class="nav-link">
+                            <a href="/ /pages/ad_adds/add_blog.jsp" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Viết bài mới</p>
                             </a>
