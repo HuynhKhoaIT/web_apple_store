@@ -27,7 +27,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <%@include file="../include/ad_header.jsp"%>
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -508,10 +508,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block"><b>Version</b> 3.2.0</div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+  <%@include file="../include/ad_footer.jsp"%>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/admin.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts/account.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_adds/add_product.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_adds" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_orders/invoices.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_orders" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_products/category.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_products" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart/cart.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/header_footer/header1.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/header_footer" />
+      </map>
+    </option>
+  </component>
+</project>
