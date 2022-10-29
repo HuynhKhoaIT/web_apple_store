@@ -4,13 +4,40 @@
 <div id="header">
   <div id="header-top">
     <div class="container">
-      <div class="header-logo">
-        <a href="${root}index.jsp">
-          <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
-        </a>
+      <div class="row">
+      <div class="col-md-3 col-sm-12">
+	      <div class="row top-header">
+	          <div class="col-1">
+	              <a href="${root}cart.jsp" class="menu ">
+	                  <div class="sec-icon menu">
+	                      <i class="ti-menu"></i>
+	                  </div>
+	              </a>
+	          </div>
+	          <div class="col-md-12 col-6">
+	          	  <a href="${root}index.jsp" class="logo">
+	          	  <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
+	        	  </a>
+	          </div>
+	          <div class="col-1">
+	              <a href="${root}cart.jsp" class="cart-1">
+	                   <div class="sec-icon cart">
+	                       <i class="ti-shopping-cart"></i>
+	                   </div>
+	               </a>
+	          </div>
+	          <div class="col-1">
+	              <a href="${root}user.jsp" class="user-1">
+	                  <div class="sec-icon user">
+	                      <i class="ti-user"></i>
+	                  </div>
+	              </a>
+	          </div>
+	          
+	       </div>
       </div>
 
-      <div class="header-search">
+      <div class="header-search col-md-5 col-sm-12">
         <form action="">
           <div class="form-search">
             <i class="ti-search"></i>
@@ -19,8 +46,8 @@
         </form>
       </div>
 
-      <div class="header-cart">
-        <a href="../cart/cart.jsp">
+      <div class="header-cart col-md-2">
+        <a href="../cart/cart.jsp" class="cart">
           <div class="sec-icon">
             <i class="ti-shopping-cart"></i>
             <div class="icon-text">Giỏ hàng của bạn</div>
@@ -28,13 +55,14 @@
         </a>
       </div>
 
-      <div class="header-user">
+      <div class="header-user col-md-2">
         <a href="${root}user/user.jsp" class="user">
           <div class="sec-icon">
             <i class="ti-user"></i>
             <div class="icon-text">Account</div>
           </div>
         </a>
+      </div>
       </div>
     </div>
   </div>

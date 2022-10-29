@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,65 +9,104 @@
     <title>Apple-Store</title>
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/font/themify-icons/themify-icons.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div id="main">
     <div id="header">
         <div id="header-top">
             <div class="container">
-                <div class="header-logo">
-                    <a href="">
-                        <img src="asset/img/logo.webp" alt="logo" class="max-width">
-                    </a>
-                </div>
-
-                <div class="header-search">
-                    <form action="">
-                        <div class="form-search">
-                            <i class="ti-search"></i>
-                            <input type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ...">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="row top-header">
+                            <div class="col-1">
+                                <a href="./pages/cart/cart.jsp" class="menu ">
+                                    <div class="sec-icon menu">
+                                        <i class="ti-menu"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        
+                            <div class="col-md-12 col-6">
+                                <a href="" class="logo">
+                                    <img src="asset/img/logo.webp" alt="logo" class="max-width">
+                                </a>
+                            </div>
+                            
+                            <div class="col-1">
+                                <a href="./pages/cart/cart.jsp" class="cart-1">
+                                    <div class="sec-icon cart">
+                                        <i class="ti-shopping-cart"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="col-1">
+                                <a href="./pages/user/user.jsp" class="user-1">
+                                    <div class="sec-icon user">
+                                        <i class="ti-user"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            
                         </div>
-                    </form>
-                </div>
-
-                <div class="header-cart">
-                    <a href="./pages/cart/cart.jsp">
-                        <div class="sec-icon">
-                            <i class="ti-shopping-cart"></i>
-                            <div class="icon-text">Giỏ hàng của bạn</div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="header-user">
-                    <a href="./pages/user/user.jsp" class="user">
-                        <div class="sec-icon">
-                            <i class="ti-user"></i>
-                            <div class="icon-text">Account</div>
-                        </div>
-                    </a>
+                    </div>
+    
+                    <div class="header-search col-md-5 col-sm-12">
+                        <form action="">
+                            <div class="form-search">
+                                <i class="ti-search"></i>
+                                <input type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ...">
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="header-cart col-md-2">
+                        <a href="./pages/cart/cart.jsp" class="cart">
+                            <div class="sec-icon">
+                                <i class="ti-shopping-cart"></i>
+                                <div class="icon-text">Giỏ hàng của bạn</div>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="header-user col-md-2">
+                        <a href="./pages/user/user.jsp" class="user">
+                            <div class="sec-icon">
+                                <i class="ti-user"></i>
+                                <div class="icon-text">Account</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="header-bot">
-            <div class="container">
-                <div class="header-nav">
-                    <div class="header-item">
-                        <ul>
-                            <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
-                            <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
-                            <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
-                            <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
-                            <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
-                            <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
-                        </ul>
-                        <div class="header-call">
-                            <div class="call-btn">
-                                <a href="tel:0869950090">
-                                    <i class="ti-mobile"></i>
-                                    <span>0869950090</span>
-                                </a>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-nav">
+                            <div class="header-item">
+                                <ul>
+                                    <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
+                                    <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
+                                    <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
+                                    <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
+                                    <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
+                                    <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
+                                </ul>
+                                <div class="header-call">
+                                    <div class="call-btn">
+                                        <a href="tel:0869950090">
+                                            <i class="ti-mobile"></i>
+                                            <span>0869950090</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -244,7 +284,7 @@
         <section id="content-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 padding-0-12">
+                    <div class="col-md-6 col-sm-12 padding-0-12">
                         <div class="card">
                             <div class="card-img">
                                 <img src="asset/img/blog1.webp" alt="">
@@ -266,7 +306,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 padding-0-12">
+                    <div class="col-md-6 col-sm-12 padding-0-12">
                         <div class="card">
                             <div class="card-img">
                                 <img src="asset/img/bn1.webp" alt="">
@@ -287,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 padding-0-12">
+                    <div class="col-md-6 col-sm-12 padding-0-12">
                         <div class="card">
                             <div class="card-img">
                                 <img src="asset/img/bn3.webp" alt="">
@@ -308,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 padding-0-12">
+                    <div class="col-md-6 col-sm-12 padding-0-12">
                         <div class="card">
                             <div class="card-img">
                                 <img src="asset/img/bn4.webp" alt="">
@@ -337,43 +377,45 @@
     <div id="footer">
         <div id="footer-top">
             <div class="container">
-                <ul>
-                    <li>
-                        <img src="asset/img/like.webp" alt="" class="top-img">
-                        <div class="group-text">
-                            <div class="group-title">Thương hiệu đảm bảo</div>
-                            <div class="group-desc">Sản phẩm chính hãng Apple </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="asset/img/shield.webp" alt="" class="top-img">
-                        <div class="group-text">
-                            <div class="group-title">Bảo hành chính hãng</div>
-                            <div class="group-desc">Bảo hành theo chính sách Apple</div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="asset/img/deli.webp" alt="" class="top-img">
-                        <div class="group-text">
-                            <div class="group-title">Giao hàng tận nơi</div>
-                            <div class="group-desc">Tại 63 tỉnh thành</div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="asset/img/crown.webp" alt="" class="top-img">
-                        <div class="group-text">
-                            <div class="group-title">Trải nghiệm Premium</div>
-                            <div class="group-desc">Không gian trải nghiệm cao cấp</div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="row">
+                    <ul>
+                        <li>
+                            <img src="asset/img/like.webp" alt="" class="top-img">
+                            <div class="group-text">
+                                <div class="group-title">Thương hiệu đảm bảo</div>
+                                <div class="group-desc">Sản phẩm chính hãng Apple </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="asset/img/shield.webp" alt="" class="top-img">
+                            <div class="group-text">
+                                <div class="group-title">Bảo hành chính hãng</div>
+                                <div class="group-desc">Bảo hành theo chính sách Apple</div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="asset/img/deli.webp" alt="" class="top-img">
+                            <div class="group-text">
+                                <div class="group-title">Giao hàng tận nơi</div>
+                                <div class="group-desc">Tại 63 tỉnh thành</div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="asset/img/crown.webp" alt="" class="top-img">
+                            <div class="group-text">
+                                <div class="group-title">Trải nghiệm Premium</div>
+                                <div class="group-desc">Không gian trải nghiệm cao cấp</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div id="footer-middle">
-            <div class="container row">
-                <div class="footer-content">
-                    <div class="footer-info col-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
                         <div class="hotline">
                             <div class="item">
                                 <div class="text">Giao hàng miễn phí</div>
@@ -401,8 +443,9 @@
                         </div>
                     </div>
 
-                    <div class="footer-category col-7">
-                        <div class="category-item">
+                    <div class="category col-md-7 col-sm-12">
+                       <div class="row">
+                        <div class="category-item col-4">
                             <div class="title">Sản Phẩm</div>
                             <ul>
                                 <li><a href="">iPhone</a></li>
@@ -413,7 +456,7 @@
                             </ul>
 
                         </div>
-                        <div class="category-item">
+                        <div class="category-item col-4">
                             <div class="title">Chính sách</div>
                             <ul>
                                 <li><a href="">Chính sách bảo mật</a></li>
@@ -423,7 +466,7 @@
                                 <li><a href="">Chính sách thanh toán</a></li>
                             </ul>
                         </div>
-                        <div class="category-item">
+                        <div class="category-item col-4">
                             <div class="title">Về chúng tôi</div>
                             <ul>
                                 <li><a href="">Giới thiệu</a></li>
@@ -433,8 +476,10 @@
                                 <li><a href="">Hướng dẫn mua hàng</a></li>
                             </ul>
                         </div>
+                       </div>
                     </div>
                 </div>
+                
 
 
             </div>
