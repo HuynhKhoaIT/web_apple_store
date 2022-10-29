@@ -125,7 +125,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="blog.jsp" class="nav-link">
+                <a href="../ad_products/blog.jsp" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả bài viết</p>
                 </a>

@@ -5,12 +5,12 @@ import java.sql.DriverManager;
 
 public class ConnectJDBC {
 	
-	private final String serverName = "DESKTOP-8M4OG13";
+	private final String serverName = "DESKTOP-4VT0NI5\\HKHOA";
 	private final String dbName = "AppleStore";
 	private final String portNumber = "1433";
 	private final String instance = " ";
 	private final String userID = "sa";
-	private final String password = "123";
+	private final String password = "123456";
 
 		public Connection getConnection() throws Exception {
 			String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\" + instance + ";databaseName=" + dbName+";encrypt=true;trustServerCertificate=true;";
@@ -20,11 +20,11 @@ public class ConnectJDBC {
 			return DriverManager.getConnection(url, userID, password);
 		}
 
-//		public static void main(String[] args) {
-//			try {
-//				System.out.println(new ConnectJDBC().getConnection());
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
+		public static void main(String[] args) {
+			try {
+			System.out.println(new ConnectJDBC().getConnection());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
