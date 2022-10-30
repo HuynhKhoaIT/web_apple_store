@@ -1004,6 +1004,15 @@
 #detail .renderboxbtn .action .btn-buy:hover{
     background: #044dd6;
     border: 1px solid #044dd6;
+    
+}
+#detail .renderboxbtn .action .btn-add{
+	
+}
+#detail .renderboxbtn .action .btn-add:hover{
+	color: #fff;
+    background: #939ca3;
+    border: 1px solid #939ca3;
 }
 
 #detail .renderboxbtn .action .btn{
@@ -1212,4 +1221,19 @@
         flex: 0 0 calc(100%/2.5);
         max-width: calc(100%/2.5);
     }
+    #detail .mySwiper{
+    	display: none;
+    }
+    
+	#detail .name{
+	    text-align: center;
+	    
+	}
+	
+	#detail .price{
+	    justify-content: center;
+	}
+	#detail .colors{
+		column-gap: 2px;
+	}
 }
