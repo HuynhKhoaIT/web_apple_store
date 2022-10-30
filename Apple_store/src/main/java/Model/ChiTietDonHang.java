@@ -1,81 +1,60 @@
 package Model;
 
 public class ChiTietDonHang {
-	private int madonhang;
-	private int masp;
-	private String tensp;
-	private int soluong;
-	private String mota;
-	private int thanhtien;
-	
-	public ChiTietDonHang() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public ChiTietDonHang(int madonhang, int masp, String tensp, int soluong, String mota, int thanhtien) {
-		super();
-		this.madonhang = madonhang;
-		this.masp = masp;
-		this.tensp = tensp;
-		this.soluong = soluong;
-		this.mota = mota;
-		this.thanhtien = thanhtien;
-	}
+    int MaDH;
+    int MaSP;
+    int SoLuong;
+    int TongTien;
 
-	public int getMadonhang() {
-		return madonhang;
-	}
+    public ChiTietDonHang() {
+    }
 
-	public void setMadonhang(int madonhang) {
-		this.madonhang = madonhang;
-	}
+    public ChiTietDonHang(int maDH, int maSP, int soLuong, int tongTien) {
+        MaDH = maDH;
+        MaSP = maSP;
+        SoLuong = soLuong;
+        TongTien = tongTien;
+    }
 
-	public int getMasp() {
-		return masp;
-	}
+    public int getMaDH() {
+        return MaDH;
+    }
 
-	public void setMasp(int masp) {
-		this.masp = masp;
-	}
+    public void setMaDH(int maDH) {
+        MaDH = maDH;
+    }
 
-	public String getTensp() {
-		return tensp;
-	}
+    public int getMaSP() {
+        return MaSP;
+    }
 
-	public void setTensp(String tensp) {
-		this.tensp = tensp;
-	}
+    public void setMaSP(int maSP) {
+        MaSP = maSP;
+    }
 
-	public int getSoluong() {
-		return soluong;
-	}
+    public int getSoLuong() {
+        return SoLuong;
+    }
 
-	public void setSoluong(int soluong) {
-		this.soluong = soluong;
-	}
+    public void setSoLuong(int soLuong) {
+        SoLuong = soLuong;
+    }
 
-	public String getMota() {
-		return mota;
-	}
+    public int getTongTien() {
+        return TongTien;
+    }
 
-	public void setMota(String mota) {
-		this.mota = mota;
-	}
+    public void setTongTien(int tongTien) {
+        TongTien = tongTien;
+    }
 
-	public int getThanhtien() {
-		return thanhtien;
-	}
-
-	public void setThanhtien(int thanhtien) {
-		this.thanhtien = thanhtien;
-	}
-
-	@Override
-	public String toString() {
-		return "ChiTietDonHang [madonhang=" + madonhang + ", masp=" + masp + ", tensp=" + tensp + ", soluong=" + soluong
-				+ ", mota=" + mota + ", thanhtien=" + thanhtien + "]";
-	}
-	
-	
-
+    @Override
+    public String toString() {
+        return "ChiTietDonHang{" +
+                "MaDH=" + MaDH +
+                ", MaSP=" + MaSP +
+                ", SoLuong=" + SoLuong +
+                ", TongTien=" + TongTien +
+                '}';
+    }
 }
