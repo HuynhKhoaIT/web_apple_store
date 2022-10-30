@@ -1,70 +1,71 @@
 package Model;
 
 public class TaiKhoan {
-	private int matk;
-	private String tendn;
-	private String matkhau;
-	private String gmail;
-	private String chucnang;
-	
-	public TaiKhoan() {
-		// TODO Auto-generated constructor stub
-	}
+    int MaTK;
+    int MaLoaiTK;
+    String TenDN;
+    String MatKhau;
+    String Gmail;
 
-	public TaiKhoan(int matk, String tendn, String matkhau, String gmail, String chucnang) {
-		super();
-		this.matk = matk;
-		this.tendn = tendn;
-		this.matkhau = matkhau;
-		this.gmail = gmail;
-		this.chucnang = chucnang;
-	}
+    public TaiKhoan() {
+    }
 
-	public int getMatk() {
-		return matk;
-	}
+    public TaiKhoan(int maTK, int maLoaiTK, String tenDN, String matKhau, String gmail) {
+        MaTK = maTK;
+        MaLoaiTK = maLoaiTK;
+        TenDN = tenDN;
+        MatKhau = matKhau;
+        Gmail = gmail;
+    }
 
-	public void setMatk(int matk) {
-		this.matk = matk;
-	}
+    public int getMaTK() {
+        return MaTK;
+    }
 
-	public String getTendn() {
-		return tendn;
-	}
+    public void setMaTK(int maTK) {
+        MaTK = maTK;
+    }
 
-	public void setTendn(String tendn) {
-		this.tendn = tendn;
-	}
+    public int getMaLoaiTK() {
+        return MaLoaiTK;
+    }
 
-	public String getMatkhau() {
-		return matkhau;
-	}
+    public void setMaLoaiTK(int maLoaiTK) {
+        MaLoaiTK = maLoaiTK;
+    }
 
-	public void setMatkhau(String matkhau) {
-		this.matkhau = matkhau;
-	}
+    public String getTenDN() {
+        return TenDN;
+    }
 
-	public String getGmail() {
-		return gmail;
-	}
+    public void setTenDN(String tenDN) {
+        TenDN = tenDN;
+    }
 
-	public void setGmail(String gmail) {
-		this.gmail = gmail;
-	}
+    public String getMatKhau() {
+        return MatKhau;
+    }
 
-	public String getChucnang() {
-		return chucnang;
-	}
+    public void setMatKhau(String matKhau) {
+        MatKhau = matKhau;
+    }
 
-	public void setChucnang(String chucnang) {
-		this.chucnang = chucnang;
-	}
+    public String getGmail() {
+        return Gmail;
+    }
 
-	@Override
-	public String toString() {
-		return "TaiKhoan [matk=" + matk + ", tendn=" + tendn + ", matkhau=" + matkhau + ", gmail=" + gmail
-				+ ", chucnang=" + chucnang + "]";
-	}
-	
+    public void setGmail(String gmail) {
+        Gmail = gmail;
+    }
+
+    @Override
+    public String toString() {
+        return "TaiKhoan{" +
+                "MaTK=" + MaTK +
+                ", MaLoaiTK=" + MaLoaiTK +
+                ", TenDN='" + TenDN + '\'' +
+                ", MatKhau='" + MatKhau + '\'' +
+                ", Gmail='" + Gmail + '\'' +
+                '}';
+    }
 }
-

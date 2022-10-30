@@ -1,90 +1,95 @@
 package Model;
 
+import java.util.Date;
+
 public class KhachHang {
-	private int makh;
-	private int matk;
-	private String hoten;
-	private String gioitinh;
-	private String namsinh;
-	private String diachi;
-	private String sdt;
-	
-	public KhachHang() {
-		// TODO Auto-generated constructor stub
-	}
+    int MaKH;
+    int MaTK;
+    String TenKH;
+    String GioiTinh;
+    Date NamSinh;
+    String DiaChi;
+    String SoDT;
 
-	public KhachHang(int makh, int matk, String hoten, String gioitinh, String namsinh, String diachi, String sdt) {
-		super();
-		this.makh = makh;
-		this.matk = matk;
-		this.hoten = hoten;
-		this.gioitinh = gioitinh;
-		this.namsinh = namsinh;
-		this.diachi = diachi;
-		this.sdt = sdt;
-	}
+    public KhachHang() {
+    }
 
-	public int getMakh() {
-		return makh;
-	}
+    public KhachHang(int maKH, int maTK, String tenKH, String gioiTinh, Date namSinh, String diaChi, String soDT) {
+        MaKH = maKH;
+        MaTK = maTK;
+        TenKH = tenKH;
+        GioiTinh = gioiTinh;
+        NamSinh = namSinh;
+        DiaChi = diaChi;
+        SoDT = soDT;
+    }
 
-	public void setMakh(int makh) {
-		this.makh = makh;
-	}
+    public int getMaKH() {
+        return MaKH;
+    }
 
-	public int getMatk() {
-		return matk;
-	}
+    public void setMaKH(int maKH) {
+        MaKH = maKH;
+    }
 
-	public void setMatk(int matk) {
-		this.matk = matk;
-	}
+    public int getMaTK() {
+        return MaTK;
+    }
 
-	public String getHoten() {
-		return hoten;
-	}
+    public void setMaTK(int maTK) {
+        MaTK = maTK;
+    }
 
-	public void setHoten(String hoten) {
-		this.hoten = hoten;
-	}
+    public String getTenKH() {
+        return TenKH;
+    }
 
-	public String getGioitinh() {
-		return gioitinh;
-	}
+    public void setTenKH(String tenKH) {
+        TenKH = tenKH;
+    }
 
-	public void setGioitinh(String gioitinh) {
-		this.gioitinh = gioitinh;
-	}
+    public String getGioiTinh() {
+        return GioiTinh;
+    }
 
-	public String getNamsinh() {
-		return namsinh;
-	}
+    public void setGioiTinh(String gioiTinh) {
+        GioiTinh = gioiTinh;
+    }
 
-	public void setNamsinh(String namsinh) {
-		this.namsinh = namsinh;
-	}
+    public Date getNamSinh() {
+        return NamSinh;
+    }
 
-	public String getDiachi() {
-		return diachi;
-	}
+    public void setNamSinh(Date namSinh) {
+        NamSinh = namSinh;
+    }
 
-	public void setDiachi(String diachi) {
-		this.diachi = diachi;
-	}
+    public String getDiaChi() {
+        return DiaChi;
+    }
 
-	public String getSdt() {
-		return sdt;
-	}
+    public void setDiaChi(String diaChi) {
+        DiaChi = diaChi;
+    }
 
-	public void setSdt(String sdt) {
-		this.sdt = sdt;
-	}
+    public String getSoDT() {
+        return SoDT;
+    }
 
-	@Override
-	public String toString() {
-		return "KhachHang [makh=" + makh + ", matk=" + matk + ", hoten=" + hoten + ", gioitinh=" + gioitinh
-				+ ", namsinh=" + namsinh + ", diachi=" + diachi + ", sdt=" + sdt + "]";
-	}
-	
+    public void setSoDT(String soDT) {
+        SoDT = soDT;
+    }
 
+    @Override
+    public String toString() {
+        return "KhachHang{" +
+                "MaKH=" + MaKH +
+                ", MaTK=" + MaTK +
+                ", TenKH='" + TenKH + '\'' +
+                ", GioiTinh='" + GioiTinh + '\'' +
+                ", NamSinh=" + NamSinh +
+                ", DiaChi='" + DiaChi + '\'' +
+                ", SoDT='" + SoDT + '\'' +
+                '}';
+    }
 }

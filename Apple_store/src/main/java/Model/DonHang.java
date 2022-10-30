@@ -1,70 +1,73 @@
 package Model;
 
+import java.util.Date;
+
 public class DonHang {
-	private int madonhang;
-	private int makh;
-	private int tongtien;
-	private String thoigian;
-	private String tinhtrang;
-	
-	public DonHang() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public DonHang(int madonhang, int makh, int tongtien, String thoigian, String tinhtrang) {
-		super();
-		this.madonhang = madonhang;
-		this.makh = makh;
-		this.tongtien = tongtien;
-		this.thoigian = thoigian;
-		this.tinhtrang = tinhtrang;
-	}
+    int MaDH;
+    int MaKH;
+    int TongTien;
+    Date ThoiGian;
+    int MaTrangThai;
 
-	public int getMadonhang() {
-		return madonhang;
-	}
+    public DonHang() {
+    }
 
-	public void setMadonhang(int madonhang) {
-		this.madonhang = madonhang;
-	}
+    public DonHang(int maDH, int maKH, int tongTien, Date thoiGian, int maTrangThai) {
+        MaDH = maDH;
+        MaKH = maKH;
+        TongTien = tongTien;
+        ThoiGian = thoiGian;
+        MaTrangThai = maTrangThai;
+    }
 
-	public int getMakh() {
-		return makh;
-	}
+    public int getMaDH() {
+        return MaDH;
+    }
 
-	public void setMakh(int makh) {
-		this.makh = makh;
-	}
+    public void setMaDH(int maDH) {
+        MaDH = maDH;
+    }
 
-	public int getTongtien() {
-		return tongtien;
-	}
+    public int getMaKH() {
+        return MaKH;
+    }
 
-	public void setTongtien(int tongtien) {
-		this.tongtien = tongtien;
-	}
+    public void setMaKH(int maKH) {
+        MaKH = maKH;
+    }
 
-	public String getThoigian() {
-		return thoigian;
-	}
+    public int getTongTien() {
+        return TongTien;
+    }
 
-	public void setThoigian(String thoigian) {
-		this.thoigian = thoigian;
-	}
+    public void setTongTien(int tongTien) {
+        TongTien = tongTien;
+    }
 
-	public String getTinhtrang() {
-		return tinhtrang;
-	}
+    public Date getThoiGian() {
+        return ThoiGian;
+    }
 
-	public void setTinhtrang(String tinhtrang) {
-		this.tinhtrang = tinhtrang;
-	}
+    public void setThoiGian(Date thoiGian) {
+        ThoiGian = thoiGian;
+    }
 
-	@Override
-	public String toString() {
-		return "DonHang [madonhang=" + madonhang + ", makh=" + makh + ", tongtien=" + tongtien + ", thoigian="
-				+ thoigian + ", tinhtrang=" + tinhtrang + "]";
-	}
-	
+    public int getMaTrangThai() {
+        return MaTrangThai;
+    }
 
+    public void setMaTrangThai(int maTrangThai) {
+        MaTrangThai = maTrangThai;
+    }
+
+    @Override
+    public String toString() {
+        return "DonHang{" +
+                "MaDH=" + MaDH +
+                ", MaKH=" + MaKH +
+                ", TongTien=" + TongTien +
+                ", ThoiGian=" + ThoiGian +
+                ", MaTrangThai=" + MaTrangThai +
+                '}';
+    }
 }

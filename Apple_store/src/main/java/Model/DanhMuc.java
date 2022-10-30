@@ -1,43 +1,60 @@
 package Model;
 
 public class DanhMuc {
-	private int madm;
-	private int maloai;
-	private String tendm;
-	
-	public DanhMuc() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public DanhMuc(int madm, int maloai, String tendm) {
-		super();
-		this.madm = madm;
-		this.maloai = maloai;
-		this.tendm = tendm;
-	}
+    int MaDM;
+    int MaLoai;
+    String TenDM;
+    String DuongDan;
 
-	public int getMadm() {
-		return madm;
-	}
+    public DanhMuc() {
+    }
 
-	public void setMadm(int madm) {
-		this.madm = madm;
-	}
+    public DanhMuc(int maDM, int maLoai, String tenDM, String duongDan) {
+        MaDM = maDM;
+        MaLoai = maLoai;
+        TenDM = tenDM;
+        DuongDan = duongDan;
+    }
 
-	public int getMaloai() {
-		return maloai;
-	}
+    public int getMaDM() {
+        return MaDM;
+    }
 
-	public void setMaloai(int maloai) {
-		this.maloai = maloai;
-	}
+    public void setMaDM(int maDM) {
+        MaDM = maDM;
+    }
 
-	public String getTendm() {
-		return tendm;
-	}
+    public int getMaLoai() {
+        return MaLoai;
+    }
 
-	public void setTendm(String tendm) {
-		this.tendm = tendm;
-	}
-	
+    public void setMaLoai(int maLoai) {
+        MaLoai = maLoai;
+    }
+
+    public String getTenDM() {
+        return TenDM;
+    }
+
+    public void setTenDM(String tenDM) {
+        TenDM = tenDM;
+    }
+
+    public String getDuongDan() {
+        return DuongDan;
+    }
+
+    public void setDuongDan(String duongDan) {
+        DuongDan = duongDan;
+    }
+
+    @Override
+    public String toString() {
+        return "DanhMuc{" +
+                "MaDM=" + MaDM +
+                ", MaLoai=" + MaLoai +
+                ", TenDM='" + TenDM + '\'' +
+                ", DuongDan='" + DuongDan + '\'' +
+                '}';
+    }
 }

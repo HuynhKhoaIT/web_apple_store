@@ -1,34 +1,38 @@
 package Model;
 
-public class Loaisp {
-	private int maloai;
-	private String tenloai;
-	
-	public Loaisp() {
-		// TODO Auto-generated constructor stub
-	}
+public class LoaiSP {
+    int MaLoai;
+    String TenLoai;
 
-	public Loaisp(int maloai, String tenloai) {
-		super();
-		this.maloai = maloai;
-		this.tenloai = tenloai;
-	}
+    public LoaiSP() {
+    }
 
-	public int getMaloai() {
-		return maloai;
-	}
+    public LoaiSP(int maLoai, String tenLoai) {
+        MaLoai = maLoai;
+        TenLoai = tenLoai;
+    }
 
-	public void setMaloai(int maloai) {
-		this.maloai = maloai;
-	}
+    public int getMaLoai() {
+        return MaLoai;
+    }
 
-	public String getTenloai() {
-		return tenloai;
-	}
+    public void setMaLoai(int maLoai) {
+        MaLoai = maLoai;
+    }
 
-	public void setTenloai(String tenloai) {
-		this.tenloai = tenloai;
-	}
-	
+    public String getTenLoai() {
+        return TenLoai;
+    }
 
+    public void setTenLoai(String tenLoai) {
+        TenLoai = tenLoai;
+    }
+
+    @Override
+    public String toString() {
+        return "LoaiSP{" +
+                "MaLoai=" + MaLoai +
+                ", TenLoai='" + TenLoai + '\'' +
+                '}';
+    }
 }
