@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPPhuKienDAO;
-import Model.SPPhukien;
+import Model.SanPham;
 @WebServlet(urlPatterns = {"/phukien/oplung"})
 public class SPPhuKienOpLungControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -18,7 +18,7 @@ public class SPPhuKienOpLungControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPPhuKienDAO phukiendao = new SPPhuKienDAO();
-        List<SPPhukien> listoplung = phukiendao.getAllphukienoplung();
+        List<SanPham> listoplung = phukiendao.getAllphukienoplung();
         
         
         request.setAttribute("listPhuKien", listoplung);

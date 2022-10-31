@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPIphoneDAO;
-import Model.SPIphone;
-@WebServlet(urlPatterns = {"/iphone/iphoneSE"})
+import Model.SanPham;
+@WebServlet(urlPatterns = {"/iphone/iphonese"})
 public class SPIphoneSEControl extends HttpServlet {
 	protected void iphoneSERequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
         SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SPIphone> listiphonese = iphonedao.getAlliphoneSE();
+        List<SanPham> listiphonese = iphonedao.getAlliphoneSE();
         
         
         request.setAttribute("listIphone", listiphonese);

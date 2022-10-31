@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Connection.ConnectJDBC;
-import Model.SPIphone;
+import Model.SanPham;
 
 public class SPIphoneDAO 
 {
@@ -15,152 +15,126 @@ public class SPIphoneDAO
 	PreparedStatement ps =null;
 	ResultSet rs = null;
 	
-	public List<SPIphone> getAlliphone()
+	public List<SanPham> getAlliphone()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where MaDM<=5 and MaDM>=1";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphone14()
+	public List<SanPham> getAlliphone14()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=1";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=1";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphone13()
+	public List<SanPham> getAlliphone13()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=3";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=2";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphone12()
+	public List<SanPham> getAlliphone12()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=4";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=3";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphone11()
+	public List<SanPham> getAlliphone11()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=5";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=4";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphoneX()
+	public List<SanPham> getAlliphoneSE()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=6";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=5";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPIphone> getAlliphoneSE()
+	public List<SanPham> getAlliphone8()
 	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=7";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=8";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
-				}
-		}
-			catch (Exception e) {
-			}
-		return list;
-	}
-	public List<SPIphone> getAlliphone8()
-	{
-		List<SPIphone> list = new ArrayList<>();
-		String query = "select * From SPIphone Where madm=8";
-		try {
-				conn =new ConnectJDBC().getConnection();
-				ps =conn.prepareStatement(query);
-				rs =ps.executeQuery();
-				while(rs.next())
-				{
-					list.add(new SPIphone(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),
-							rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
@@ -169,8 +143,8 @@ public class SPIphoneDAO
 	}
 	public static void main(String[] args) {
         SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SPIphone> list = iphonedao.getAlliphone13();
-        for (SPIphone o : list) {
+        List<SanPham> list = iphonedao.getAlliphone();
+        for (SanPham o : list) {
             System.out.println(o);
         }
     }

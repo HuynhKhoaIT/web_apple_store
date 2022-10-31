@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPAppleWatchDAO;
-import Model.SPAppleWatch;
+import Model.SanPham;
 @WebServlet(urlPatterns = {"/applewatch/series8"})
 public class SPAppleWatchSeries8Control extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -18,7 +18,7 @@ public class SPAppleWatchSeries8Control extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPAppleWatchDAO applewatchdao = new SPAppleWatchDAO();
-        List<SPAppleWatch> listseries8 = applewatchdao.getAllapplewatch();
+        List<SanPham> listseries8 = applewatchdao.getAllapplewatchseries8();
         
         
         request.setAttribute("listAppleWatch", listseries8);

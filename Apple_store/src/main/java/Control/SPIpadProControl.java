@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPIpadDAO;
-import Model.SPIpad;
+import Model.SanPham;
 
 @WebServlet(urlPatterns = {"/ipad/ipadpro"})
 public class SPIpadProControl extends HttpServlet{
@@ -20,7 +20,7 @@ public class SPIpadProControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPIpadDAO ipaddao = new SPIpadDAO();
-        List<SPIpad> listipadpro = ipaddao.getAllipadpro();
+        List<SanPham> listipadpro = ipaddao.getAllipadpro();
         
         
         request.setAttribute("listIpad", listipadpro);

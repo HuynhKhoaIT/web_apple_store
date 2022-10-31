@@ -7,119 +7,110 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Connection.ConnectJDBC;
-import Model.SPPhukien;
+import Model.SanPham;
+
 
 public class SPPhuKienDAO {
 	Connection conn=null;
 	PreparedStatement ps =null;
 	ResultSet rs = null;
 	
-	public List<SPPhukien> getAllphukien()
+	public List<SanPham> getAllphukien()
 	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where MaDM<=20 and MaDM>=17";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPPhukien> getAllphukienoplung()
+	public List<SanPham> getAllphukienoplung()
 	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien Where madm=23";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=17";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPPhukien> getAllphukientainghe()
+	public List<SanPham> getAllphukientainghe()
 	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien Where madm=24";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=18";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPPhukien> getAllphukiencapchuyendoi()
+	public List<SanPham> getAllphukiencapchuyendoi()
 	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien Where madm=25";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=19";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPPhukien> getAllphukienchuot()
+	public List<SanPham> getAllphukienchuot()
 	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien Where madm=26";
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where madm=20";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
 				}
 		}
 			catch (Exception e) {
 			}
 		return list;
 	}
-	public List<SPPhukien> getAllphukiensacduphong()
-	{
-		List<SPPhukien> list = new ArrayList<>();
-		String query = "select * From SPPhuKien Where madm=27";
-		try {
-				conn =new ConnectJDBC().getConnection();
-				ps =conn.prepareStatement(query);
-				rs =ps.executeQuery();
-				while(rs.next())
-				{
-					list.add(new SPPhukien(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7)));
-				}
-		}
-			catch (Exception e) {
-			}
-		return list;
+	public static void main(String[] args) {
+		SPPhuKienDAO ipaddao = new SPPhuKienDAO();
+        List<SanPham> list = ipaddao.getAllphukien();
+        for (SanPham o : list) {
+            System.out.println(o);
+        }
 	}
+
 }

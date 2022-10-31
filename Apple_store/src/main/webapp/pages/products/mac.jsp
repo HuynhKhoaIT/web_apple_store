@@ -41,11 +41,9 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <a href="http://localhost:8080/Apple_store/mac" class="swiper-slide active">Tất cả</a>
-                                    <a href="http://localhost:8080/Apple_store/mac/mac13" class="swiper-slide">Mac 13</a>
-                                    <a href="http://localhost:8080/Apple_store/mac/mac14" class="swiper-slide">Mac 14</a>
-                                    <a href="http://localhost:8080/Apple_store/mac/mac16" class="swiper-slide">Mac 16</a>
+                                    <a href="http://localhost:8080/Apple_store/mac/macpro" class="swiper-slide">Mac Pro</a>
+                                    <a href="http://localhost:8080/Apple_store/mac/macair" class="swiper-slide">Mac Air</a>
                                     <a href="http://localhost:8080/Apple_store/mac/imac" class="swiper-slide">iMac</a>
-                                    <a href="http://localhost:8080/Apple_store/mac/macmini" class="swiper-slide">Mac mini</a>
                                     
                                 </div>
                             </div>
@@ -86,7 +84,7 @@
                                         <span style="background-color:#675E6F"></span>
                                     </div>
                                     <h3 class="product-name">
-                                        <div class="text">${o.tensp}</div>
+                                        <div class="text">${o.tenSP}</div>
                                     </h3>
                                     <div class="product-memory js-select">
                                         <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -104,7 +102,7 @@
                                     </div>
                                     <div class="product-price">
                                         <div class="text">Giá chỉ</div>
-                                        <div class="price">${o.giaban}đ</div>
+                                        <div class="price">${o.giaBanThuong}đ</div>
                                     </div>
                                 </div>
                                 <div class="product-detai">

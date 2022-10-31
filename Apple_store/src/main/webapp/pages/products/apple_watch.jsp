@@ -44,7 +44,6 @@
                                     <a href="http://localhost:8080/Apple_store/applewatch/seriesultra" class="swiper-slide">Series Ultra</a>
                                     <a href="http://localhost:8080/Apple_store/applewatch/series8" class="swiper-slide">Series 8</a>
                                     <a href="http://localhost:8080/Apple_store/applewatch/series7" class="swiper-slide">Series 7</a>
-                                    <a href="http://localhost:8080/Apple_store/applewatch/series3" class="swiper-slide">Series 3</a>
                                     <a href="http://localhost:8080/Apple_store/applewatch/seriesse" class="swiper-slide">Series SE</a>
                                     
                                 </div>
@@ -86,7 +85,7 @@
                                         <span style="background-color:#675E6F"></span>
                                     </div>
                                     <h3 class="product-name">
-                                        <div class="text">${o.tensp}</div>
+                                        <div class="text">${o.tenSP}</div>
                                     </h3>
                                     <div class="product-memory js-select">
                                         <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -104,7 +103,7 @@
                                     </div>
                                     <div class="product-price">
                                         <div class="text">Giá chỉ</div>
-                                        <div class="price">${o.giaban}đ</div>
+                                        <div class="price">${o.giaBanThuong}đ</div>
                                     </div>
                                 </div>
                                 <div class="product-detai">
