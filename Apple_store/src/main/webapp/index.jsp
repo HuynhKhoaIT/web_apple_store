@@ -83,31 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="side-menu show">
-                    <div class="mn-content">
-                        <div class="mn-top flex flex-between">
-                            <div class="mn-logo">
-                                <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
-                            </div>
-                            <span class="js-close-menu">
-                                <i class="ti-close"> </i>
-                            </span>
-                        </div>
-                        <div class="mn-body">
-                            <ul>
-                                <li class="b-b-600"><a href="/iphone">iPhone</a></li>
-                                <li class="b-b-600"><a href="/ipad">iPad</a></li>
-                                <li class="b-b-600"><a href="/mac">Mac</a></li>
-                                <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
-                                <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
-                                <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
-                                <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="header-bot">
+                
+                <div id="header-bot">
                 <div class="row">
                     <div class="container">
                         <div class="row">
@@ -135,7 +112,9 @@
                     </div>
                 </div>
             </div>
-
+                
+            </div>
+            
             <div id="slider">
                 <a href="" class="slider-img">
                     <img src="asset/img/br.webp" alt="" />
@@ -525,9 +504,36 @@
                 </div>
             </div>
         </div>
+        
+        <div class="model">
+                <div class="side-menu show">
+              <div class="mn-content">
+                  <div class="mn-top flex flex-between">
+                      <div class="mn-logo">
+                          <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
+                      </div>
+                      <span class="js-close-menu">
+                          <i class="ti-close"> </i>
+                      </span>
+                  </div>
+                  <div class="mn-body">
+                      <ul>
+                          <li class="b-b-600"><a href="/iphone">iPhone</a></li>
+                          <li class="b-b-600"><a href="/ipad">iPad</a></li>
+                          <li class="b-b-600"><a href="/mac">Mac</a></li>
+                          <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
+                          <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
+                          <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
+                          <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+
         <script>
             const element = document.getElementById("js-menu-ticket");
-            const sideMenu = document.querySelector('.side-menu')
+            const sideMenu = document.querySelector('.model')
             const menuClose = document.querySelector('.js-close-menu')
             
             element.addEventListener("click", showMenuTicket);
