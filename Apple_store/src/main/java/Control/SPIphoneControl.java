@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPIphoneDAO;
-import Model.SPIphone;
+import Model.SanPham;
+
 
 @WebServlet(urlPatterns = {"/iphone"})
 public class SPIphoneControl extends HttpServlet{	
@@ -19,7 +20,7 @@ public class SPIphoneControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SPIphone> list = iphonedao.getAlliphone();
+        List<SanPham> list = iphonedao.getAlliphone();
         
         
         request.setAttribute("listIphone", list);

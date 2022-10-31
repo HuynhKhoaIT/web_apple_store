@@ -45,7 +45,7 @@
                                     <a href="http://localhost:8080/Apple_store/phukien/tainghe" class="swiper-slide">Tai nghe</a>
                                     <a href="http://localhost:8080/Apple_store/phukien/capchuyendoi" class="swiper-slide">Cáp chuyển đổi</a>
                                     <a href="http://localhost:8080/Apple_store/phukien/chuot-banphim-but" class="swiper-slide">Chuột/Bàn phím/Bút</a>
-                                    <a href="http://localhost:8080/Apple_store/phukien/sacduphong" class="swiper-slide">Sạc dự phòng</a>                                
+                                    
                                 </div>
                             </div>
                             <div class="swiper-button-next sw-button">
@@ -70,7 +70,7 @@
                     </div>
                     <div class="tab-pane">
                         <div class="product-list">
-                           <c:forEach items="${listPhukien}" var="o" >
+                           <c:forEach items="${listPhuKien}" var="o" >
                         		<div class="product">
                                 <div class="product-img">
                                     <a href="" class="img-a">
@@ -85,7 +85,7 @@
                                         <span style="background-color:#675E6F"></span>
                                     </div>
                                     <h3 class="product-name">
-                                        <div class="text">${o.tensp}</div>
+                                        <div class="text">${o.tenSP}</div>
                                     </h3>
                                     <div class="product-memory js-select">
                                         <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="product-price">
                                         <div class="text">Giá chỉ</div>
-                                        <div class="price">${o.giaban}đ</div>
+                                        <div class="price">${o.giaBanThuong}đ</div>
                                     </div>
                                 </div>
                                 <div class="product-detai">

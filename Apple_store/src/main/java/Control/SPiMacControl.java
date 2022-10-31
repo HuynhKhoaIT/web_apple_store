@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPMacDAO;
-import Model.SPMac;
+import Model.SanPham;
 @WebServlet(urlPatterns = {"/mac/imac"})
 public class SPiMacControl extends HttpServlet{
 	protected void SPMaciMacRequest(HttpServletRequest request, HttpServletResponse response)
@@ -18,7 +18,7 @@ public class SPiMacControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPMacDAO macdao = new SPMacDAO();
-        List<SPMac> listmacimac = macdao.getAllmac();
+        List<SanPham> listmacimac = macdao.getAllimac();
         
         
         request.setAttribute("listMac", listmacimac);

@@ -44,7 +44,7 @@
                                     <a href="http://localhost:8080/Apple_store/ipad/ipadpro" class="swiper-slide">iPad Pro</a>
                                     <a href="http://localhost:8080/Apple_store/ipad/ipadair" class="swiper-slide">iPad Air</a>
                                     <a href="http://localhost:8080/Apple_store/ipad/ipadmini" class="swiper-slide">iPad mini</a>
-                                    <a href="http://localhost:8080/Apple_store/ipad/ipad9thgen" class="swiper-slide">iPad 9th Gen</a>
+                                    <a href="http://localhost:8080/Apple_store/ipad/ipadgen" class="swiper-slide">iPad Gen</a>
                                   
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                                             <span style="background-color:#675E6F"></span>
                                         </div>
                                         <h3 class="product-name">
-                                            <div class="text">${o.tensp}</div>
+                                            <div class="text">${o.tenSP}</div>
                                         </h3>
                                         <div class="product-memory js-select">
                                             <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="product-price">
                                             <div class="text">Giá chỉ</div>
-                                            <div class="price">${o.giaban}đ</div>
+                                            <div class="price">${o.giaBanThuong}đ</div>
                                         </div>
                                     </div>
                                     <div class="product-detai">

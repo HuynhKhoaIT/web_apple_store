@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPPhuKienDAO;
-import Model.SPPhukien;
+import Model.SanPham;
 @WebServlet(urlPatterns = {"/phukien/tainghe"})
 public class SPPhuKienTaiNgheControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -18,7 +18,7 @@ public class SPPhuKienTaiNgheControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPPhuKienDAO phukiendao = new SPPhuKienDAO();
-        List<SPPhukien> listtainghe = phukiendao.getAllphukientainghe();
+        List<SanPham> listtainghe = phukiendao.getAllphukientainghe();
         
         
         request.setAttribute("listPhuKien", listtainghe);

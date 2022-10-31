@@ -87,6 +87,7 @@ public class SanPham {
     public void setSoLuong(int soLuong) {
         SoLuong = soLuong;
     }
+    
 
     @Override
     public String toString() {
@@ -101,4 +102,8 @@ public class SanPham {
                 ", SoLuong=" + SoLuong +
                 '}';
     }
+//    public static void main(String[] args) {
+//		SanPham sp= new SanPham();
+//		System.out.println(sp.toString());
+//        }
 }

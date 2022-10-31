@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import DAO.SPMacDAO;
-import Model.SPMac;
+import Model.SanPham;
 @WebServlet(urlPatterns = {"/mac"})
 public class SPMacControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -19,7 +19,7 @@ public class SPMacControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        
         SPMacDAO macdao = new SPMacDAO();
-        List<SPMac> list = macdao.getAllmac();
+        List<SanPham> list = macdao.getAllmac();
         
         
         request.setAttribute("listMac", list);

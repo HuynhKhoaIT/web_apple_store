@@ -10,23 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SPMacDAO;
-import Model.SPMac;
-@WebServlet(urlPatterns = {"/mac/mac14"})
-public class SPMac14Control extends HttpServlet{
-	protected void SPMac14Request(HttpServletRequest request, HttpServletResponse response)
+import Model.SanPham;
+@WebServlet(urlPatterns = {"/mac/macair"})
+public class SPMacAirControl extends HttpServlet{
+	protected void SPMaciMacRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
         SPMacDAO macdao = new SPMacDAO();
-        List<SPMac> listmac14 = macdao.getAllmac();
+        List<SanPham> listmacair = macdao.getAllmacair();
         
         
-        request.setAttribute("listMac", listmac14);
+        request.setAttribute("listMac", listmacair);
         request.getRequestDispatcher("/pages/products/mac.jsp").forward(request, response);
         
     }
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		SPMac14Request(req, resp);
+		SPMaciMacRequest(req, resp);
 	}
 }

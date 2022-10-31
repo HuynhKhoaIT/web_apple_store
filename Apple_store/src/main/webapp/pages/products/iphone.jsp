@@ -45,9 +45,8 @@
                                     <a href="http://localhost:8080/Apple_store/iphone/iphone13" class="swiper-slide">iphone 13</a>
                                     <a href="http://localhost:8080/Apple_store/iphone/iphone12" class="swiper-slide">iphone 12</a>
                                     <a href="http://localhost:8080/Apple_store/iphone/iphone11" class="swiper-slide">iphone 11</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphonex" class="swiper-slide">iphone X</a>
                                     <a href="http://localhost:8080/Apple_store/iphone/iphonese" class="swiper-slide">iphone SE</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphone8" class="swiper-slide">iphone 8</a>
+                                    
                                 </div>
                             </div>
                             <div class="swiper-button-next sw-button">
@@ -87,7 +86,7 @@
                                         <span style="background-color:#675E6F"></span>
                                     </div>
                                     <h3 class="product-name">
-                                        <div class="text">${o.tensp}</div>
+                                        <div class="text">${o.tenSP}</div>
                                     </h3>
                                     <div class="product-memory js-select">
                                         <div class="product-memory-item item btnchangegroup btnchangegroup-267 active" data-group="267" data-product="42725" data-cate="iphone">
@@ -105,7 +104,7 @@
                                     </div>
                                     <div class="product-price">
                                         <div class="text">Giá chỉ</div>
-                                        <div class="price">${o.giaban}đ</div>
+                                        <div class="price">${o.giaBanThuong}đ</div>
                                     </div>
                                 </div>
                                 <div class="product-detai">
