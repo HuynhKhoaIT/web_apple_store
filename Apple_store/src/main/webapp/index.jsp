@@ -22,13 +22,13 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-12">
                                 <div class="row top-header">
-                                    <div class="col-1">
+                                    <a class="col-1">
                                         <div id="js-menu-ticket" class="menu">
                                             <div class="sec-icon menu">
                                                 <i class="ti-menu"></i>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
                                     <div class="col-md-12 col-6">
                                         <a href="" class="logo">

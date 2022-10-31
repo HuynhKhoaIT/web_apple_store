@@ -8,7 +8,7 @@
       <div class="col-md-3 col-sm-12">
 	      <div class="row top-header">
 	          <div class="col-1">
-	              <a href="${root}cart.jsp" class="menu ">
+	              <a id="js-menu-ticket" class="menu ">
 	                  <div class="sec-icon menu">
 	                      <i class="ti-menu"></i>
 	                  </div>
@@ -92,3 +92,46 @@
     </div>
   </div>
 </div>
+<div class="model">
+	<div class="side-menu show">
+       <div class="mn-content">
+           <div class="mn-top flex flex-between">
+               <div class="mn-logo">
+                   <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
+               </div>
+               <span class="js-close-menu">
+                   <i class="ti-close"> </i>
+               </span>
+           </div>
+           <div class="mn-body">
+               <ul>
+                   <li class="b-b-600"><a href="/iphone">iPhone</a></li>
+                   <li class="b-b-600"><a href="/ipad">iPad</a></li>
+                   <li class="b-b-600"><a href="/mac">Mac</a></li>
+                   <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
+                   <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
+                   <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
+                   <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+ </div>
+
+ <script>
+     const element = document.getElementById("js-menu-ticket");
+     const sideMenu = document.querySelector('.model')
+     const menuClose = document.querySelector('.js-close-menu')
+     
+     element.addEventListener("click", showMenuTicket);
+
+     function showMenuTicket() {
+     	sideMenu.classList.add('open')
+     }
+     
+     menuClose.addEventListener("click", closeMenuTicket);
+     function closeMenuTicket() {
+     	sideMenu.classList.remove('open')
+     }
+     
+ </script>
