@@ -1239,14 +1239,15 @@
 
 #detail .post-text .row .col-9{
 }
-
-/*responsive may tinh ban */
-@media (min-width: 768px) and (max-width: 990px) {
+@media (min-width: 768px){
 	#header-top .user-1,
     #header-top .cart-1,
     #header-top .menu{
         display: none;
     }
+}
+/*responsive may tinh ban */
+@media (min-width: 768px) and (max-width: 990px) {
     #category .product {
         height: 534px;
         background: #fff;
