@@ -4,7 +4,7 @@
 <div id="header">
   <div id="header-top">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
       <div class="col-md-3 col-sm-12">
 	      <div class="row top-header">
 	          <div class="col-1">
@@ -48,9 +48,9 @@
 
       <div class="header-cart col-md-2">
         <a href="../cart/cart.jsp" class="cart">
-          <div class="sec-icon">
+          <div class="sec-icon align-items-center">
             <i class="ti-shopping-cart"></i>
-            <div class="icon-text">Giỏ hàng của bạn</div>
+            <div class="icon-text">Giỏ hàng</div>
           </div>
         </a>
       </div>
@@ -59,7 +59,7 @@
         <a href="${root}user/user.jsp" class="user">
           <div class="sec-icon">
             <i class="ti-user"></i>
-            <div class="icon-text">Account</div>
+            <div class="icon-text">Tài Khoản</div>
           </div>
         </a>
       </div>
@@ -77,7 +77,7 @@
             <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
             <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
             <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
-            <li><a href="#" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
+            <li><a href="#" class="nav-sub">Tin Tức</a></li>
           </ul>
           <div class="header-call">
             <div class="call-btn">
@@ -97,7 +97,7 @@
        <div class="mn-content">
            <div class="mn-top flex flex-between">
                <div class="mn-logo">
-                   <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
+                   <a href="/"><img src="${root}asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
                </div>
                <span class="js-close-menu">
                    <i class="ti-close"> </i>

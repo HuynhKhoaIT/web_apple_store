@@ -19,10 +19,10 @@
             <div id="header">
                 <div id="header-top">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-12">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 col-sm-12 col-12">
                                 <div class="row top-header">
-                                    <a class="col-1">
+                                    <a class="col-sm-1 col-1">
                                         <div id="js-menu-ticket" class="menu">
                                             <div class="sec-icon menu">
                                                 <i class="ti-menu"></i>
@@ -30,13 +30,13 @@
                                         </div>
                                     </a>
 
-                                    <div class="col-md-12 col-6">
+                                    <div class="col-md-12 col-sm-6 col-6">
                                         <a href="" class="logo">
                                             <img src="asset/img/logo.webp" alt="logo" class="max-width" />
                                         </a>
                                     </div>
 
-                                    <div class="col-1">
+                                    <div class="col-sm-1 col-1">
                                         <a href="./pages/cart/cart.jsp" class="cart-1">
                                             <div class="sec-icon cart">
                                                 <i class="ti-shopping-cart"></i>
@@ -44,7 +44,7 @@
                                         </a>
                                     </div>
 
-                                    <div class="col-1">
+                                    <div class="col-sm-1 col-1">
                                         <a href="./pages/user/user.jsp" class="user-1">
                                             <div class="sec-icon user">
                                                 <i class="ti-user"></i>
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
 
-                            <div class="header-search col-md-5 col-sm-12">
+                            <div class="header-search col-md-5 col-sm-12 col-12">
                                 <form action="">
                                     <div class="form-search">
                                         <i class="ti-search"></i>
@@ -65,9 +65,9 @@
 
                             <div class="header-cart col-md-2">
                                 <a href="./pages/cart/cart.jsp" class="cart">
-                                    <div class="sec-icon">
+                                    <div class="sec-icon align-items-center">
                                         <i class="ti-shopping-cart"></i>
-                                        <div class="icon-text">Giỏ hàng của bạn</div>
+                                        <div class="icon-text">Giỏ hàng</div>
                                     </div>
                                 </a>
                             </div>
@@ -76,7 +76,7 @@
                                 <a href="./pages/user/user.jsp" class="user">
                                     <div class="sec-icon">
                                         <i class="ti-user"></i>
-                                        <div class="icon-text">Account</div>
+                                        <div class="icon-text">Tài Khoản</div>
                                     </div>
                                 </a>
                             </div>
@@ -96,7 +96,7 @@
                                         <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
                                         <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
                                         <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
-                                        <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức - Thủ Thuật</a></li>
+                                        <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức</a></li>
                                     </ul>
                                     <div class="header-call">
                                         <div class="call-btn">
