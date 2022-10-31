@@ -58,7 +58,7 @@
                             <div class="content-sort">
                                 <div class="text">Sắp xếp theo:</div>
                                 <div class="dropdown">
-                                    <button class="btn btn-outline dropdown-toggle" type="button" data-toggle="dropdown">Bán chạy nhất
+                                    <button class="btn btn-outline" type="button" data-toggle="dropdown">Bán chạy nhất
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Bán chạy nhất</a></li>
