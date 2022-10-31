@@ -47,7 +47,7 @@
             <div class="detail-gallery">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-12 padding-0-12">
+                        <div class="col-md-6 col-sm-6 col-12 padding-0-12">
                             <div class="slider-gallery">
                                 <div
                                         style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12 padding-0-12">
+                        <div class="col-md-6 col-sm-6 col-12 padding-0-12">
                             <div class="wrapper">
                                 <h1 class="h1 name">iPhone 13 128GB</h1>
                                 <div class="price">
@@ -165,10 +165,10 @@
                                 </div>
                                 <div class="renderboxbtn">
                                     <div class="action" style="display:flex">
-                                        <a class="btn btn-link btn-xl btn-buy col-6" href="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711">
+                                        <a class="btn btn-link btn-xl btn-buy col-12" href="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711">
                                             <div>MUA NGAY</div>
                                         </a>
-                                        <a class="btn btn-outline-grayscale btn-xl btn-add col-6" href="#">
+                                        <a class="btn btn-outline-grayscale btn-xl btn-add col-12" href="#">
                                             <div>THÊM GIỎ HÀNG</div>
                                         </a>
                                     </div>
@@ -193,7 +193,7 @@
 		                    <span>Sản phẩm khác</span>
 		                </div>
 		                <div class="row no-gutter pro-list">
-		                    <div class="col-md-3 col-sm-4 col-6">
+		                    <div class="col-md-3 col-6">
 		                        <a href="/" class="product-item">
 		                            <div class="product-img">
 		                                <img src="../../asset/img/ip13%20slider%203.webp" alt="">
@@ -204,7 +204,7 @@
 		                            </div>
 		                        </a>
 		                    </div>
-		                    <div class="col-md-3 col-sm-4 col-6">
+		                    <div class="col-md-3 col-6">
 		                        <a href="/" class="product-item">
 		                            <div class="product-img">
 		                                <img src="../../asset/img/ip13%20slider%202.webp" alt="">
@@ -215,7 +215,7 @@
 		                            </div>
 		                        </a>
 		                    </div>
-		                    <div class="col-md-3 col-sm-4 col-6">
+		                    <div class="col-md-3 col-6">
 		                        <a href="/" class="product-item">
 		                            <div class="product-img">
 		                                <img src="../../asset/img/ip%2013%20slider%20.webp" alt="">
@@ -226,7 +226,7 @@
 		                            </div>
 		                        </a>
 		                    </div>
-		                    <div class="col-md-3 col-sm-4 col-6">
+		                    <div class="col-md-3 col-6">
 		                        <a href="/" class="product-item">
 		                            <div class="product-img">
 		                                <img src="../../asset/img/ip%2013%20slider%205.webp" alt="">
@@ -246,7 +246,7 @@
                 <div class="container">
                     <div class="properties-detail">
                         <div class="row no-gutter">
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="row no-gutter properties-title">
                                     <div class="text">
                                         <span>Thông số kỹ thuật</span>

@@ -1381,6 +1381,9 @@
 	#detail .colors{
 		column-gap: 2px;
 	}
+	#detail .renderboxbtn .action{
+	    flex-direction: column;
+	}
 }
 
 @keyframes openMenu{
