@@ -18,11 +18,12 @@ public class SearchDAO
 	public List<SanPham> searchByName(String txtSearch)
 	{
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham Where MaDM<=5 and MaDM>=1";
+		String query = "select *from SanPham \r\n"
+				+ "where [TenSP] like ? ";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
-				ps = 
+				ps.setString(1, "%"+txtSearch+"%");
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
@@ -35,11 +36,4 @@ public class SearchDAO
 		return list;
 	}
 	
-	public static void main(String[] args) {
-        SPIphoneDAO iphonedao = new SPIphoneDAO();
-        List<SanPham> list = iphonedao.getAlliphone();
-        for (SanPham o : list) {
-            System.out.println(o);
-        }
-    }
 }
