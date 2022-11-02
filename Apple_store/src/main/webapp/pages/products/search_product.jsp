@@ -33,44 +33,27 @@
                 </li>
                 <li class="breadcrumb-item">ipad</li>
             </ol>
-            <h1 class="h1">ipad</h1>
+             <div class="actions">
+                 <div class="sort">
+                     <div class="content-sort">
+                         <div class="text">Sắp xếp theo:</div>
+                         <div class="dropdown">
+                             <button class="btn btn-outline" type="button" data-toggle="dropdown">Bán chạy nhất
+                                 <span class="caret"></span></button>
+                             <ul class="dropdown-menu">
+                                 <li><a href="#">Bán chạy nhất</a></li>
+                                 <li><a href="#">Giá thấp đến cao</a></li>
+                                 <li><a href="#">Giá cao đến thấp</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
             <div class="products">
                 <div class="products-body">
-                    <div class="actions">
-                        <div class="menu">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <a href="http://localhost:8080/Apple_store/ipad" class="swiper-slide active">Tất cả</a>
-                                    <a href="http://localhost:8080/Apple_store/ipad/ipadpro" class="swiper-slide">iPad Pro</a>
-                                    <a href="http://localhost:8080/Apple_store/ipad/ipadair" class="swiper-slide">iPad Air</a>
-                                    <a href="http://localhost:8080/Apple_store/ipad/ipadmini" class="swiper-slide">iPad mini</a>
-                                    <a href="http://localhost:8080/Apple_store/ipad/ipadgen" class="swiper-slide">iPad Gen</a>
-                                  
-                                </div>
-                            </div>
-                            <div class="swiper-button-next sw-button">
-                            </div>
-                            <div class="swiper-button-prev sw-button">
-                            </div>
-                        </div>
-                        <div class="sort">
-                            <div class="content-sort">
-                                <div class="text">Sắp xếp theo:</div>
-                                <div class="dropdown">
-                                    <button class="btn btn-outline" type="button" data-toggle="dropdown">Bán chạy nhất
-                                        <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Bán chạy nhất</a></li>
-                                        <li><a href="#">Giá thấp đến cao</a></li>
-                                        <li><a href="#">Giá cao đến thấp</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="tab-pane">
                         <div class="product-list">
-                            <c:forEach items="${listIpad}" var="o" >
+                            <c:forEach items="${listSearch}" var="o" >
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="" class="img-a">

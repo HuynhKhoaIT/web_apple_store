@@ -15,7 +15,7 @@ import Model.SanPham;
 /**
  * Servlet implementation class SearchControl
  */
-@WebServlet(name = "Search", urlPatterns = { "/Search" })
+@WebServlet(urlPatterns = {"/search"})
 public class SearchControl extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -26,17 +26,21 @@ public class SearchControl extends HttpServlet {
 		SearchDAO searchdao = new SearchDAO();
 		List<SanPham> list = searchdao.searchByName(txtSearch);
 
-		request.setAttribute("listIphone", list);
+		request.setAttribute("listSearch", list);
 
-		request.getRequestDispatcher("/pages/products/iphone.jsp").forward(request, response);
+		request.getRequestDispatcher("/pages/products/search_product.jsp").forward(request, response);
 
 	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		processRequest(req, resp);
 	}
+	/*
+	 * protected void doGet(HttpServletRequest request, HttpServletResponse
+	 * response) throws ServletException, IOException { // TODO Auto-generated
+	 * method stub
+	 * response.getWriter().append("Served at: ").append(request.getContextPath());
+	 * }
+	 */
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
