@@ -15,7 +15,7 @@
 	              </a>
 	          </div>
 	          <div class="col-md-12 col-6">
-	          	  <a href="${root}index.jsp" class="logo">
+	          	  <a href="http://localhost:8080/Apple_store" class="logo">
 	          	  <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
 	        	  </a>
 	          </div>

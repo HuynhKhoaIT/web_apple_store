@@ -9,21 +9,20 @@ import java.util.List;
 import Connection.ConnectJDBC;
 import Model.SanPham;
 
-public class SearchDAO 
+public class NewProductDAO 
 {
 	Connection conn=null;
 	PreparedStatement ps =null;
 	ResultSet rs = null;
 	
-	public List<SanPham> searchByName(String txtSearch)
+	public List<SanPham> newProduct()
 	{
 		List<SanPham> list = new ArrayList<>();
-		String query = "select *from SanPham \r\n"
-				+ "where [TenSP] like ? ";
+		String query = "select TOP 6  *from SanPham\r\n"
+				+ "order by MaSP desc;";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
-				ps.setString(1, "%"+txtSearch+"%");
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
@@ -36,8 +35,8 @@ public class SearchDAO
 		return list;
 	}
 	public static void main(String[] args) {
-		SearchDAO searchdao = new SearchDAO();
-		List<SanPham> list = searchdao.searchByName("iPhone");
+		NewProductDAO newproducdao = new NewProductDAO();
+		List<SanPham> list = newproducdao.newProduct();
 		for(SanPham o : list) {
 			System.out.println(o);
 		}

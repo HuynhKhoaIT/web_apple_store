@@ -9,26 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.SearchDAO;
+import DAO.NewProductDAO;
 import Model.SanPham;
 
 /**
  * Servlet implementation class SearchControl
  */
-@WebServlet(urlPatterns = {"/search"})
-public class SearchControl extends HttpServlet {
+@WebServlet(urlPatterns = {""})
+public class NewProductControl extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 
-		String txtSearch = request.getParameter("txt");
+		NewProductDAO newproducdao = new NewProductDAO();
+		List<SanPham> list = newproducdao.newProduct();
 
-		SearchDAO searchdao = new SearchDAO();
-		List<SanPham> list = searchdao.searchByName(txtSearch);
+		request.setAttribute("listNew", list);
 
-		request.setAttribute("listSearch", list);
-
-		request.getRequestDispatcher("/pages/products/search_product.jsp").forward(request, response);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
 	}
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

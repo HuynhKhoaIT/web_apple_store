@@ -85,7 +85,7 @@
                                             </div>
                                         </div>
                                         <div class="product-price">
-                                            <div class="text">Giá chỉ</div>
+                                            <div class="text">Giá chỉ: </div>
                                             <div class="price">${o.giaBanThuong}đ</div>
                                         </div>
                                     </div>

@@ -6,13 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../../asset/css/cart.css" />
-
+	<link rel="stylesheet" href="../../asset/style.css">
         <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
         <title>Document</title>
     </head>
     <body>
         <div class="main">
-            <%@include file="../include/header1.jsp"%>
+            <%@include file="../include/header2.jsp"%>
             <div class="content">
                 <div class="subcontainer">
                     <div class="subheading">
@@ -136,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <%@include file="../include/footer1.jsp"%>
+            <%@include file="../include/footer2.jsp"%>
         </div>
         <script src="../../asset/js/cart.js"></script>
     </body>
