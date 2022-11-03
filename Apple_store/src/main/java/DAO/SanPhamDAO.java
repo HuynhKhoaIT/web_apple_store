@@ -9,7 +9,7 @@ import java.util.List;
 import Connection.ConnectJDBC;
 import Model.SanPham;
 
-public class SPDAO 
+public class SanPhamDAO 
 {
 	Connection conn=null;
 	PreparedStatement ps =null;
@@ -36,7 +36,7 @@ public class SPDAO
 
 	
 	public static void main(String[] args) {
-        SPDAO iphonedao = new SPDAO();
+		SanPhamDAO iphonedao = new SanPhamDAO();
         List<SanPham> list = iphonedao.getAlliphone();
         for (SanPham o : list) {
             System.out.println(o);
