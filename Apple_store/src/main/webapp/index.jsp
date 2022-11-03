@@ -1,5 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,10 +55,10 @@
                             </div>
 
                             <div class="header-search col-md-5 col-sm-12 col-12">
-                                <form action="">
+                                <form action="search" method="get">
                                     <div class="form-search">
                                         <i class="ti-search"></i>
-                                        <input type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ..." />
+                                        <input name="txt" type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ..." />
                                     </div>
                                 </form>
                             </div>
@@ -83,27 +83,28 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="header-bot">
-                <div class="row">
-                    <div class="container">
-                        <div class="row">
-                            <div class="header-nav">
-                                <div class="header-item">
-                                    <ul>
-                                        <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
-                                        <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
-                                        <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
-                                        <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
-                                        <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
-                                        <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức</a></li>
-                                    </ul>
-                                    <div class="header-call">
-                                        <div class="call-btn">
-                                            <a href="tel:0869950090">
-                                                <i class="ti-mobile"></i>
-                                                <span>0869950090</span>
-                                            </a>
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="header-nav">
+                                    <div class="header-item">
+                                        <ul>
+                                            <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
+                                            <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
+                                            <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
+                                            <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
+                                            <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
+                                            <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức</a></li>
+                                        </ul>
+                                        <div class="header-call">
+                                            <div class="call-btn">
+                                                <a href="tel:0869950090">
+                                                    <i class="ti-mobile"></i>
+                                                    <span>0869950090</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -112,9 +113,7 @@
                     </div>
                 </div>
             </div>
-                
-            </div>
-            
+
             <div id="slider">
                 <a href="" class="slider-img">
                     <img src="asset/img/br.webp" alt="" />
@@ -196,7 +195,8 @@
                                 <h2>Sản phẩm mới</h2>
                             </div>
                             <div class="pro-container">
-                                <ul class="pro-list">
+                                <ul class="pro-list p-0">
+                                <c:forEach items="${listNew}" var="o" >
                                     <li>
                                         <a href="pages/detail_product/detail_product.jsp" class="pro-item">
                                             <div class="item-top">
@@ -204,89 +204,19 @@
                                                     <img src="asset/img/iphone_14_PNG41.png" alt="" />
                                                 </div>
                                                 <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
+                                                    <h3>${o.tenSP}</h3>
                                                 </div>
                                             </div>
+                                            <div class="product-price">
+		                                        <div class="text">Giá chỉ: </div>
+		                                        <div class="price">${o.giaBanThuong}đ</div>
+		                                    </div>
                                             <div class="pro-add">
                                                 <span>Xem chi tiết</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
-                                            <div class="item-top">
-                                                <div class="pro-img">
-                                                    <img src="asset/img/iphone_14_PNG12.png" alt="" />
-                                                </div>
-                                                <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
-                                                </div>
-                                            </div>
-                                            <div class="pro-add">
-                                                <span>Xem chi tiết</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
-                                            <div class="item-top">
-                                                <div class="pro-img">
-                                                    <img src="asset/img/iphone_14_PNG12.png" alt="" />
-                                                </div>
-                                                <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
-                                                </div>
-                                            </div>
-                                            <div class="pro-add">
-                                                <span>Xem chi tiết</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
-                                            <div class="item-top">
-                                                <div class="pro-img">
-                                                    <img src="asset/img/apple-iphone-14-pro-max-1-sim-1tb-01663058740 (1).png" alt="" />
-                                                </div>
-                                                <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
-                                                </div>
-                                            </div>
-                                            <div class="pro-add">
-                                                <span>Xem chi tiết</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
-                                            <div class="item-top">
-                                                <div class="pro-img">
-                                                    <img src="asset/img/iphone_14_PNG42.png" alt="" />
-                                                </div>
-                                                <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
-                                                </div>
-                                            </div>
-                                            <div class="pro-add">
-                                                <span>Xem chi tiết</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
-                                            <div class="item-top">
-                                                <div class="pro-img">
-                                                    <img src="asset/img/iphone_13_PNG9.png" alt="" />
-                                                </div>
-                                                <div class="pro-name">
-                                                    <h3>Tên sản phẩm</h3>
-                                                </div>
-                                            </div>
-                                            <div class="pro-add">
-                                                <span>Xem chi tiết</span>
-                                            </div>
-                                        </a>
-                                    </li>
+								</c:forEach>
                                 </ul>
                             </div>
                         </div>
@@ -459,7 +389,7 @@
                                 <div class="row">
                                     <div class="category-item col-4">
                                         <div class="title">Sản Phẩm</div>
-                                        <ul>
+                                        <ul class="p-0">
                                             <li><a href="">iPhone</a></li>
                                             <li><a href="">iPad</a></li>
                                             <li><a href="">Mac</a></li>
@@ -469,7 +399,7 @@
                                     </div>
                                     <div class="category-item col-4">
                                         <div class="title">Chính sách</div>
-                                        <ul>
+                                        <ul class="p-0">
                                             <li><a href="">Chính sách bảo mật</a></li>
                                             <li><a href="">Chính sách đổi trả sản phẩm</a></li>
                                             <li><a href="">Chính sách bảo hành</a></li>
@@ -479,7 +409,7 @@
                                     </div>
                                     <div class="category-item col-4">
                                         <div class="title">Về chúng tôi</div>
-                                        <ul>
+                                        <ul class="p-0">
                                             <li><a href="">Giới thiệu</a></li>
                                             <li><a href="">Tin tức - Thủ thuật</a></li>
                                             <li><a href="">Hệ thống cửa hàng</a></li>
@@ -504,49 +434,48 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="model">
-                <div class="side-menu show">
-              <div class="mn-content">
-                  <div class="mn-top flex flex-between">
-                      <div class="mn-logo">
-                          <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
-                      </div>
-                      <span class="js-close-menu">
-                          <i class="ti-close"> </i>
-                      </span>
-                  </div>
-                  <div class="mn-body">
-                      <ul>
-                          <li class="b-b-600"><a href="/iphone">iPhone</a></li>
-                          <li class="b-b-600"><a href="/ipad">iPad</a></li>
-                          <li class="b-b-600"><a href="/mac">Mac</a></li>
-                          <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
-                          <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
-                          <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
-                          <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+            <div class="side-menu show">
+                <div class="mn-content">
+                    <div class="mn-top flex flex-between">
+                        <div class="mn-logo">
+                            <a href="/"><img src="asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
+                        </div>
+                        <span class="js-close-menu">
+                            <i class="ti-close"> </i>
+                        </span>
+                    </div>
+                    <div class="mn-body">
+                        <ul>
+                            <li class="b-b-600"><a href="/iphone">iPhone</a></li>
+                            <li class="b-b-600"><a href="/ipad">iPad</a></li>
+                            <li class="b-b-600"><a href="/mac">Mac</a></li>
+                            <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
+                            <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
+                            <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
+                            <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script>
             const element = document.getElementById("js-menu-ticket");
-            const sideMenu = document.querySelector('.model')
-            const menuClose = document.querySelector('.js-close-menu')
-            
+            const sideMenu = document.querySelector(".model");
+            const menuClose = document.querySelector(".js-close-menu");
+
             element.addEventListener("click", showMenuTicket);
 
             function showMenuTicket() {
-            	sideMenu.classList.add('open')
+                sideMenu.classList.add("open");
             }
-            
+
             menuClose.addEventListener("click", closeMenuTicket);
             function closeMenuTicket() {
-            	sideMenu.classList.remove('open')
+                sideMenu.classList.remove("open");
             }
-            
         </script>
     </body>
 </html>

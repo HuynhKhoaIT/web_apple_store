@@ -12,18 +12,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../asset/css/cart.css" />
+    <!-- <link rel="stylesheet" href="../../asset/css/cart.css" /> -->
+  <link rel="stylesheet" href="../../asset/style.css">
     <link
             rel="stylesheet"
             href="../../asset/font/themify-icons/themify-icons.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
 <body>
 <div class="main">
-    <%@include file="../include/header1.jsp"%>
-
-    <div class="content">
+	<%@include file="../include/header2.jsp"%>
+ 
+<!--     <div class="content">
         <div class="pro-container">
             <div class="user-profile">
                 <div class="subnav">
@@ -64,7 +68,7 @@
                                 <label class="label">Số điện thoại </label>
                                 <div  class ="float-right">
                                     <input class="input" type="text" value="0123456789" >
-                                    <!-- <div class="note">Vui lòng nhập đúng </div> -->
+                                    <div class="note">Vui lòng nhập đúng </div>
                                 </div>
                                 <div class="clear"></div>
                             </li>
@@ -111,7 +115,7 @@
                                 <label class="label">Nhập lại mật khẩu mới</label>
                                 <div  class ="float-right">
                                     <input class="input password" type="password" >
-                                    <!-- <div class="note">Vui lòng nhập đúng </div> -->
+                                    <div class="note">Vui lòng nhập đúng </div>
                                 </div>
                                 <div class="clear"></div>
                             </li>
@@ -141,7 +145,7 @@
                                     <div class="colors">
                                         <span>Color</span>
                                         <ul class="ordercolorful">
-                                            <!-- -->
+                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -167,7 +171,7 @@
             <div class="clear"></div>
         </div>
     </div>
-    <%@include file="../include/footer1.jsp"%>
+ -->    <%@include file="../include/footer2.jsp"%>
 </div>
 <script>
     const content_tab = document.querySelector('.js-content-tab')

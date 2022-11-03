@@ -15,7 +15,7 @@
 	              </a>
 	          </div>
 	          <div class="col-md-12 col-6">
-	          	  <a href="${root}index.jsp" class="logo">
+	          	  <a href="http://localhost:8080/Apple_store" class="logo">
 	          	  <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
 	        	  </a>
 	          </div>
@@ -38,10 +38,10 @@
       </div>
 
       <div class="header-search col-md-5 col-sm-12">
-        <form action="">
+        <form action="search" method="get">
           <div class="form-search">
             <i class="ti-search"></i>
-            <input type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ...">
+            <input name="txt" type="text" class="search-input" placeholder="Bạn đang tìm sản phẩm, tin tức, ...">
           </div>
         </form>
       </div>
