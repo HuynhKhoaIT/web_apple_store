@@ -9,21 +9,19 @@ import java.util.List;
 import Connection.ConnectJDBC;
 import Model.SanPham;
 
-public class SearchDAO 
+public class SPDAO 
 {
 	Connection conn=null;
 	PreparedStatement ps =null;
 	ResultSet rs = null;
 	
-	public List<SanPham> searchByName(String txtSearch)
+	public List<SanPham> getAlliphone()
 	{
 		List<SanPham> list = new ArrayList<>();
-		String query = "select *from SanPham \r\n"
-				+ "where [TenSP] like ? ";
+		String query = "select * From SanPham Where MaDM<=5 and MaDM>=1";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
-				ps.setString(1, "%"+txtSearch+"%");
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
@@ -35,12 +33,13 @@ public class SearchDAO
 			}
 		return list;
 	}
-	public static void main(String[] args) {
-		SearchDAO searchdao = new SearchDAO();
-		List<SanPham> list = searchdao.searchByName("iPhone");
-		for(SanPham o : list) {
-			System.out.println(o);
-		}
-	}
+
 	
+	public static void main(String[] args) {
+        SPDAO iphonedao = new SPDAO();
+        List<SanPham> list = iphonedao.getAlliphone();
+        for (SanPham o : list) {
+            System.out.println(o);
+        }
+    }
 }

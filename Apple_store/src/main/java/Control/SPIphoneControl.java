@@ -24,7 +24,7 @@ public class SPIphoneControl extends HttpServlet{
         
         
         request.setAttribute("listIphone", list);
-        request.getRequestDispatcher("/pages/products/iphone.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/products/product.jsp").forward(request, response);
         
     }
 	@Override

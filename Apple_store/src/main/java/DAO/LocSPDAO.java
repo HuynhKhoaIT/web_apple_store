@@ -9,7 +9,7 @@ import java.util.List;
 import Connection.ConnectJDBC;
 import Model.SanPham;
 
-public class SPIphoneDAO 
+public class LocSPDAO 
 {
 	Connection conn=null;
 	PreparedStatement ps =null;
