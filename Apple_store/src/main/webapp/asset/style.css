@@ -208,6 +208,19 @@
     border-radius: 4px;
 }
 
+#content .container-pro .pro-list li a{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+#content .container-pro .pro-add{
+    display: flex;
+    justify-content: center;
+}
+
+
 #content .container-pro .price {
     font-size: 20px;
     line-height: 28px;
@@ -804,6 +817,11 @@
     display: flex;
     justify-content: center;
     margin-top: 16px;
+}
+
+#category .title-h2{
+	display: flex;
+	justify-content: center;
 }
 
 /* ----------------------------------- */

@@ -20,14 +20,14 @@ public class SearchControl extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-
+		request.setCharacterEncoding("UTF-8");
 		String txtSearch = request.getParameter("txt");
 
 		SearchDAO searchdao = new SearchDAO();
 		List<SanPham> list = searchdao.searchByName(txtSearch);
 
 		request.setAttribute("listSearch", list);
-
+		request.setAttribute("txtS", txtSearch);
 		request.getRequestDispatcher("/pages/products/search_product.jsp").forward(request, response);
 
 	}

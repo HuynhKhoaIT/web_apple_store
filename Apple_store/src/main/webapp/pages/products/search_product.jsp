@@ -31,8 +31,11 @@
                 <li class="breadcrumb-item">
                     <a href="../../index.jsp">Trang chủ</a>
                 </li>
-                <li class="breadcrumb-item">ipad</li>
+                <li class="breadcrumb-item">${txtS }</li>
             </ol>
+            <div class="title-h2">
+            	<h2>Bạn đang tìm từ khóa: ${txtS }</h2>
+            </div>
              <div class="actions">
                  <div class="sort">
                      <div class="content-sort">
@@ -57,7 +60,7 @@
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="" class="img-a">
-                                            <img src="${root}asset/img/ip14-s.webp" alt="">
+                                            <img src="${o.anh }" alt="">
                                         </a>
                                     </div>
                                     <div class="product-info">

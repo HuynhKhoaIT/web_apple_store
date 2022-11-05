@@ -32,7 +32,7 @@
 
                                     <div class="col-md-12 col-sm-6 col-6">
                                         <a href="" class="logo">
-                                            <img src="asset/img/logo.webp" alt="logo" class="max-width" />
+                                            <img src="asset/img/logoPNG.png" alt="logo" class="max-width" />
                                         </a>
                                     </div>
 
@@ -201,7 +201,7 @@
                                         <a href="pages/detail_product/detail_product.jsp" class="pro-item">
                                             <div class="item-top">
                                                 <div class="pro-img">
-                                                    <img src="asset/img/iphone_14_PNG41.png" alt="" />
+                                                    <img src="${o.anh }" alt="" />
                                                 </div>
                                                 <div class="pro-name">
                                                     <h3>${o.tenSP}</h3>

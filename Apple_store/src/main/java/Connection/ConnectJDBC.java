@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class ConnectJDBC {
 	
 	private final String serverName = "DESKTOP-4VT0NI5\\HKHOA";
-	private final String dbName = "AppleStore";
+	private final String dbName = "Ap1";
 	private final String portNumber = "1433";
 	private final String instance = " ";
 	private final String userID = "sa";
