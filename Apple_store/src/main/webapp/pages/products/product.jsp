@@ -24,28 +24,27 @@
 <body>
 <div id="main">
     <%@include file="../include/header2.jsp"%>
-
+	
     <div id="category">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="http://localhost:8080/Apple_store">Trang chủ</a>
                 </li>
-                <li class="breadcrumb-item">iPhone</li>
+                <li class="breadcrumb-item">${tl}</li>
             </ol>
-            <h1 class="h1">iphone</h1>
+            <h1 class="h1">${tl}</h1>     
             <div class="products">
                 <div class="products-body">
                     <div class="actions">
                         <div class="menu">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <a href="http://localhost:8080/Apple_store/iphone" class="swiper-slide active">Tất cả</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphone14" class="swiper-slide">iphone 14 </a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphone13" class="swiper-slide">iphone 13</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphone12" class="swiper-slide">iphone 12</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphone11" class="swiper-slide">iphone 11</a>
-                                    <a href="http://localhost:8080/Apple_store/iphone/iphonese" class="swiper-slide">iphone SE</a>
+                                    <a href="loaisp?maloai=${ml}" class="swiper-slide active">Tất cả</a>
+                                    <c:forEach items="${listdm}" var="o" >
+                                    
+                                    	<a href="loaisp?madm=${o.maDM}" class="swiper-slide">${o.tenDM}</a>
+                                    </c:forEach>
                                     
                                 </div>
                             </div>
@@ -71,11 +70,11 @@
                     </div>
                     <div class="tab-pane">
                         <div class="product-list">
-                        	<c:forEach items="${listIphone}" var="o" >
+                        	<c:forEach items="${listsp}" var="o" >
                         		<div class="product">
                                 <div class="product-img">
                                     <a href="" class="img-a">
-                                        <img src="${root}asset/img/ip14-s.webp" alt="">
+                                        <img src="${root}${o.anh}" alt="">
                                     </a>
                                 </div>
                                 <div class="product-info">
@@ -124,6 +123,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <%@include file="../include/footer2.jsp"%>

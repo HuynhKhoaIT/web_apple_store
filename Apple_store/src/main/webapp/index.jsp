@@ -1,14 +1,15 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Apple-Store</title>
-        <link rel="stylesheet" href="asset/style.css" />
-        <link rel="stylesheet" href="asset/font/themify-icons/themify-icons.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-Store</title>
+    <link rel="stylesheet" href="${root}asset/style.css">
+    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <!-- Latest compiled JavaScript -->
@@ -91,11 +92,9 @@
                                 <div class="header-nav">
                                     <div class="header-item">
                                         <ul>
-                                            <li><a href="http://localhost:8080/Apple_store/iphone" class="nav-sub">iPhone</a></li>
-                                            <li><a href="http://localhost:8080/Apple_store/ipad" class="nav-sub">iPad</a></li>
-                                            <li><a href="http://localhost:8080/Apple_store/mac" class="nav-sub">Mac</a></li>
-                                            <li><a href="http://localhost:8080/Apple_store/applewatch" class="nav-sub">Apple Watch</a></li>
-                                            <li><a href="http://localhost:8080/Apple_store/phukien" class="nav-sub">Phụ Kiện</a></li>
+                                        <c:forEach items="${listlsp}" var="o" >
+                                            <li><a href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
+                                        </c:forEach>
                                             <li><a href="pages/products/blog.jsp" class="nav-sub">Tin Tức</a></li>
                                         </ul>
                                         <div class="header-call">
@@ -125,7 +124,7 @@
                     <div class="container">
                         <div class="container-item">
                             <div class="cate-item">
-                                <a href="pages/products/iphone.jsp">
+                                <a href="">
                                     <div class="item-title">iPhone</div>
                                     <div class="item-img">
                                         <img src="asset/img/iphone.webp" alt="" />
@@ -137,7 +136,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="pages/products/ipad.jsp">
+                                <a href="">
                                     <div class="item-title">iPad</div>
                                     <div class="item-img">
                                         <img src="asset/img/ipad.webp" alt="" />
@@ -149,7 +148,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="pages/products/mac.jsp">
+                                <a href="">
                                     <div class="item-title">Mac</div>
                                     <div class="item-img">
                                         <img src="asset/img/mac.webp" alt="" />
@@ -161,7 +160,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="pages/products/apple_watch.jsp">
+                                <a href="">
                                     <div class="item-title">Apple Watch</div>
                                     <div class="item-img">
                                         <img src="asset/img/Apple-watch.webp" alt="" />
@@ -173,7 +172,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="pages/products/phu_kien.jsp">
+                                <a href="">
                                     <div class="item-title">Phụ Kiện</div>
                                     <div class="item-img">
                                         <img src="asset/img/airtag.webp" alt="" />

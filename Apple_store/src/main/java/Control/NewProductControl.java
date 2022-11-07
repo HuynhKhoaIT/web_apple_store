@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.NewProductDAO;
+import DAO.SanPhamDAO;
+import Model.LoaiSP;
 import Model.SanPham;
 
 /**
@@ -22,10 +24,12 @@ public class NewProductControl extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 
 		NewProductDAO newproducdao = new NewProductDAO();
+		SanPhamDAO sanphamdao = new SanPhamDAO();
 		List<SanPham> list = newproducdao.newProduct();
+		List<LoaiSP> listlsp = sanphamdao.getAllloaisp();
 
 		request.setAttribute("listNew", list);
-
+		request.setAttribute("listlsp", listlsp);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
 	}
