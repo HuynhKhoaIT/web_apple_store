@@ -131,6 +131,44 @@ public class SanPhamDAO
 			}
 		return list;
 	}
+	public List<SanPham> getAll()
+	{
+		List<SanPham> list = new ArrayList<>();
+
+		String query = "select *from SanPham  ";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+			rs =ps.executeQuery();
+			while(rs.next())
+			{
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+			}
+		}
+		catch (Exception e) {
+		}
+		return list;
+	}
+	public SanPham getProductById(int id){
+		String query = "select *from SanPham where MaSP = ? ";
+		try{
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+			ps.setInt(1,id);
+			rs =ps.executeQuery();
+			while(rs.next())
+			{
+				return new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9));
+			}
+
+		}catch (Exception e){
+
+		}
+		return  null;
+
+	}
 
 	
 	public static void main(String[] args) {
