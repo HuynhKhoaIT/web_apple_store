@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 17/10/2022
-  Time: 14:32
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple-Store</title>
-    <link rel="stylesheet" href="../../asset/style.css">
-    <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="${root}asset/style.css">
+    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -51,24 +46,15 @@
                             <div class="slider-gallery">
                                 <div
                                         style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                        class="swiper mySwiper2"
-                                >
+                                        class="swiper mySwiper2">
+                                    <c:set var="p" value="${SanPham}"/>
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13slider1.webp" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13%20slider%202.webp" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13%20slider%203.webp" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip%2013%20slider%20.webp" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip%2013%20slider%205.webp" />
-                                        </div>
+                                        <c:forEach var="a" items="${listAnhSP}">
+                                            <div class="swiper-slide">
+                                                <img src="${a.anh}" />
+                                            </div>
+                                        </c:forEach>
+<%--                                      o day ne kiem dau the--%>
                                     </div>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
@@ -76,34 +62,20 @@
                                 </div>
                                 <div thumbsSlider="" class="swiper mySwiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13slider1.webp" />
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13%20slider%202.webp" />
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip13%20slider%203.webp" />
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip%2013%20slider%20.webp" />
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <img src="../../asset/img/ip%2013%20slider%205.webp" />
-                                        </div>
+                                        <c:forEach var="a" items="${listAnhSP}">
+                                            <div class="swiper-slide">
+                                                <img src="${a.anh}" />
+                                            </div>
+                                        </c:forEach>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-12 padding-0-12">
                             <div class="wrapper">
-                                <h1 class="h1 name">iPhone 13 128GB</h1>
+                                <h1 class="h1 name">${p.tenSP}</h1>
                                 <div class="price">
-                                    <div class="text text-primary txtprice">18.990.000đ</div>
+                                    <div class="text text-primary txtprice">${p.giaKhuyenMai}đ</div>
                                     <!-- <div class="sub">
                                     <div class="text">Trả góp chỉ từ</div>
                                     <div class="text"> <strong>2.030.000đ</strong>/tháng</div>
@@ -165,12 +137,19 @@
                                 </div>
                                 <div class="renderboxbtn">
                                     <div class="action" style="display:flex">
-                                        <a class="btn btn-link btn-xl btn-buy col-12" href="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711">
-                                            <div>MUA NGAY</div>
-                                        </a>
-                                        <a class="btn btn-outline-grayscale btn-xl btn-add col-12" href="#">
-                                            <div>THÊM GIỎ HÀNG</div>
-                                        </a>
+
+                                        <form action="buy" method="post" class="btn btn-link btn-xl btn-buy col-12">
+                                            <input type="hidden" name = "id" value="${p.maSP}"/>
+                                            <input type="hidden" name = "num" value="1"/>
+                                            <input type="hidden" name = "check" value="0"/>
+                                            <input type="submit" value="Thêm vào giỏ hàng" >
+                                        </form>
+                                        <form action="buy" method="post" class="btn btn-link btn-xl btn-buy col-12">
+                                            <input type="hidden" name = "id" value="${p.maSP}"/>
+                                            <input type="hidden" name = "num" value="1"/>
+                                            <input type="hidden" name = "check" value="1"/>
+                                            <input type="submit" value="Mua ngay" >
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="f-s-ui-14 text-center">
@@ -368,7 +347,6 @@
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".mySwiper", {

@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                                 <div class="product-detai">
-                                    <a href="../../pages/detail_product/detail_product.jsp">
+                                    <a href="ProductDetailControl?maSP=${o.maSP}">
                                         <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
                                     </a>
                                 </div>
