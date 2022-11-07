@@ -33,7 +33,7 @@
                             GIỎ HÀNG CỦA BẠN
                             <!-- <span>(1 sản phẩm)</span>-->
                         </h3>
-                        <a href="#" class="float-right home-link">Mua thêm sản phẩm khác</a>
+<%--                        <a href="" class="float-right home-link">Mua thêm sản phẩm khác</a>--%>
                     </div>
                     <div class="container">
                         <div class="list-items">

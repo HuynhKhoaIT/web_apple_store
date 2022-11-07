@@ -197,7 +197,7 @@
                                 <ul class="pro-list p-0">
                                 <c:forEach items="${listNew}" var="o" >
                                     <li>
-                                        <a href="pages/detail_product/detail_product.jsp" class="pro-item">
+                                        <a href="ProductDetailControl?maSP=${o.maSP}" class="pro-item">
                                             <div class="item-top">
                                                 <div class="pro-img">
                                                     <img src="${o.anh }" alt="" />
