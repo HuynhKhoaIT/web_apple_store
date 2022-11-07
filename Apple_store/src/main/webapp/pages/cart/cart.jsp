@@ -1,67 +1,82 @@
 <%-- Created by IntelliJ IDEA. User: lelon Date: 21/10/2022 Time: 00:53 To change this template use File | Settings | File Templates. --%> <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../asset/css/cart.css" />
-	<link rel="stylesheet" href="../../asset/style.css">
-        <link rel="stylesheet" href="../../asset/font/themify-icons/themify-icons.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-Store</title>
+    <link rel="stylesheet" href="${root}asset/style.css">
+    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="${root}asset/css/cart.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Document</title>
-    </head>
+</head>
     <body>
         <div class="main">
             <%@include file="../include/header2.jsp"%>
             <div class="content">
                 <div class="subcontainer">
                     <div class="subheading">
-                        <button class="check_add">Add</button>
                         <h3 class="inline-block">
                             GIỎ HÀNG CỦA BẠN
                             <!-- <span>(1 sản phẩm)</span>-->
                         </h3>
-                        <a href="" class="float-right home-link">Mua thêm sản phẩm khác</a>
+                        <a href="#" class="float-right home-link">Mua thêm sản phẩm khác</a>
                     </div>
                     <div class="container">
                         <div class="list-items">
+                        <c:set var="o" value="${requestScope.cart}"/>
+                        <c:set var="tt" value="0"/>
+                        <c:forEach items="${o.items}" var="i">
+                            <c:set var="tt" value="${tt+1}"/>
                             <div class="items">
                                 <div class="pic float-left">
-                                    <img id="items-pic" src="../../asset/img/ip13-pro-max.jpeg" alt="Sản phẩm" />
+                                    <img id="items-pic" src="${i.product.anh}" alt="Sản phẩm" />
                                 </div>
-
                                 <div class="float-left">
                                     <div class="items-type float-left">
-                                        <h3 class="items-name">iPhone 13 128GB</h3>
-                                        <div class="colors">
-                                            <span>Màu</span>
-                                            <ul class="ordercolorful"></ul>
-                                        </div>
+                                        <h3 class="items-name">${i.product.tenSP}</h3>
+<%--                                        <div class="colors">--%>
+<%--                                            <span>Màu</span>--%>
+<%--                                            <ul class="ordercolorful"></ul>--%>
+<%--                                        </div>--%>
                                     </div>
                                     <div class="items-price float-left">
-                                        <p class="end-price"><span>19.190.000</span> <sup>đ</sup></p>
-                                        <p class="price"><span>24.990.000</span> <sup>đ</sup></p>
-                                        <p class="discount inline-block">Giảm -30 %</p>
+                                        <p class="end-price"><span>${i.product.giaKhuyenMai}</span> <sup>đ</sup></p>
+                                        <p class="price"><span>${i.product.giaBanThuong}</span> <sup>đ</sup></p>
+                                        <p class="discount inline-block">Giảm ${i.product.giaKhuyenMai - i.product.giaBanThuong}</p>
                                     </div>
 
                                     <div class="items-amount float-left">
                                         <div class="wrapper">
-                                            <span class="minus">-</span>
-                                            <span class="num inline-block">01</span>
-                                            <span class="plus">+</span>
+                                            <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>
+                                            <span class="inline-block">${i.quantity}</span>
+                                            <span><a href="process?num=1&id=${i.product.maSP}">+</a></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="remove_item float-right">
-                                    <i class="close-icon ti-close"></i>
+                                    <form action="process" method="POST">
+                                        <input type="hidden" name="id" value="${i.product.maSP}" />
+                                        <a href="#" onclick="this.parentNode.submit()"> <i class="close-icon ti-close" > </i></a>
+                                    </form>
                                     <div class="clear"></div>
                                 </div>
                             </div>
+                        </c:forEach>
                         </div>
-
                         <div class="bill-total">
                             <!-- <div class="voucher inline-block">
                               <p class="">Sử dụng mã giảm giá:</p>
@@ -74,15 +89,15 @@
                                 <ul class="bill-detal">
                                     <li class="temp-price">
                                         <label>Tạm tính:</label>
-                                        <p><span>24.990.000 </span><sup>đ</sup></p>
+                                        <p><span>${o.getFirstMoney()}</span><sup>đ</sup></p>
                                     </li>
                                     <li class="promo-price">
                                         <label>Khuyến mãi:</label>
-                                        <p><span>-5.800.000</span><sup>đ</sup></p>
+                                        <p><span>${o.getTotalMoney() - o.getFirstMoney()}</span><sup>đ</sup></p>
                                     </li>
                                     <li class="last-price">
                                         <label>Tổng tiền:</label>
-                                        <p><span>19.190.000 </span><sup>đ</sup></p>
+                                        <p><span>${o.getTotalMoney()}</span><sup>đ</sup></p>
                                     </li>
                                 </ul>
                             </div>
@@ -122,7 +137,6 @@
                                                 <span>(Chọn hình thức nhận hàng)</span>
                                             </button>
                                         </div>
-
                                         <div id="or">
                                             <p>Hoặc</p>
                                         </div>
@@ -141,6 +155,5 @@
             </div>
             <%@include file="../include/footer2.jsp"%>
         </div>
-        <script src="../../asset/js/cart.js"></script>
     </body>
 </html>

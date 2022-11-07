@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Apple_store:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="" />
+    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/AddToCartControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/CartControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProcessControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProductDetailControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/AnhSPDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/detail_product/detail_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/detail_product/detail_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/products/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/products/product.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -36,19 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/web_apple_store/Apple_store&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/HCMUTE/Nam3-HK1/CNPM/moi1/Apple_store/src/main/webapp/pages/detail_product",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi1\Apple_store\src\main\webapp\pages\detail_product" />
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi1\Apple_store\src\main\webapp\pages\cart" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DAO" />
+      <recent name="Control" />
+      <recent name="Model" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="web_apple_store" />
@@ -63,9 +103,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.652" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.652" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="18" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="Apple_store:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Apple_store" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="11f32d86-f41c-4505-9941-ba20bb36fb26" />
       </server-settings>
@@ -139,6 +185,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Apple_store:war exploded" />
+        </option>
       </method>
     </configuration>
   </component>
@@ -153,6 +202,7 @@
       <workItem from="1666100670031" duration="1378000" />
       <workItem from="1666102080656" duration="61000" />
       <workItem from="1667135702880" duration="317000" />
+      <workItem from="1667812594916" duration="1691000" />
     </task>
     <servers />
   </component>
