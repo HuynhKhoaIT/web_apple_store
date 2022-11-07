@@ -56,7 +56,7 @@
                               <div class="items-price">
                                  <p class="end-price"><span>${i.product.giaKhuyenMai}</span> <sup>đ</sup></p>
                                  <p class="price"><span>${i.product.giaBanThuong}</span> <sup>đ</sup></p>
-                                 <p class="discount inline-block">Giảm ${i.product.giaKhuyenMai - i.product.giaBanThuong}</p>
+                                 <p class="discount inline-block">Giảm ${i.product.giaKhuyenMai - i.product.giaBanThuong}</p
                               </div>
                               <div class="items-amount">
                                  <div class="wrapper">
