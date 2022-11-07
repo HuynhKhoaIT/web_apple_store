@@ -4,156 +4,156 @@
 <c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple-Store</title>
-    <link rel="stylesheet" href="${root}asset/style.css">
-    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="${root}asset/css/cart.css">
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-    <body>
-        <div class="main">
-            <%@include file="../include/header2.jsp"%>
-            <div class="content">
-                <div class="subcontainer">
-                    <div class="subheading">
-                        <h3 class="inline-block">
-                            GIỎ HÀNG CỦA BẠN
-                            <!-- <span>(1 sản phẩm)</span>-->
-                        </h3>
-                        <a href="#" class="float-right home-link">Mua thêm sản phẩm khác</a>
-                    </div>
-                    <div class="container">
-                        <div class="list-items">
-                        <c:set var="o" value="${requestScope.cart}"/>
-                        <c:set var="tt" value="0"/>
-                        <c:forEach items="${o.items}" var="i">
-                            <c:set var="tt" value="${tt+1}"/>
-                            <div class="items">
-                                <div class="pic float-left">
-                                    <img id="items-pic" src="${i.product.anh}" alt="Sản phẩm" />
-                                </div>
-                                <div class="float-left">
-                                    <div class="items-type float-left">
-                                        <h3 class="items-name">${i.product.tenSP}</h3>
-<%--                                        <div class="colors">--%>
-<%--                                            <span>Màu</span>--%>
-<%--                                            <ul class="ordercolorful"></ul>--%>
-<%--                                        </div>--%>
-                                    </div>
-                                    <div class="items-price float-left">
-                                        <p class="end-price"><span>${i.product.giaKhuyenMai}</span> <sup>đ</sup></p>
-                                        <p class="price"><span>${i.product.giaBanThuong}</span> <sup>đ</sup></p>
-                                        <p class="discount inline-block">Giảm ${i.product.giaKhuyenMai - i.product.giaBanThuong}</p>
-                                    </div>
-
-                                    <div class="items-amount float-left">
-                                        <div class="wrapper">
-                                            <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>
-                                            <span class="inline-block">${i.quantity}</span>
-                                            <span><a href="process?num=1&id=${i.product.maSP}">+</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="remove_item float-right">
-                                    <form action="process" method="POST">
-                                        <input type="hidden" name="id" value="${i.product.maSP}" />
-                                        <a href="#" onclick="this.parentNode.submit()"> <i class="close-icon ti-close" > </i></a>
-                                    </form>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </c:forEach>
-                        </div>
-                        <div class="bill-total">
-                            <!-- <div class="voucher inline-block">
-                              <p class="">Sử dụng mã giảm giá:</p>
-                              <div class="voucher-code">
-                                  <input type="text" placeholder="Nhập mã giảm giá" class="input voucher-input">
-                                  <button id="check-voucher">Áp dụng</button>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Apple-Store</title>
+      <link rel="stylesheet" href="${root}asset/style.css">
+      <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css">
+      <link rel="stylesheet" href="${root}asset/css/cart.css">
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+         />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Latest compiled JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="main">
+         <%@include file="../include/header2.jsp"%>
+         <div class="content">
+            <div class="subcontainer">
+               <div class="subheading">
+                  <h3 class="inline-block">
+                     GIỎ HÀNG CỦA BẠN
+                     <!-- <span>(1 sản phẩm)</span>-->
+                  </h3>
+                  <a href="#" class="float-right home-link">Mua thêm sản phẩm khác</a>
+               </div>
+               <div class="container">
+                  <div class="list-items">
+                     <c:set var="o" value="${requestScope.cart}"/>
+                     <c:set var="tt" value="0"/>
+                     <c:forEach items="${o.items}" var="i">
+                        <c:set var="tt" value="${tt+1}"/>
+                        <div class="items col-md-12 col-sm-12 col-12">
+                           <div class="pic col-md-2 com-sm-3 col-2">
+                              <img id="items-pic" src="${i.product.anh}" alt="Sản phẩm" />
+                           </div>
+                           <div class="col-md-9 com-sm-8 col-9">
+                              <div class="items-type">
+                                 <h3 class="items-name">${i.product.tenSP}</h3>
+                                 <%--                                        <div class="colors">--%>
+                                 <%--                                            <span>Màu</span>--%>
+                                 <%--                                            <ul class="ordercolorful"></ul>--%>
+                                 <%--                                        </div>--%>
                               </div>
-                          </div> -->
-                            <div class="price float-right">
-                                <ul class="bill-detal">
-                                    <li class="temp-price">
-                                        <label>Tạm tính:</label>
-                                        <p><span>${o.getFirstMoney()}</span><sup>đ</sup></p>
-                                    </li>
-                                    <li class="promo-price">
-                                        <label>Khuyến mãi:</label>
-                                        <p><span>${o.getTotalMoney() - o.getFirstMoney()}</span><sup>đ</sup></p>
-                                    </li>
-                                    <li class="last-price">
-                                        <label>Tổng tiền:</label>
-                                        <p><span>${o.getTotalMoney()}</span><sup>đ</sup></p>
-                                    </li>
-                                </ul>
-                            </div>
+                              <div class="items-price">
+                                 <p class="end-price"><span>${i.product.giaKhuyenMai}</span> <sup>đ</sup></p>
+                                 <p class="price"><span>${i.product.giaBanThuong}</span> <sup>đ</sup></p>
+                                 <p class="discount inline-block">Giảm ${i.product.giaKhuyenMai - i.product.giaBanThuong}</p>
+                              </div>
+                              <div class="items-amount">
+                                 <div class="wrapper">
+                                    <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>
+                                    <span class="inline-block">${i.quantity}</span>
+                                    <span><a href="process?num=1&id=${i.product.maSP}">+</a></span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="remove_item col-md-1 com-sm-1 col-1">
+                              <form action="process" method="POST">
+                                 <input type="hidden" name="id" value="${i.product.maSP}" />
+                                 <a href="#" onclick="this.parentNode.submit()"> <i class="close-icon ti-close" > </i></a>
+                              </form>
+                              <div class="clear"></div>
+                           </div>
                         </div>
-                        <form action="" class="cus-form">
-                            <p class="sub-title">Thông tin khách hàng</p>
-                            <ul class="form">
-                                <li class="row">
-                                    <label class="label">Họ và tên: <sup>*</sup></label>
-                                    <div class="float-right">
-                                        <input class="input" type="text" placeholder="Nhập họ và tên" id="name" />
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li class="row">
-                                    <label class="label">Số điện thoại: <sup>*</sup></label>
-                                    <div class="float-right">
-                                        <input class="input" type="text" placeholder="Số điện thoại" id="phone" />
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li class="row" class="email">
-                                    <label class="label">
-                                        Email:
-                                        <span class="inline-block">(không bắt buộc)</span>
-                                    </label>
-                                    <div class="float-right">
-                                        <input class="input" type="email" placeholder="Email" class="email" />
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li class="row">
-                                    <div class="btn-container">
-                                        <div>
-                                            <button type="button" class="btn" id="next-step" onclick="send()">
-                                                <strong>Tiếp tục</strong>
-                                                <span>(Chọn hình thức nhận hàng)</span>
-                                            </button>
-                                        </div>
-                                        <div id="or">
-                                            <p>Hoặc</p>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn" id="order-fast">
-                                                <strong>Đặt hàng luôn</strong>
-                                                <span>FPT Shop sẽ gọi cho quý khách</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                </div>
+                     </c:forEach>
+                  </div>
+                  <div class="bill-total">
+                     <!-- <div class="voucher inline-block">
+                        <p class="">Sử dụng mã giảm giá:</p>
+                        <div class="voucher-code">
+                            <input type="text" placeholder="Nhập mã giảm giá" class="input voucher-input">
+                            <button id="check-voucher">Áp dụng</button>
+                        </div>
+                        </div> -->
+                     <div class="price float-right">
+                        <ul class="bill-detal">
+                           <li class="temp-price">
+                              <label>Tạm tính:</label>
+                              <p><span>${o.getFirstMoney()}</span><sup>đ</sup></p>
+                           </li>
+                           <li class="promo-price">
+                              <label>Khuyến mãi:</label>
+                              <p><span>${o.getTotalMoney() - o.getFirstMoney()}</span><sup>đ</sup></p>
+                           </li>
+                           <li class="last-price">
+                              <label>Tổng tiền:</label>
+                              <p><span>${o.getTotalMoney()}</span><sup>đ</sup></p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <form action="" class="cus-form">
+                     <p class="sub-title">Thông tin khách hàng</p>
+                     <ul class="form">
+                        <li class="row">
+                           <p class="title-2 col-md-4">Họ và tên: <sup>*</sup></p>
+                           <div class="col-md-8">
+                              <input class="input" type="text" placeholder="Nhập họ và tên" id="name" />
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row">
+                           <p class="title-2 col-md-4">Số điện thoại: <sup>*</sup></p>
+                           <div class="col-md-8 ">
+                              <input class="input" type="text" placeholder="Số điện thoại" id="phone" />
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row" class="email">
+                           <p class="title-2 col-md-4">
+                           Email:
+                           <span class="inline-block">(không bắt buộc)</span>
+                           </p>
+                           <div class="col-md-8">
+                              <input class="input" type="email" placeholder="Email" class="email" />
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row">
+                        	<div class="col-md-4">
+                        	</div>
+                           <div class="btn-container col-md-8">
+                              <div>
+                                 <button type="button" class="btn" id="next-step" onclick="send()">
+                                 <strong>Tiếp tục</strong>
+                                 <span>(Chọn hình thức nhận hàng)</span>
+                                 </button>
+                              </div>
+                              <div id="or">
+                                 <p>Hoặc</p>
+                              </div>
+                              <div>
+                                 <button type="button" class="btn" id="order-fast">
+                                 <strong>Đặt hàng luôn</strong>
+                                 <span>FPT Shop sẽ gọi cho quý khách</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </form>
+               </div>
             </div>
-            <%@include file="../include/footer2.jsp"%>
-        </div>
-    </body>
+         </div>
+      </div>
+   </body>
 </html>
