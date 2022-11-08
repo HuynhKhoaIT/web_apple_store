@@ -21,7 +21,7 @@ public class SanPhamControl extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
        String maloai=request.getParameter("maloai");
        String madm=request.getParameter("madm");
-       
+       String sort = request.getParameter("sort");
         SanPhamDAO sanphamdao = new SanPhamDAO();
         List<SanPham> listsp;
         List<DanhMuc> listdm;
@@ -40,8 +40,13 @@ public class SanPhamControl extends HttpServlet{
         	listdm = sanphamdao.getAlldanhmuc(ml);
         	tl =sanphamdao.gettenloai(ml);
         } 
-               
-       
+        
+        if(sort!=null && madm==null) {
+        	listsp = sanphamdao.getSortSPTang(sort);
+        	System.out.println(listsp);
+        }
+        
+        System.out.println(listsp);
         
         request.setAttribute("listsp", listsp);
         request.setAttribute("listdm", listdm);

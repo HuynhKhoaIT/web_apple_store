@@ -26,10 +26,10 @@ public class NewProductControl extends HttpServlet {
 		NewProductDAO newproducdao = new NewProductDAO();
 		SanPhamDAO sanphamdao = new SanPhamDAO();
 		List<SanPham> list = newproducdao.newProduct();
-		List<LoaiSP> listlsp = sanphamdao.getAllloaisp();
+		/* List<LoaiSP> listlsp = sanphamdao.getAllloaisp(); */
 
 		request.setAttribute("listNew", list);
-		request.setAttribute("listlsp", listlsp);
+		/* request.setAttribute("listlsp", listlsp); */
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
 	}

@@ -170,6 +170,60 @@ public class SanPhamDAO
 
 	}
 	
+//lọc sản phẩm theo giá tiền 
+	public List<SanPham> getSortSPTang(String sort)
+	{
+		
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where MaDM = ?\r\n"
+				+ "order by GiaBanThuong ASC;\r\n";
+		try {
+				conn =new ConnectJDBC().getConnection();
+				ps =conn.prepareStatement(query);
+				ps.setString(1,sort);
+				rs =ps.executeQuery();
+				while(rs.next())
+				{
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				}
+		}
+			catch (Exception e) {
+			}
+		return list;
+	}
+	
+	public List<SanPham> getSortSPGiam(String sort)
+	{
+		
+		List<SanPham> list = new ArrayList<>();
+		String query = "select * From SanPham Where MaDM = ?\r\n"
+				+ "order by GiaBanThuong desc;\r\n";
+		try {
+				conn =new ConnectJDBC().getConnection();
+				ps =conn.prepareStatement(query);
+				ps.setString(1,sort);
+				rs =ps.executeQuery();
+				while(rs.next())
+				{
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				}
+		}
+			catch (Exception e) {
+			}
+		return list;
+	}
+
+	
+	public static void main(String[] args) {
+		SanPhamDAO iphonedao = new SanPhamDAO();
+        List<SanPham> list = iphonedao.getSortSPTang("1");
+
+        for(SanPham o : list) {
+			System.out.println(o);
+		}
+    }
 }
 	
 

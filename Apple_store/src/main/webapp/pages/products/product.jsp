@@ -57,16 +57,18 @@
                             <div class="content-sort">
                                 <div class="text">Sắp xếp theo:</div>
                                 <div class="dropdown">
-                                    <button class="btn btn-outline" type="button" data-toggle="dropdown">Bán chạy nhất
-                                        <span class="caret"></span></button>
+                                    <button class="btn btn-outline" type="button" data-toggle="dropdown">Mới Nhất
+                                        <span class="caret"></span>
+                                    </button>
                                     <ul class="dropdown-menu">
-                                        <li class="tab-item"><a href="#">Bán chạy nhất</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=${o.maDM}">Giá thấp đến cao</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=${o.maDM}">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="#">Mới Nhất</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=1">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=1">Giá cao đến thấp</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="tab-pane">
                         <div class="product-list">
