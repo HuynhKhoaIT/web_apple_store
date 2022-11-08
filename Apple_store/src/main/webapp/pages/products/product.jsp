@@ -60,9 +60,9 @@
                                     <button class="btn btn-outline" type="button" data-toggle="dropdown">Bán chạy nhất
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Bán chạy nhất</a></li>
-                                        <li><a href="#">Giá thấp đến cao</a></li>
-                                        <li><a href="#">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="#">Bán chạy nhất</a></li>
+                                        <li class="tab-item"><a href="#">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="#">Giá cao đến thấp</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -129,6 +129,7 @@
     <%@include file="../include/footer2.jsp"%>
 </div>
 </div>
+<script src="${root}asset/js/product.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
