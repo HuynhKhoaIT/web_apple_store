@@ -129,7 +129,6 @@
     <%@include file="../include/footer2.jsp"%>
 </div>
 </div>
-<script src="${root}asset/js/product.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
