@@ -61,8 +61,8 @@
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                         <li class="tab-item"><a href="#">Bán chạy nhất</a></li>
-                                        <li class="tab-item"><a href="#">Giá thấp đến cao</a></li>
-                                        <li class="tab-item"><a href="#">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=${o.maDM}">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=${o.maDM}">Giá cao đến thấp</a></li>
                                     </ul>
                                 </div>
                             </div>

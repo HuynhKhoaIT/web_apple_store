@@ -193,7 +193,7 @@ public class SanPhamDAO
 		return list;
 	}
 	
-	public List<SanPham> getSortSPGiam(String madm)
+	public List<SanPham> getSortSPGiam(String sort)
 	{
 		
 		List<SanPham> list = new ArrayList<>();
@@ -202,7 +202,7 @@ public class SanPhamDAO
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
-				ps.setString(1,madm);
+				ps.setString(1,sort);
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
