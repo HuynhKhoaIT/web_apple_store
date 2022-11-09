@@ -29,7 +29,7 @@ public class Ad_UserControl extends HttpServlet {
 
         request.setAttribute("listKhachHang",listKH);
 
-        request.getRequestDispatcher("/shop/user.jsp").forward(request,response);
+        request.getRequestDispatcher("/admin/user.jsp").forward(request,response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

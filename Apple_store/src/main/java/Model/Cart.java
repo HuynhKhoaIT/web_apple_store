@@ -12,7 +12,10 @@ public class Cart {
         return items;
     }
     public int getQuantityById(int id){
-        return getItemById(id).getQuantity();
+        if(getItemById(id) !=null ){
+            return getItemById(id).getQuantity();
+        }
+        else return 0;
     }
     private Item getItemById(int id){
         for(Item i:items) {

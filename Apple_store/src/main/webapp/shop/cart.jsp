@@ -34,7 +34,7 @@
                      GIỎ HÀNG CỦA BẠN
                      <!-- <span>(1 sản phẩm)</span>-->
                   </h3>
-                  <a href="#" class="float-right home-link">Mua thêm sản phẩm khác</a>
+                  <a href="http://localhost:8080/Apple_store" class="float-right home-link">Mua thêm sản phẩm khác</a>
                </div>
                <div class="container">
                   <div class="list-items">
@@ -49,10 +49,10 @@
                            <div class="col-md-9 com-sm-8 col-9">
                               <div class="items-type">
                                  <h3 class="items-name">${i.product.tenSP}</h3>
-                                 <%--                                        <div class="colors">--%>
-                                 <%--                                            <span>Màu</span>--%>
-                                 <%--                                            <ul class="ordercolorful"></ul>--%>
-                                 <%--                                        </div>--%>
+                                    <%--                                        <div class="colors">--%>
+                                    <%--                                            <span>Màu</span>--%>
+                                    <%--                                            <ul class="ordercolorful"></ul>--%>
+                                    <%--                                        </div>--%>
                               </div>
                               <div class="items-price">
                                  <p class="end-price"><span>${i.product.giaKhuyenMai}</span> <sup>đ</sup></p>
@@ -61,24 +61,24 @@
                               </div>
                               <div class="items-amount">
                                  <div class="wrapper">
-                                    <span>
-                                       <form action="process" method="POST">
-                                          <input type="hidden" name="id" value="${i.product.maSP}"/>
-                                          <input type="hidden" name="num" value="-1"/>
-                                          <a href="#" onclick="this.parentNode.submit()">-</a>
-                                       </form>
-                                    </span>
+                           <span>
+                              <form action="process" method="POST">
+                              <input type="hidden" name="id" value="${i.product.maSP}"/>
+                                 <input type="hidden" name="num" value="-1"/>
+                              <a href="#" onclick="this.parentNode.submit()">-</a>
+                              </form>
+                           </span>
                                     <span class="inline-block">${i.quantity}</span>
                                     <span>
-                                       <form action="process" method="POST">
-                                          <input type="hidden" name="id" value="${i.product.maSP}" />
-                                          <input type="hidden" name="num" value="1"/>
-                                          <a href="#" onclick="this.parentNode.submit()">+</a>
-                                       </form>
-                                    </span>
-                                    <%--                           <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>--%>
-                                    <%--                           <span class="inline-block">${i.quantity}</span>--%>
-                                    <%--                           <span><a href="process?num=1&id=${i.product.maSP}">+</a></span>--%>
+                              <form action="process" method="POST">
+                              <input type="hidden" name="id" value="${i.product.maSP}" />
+                                 <input type="hidden" name="num" value="1"/>
+                              <a href="#" onclick="this.parentNode.submit()">+</a>
+                              </form>
+                           </span>
+                                       <%--                           <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>--%>
+                                       <%--                           <span class="inline-block">${i.quantity}</span>--%>
+                                       <%--                           <span><a href="process?num=1&id=${i.product.maSP}">+</a></span>--%>
                                  </div>
                               </div>
                            </div>
@@ -100,7 +100,7 @@
                             <input type="text" placeholder="Nhập mã giảm giá" class="input voucher-input">
                             <button id="check-voucher">Áp dụng</button>
                         </div>
-                        </div> -->
+                       </div> -->
                      <div class="price float-right">
                         <ul class="bill-detal">
                            <li class="temp-price">
@@ -118,20 +118,22 @@
                         </ul>
                      </div>
                   </div>
-                  <form action="" class="cus-form">
+                  <form action="" class="cus-form" id="form-order" onsubmit="return formvalidate();">
                      <p class="sub-title">Thông tin khách hàng</p>
                      <ul class="form">
                         <li class="row">
                            <p class="title-2 col-md-4">Họ và tên: <sup>*</sup></p>
                            <div class="col-md-8">
-                              <input class="input" type="text" placeholder="Nhập họ và tên" id="name" required />
+                              <input class="input" type="text" placeholder="Nhập họ và tên" id="name" onblur="checkName()" name="name" />
+                              <small id="name_empty"></small>
                            </div>
                            <div class="clear"></div>
                         </li>
                         <li class="row">
                            <p class="title-2 col-md-4">Số điện thoại: <sup>*</sup></p>
                            <div class="col-md-8 ">
-                              <input class="input" type="text" placeholder="Số điện thoại" id="phone"  required/>
+                              <input class="input" type="text" placeholder="Số điện thoại" id="phone"  onblur="checkPhone()" name ="phone" />
+                              <small id="phone_empty"></small>
                            </div>
                            <div class="clear"></div>
                         </li>
@@ -141,14 +143,16 @@
                               <span class="inline-block">(không bắt buộc)</span>
                            </p>
                            <div class="col-md-8">
-                              <input class="input" type="email" placeholder="Email" class="email" />
+                              <input class="input" type="email" placeholder="Email" class="email" id="email" onblur="checkEmail()" name="email"/>
+                              <small id="email_empty"></small>
                            </div>
                            <div class="clear"></div>
                         </li>
                         <li class="row" class="email">
                            <p class="title-2 col-md-4">Địa chỉ: <sup>*</sup></p>
                            <div class="col-md-8">
-                              <input class="input" type="text" placeholder="Địa chỉ nhận hàng" class="diachi" required/>
+                              <input class="input" type="text" placeholder="Địa chỉ nhận hàng" class="address" id="address" onblur="checkAddress()" name="address"/>
+                              <small id="address_empty"></small>
                            </div>
                            <div class="clear"></div>
                         </li>
@@ -157,18 +161,18 @@
                            </div>
                            <div class="btn-container col-md-8">
                               <div>
-                                 <button type="button" class="btn" id="next-step" onclick="send()">
-                                 <strong>Tiếp tục</strong>
-                                 <span>(Chọn hình thức nhận hàng)</span>
+                                 <button type="button" class="btn" id="next-step" onclick="formvalidate()">
+                                    <strong>Tiếp tục</strong>
+                                    <span>(Chọn hình thức nhận hàng)</span>
                                  </button>
                               </div>
                               <div id="or">
                                  <p>Hoặc</p>
                               </div>
                               <div>
-                                 <button type="button" class="btn" id="order-fast">
-                                 <strong>Đặt hàng luôn</strong>
-                                 <span>FPT Shop sẽ gọi cho quý khách</span>
+                                 <button type="button" class="btn" id="order-fast" onclick="callServlet('POST')">
+                                    <strong>Đặt hàng luôn</strong>
+                                    <span>FPT Shop sẽ gọi cho quý khách</span>
                                  </button>
                               </div>
                            </div>
@@ -179,5 +183,6 @@
             </div>
          </div>
       </div>
+      <script src="${root}asset/js/cart.js"></script>
    </body>
 </html>
