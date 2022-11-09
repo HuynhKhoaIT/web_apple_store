@@ -554,6 +554,10 @@ a.float-right.home-link {
 .note-text.strong {
     color: #23ad5c;
 }
+#name_empty,#phone_empty,#address_empty,#email_empty{
+    color: red;
+    display: none;
+}
 
 @media (max-width: 480px) {
 	.subcontainer{

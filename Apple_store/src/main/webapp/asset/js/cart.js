@@ -118,3 +118,126 @@ function addCart() {
     amountItem();
     totalCart();
 }
+/// phần form người dùng
+function formvalidate(){
+    var resutl = true;
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var address = document.getElementById("address").value;
+
+    if(name.length == 0){
+        document.getElementById("name_empty").innerHTML = "Vui lòng nhập tên";
+        document.getElementById("name_empty").style.display = "block";
+        resutl = false;
+    }
+    else {
+        document.getElementById("name_empty").style.display = "none";
+    }
+
+    if(phone.length == 0){
+        document.getElementById("phone_empty").style.display = "block";
+        document.getElementById("phone_empty").innerHTML = "Vui lòng nhập số điện thoại";
+        resutl = false;
+    }
+    else{
+        if(!validatePhone(phone)) {
+            document.getElementById("phone_empty").style.display = "block";
+            document.getElementById("phone_empty").innerHTML = "Vui lòng nhập đúng định dạng số điện thoại bắt đầu với 84 hoặc 0 theo sao là 9 số";
+            resutl = false;
+        }
+        else{
+            document.getElementById("phone_empty").style.display = "none";
+        }
+    }
+    if(email.length != 0)
+    {
+        if(!isEmail(email)){
+            document.getElementById("email_empty").style.display = "block";
+            document.getElementById("email_empty").innerHTML = "Vui lòng nhập đúng định dạng email";
+            resutl = false;
+        }
+        else {
+            document.getElementById("email_empty").style.display = "none";
+        }
+    }
+    else {
+        document.getElementById("email_empty").style.display = "none";
+    }
+    if(address.length == 0){
+        document.getElementById("address_empty").style.display = "block";
+        document.getElementById("address_empty").innerHTML = "Vui lòng nhập địa chỉ nhận hàng";
+        resutl = false;
+    }
+    else {
+        document.getElementById("address_empty").style.display = "none";
+    }
+    if(resutl == true)
+    {
+        callServlet('POST');
+    }
+}
+function validatePhone(number) {
+    return /(84|0)+([3|5|7|8|9])+([0-9]{8})\b/.test(number);
+}
+function callServlet(methodType){
+    document.getElementById("form-order").action="orderControl";
+    document.getElementById("form-order").method=methodType;
+    document.getElementById("form-order").submit();
+}
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+function checkName(){
+    var name = document.getElementById("name").value;
+    if(name.length == 0){
+        document.getElementById("name_empty").style.display = "block";
+        document.getElementById("name_empty").innerHTML="Vui lòng nhập tên"
+    }
+    else {
+        document.getElementById("name_empty").style.display = "none";
+    }
+}
+function checkEmail(){
+    var email = document.getElementById("email").value;
+    if(email.length != 0)
+    {
+        if(!isEmail(email)){
+            document.getElementById("email_empty").style.display = "block";
+            document.getElementById("email_empty").innerHTML = "Vui lòng nhập đúng định dạng email";
+
+        }
+        else {
+            document.getElementById("email_empty").style.display = "none";
+        }
+    }
+    else {
+        document.getElementById("email_empty").style.display = "none";
+    }
+}
+function checkAddress(){
+    var address = document.getElementById("address").value;
+    if(address.length == 0){
+        document.getElementById("address_empty").style.display = "block";
+        document.getElementById("address_empty").innerHTML = "Vui lòng nhập địa chỉ nhận hàng";
+    }
+    else {
+        document.getElementById("address_empty").style.display = "none";
+    }
+
+}
+function checkPhone() {
+    var phone = document.getElementById("phone").value;
+    if (phone.length == 0) {
+        document.getElementById("phone_empty").style.display = "block";
+        document.getElementById("phone_empty").innerHTML = "Vui lòng nhập số điện thoại";
+    } else {
+        if (!validatePhone(phone)) {
+            document.getElementById("phone_empty").style.display = "block";
+            document.getElementById("phone_empty").innerHTML = "Vui lòng nhập đúng định dạng số điện thoại bắt đầu với 84 hoặc 0 theo sao là 9 số";
+        } else {
+            document.getElementById("phone_empty").style.display = "none";
+        }
+    }
+}
+

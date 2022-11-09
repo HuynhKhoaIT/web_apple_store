@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple-Store</title>
-    <link rel="stylesheet" href="${root}asset/style.css" />
-    <link rel="stylesheet" href="${root}asset/font/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./asset/style.css" />
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css" />
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
+</head>
     <body>
         <div id="main">
             <c:set var="items" value="${listlsp}" scope="request"/>

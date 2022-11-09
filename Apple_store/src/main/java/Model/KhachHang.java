@@ -14,6 +14,12 @@ public class KhachHang {
     public KhachHang() {
     }
 
+    public KhachHang(String tenKH,String diaChi, String soDT) {
+        TenKH = tenKH;
+        DiaChi = diaChi;
+        SoDT = soDT;
+    }
+
     public KhachHang(int maKH, int maTK, String tenKH, String gioiTinh, Date namSinh, String diaChi, String soDT) {
         MaKH = maKH;
         MaTK = maTK;

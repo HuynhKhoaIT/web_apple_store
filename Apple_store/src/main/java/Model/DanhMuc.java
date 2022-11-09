@@ -8,7 +8,6 @@ public class DanhMuc {
 
     public DanhMuc() {
     }
-
     public DanhMuc(int maDM, int maLoai, String tenDM, String duongDan) {
         MaDM = maDM;
         MaLoai = maLoai;
