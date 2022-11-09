@@ -72,11 +72,9 @@
       <div class="header-nav">
         <div class="header-item">
           <ul>
-            <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=1" class="nav-sub">iPhone</a></li>
-            <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=2" class="nav-sub">iPad</a></li>
-            <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=3" class="nav-sub">Mac</a></li>
-            <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=4" class="nav-sub">Apple Watch</a></li>
-            <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=5" class="nav-sub">Phụ Kiện</a></li>
+            <c:forEach items="${listlsp}" var="o" >
+                <li><a href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
+            </c:forEach>
             <li><a href="#" class="nav-sub">Tin Tức</a></li>
           </ul>
           <div class="header-call">

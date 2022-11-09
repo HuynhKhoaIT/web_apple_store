@@ -114,23 +114,15 @@ public class SanPhamDAO
 			}
 		return list;
 	}
-	public List<LoaiSP> getAllloaisp()
-	{
-		List<LoaiSP> list = new ArrayList<>();
-		String query = "select * From LoaiSP";
-		try {
-				conn =new ConnectJDBC().getConnection();
-				ps =conn.prepareStatement(query);
-				rs =ps.executeQuery();
-				while(rs.next())
-				{
-					list.add(new LoaiSP(rs.getInt(1),rs.getString(2)));
-				}
-		}
-			catch (Exception e) {
-			}
-		return list;
-	}
+
+	/*
+	 * public List<LoaiSP> getAllloaisp() { List<LoaiSP> list = new ArrayList<>();
+	 * String query = "select * From LoaiSP"; try { conn =new
+	 * ConnectJDBC().getConnection(); ps =conn.prepareStatement(query); rs
+	 * =ps.executeQuery(); while(rs.next()) { list.add(new
+	 * LoaiSP(rs.getInt(1),rs.getString(2))); } } catch (Exception e) { } return
+	 * list; }
+	 */
 	public List<SanPham> getAll()
 	{
 		List<SanPham> list = new ArrayList<>();
