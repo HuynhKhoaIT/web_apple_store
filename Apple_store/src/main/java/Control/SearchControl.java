@@ -28,7 +28,7 @@ public class SearchControl extends HttpServlet {
 
 		request.setAttribute("listSearch", list);
 		request.setAttribute("txtS", txtSearch);
-		request.getRequestDispatcher("/pages/products/search_product.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/search_product.jsp").forward(request, response);
 
 	}
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

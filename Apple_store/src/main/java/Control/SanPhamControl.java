@@ -52,7 +52,7 @@ public class SanPhamControl extends HttpServlet{
         request.setAttribute("listdm", listdm);
         request.setAttribute("ml", ml);
         request.setAttribute("tl", tl);
-        request.getRequestDispatcher("/pages/products/product.jsp").forward(request, response);
+        request.getRequestDispatcher("/shop/product.jsp").forward(request, response);
         
     }
 	@Override

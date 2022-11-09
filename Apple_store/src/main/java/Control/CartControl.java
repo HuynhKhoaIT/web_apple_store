@@ -33,7 +33,7 @@ public class CartControl extends HttpServlet {
         Cart cart = new Cart(txt,list);
         cart.getItems().size();
         request.setAttribute("cart",cart);
-        request.getRequestDispatcher("/pages/cart/cart.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

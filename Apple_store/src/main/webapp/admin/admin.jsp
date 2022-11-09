@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,138 +17,23 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="${root}plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="./asset/dist/css/adminlte.min.css">
-<%--    <link rel="stylesheet" href="./asset/css/adminlte.min.css">--%>
+    <link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
+	<%-- <link rel="stylesheet" href="${root}asset/css/adminlte.min.css"> --%>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="./asset/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+        <img class="animation__shake" src="${root}asset/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
     </div>
     <!-- Navbar -->
-    <%@include file="./pages/include/ad_header.jsp"%>
+    <%@include file="./ad_header.jsp"%>
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <!-- Brand Logo -->
-        <a href="admin.jsp" class="brand-link">
-            <img src="./asset/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Apple Store</span>
-        </a>
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Sản phẩm -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Sản phẩm
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_products/product.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tất cả sản phẩm</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_adds/add_product.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm sản phẩm</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_products/category.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Danh mục</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- khách hàng -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Khách hàng
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_accounts/user.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tất cả khách hàng</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- Đơn hàng -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Đơn hàng
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_orders/order.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tất cả đơn hàng</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_orders/newOrders.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Đơn hàng mới</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Bài viết
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_products/blog.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tất cả bài viết</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_adds/add_blog.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Viết bài mới</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Apple_store/pages/ad_products/chuyen_muc.jsp" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Chuyên mục</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-</div>
-<!-- /.sidebar -->
-</aside>
+    <%@include file="./sidebar.jsp"%>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -185,7 +72,7 @@
                         <div class="icon">
                             <i class="ion ion-bag"></i>
                         </div>
-                        <a href="/Apple_store/pages/ad_orders/newOrders.jsp" class="small-box-footer">Thêm thông tin <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="/Apple_store/admin/newOrders.jsp" class="small-box-footer">Thêm thông tin <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -213,7 +100,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="/Apple_store/pages/ad_accounts/user.jsp" class="small-box-footer">Thêm thông tin <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="/Apple_store/admin/user.jsp" class="small-box-footer">Thêm thông tin <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -403,7 +290,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                      <td><a href="admin/invoice.html">OR9842</a></td>
                       <td>Call of Duty IV</td>
                       <td><span class="badge badge-success">Shipped</span></td>
                       <td>
@@ -411,7 +298,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                      <td><a href="admin/invoice.html">OR1848</a></td>
                       <td>Samsung Smart TV</td>
                       <td><span class="badge badge-warning">Pending</span></td>
                       <td>
@@ -419,7 +306,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td><a href="admin/invoice.html">OR7429</a></td>
                       <td>iPhone 6 Plus</td>
                       <td><span class="badge badge-danger">Delivered</span></td>
                       <td>
@@ -427,7 +314,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td><a href="admin/invoice.html">OR7429</a></td>
                       <td>Samsung Smart TV</td>
                       <td><span class="badge badge-info">Processing</span></td>
                       <td>
@@ -435,7 +322,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                      <td><a href="admin/invoice.html">OR1848</a></td>
                       <td>Samsung Smart TV</td>
                       <td><span class="badge badge-warning">Pending</span></td>
                       <td>
@@ -443,7 +330,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td><a href="admin/invoice.html">OR7429</a></td>
                       <td>iPhone 6 Plus</td>
                       <td><span class="badge badge-danger">Delivered</span></td>
                       <td>
@@ -451,7 +338,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                      <td><a href="admin/invoice.html">OR9842</a></td>
                       <td>Call of Duty IV</td>
                       <td><span class="badge badge-success">Shipped</span></td>
                       <td>
@@ -485,10 +372,10 @@
 </div>
 <!-- ./wrapper -->
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="${root}plugins/jquery/jquery.min.js"></script>
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
-<script src="./asset/dist/js/adminlte.js"></script>
+<script src="${root}asset/dist/js/adminlte.js"></script>
 </body>
 </html>

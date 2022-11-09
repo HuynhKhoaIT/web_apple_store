@@ -103,11 +103,9 @@
            </div>
            <div class="mn-body">
                <ul>
-                   <li class="b-b-600"><a href="/iphone">iPhone</a></li>
-                   <li class="b-b-600"><a href="/ipad">iPad</a></li>
-                   <li class="b-b-600"><a href="/mac">Mac</a></li>
-                   <li class="b-b-600"><a href="/watch">Apple Watch</a></li>
-                   <li class="b-b-600"><a href="/phu-kien">Phụ kiện</a></li>
+               <c:forEach items="${listlsp}" var="o" >
+                <li><a class="b-b-600" href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
+            	</c:forEach>
                    <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
                    <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
                </ul>

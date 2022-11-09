@@ -66,7 +66,7 @@ public class ProcessControl extends HttpServlet {
         c.setMaxAge(2*24*60*60);
         response.addCookie(c);
         request.setAttribute("cart",cart);
-        request.getRequestDispatcher("/pages/cart/cart.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
     }
 
     @Override
@@ -104,6 +104,6 @@ public class ProcessControl extends HttpServlet {
         }
         Cart cart=new Cart(out,list);
         request.setAttribute("cart",cart);
-        request.getRequestDispatcher("/pages/cart/cart.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
     }
 }

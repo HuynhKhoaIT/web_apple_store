@@ -18,7 +18,7 @@ import Model.SanPham;
  * Servlet implementation class SearchControl
  */
 @WebServlet(urlPatterns = {""})
-public class NewProductControl extends HttpServlet {
+public class ViewShop extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
@@ -30,7 +30,7 @@ public class NewProductControl extends HttpServlet {
 
 		request.setAttribute("listNew", list);
 		request.setAttribute("listlsp", listlsp);
-		request.getRequestDispatcher("/index.jsp").forward(request, response);
+		request.getRequestDispatcher("shop/index.jsp").forward(request, response);
 	}
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		processRequest(req, resp);

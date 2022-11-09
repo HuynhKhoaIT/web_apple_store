@@ -25,7 +25,7 @@ public class ProductDetailControl extends HttpServlet {
         List<AnhSanPham> listAnhSP= anhSPDAO.getAnhSPByID(id);
         request.setAttribute("listAnhSP",listAnhSP);
         request.setAttribute("SanPham",sanPham);
-        request.getRequestDispatcher("/pages/detail_product/detail_product.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/detail_product.jsp").forward(request,response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
