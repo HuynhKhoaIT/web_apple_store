@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.DanhMuc;
 import Model.LoaiSP;
@@ -20,23 +19,19 @@ public class SanPhamControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        String maloai=request.getParameter("maloai");
-        String madm=request.getParameter("madm");
-        String sort = request.getParameter("sort");
-
+       String maloai=request.getParameter("maloai");
+       String madm=request.getParameter("madm");
+       String sort = request.getParameter("sort");
+       String gia = request.getParameter("gia");
+       
         SanPhamDAO sanphamdao = new SanPhamDAO();
-        LoaispDAO loaispDAO = new LoaispDAO();
-        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-
         List<SanPham> listsp;
         List<DanhMuc> listdm;
-
-
         String ml =sanphamdao.getmaloai(madm);
         String tl ;
         if(madm==null)
         {
+        	
         	listsp = sanphamdao.getAllsanphamtheodm(maloai);
         	listdm = sanphamdao.getAlldanhmuc(maloai);
         	tl =sanphamdao.gettenloai(maloai);
@@ -47,19 +42,22 @@ public class SanPhamControl extends HttpServlet{
         	listdm = sanphamdao.getAlldanhmuc(ml);
         	tl =sanphamdao.gettenloai(ml);
         } 
-        
-        if(sort!=null && madm==null) {
-        	listsp = sanphamdao.getSortSPTang(sort);
-        	System.out.println(listsp);
+       
+        String S1="cao-den-thap";
+        String S2="thap-den-cao";
+        if(gia!=null && gia.equals(S1)) {
+        	listsp = sanphamdao.getSortSPGiam(sort);
+        	
         }
-        
-        System.out.println(listsp);
+        else if(gia!=null && gia.equals(S2)) {
+        	listsp = sanphamdao.getSortSPTang(sort);
+        }
 
-        request.setAttribute("listlsp", listlsp);
         request.setAttribute("listsp", listsp);
         request.setAttribute("listdm", listdm);
         request.setAttribute("ml", ml);
         request.setAttribute("tl", tl);
+        request.setAttribute("mdm", madm);
         request.getRequestDispatcher("/shop/product.jsp").forward(request, response);
         
     }
