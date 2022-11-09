@@ -26,7 +26,8 @@
 </head>
 <body>
 <div class="main">
-	<%@include file="./header2.jsp"%>
+    <c:set var="items" value="${listlsp}" scope="request"/>
+    <jsp:include page="./header2.jsp" />
  
 <!--     <div class="content">
         <div class="pro-container">

@@ -1,7 +1,9 @@
 package Control;
 
+import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.Cart;
+import Model.LoaiSP;
 import Model.SanPham;
 
 import javax.servlet.ServletException;
@@ -29,6 +31,10 @@ public class CartControl extends HttpServlet {
                 }
             }
         }
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+        request.setAttribute("listlsp",listlsp);
         System.out.println(txt);
         Cart cart = new Cart(txt,list);
         cart.getItems().size();

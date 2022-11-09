@@ -17,7 +17,9 @@
     </head>
     <body>
         <div id="main">
-            <%@include file="./header2.jsp"%>
+            <c:set var="items" value="${listlsp}" scope="request"/>
+            <jsp:include page="./header2.jsp" />
+
             <div id="slider">
                 <a href="" class="slider-img">
                     <img src="${root}asset/img/br.webp" alt="" />

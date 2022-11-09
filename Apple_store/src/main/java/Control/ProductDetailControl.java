@@ -1,8 +1,10 @@
 package Control;
 
 import DAO.AnhSPDAO;
+import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.AnhSanPham;
+import Model.LoaiSP;
 import Model.SanPham;
 
 import javax.servlet.ServletException;
@@ -23,6 +25,10 @@ public class ProductDetailControl extends HttpServlet {
         int id = Integer.parseInt(id_raw);
         SanPham sanPham = sanPhamDAO.getProductById(id);
         List<AnhSanPham> listAnhSP= anhSPDAO.getAnhSPByID(id);
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+        request.setAttribute("listlsp",listlsp);
         request.setAttribute("listAnhSP",listAnhSP);
         request.setAttribute("SanPham",sanPham);
         request.getRequestDispatcher("/shop/detail_product.jsp").forward(request,response);

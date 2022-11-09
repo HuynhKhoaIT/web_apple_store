@@ -23,7 +23,8 @@
 </head>
 <body>
 <div id="main">
-    <%@include file="./header2.jsp"%>
+    <c:set var="items" value="${listlsp}" scope="request"/>
+    <jsp:include page="./header2.jsp" />
     <div id="detail">
         <div class="detail-heading">
             <div class="detail-breadcrumb">

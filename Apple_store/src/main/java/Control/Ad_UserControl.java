@@ -1,7 +1,9 @@
 package Control;
 
 import DAO.KhachHangDAO;
+import DAO.LoaispDAO;
 import Model.KhachHang;
+import Model.LoaiSP;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +21,11 @@ public class Ad_UserControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         KhachHangDAO khachHangDAO = new KhachHangDAO();
         List<KhachHang> listKH = khachHangDAO.getAllKhachHang();
+
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+        request.setAttribute("listlsp",listlsp);
 
         request.setAttribute("listKhachHang",listKH);
 

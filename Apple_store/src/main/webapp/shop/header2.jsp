@@ -72,9 +72,9 @@
       <div class="header-nav">
         <div class="header-item">
           <ul>
-            <c:forEach items="${listlsp}" var="o" >
-                <li><a href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
-            </c:forEach>
+             <c:forEach items="${requestScope.items}" var="o">
+                 <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
+             </c:forEach>
             <li><a href="#" class="nav-sub">Tin Tức</a></li>
           </ul>
           <div class="header-call">
