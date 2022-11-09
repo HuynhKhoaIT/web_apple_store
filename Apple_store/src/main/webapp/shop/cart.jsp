@@ -25,7 +25,7 @@
    </head>
    <body>
       <div class="main">
-         <%@include file="../include/header2.jsp"%>
+         <%@include file="./header2.jsp"%>
          <div class="content">
             <div class="subcontainer">
                <div class="subheading">

@@ -23,7 +23,7 @@
 </head>
 <body>
 <div id="main">
-    <%@include file="../include/header2.jsp"%>
+    <%@include file="./header2.jsp"%>
 	
     <div id="category">
         <div class="container">
@@ -128,7 +128,7 @@
 
     </div>
 
-    <%@include file="../include/footer2.jsp"%>
+    <%@include file="./footer2.jsp"%>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
