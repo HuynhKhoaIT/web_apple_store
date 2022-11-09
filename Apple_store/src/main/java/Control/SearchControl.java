@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import DAO.LoaispDAO;
 import DAO.SearchDAO;
+import Model.LoaiSP;
 import Model.SanPham;
 
 /**
@@ -25,10 +27,14 @@ public class SearchControl extends HttpServlet {
 
 		SearchDAO searchdao = new SearchDAO();
 		List<SanPham> list = searchdao.searchByName(txtSearch);
+		LoaispDAO loaispDAO = new LoaispDAO();
+		List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+		request.setAttribute("listlsp",listlsp);
 
 		request.setAttribute("listSearch", list);
 		request.setAttribute("txtS", txtSearch);
-		request.getRequestDispatcher("/pages/products/search_product.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/search_product.jsp").forward(request, response);
 
 	}
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -23,7 +23,8 @@
 </head>
 <body>
 <div id="main">
-    <%@include file="../include/header2.jsp"%>
+    <c:set var="items" value="${listlsp}" scope="request"/>
+    <jsp:include page="./header2.jsp" />
     <div id="detail">
         <div class="detail-heading">
             <div class="detail-breadcrumb">
@@ -342,7 +343,7 @@
         </div>
     </div>
 
-    <%@include file="../include/footer2.jsp"%>
+    <%@include file="./footer2.jsp"%>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

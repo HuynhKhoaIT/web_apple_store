@@ -1,8 +1,10 @@
 package Control;
 
+import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.Cart;
 import Model.Item;
+import Model.LoaiSP;
 import Model.SanPham;
 
 import javax.servlet.ServletException;
@@ -62,11 +64,15 @@ public class ProcessControl extends HttpServlet {
                 txt+="#"+items.get(i).getProduct().getMaSP()+":"+items.get(i).getQuantity();
             }
         }
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+        request.setAttribute("listlsp",listlsp);
         Cookie c = new Cookie("cart",txt);
         c.setMaxAge(2*24*60*60);
         response.addCookie(c);
         request.setAttribute("cart",cart);
-        request.getRequestDispatcher("/pages/cart/cart.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
     }
 
     @Override
@@ -102,8 +108,11 @@ public class ProcessControl extends HttpServlet {
             c.setMaxAge(2*24*60*60);
             response.addCookie(c);
         }
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+        request.setAttribute("listlsp",listlsp);
         Cart cart=new Cart(out,list);
         request.setAttribute("cart",cart);
-        request.getRequestDispatcher("/pages/cart/cart.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
     }
 }

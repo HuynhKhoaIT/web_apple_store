@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../asset/css/cart.css" /> -->
-  <link rel="stylesheet" href="../../asset/style.css">
+  <link rel="stylesheet" href="${root}asset/style.css">
     <link\
             rel="stylesheet"
-            href="../../asset/font/themify-icons/themify-icons.css"
+            href="${root}asset/font/themify-icons/themify-icons.css"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
@@ -25,7 +26,8 @@
 </head>
 <body>
 <div class="main">
-	<%@include file="../include/header2.jsp"%>
+    <c:set var="items" value="${listlsp}" scope="request"/>
+    <jsp:include page="./header2.jsp" />
  
 <!--     <div class="content">
         <div class="pro-container">
@@ -171,7 +173,7 @@
             <div class="clear"></div>
         </div>
     </div>
- -->    <%@include file="../include/footer2.jsp"%>
+ -->    <%@include file="./footer2.jsp"%>
 </div>
 <script>
     const content_tab = document.querySelector('.js-content-tab')

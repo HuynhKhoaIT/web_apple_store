@@ -1,7 +1,9 @@
 package Control;
 
 import DAO.KhachHangDAO;
+import DAO.LoaispDAO;
 import Model.KhachHang;
+import Model.LoaiSP;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,9 +22,14 @@ public class Ad_UserControl extends HttpServlet {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
         List<KhachHang> listKH = khachHangDAO.getAllKhachHang();
 
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+        request.setAttribute("listlsp",listlsp);
+
         request.setAttribute("listKhachHang",listKH);
 
-        request.getRequestDispatcher("/pages/ad_accounts/user.jsp").forward(request,response);
+        request.getRequestDispatcher("/shop/user.jsp").forward(request,response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

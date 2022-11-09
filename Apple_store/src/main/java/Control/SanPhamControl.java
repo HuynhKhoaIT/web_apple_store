@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.DanhMuc;
 import Model.LoaiSP;
@@ -19,17 +20,23 @@ public class SanPhamControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       String maloai=request.getParameter("maloai");
-       String madm=request.getParameter("madm");
-       String sort = request.getParameter("sort");
+
+        String maloai=request.getParameter("maloai");
+        String madm=request.getParameter("madm");
+        String sort = request.getParameter("sort");
+
         SanPhamDAO sanphamdao = new SanPhamDAO();
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
         List<SanPham> listsp;
         List<DanhMuc> listdm;
+
+
         String ml =sanphamdao.getmaloai(madm);
         String tl ;
         if(madm==null)
         {
-        	
         	listsp = sanphamdao.getAllsanphamtheodm(maloai);
         	listdm = sanphamdao.getAlldanhmuc(maloai);
         	tl =sanphamdao.gettenloai(maloai);
@@ -47,12 +54,13 @@ public class SanPhamControl extends HttpServlet{
         }
         
         System.out.println(listsp);
-        
+
+        request.setAttribute("listlsp", listlsp);
         request.setAttribute("listsp", listsp);
         request.setAttribute("listdm", listdm);
         request.setAttribute("ml", ml);
         request.setAttribute("tl", tl);
-        request.getRequestDispatcher("/pages/products/product.jsp").forward(request, response);
+        request.getRequestDispatcher("/shop/product.jsp").forward(request, response);
         
     }
 	@Override
