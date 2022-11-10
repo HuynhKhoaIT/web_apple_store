@@ -64,18 +64,16 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-3 text-center">
-                      <img src="${root}asset/dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
+                      <img src="" alt="user-avatar" class="img-circle img-fluid">
                     </div>
                     <div class="col-9">
-                      <h2 class="lead"><b>Nguyễn Huỳnh Khoa</b></h2>
+                      <h2 class="lead"><b>${khachHang.tenKH}</b></h2>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Địa chỉ: chung cư R7 đức khải, bình khánh quận 2</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT: 0869950090</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Địa chỉ: ${khachHang.diaChi}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT: ${khachHang.soDT}</li>
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-gmail"></i></span> Email: huynhkhoa.itc@gmail.com</li>
-
                       </ul>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -91,15 +89,19 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>
-                <a href="../admin/invoice.jsp">
-                  1
-                </a>
-              </td>
-              <td>1300000</td>
-              <td> 13/04/2022</td>
-              <td>Đã giao</td>
+            <c:forEach var="l" items="${listDonHang}">
+              <tr>
+                <td>
+                  <a href="Ad_invoiceControl?maDH=${l.maDH}">
+                    ${l.maDH}
+                  </a>
+                </td>
+                <td> ${l.tongTien} </td>
+                <td> ${l.thoiGian} </td>
+                <td>Đã giao</td>
+              </tr>
+
+            </c:forEach>
 
             </tbody>
             <tfoot>
@@ -107,12 +109,9 @@
           </table>
         </div>
       </div>
-  </div>
-  <!-- /.card -->
-
-  </section>
+    </section>
   <!-- /.content -->
-</div>
+  </div>
 <!-- /.content-wrapper -->
 
 <!-- Control Sidebar -->

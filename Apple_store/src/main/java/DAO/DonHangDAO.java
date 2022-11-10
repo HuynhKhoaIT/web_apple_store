@@ -1,14 +1,14 @@
 package DAO;
 
 import Connection.ConnectJDBC;
-import Model.Cart;
-import Model.Item;
-import Model.KhachHang;
+import Model.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DonHangDAO {
     Connection conn=null;
@@ -57,5 +57,42 @@ public class DonHangDAO {
         catch (Exception e) {
         }
     }
+    public List<DonHang> getAllDonHangByMaKH(String id)
+    {
+        List<DonHang> list = new ArrayList<>();
+        String query = "Select * From DonHang where MaKH = ?";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setString(1,id);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDate(4),
+                        rs.getInt(5)));
+            }
+        }
+        catch (Exception e) {
+        }
+        return list;
+    }
+    public DonHang getDonHangByMaDH(String id)
+    {
+        String query = "Select * From DonHang where MaDH = ?";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setString(1,id);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDate(4), rs.getInt(5));
+            }
+        }
+        catch (Exception e) {
+        }
+        return null;
+    }
+
 
 }

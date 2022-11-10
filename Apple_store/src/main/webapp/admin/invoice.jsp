@@ -94,20 +94,19 @@
                 <div class="col-sm-4 invoice-col">
                   Đến
                   <address>
-                    <strong>Huỳnh Khoa</strong><br>
-                    Chung cư R7 Đức khải<br>
-                    Phường Bình Khánh, Quận 2<br>
-                    Phone: 087589494<br>
+                    <strong>${khachHang.tenKH}</strong><br>
+                    ${khachHang.diaChi} <br>
+                    Phone:  ${khachHang.soDT}<br>
                     Email: huynhkhoa@gmail.com
                   </address>
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 invoice-col">
-                  <b>Hóa Đơn #007612</b><br>
+                  <b>Hóa Đơn #${donHang.maDH}</b><br>
                   <br>
-                  <b>ID đặt hàng:</b> 4F3S8J<br>
-                  <b>Thanh toán:</b> 2/22/2014<br>
-                  <b>Tài khoản:</b> 087589494
+                  <b>ID đặt hàng:</b> ${khachHang.maKH}<br>
+                  <b>Thanh toán:</b> ${donHang.thoiGian} <br>
+                  <b>Tài khoản:</b> 087589494 Chưa làm chỗ này
                 </div>
                 <!-- /.col -->
               </div>
