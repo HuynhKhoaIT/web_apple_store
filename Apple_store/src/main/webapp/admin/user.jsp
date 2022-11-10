@@ -89,7 +89,7 @@
                       <a href="#" class="btn btn-sm bg-teal">
                         <i class="fas fa-comments"></i>
                       </a>
-                      <a href="./account.jsp" class="btn btn-sm btn-primary"> <i class="fas fa-user"></i> View Profile </a>
+                      <a href="Ad_AccountControl?maKH=${o.maKH}" class="btn btn-sm btn-primary"> <i class="fas fa-user"></i> View Profile </a>
                     </div>
                   </div>
                 </div>

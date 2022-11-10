@@ -33,6 +33,23 @@ public class KhachHangDAO {
         }
         return list;
     }
+    public KhachHang getKhachHangByID(String id){
+        String query = "Select * From KhachHang where MaKH = ?";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setString(1,id);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                return new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+                        rs.getDate(5),rs.getString(6),rs.getString(7));
+            }
+        }
+        catch (Exception e) {
+        }
+        return null;
+    }
     public KhachHang getKhachHangByPhone(String sdt){
         String query = "Select * From KhachHang where SoDT = ?";
         try {
