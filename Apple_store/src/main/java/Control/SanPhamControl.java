@@ -23,38 +23,74 @@ public class SanPhamControl extends HttpServlet{
 
         String maloai=request.getParameter("maloai");
         String madm=request.getParameter("madm");
-        String sort = request.getParameter("sort");
+        String sort_raw = request.getParameter("sort");
 
+        int maLoaiInt = 0;
+        if(maloai!=null)
+        {
+            maLoaiInt = Integer.parseInt(maloai);
+        }
+        int madmInt = 0;
+        if(madm!=null)
+        {
+            madmInt = Integer.parseInt(madm);
+        }
+        int sort = 0;
+        if(sort_raw!=null)
+        {
+            sort = Integer.parseInt(sort_raw);
+        }
         SanPhamDAO sanphamdao = new SanPhamDAO();
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
 
         List<SanPham> listsp;
         List<DanhMuc> listdm;
-
-
         String ml =sanphamdao.getmaloai(madm);
         String tl ;
-        if(madm==null)
+        if(madm==null || madmInt ==0)
         {
-        	listsp = sanphamdao.getAllsanphamtheodm(maloai);
+            if(sort == 0)
+            {
+                listsp = sanphamdao.getAllsanphamtheodm(maloai);
+            }
+            else if(sort == 1)
+            {
+                listsp = sanphamdao.getSortSPTangByMaLoai(maloai);
+            }
+            else
+            {
+                listsp = sanphamdao.getSortSPGiamTheoMaLoai(maloai);
+            }
         	listdm = sanphamdao.getAlldanhmuc(maloai);
         	tl =sanphamdao.gettenloai(maloai);
         }
         else
         {
-        	listsp = sanphamdao.getAllsanpham(madm);
+            if(sort == 0)
+            {
+                listsp = sanphamdao.getAllSPByDM(madm);
+            }
+            else if(sort == 1)
+            {
+                listsp = sanphamdao.getSortSPTangByDM(madm);
+            }
+            else
+            {
+                listsp = sanphamdao.getSortSPGiamByDM(madm);
+            }
         	listdm = sanphamdao.getAlldanhmuc(ml);
         	tl =sanphamdao.gettenloai(ml);
         } 
         
-        if(sort!=null && madm==null) {
-        	listsp = sanphamdao.getSortSPTang(sort);
-        	System.out.println(listsp);
-        }
+//        if(sort!=null && madm==null) {
+//        	listsp = sanphamdao.getSortSPTang(sort);
+//        	System.out.println(listsp);
+//        }
         
         System.out.println(listsp);
-
+        request.setAttribute("maDM",madmInt);
+        request.setAttribute("maLoai",maLoaiInt);
         request.setAttribute("listlsp", listlsp);
         request.setAttribute("listsp", listsp);
         request.setAttribute("listdm", listdm);
