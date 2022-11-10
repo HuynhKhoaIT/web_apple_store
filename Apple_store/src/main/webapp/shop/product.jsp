@@ -25,6 +25,9 @@
 <div id="main">
     <c:set var="items" value="${listlsp}" scope="request"/>
     <jsp:include page="./header2.jsp" />
+
+    <c:set var="danhmuc" value="${maDM}"/>
+    <c:set var="loaiSP" value="${maLoai}"/>
 	
     <div id="category">
         <div class="container">
@@ -43,10 +46,8 @@
                                 <div class="swiper-wrapper">
                                     <a href="loaisp?maloai=${ml}" class="swiper-slide active">Tất cả</a>
                                     <c:forEach items="${listdm}" var="o" >
-                                    
                                     	<a href="loaisp?madm=${o.maDM}" class="swiper-slide">${o.tenDM}</a>
                                     </c:forEach>
-                                    
                                 </div>
                             </div>
                             <div class="swiper-button-next sw-button">
@@ -62,9 +63,9 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li class="tab-item"><a href="#">Mới Nhất</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=1">Giá thấp đến cao</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=1">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=0&maloai=${maLoai}&madm=${danhmuc}">Mới Nhất</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=1&maloai=${maLoai}&madm=${danhmuc}">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=-1&maloai=${maLoai}&madm=${danhmuc}">Giá cao đến thấp</a></li>
                                     </ul>
                                 </div>
                             </div>

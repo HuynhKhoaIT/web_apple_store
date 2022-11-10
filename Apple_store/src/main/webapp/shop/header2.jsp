@@ -101,6 +101,7 @@
                    <i class="ti-close"> </i>
                </span>
            </div>
+           <c:set var="danhmuc" value="${maDM}"/>
            <div class="mn-body">
                <ul>
                <c:forEach items="${listlsp}" var="o" >
