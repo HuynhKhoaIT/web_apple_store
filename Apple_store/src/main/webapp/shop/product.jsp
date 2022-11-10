@@ -63,8 +63,8 @@
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li class="tab-item"><a href="#">Mới Nhất</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=-1&maloai=${maloai}&madm=${madm}">Giá thấp đến cao</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=1&maloai=${maloai}&madm=${madm}">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=-1&madm=${madm}">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=1&madm=${madm}">Giá cao đến thấp</a></li>
                                     </ul>
                                 </div>
                             </div>

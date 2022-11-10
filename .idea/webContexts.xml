@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/admin.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/admin/category.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/admin" />
         <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts/account.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts" />
         <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_adds/add_product.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_adds" />
         <entry key="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_orders/invoices.jsp" value="file://$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_orders" />

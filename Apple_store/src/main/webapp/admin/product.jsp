@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="${root}plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
+  <script src="https://cdn.tiny.cloud/1/2bx6jc8z08uypematg3cwy3p25otto1in889fkegl99djs2r/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
