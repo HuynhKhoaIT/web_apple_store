@@ -43,7 +43,6 @@ public class SanPhamControl extends HttpServlet{
         SanPhamDAO sanphamdao = new SanPhamDAO();
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-
         List<SanPham> listsp;
         List<DanhMuc> listdm;
         String ml =sanphamdao.getmaloai(madm);
