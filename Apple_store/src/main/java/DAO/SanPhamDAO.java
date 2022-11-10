@@ -56,6 +56,25 @@ public class SanPhamDAO
 			}
 		return maloai;
 	}
+	public String getmaloaibymasp(String masp)
+	{
+		
+		String maloai = null;
+		String query = "select MaLoai From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM Where MaSP=? ";
+		try {
+				conn =new ConnectJDBC().getConnection();
+				ps =conn.prepareStatement(query);
+				ps.setString(1,masp);
+				rs =ps.executeQuery();
+				while(rs.next())
+				{
+					maloai=rs.getString(1);
+				}
+		}
+			catch (Exception e) {
+			}
+		return maloai;
+	}
 	public String gettenloai(String maloai)
 	{
 		
@@ -75,12 +94,51 @@ public class SanPhamDAO
 			}
 		return tenloai;
 	}
+	public String gettensp(String masp)
+	{
+		
+		String tensp = null;
+		String query = "select TensP From SanPham Where MaSP=? ";
+		try {
+				conn =new ConnectJDBC().getConnection();
+				ps =conn.prepareStatement(query);
+				ps.setString(1,masp);
+				rs =ps.executeQuery();
+				while(rs.next())
+				{
+					tensp=rs.getString(1);
+				}
+		}
+			catch (Exception e) {
+			}
+		return tensp;
+	}
 	
 	public List<SanPham> getAllsanphamtheodm(String maloai)
 	{
 		
 		List<SanPham> list = new ArrayList<>();
 		String query = "select * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM Where MaLoai=? ";
+		try {
+				conn =new ConnectJDBC().getConnection();
+				ps =conn.prepareStatement(query);
+				ps.setString(1,maloai);
+				rs =ps.executeQuery();
+				while(rs.next())
+				{
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				}
+		}
+			catch (Exception e) {
+			}
+		return list;
+	}
+	public List<SanPham> getAllsanphamtop4theodm(String maloai)
+	{
+		
+		List<SanPham> list = new ArrayList<>();
+		String query = "select top 4 * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM  Where MaLoai=?  ";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
@@ -114,7 +172,7 @@ public class SanPhamDAO
 			}
 		return list;
 	}
-
+	
 	/*
 	 * public List<LoaiSP> getAllloaisp() { List<LoaiSP> list = new ArrayList<>();
 	 * String query = "select * From LoaiSP"; try { conn =new
