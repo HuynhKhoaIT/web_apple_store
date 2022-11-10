@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="them san pham vao gio hang">
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_UserControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/ad_accounts/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/cart/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/detail_product/detail_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/pages/detail_product/detail_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/product.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/HCMUTE/Nam3-HK1/CNPM/moi1/Apple_store/src/main/webapp/pages/ad_accounts",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/web_apple_store",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -198,6 +192,7 @@
       <workItem from="1667832174964" duration="2468000" />
       <workItem from="1667839824485" duration="56000" />
       <workItem from="1667840262995" duration="112000" />
+      <workItem from="1668067047901" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>

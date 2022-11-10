@@ -22,7 +22,6 @@ public class SanPhamControl extends HttpServlet{
        String maloai=request.getParameter("maloai");
        String madm=request.getParameter("madm");
        String sort = request.getParameter("sort");
-       String gia = request.getParameter("gia");
        
         SanPhamDAO sanphamdao = new SanPhamDAO();
         List<SanPham> listsp;
@@ -43,13 +42,11 @@ public class SanPhamControl extends HttpServlet{
         	tl =sanphamdao.gettenloai(ml);
         } 
        
-        String S1="cao-den-thap";
-        String S2="thap-den-cao";
-        if(gia!=null && gia.equals(S1)) {
+
+        if(sort=="1") {
         	listsp = sanphamdao.getSortSPGiam(sort);
-        	
         }
-        else if(gia!=null && gia.equals(S2)) {
+        else if(sort=="-1") {
         	listsp = sanphamdao.getSortSPTang(sort);
         }
 
@@ -57,7 +54,8 @@ public class SanPhamControl extends HttpServlet{
         request.setAttribute("listdm", listdm);
         request.setAttribute("ml", ml);
         request.setAttribute("tl", tl);
-        request.setAttribute("mdm", madm);
+        request.setAttribute("madm", madm);
+        request.setAttribute("maloai", maloai);
         request.getRequestDispatcher("/shop/product.jsp").forward(request, response);
         
     }
