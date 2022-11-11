@@ -1495,3 +1495,7 @@ img.avatar-blog {
    color: #000;
    text-decoration: none;
 }
+/* detail blog */
+.detail-content img{
+	width: 100%;
+}

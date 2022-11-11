@@ -30,7 +30,7 @@
 	            <div class="row">
 	                <div class="img-blog col-md-6 col-12">
 	                    <div class="blog-main">
-	                        <a href="#">
+	                        <a href="${root}shop/detail_blog.jsp">
 	                            <img class="avatar-blog" src="${root}asset/img/bn3.webp" alt="">
 	                            <div class="title1-blog">
 	                                <h3>Apple Watch Ultra chiếc đồng hồ thông minh không dành cho số đông</h3>
@@ -41,21 +41,21 @@
 	                        <ul>
 	                            <li>
 	                                <div class="item row">
-	                                    <a class="col-md-4 col-4" href="#">
+	                                    <a class="col-md-4 col-4" href="${root}shop/detail_blog.jsp">
 	                                        <img class="avatar-blog" src="${root}asset/img/bn1.webp" alt="">
 	                                    </a>
 	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a  href="#">Giấc mơ iPhone đã có type-C sẽ thành sự thật nhưng có tốt như nhiều người nghĩ?</a>
+	                                        <a  href="${root}shop/detail_blog.jsp">Giấc mơ iPhone đã có type-C sẽ thành sự thật nhưng có tốt như nhiều người nghĩ?</a>
 	                                    </div>
 	                                </div>
 	                            </li>
 	                            <li>
 	                                <div class="item  row">
-	                                    <a class="col-md-4 col-4" href="#">
+	                                    <a class="col-md-4 col-4" href="${root}shop/detail_blog.jsp">
 	                                        <img class="avatar-blog" src="${root}asset/img/bn3.webp" alt="">
 	                                    </a>
 	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="#">iPhone 14 Pro Max vượt xa các đối thủ Android trong thử nghiệm pin</a>
+	                                        <a href="${root}shop/detail_blog.jsp">iPhone 14 Pro Max vượt xa các đối thủ Android trong thử nghiệm pin</a>
 	                                    </div>
 	                                </div>
 	                            </li>
