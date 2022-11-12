@@ -10,6 +10,7 @@ import Connection.ConnectJDBC;
 import Model.DanhMuc;
 import Model.LoaiSP;
 import Model.SanPham;
+import Model.ChiTietDonHang;
 
 public class SanPhamDAO 
 {
