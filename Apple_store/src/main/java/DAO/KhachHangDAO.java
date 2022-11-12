@@ -120,6 +120,30 @@ public class KhachHangDAO {
         return null;
 
     }
+	public void UpdateCustomerInfo(int MaTK,String TenKH, String sex, String NamSinh, String DiaChi,String SoDT ) {
+    	System.out.println(java.sql.Date.valueOf(NamSinh));
+    	
+		String querry = "update KhachHang set TenKH=?,GioiTinh=?,DiaChi=?,SoDT=? where MaTK=?";
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+
+			ps = conn.prepareStatement(querry);
+
+			System.out.println("Thanh cong");
+			ps.setString(1, TenKH);
+			ps.setString(2, sex);
+			ps.setString(3, DiaChi);
+			ps.setString(4, SoDT);
+			ps.setInt(5, MaTK);
+			System.out.println("Thanh cong");
+			ps.executeUpdate();
+			System.out.print("Thanh cong");
+
+		} catch (Exception e) {
+		}
+	}
+
     public static void main(String[] args) {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
         List<KhachHang> listKhachHang = khachHangDAO.getAllKhachHang();
