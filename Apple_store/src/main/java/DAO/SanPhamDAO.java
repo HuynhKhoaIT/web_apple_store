@@ -328,7 +328,27 @@ public class SanPhamDAO
 		}
 		return list;
 	}
+public int TotalChiPhi() {
+		List<ChiTietDonHang> list = new ArrayList<ChiTietDonHang>();
+		list = new ChiTietDonHangDAO().getAllChiTietDonHang();
+		int total = 0;
+		for (ChiTietDonHang o : list) {
+			String query = "select * From SanPham where MaSP=?";
 
+			try {
+				conn = new ConnectJDBC().getConnection();
+				ps = conn.prepareStatement(query);
+				ps.setInt(1, o.getMaSP());
+				rs = ps.executeQuery();
+				while (rs.next()) {
+					total = total + rs.getInt(5) * o.getSoLuong();
+
+				}
+			} catch (Exception e) {
+			}
+		}
+		return total;
+	}
 }
 	
 
