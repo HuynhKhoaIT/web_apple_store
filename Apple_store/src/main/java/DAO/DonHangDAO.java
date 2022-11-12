@@ -94,5 +94,98 @@ public class DonHangDAO {
         return null;
     }
 
+public List<DonHang> loadTop10Order() {
+		String querry = "select top 10 * from DonHang order by MaDH desc ";
+		List<DonHang> list = new ArrayList<DonHang>();
+		try {
 
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+
+			}
+
+		} catch (Exception e) {
+		}
+		return list;
+	}
+
+	public List<DonHang> loadAllOrder() {
+		String querry = "select * from DonHang";
+		List<DonHang> list = new ArrayList<DonHang>();
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+
+			}
+
+		} catch (Exception e) {
+		}
+		return list;
+	}
+
+	public void UpdateStatus(int oldStatus, int MaDH) {
+		String querry = "update DonHang set MaTrangThai=? where MaDH=?";
+
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+
+			ps = conn.prepareStatement(querry);
+			if (oldStatus == 1)
+				ps.setInt(1, 2);
+			else
+				ps.setInt(1, 1);
+
+			ps.setInt(2, MaDH);
+			ps.executeUpdate();
+
+			System.out.println("Thanh cong");
+
+		} catch (Exception e) {
+		}
+	}
+	
+	
+	public List<DonHang> loadOrderByMaKH(int MaKH) {
+		String querry = "select * from DonHang where MaKH=?";
+		List<DonHang> list = new ArrayList<DonHang>();
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setInt(1, MaKH);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+
+			}
+
+		} catch (Exception e) {
+		}
+		return list;
+	}
+	public int totalPriceAllOrder() {
+		String querry = "select * from DonHang where MaTrangThai=1 ";
+		int total=0;
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				total=total+ rs.getInt(3);
+
+			}
+
+		} catch (Exception e) {
+		}
+		return total;
+	}
 }

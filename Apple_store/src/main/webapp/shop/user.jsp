@@ -1,35 +1,106 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lelon
-  Date: 21/10/2022
-  Time: 00:53
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <c:url value="/" var="root" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../../asset/css/cart.css" /> -->
-  <link rel="stylesheet" href="${root}asset/style.css">
-    <link\
-            rel="stylesheet"
-            href="${root}asset/font/themify-icons/themify-icons.css"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="stylesheet" href="../../asset/css/cart.css" /> -->
+<link rel="stylesheet" href="${root}asset/style.css">
+<link rel="stylesheet"
+	href="${root}asset/font/themify-icons/themify-icons.css" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Document</title>
 </head>
 <body>
-<div class="main">
-    <c:set var="items" value="${listlsp}" scope="request"/>
-    <jsp:include page="./header2.jsp" />
- 
-<!--     <div class="content">
+	<div class="main">
+		<c:set var="items" value="${listlsp}" scope="request" />
+		<jsp:include page="./header2.jsp" />
+
+
+		<section class="content">
+			<div class="container-fluid">
+				<!-- Small boxes (Stat box) -->
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<!-- small box -->
+						<div class="small-box bg-info">
+							<div class="inner">
+								<h3>150</h3>
+								<p>Thông tin cá nhân</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-bag"></i>
+							</div>
+							<a href="Customer?maTK=1"
+								class="small-box-footer">Xem chi tiết <i
+								class="fas fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+					<!-- ./col -->
+					<div class="col-lg-3 col-6">
+						<!-- small box -->
+						<div class="small-box bg-success">
+							<div class="inner">
+								<h3>
+									53<sup style="font-size: 20px">%</sup>
+								</h3>
+								<p>Thông tin tài khoản</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-stats-bars"></i>
+							</div>
+							<a href="Account?maTK=1" class="small-box-footer">Xem chi tiết <i
+								class="fas fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+					<!-- ./col -->
+					<div class="col-lg-3 col-6">
+						<!-- small box -->
+						<div class="small-box bg-warning">
+							<div class="inner">
+								<h3>44</h3>
+								<p>Danh sách đơn hàng</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-person-add"></i>
+							</div>
+							<a href="User_OrderControl?maTK=1" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+							</a>
+						</div>
+					</div>
+					<!-- ./col -->
+					<div class="col-lg-3 col-6">
+						<!-- small box -->
+						<div class="small-box bg-danger">
+							<div class="inner">
+								<h3>65</h3>
+								<p>Unique Visitors</p>
+							</div>
+							<div class="icon">
+								<i class="ion ion-pie-graph"></i>
+							</div>
+							<a href="#" class="small-box-footer">Xem chi tiết <i
+								class="fas fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+					<!-- ./col -->
+				</div>
+				<!-- /.row -->
+
+			</div>
+		</section>
+		<!-- /.row -->
+		<!--     <div class="content">
         <div class="pro-container">
             <div class="user-profile">
                 <div class="subnav">
@@ -173,58 +244,55 @@
             <div class="clear"></div>
         </div>
     </div>
- -->    <%@include file="./footer2.jsp"%>
-</div>
-<script>
-    const content_tab = document.querySelector('.js-content-tab')
-    const password_tab = document.querySelector('.js-password-tab')
-    const orders_tab = document.querySelector('.js-orders-tab')
+ -->
+		<%@include file="./footer2.jsp"%>
+	</div>
+	<script>
+		const content_tab = document.querySelector('.js-content-tab')
+		const password_tab = document.querySelector('.js-password-tab')
+		const orders_tab = document.querySelector('.js-orders-tab')
 
-    const btn_content = document.querySelector('.js-content-btn')
-    const btn_password = document.querySelector('.js-password-btn')
-    const btn_order = document.querySelector('.js-orders-btn')
+		const btn_content = document.querySelector('.js-content-btn')
+		const btn_password = document.querySelector('.js-password-btn')
+		const btn_order = document.querySelector('.js-orders-btn')
 
-    function show_content(){
+		function show_content() {
 
-        btn_content.classList.add('font-bold')
-        btn_password.classList.remove('font-bold')
-        btn_order.classList.remove('font-bold')
+			btn_content.classList.add('font-bold')
+			btn_password.classList.remove('font-bold')
+			btn_order.classList.remove('font-bold')
 
-        content_tab.classList.remove('display-off')
-        password_tab.classList.add('display-off')
-        orders_tab.classList.add('display-off')
-    }
+			content_tab.classList.remove('display-off')
+			password_tab.classList.add('display-off')
+			orders_tab.classList.add('display-off')
+		}
 
-    function show_password(){
+		function show_password() {
 
-        btn_password.classList.add('font-bold')
-        btn_content.classList.remove('font-bold')
-        btn_order.classList.remove('font-bold')
+			btn_password.classList.add('font-bold')
+			btn_content.classList.remove('font-bold')
+			btn_order.classList.remove('font-bold')
 
-        password_tab.classList.remove('display-off')
-        content_tab.classList.add('display-off')
-        orders_tab.classList.add('display-off')
-    }
+			password_tab.classList.remove('display-off')
+			content_tab.classList.add('display-off')
+			orders_tab.classList.add('display-off')
+		}
 
-    function show_orders(){
+		function show_orders() {
 
-        btn_order.classList.add('font-bold')
-        btn_password.classList.remove('font-bold')
-        btn_content.classList.remove('font-bold')
+			btn_order.classList.add('font-bold')
+			btn_password.classList.remove('font-bold')
+			btn_content.classList.remove('font-bold')
 
-        orders_tab.classList.remove('display-off')
-        password_tab.classList.add('display-off')
-        content_tab.classList.add('display-off')
-    }
+			orders_tab.classList.remove('display-off')
+			password_tab.classList.add('display-off')
+			content_tab.classList.add('display-off')
+		}
 
-
-
-    btn_content.addEventListener('click',show_content)
-    btn_password.addEventListener('click',show_password)
-    btn_order.addEventListener('click',show_orders)
-
-
-</script>
-<script src="./assets/js/main.js"></script>
+		btn_content.addEventListener('click', show_content)
+		btn_password.addEventListener('click', show_password)
+		btn_order.addEventListener('click', show_orders)
+	</script>
+	<script src="./assets/js/main.js"></script>
 </body>
 </html>
