@@ -21,6 +21,11 @@ import java.util.List;
 public class ProductDetailControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         SanPhamDAO sanPhamDAO = new SanPhamDAO();
         ThongSoKyThuatDAO tsktdao =new ThongSoKyThuatDAO();
         AnhSPDAO anhSPDAO = new AnhSPDAO();
