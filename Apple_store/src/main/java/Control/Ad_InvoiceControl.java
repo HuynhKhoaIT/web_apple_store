@@ -1,50 +1,60 @@
 package Control;
 
+import DAO.ChiTietDonHangDAO;
 import DAO.DonHangDAO;
-import DAO.ItemDAO;
 import DAO.KhachHangDAO;
+import DAO.SanPhamDAO;
+import Model.ChiTietDonHang;
 import Model.DonHang;
-import Model.Item;
 import Model.KhachHang;
+import Model.SanPham;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "Ad_invoiceControl", value = "/Ad_invoiceControl")
 public class Ad_InvoiceControl extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		List<SanPham> listSP = new ArrayList<SanPham>();
+		String maDH = request.getParameter("maDH");
 
-        String maDH = request.getParameter("maDH");
+		DonHangDAO donHangDAO = new DonHangDAO();
+		DonHang donHang = donHangDAO.getDonHangByMaDH(maDH);
 
-        DonHangDAO donHangDAO = new DonHangDAO();
-        DonHang donHang = donHangDAO.getDonHangByMaDH(maDH);
+		KhachHangDAO khachHangDAO = new KhachHangDAO();
+		KhachHang khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
 
+		
+		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();
+		List<ChiTietDonHang> list = dao.getChiTietSanPhamID(Integer.parseInt(maDH));
 
-        KhachHangDAO khachHangDAO = new KhachHangDAO();
-        KhachHang khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
+		
 
-        ItemDAO itemDAO = new ItemDAO();
-        List<Item> listItem = itemDAO.getAllItemByMaDH(maDH);
+		for (ChiTietDonHang o : list) {
+			SanPhamDAO d = new SanPhamDAO();
+			listSP.add(d.getProductById(o.getMaSP()));
+		}
+		
+	
+		request.setAttribute("khachHang", khachHang);
+		request.setAttribute("donHang", donHang);
+		request.setAttribute("size", list.size());
+		request.setAttribute("listDetail", list);
+		request.setAttribute("listSP", listSP);
+		request.getRequestDispatcher("/admin/invoice.jsp").forward(request, response);
+	}
 
-        request.setAttribute("listItem",listItem);
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-        request.setAttribute("khachHang",khachHang);
-        request.setAttribute("donHang",donHang);
-
-
-        request.getRequestDispatcher("/admin/invoice.jsp").forward(request,response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
+	}
 }
