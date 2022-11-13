@@ -92,15 +92,15 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/blog.jsp" class="nav-link">
+                            <a href="${root}Ad_Blog" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tất cả bài viết</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="${root}Ad_Blog" class="nav-link">
+                            <a href="${root}Ad_TaoBaiViet" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Viết bài mới</p>
+                                <p>Tạo bài mới</p>
                             </a>
                         </li>
                         <li class="nav-item">

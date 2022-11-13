@@ -33,7 +33,7 @@ public class Ad_AddBlog extends HttpServlet {
         String chitiet = request.getParameter("chitiet");
 
         Part part = request.getPart("image");
-        String realPath = request.getServletContext().getRealPath("/blog");
+        String realPath = request.getServletContext().getRealPath("/uploads");
         String filename
                 = Paths.get(part.getSubmittedFileName()).getFileName().toString();
 
@@ -42,7 +42,7 @@ public class Ad_AddBlog extends HttpServlet {
         }
         part.write(realPath+"/"+filename);
 
-        String anh = "blog/"+filename;
+        String anh = "uploads/"+filename;
 
         BaiVietDAO baiVietDAO = new BaiVietDAO();
         baiVietDAO.addBaiViet(tieude,chitiet,anh);

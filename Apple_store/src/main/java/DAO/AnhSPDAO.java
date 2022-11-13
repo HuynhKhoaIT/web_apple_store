@@ -32,6 +32,20 @@ public class AnhSPDAO {
         }
         return list;
     }
+    public void addAnhSP(int id, String anh)
+    {
+        String query = "insert into AnhSanPham(MaSP,Anh) values(?,?)";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setInt(1,id);
+            ps.setString(2,anh);
+            ps.executeUpdate();
+
+        }
+        catch (Exception e) {
+        }
+    }
     public static void main(String[] args) {
         AnhSPDAO anhSPDAO = new AnhSPDAO();
         List<AnhSanPham> list = anhSPDAO.getAnhSPByID(6);
