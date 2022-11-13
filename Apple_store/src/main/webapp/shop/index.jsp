@@ -132,91 +132,29 @@
                 <section id="content-blog">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/blog1.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chương trình Workshop
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn1.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chế độ Always On Display của iPhone 14 Pro khác hoàn toàn với các máy Android
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
+                            <c:forEach var="l" items="${listBaiViet}">
+                                <div class="col-md-6 col-sm-12 padding-0-12">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="${l.anh}" alt="" />
+                                            <a href="BlogDetailControl?maBV=${l.maBV}" class="card-btn">
+                                                Tin tức
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <a href="BlogDetailControl?maBV=${l.maBV}">
+                                                <div class="card-title line-clamp-2">
+                                                    ${l.tieuDeBV}
+                                                </div>
+                                                <div class="card-info">
+                                                    <span>Xem ngay</span>
+                                                    <i class="ti-angle-right"></i>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn3.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chương trình khách hàng thân thiết
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn4.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Hướng dẫn thanh toán trên trang F.Studio
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </div>
                     </div>
                 </section>
