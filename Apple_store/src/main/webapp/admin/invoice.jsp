@@ -71,10 +71,10 @@
               <!-- title row -->
               <div class="row">
                 <div class="col-12">
-                  <h4>
-                    <i class="fas fa-globe"></i> AdminLTE, Inc.
-                    <small class="float-right">Date: 2/10/2014</small>
-                  </h4>
+<%--                  <h4>--%>
+<%--                    <i class="fas fa-globe"></i> AdminLTE, Inc.--%>
+<%--                    <small class="float-right">Date: 2/10/2014</small>--%>
+<%--                  </h4>--%>
                 </div>
                 <!-- /.col -->
               </div>
@@ -105,8 +105,8 @@
                   <b>Hóa Đơn #${donHang.maDH}</b><br>
                   <br>
                   <b>ID đặt hàng:</b> ${khachHang.maKH}<br>
-                  <b>Thanh toán:</b> ${donHang.thoiGian} <br>
-                  <b>Tài khoản:</b> 087589494 Chưa làm chỗ này
+                  <b>Ngày:</b> ${donHang.thoiGian} <br>
+<%--                  <b>Tài khoản:</b> 087589494 Chưa làm chỗ này--%>
                 </div>
                 <!-- /.col -->
               </div>
@@ -121,39 +121,19 @@
                       <th>SL</th>
                       <th>Tên sản phẩm</th>
                       <th>Mã sản phẩm #</th>
-                      <th>Mô tả</th>
                       <th>Thành tiền</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Điện thoại ip 13 pro max</td>
-                      <td>455-981-221</td>
-                      <td>El snort testosterone trophy driving gloves handsome</td>
-                      <td>$64.50</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>apple watch series 7</td>
-                      <td>247-925-726</td>
-                      <td>Wes Anderson umami biodiesel</td>
-                      <td>$50.00</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Macbook pro M2</td>
-                      <td>735-845-642</td>
-                      <td>Terry Richardson helvetica tousled street art master</td>
-                      <td>$10.70</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Củ sạc iP</td>
-                      <td>422-568-642</td>
-                      <td>Tousled lomo letterpress</td>
-                      <td>$25.99</td>
-                    </tr>
+                    <c:forEach var="i" items="${listItem}">
+                      <tr>
+                        <td>${i.quantity}</td>
+                        <td>${i.product.tenSP}</td>
+                        <td> <a href="ProductDetailControl?maSP=${i.product.maSP}">${i.product.maSP}</a></td>
+                        <td>${i.quantity * i.price}</td>
+                      </tr>
+                    </c:forEach>
+
                     </tbody>
                   </table>
                 </div>
@@ -163,21 +143,26 @@
 
               <div class="row">
                 <div class="col-6">
-                  <p class="lead">Amount Due 2/22/2014</p>
+<%--                  <p class="lead">Amount Due 2/22/2014</p>--%>
 
                   <div class="table-responsive">
                     <table class="table">
-                      <tr>
-                        <th style="width:50%">Tổng tiền:</th>
-                        <td>$250.30</td>
-                      </tr>
-                      <tr>
-                        <th>phí ship:</th>
-                        <td>$5.00</td>
-                      </tr>
+<%--                      <tr>--%>
+<%--                        <th style="width:50%">Tổng tiền:</th>--%>
+<%--                        <td>$250.30</td>--%>
+<%--                      </tr>--%>
+<%--                      <tr>--%>
+<%--                        <th>phí ship:</th>--%>
+<%--                        <td>$5.00</td>--%>
+<%--                      </tr>--%>
+                        <c:set var="total" value="${0}"/>
+                        <c:forEach var="i" items="${listItem}">
+                        <c:set var="total" value="${total + i.quantity * i.price}" />
+                        </c:forEach>
+
                       <tr>
                         <th>Tổng đơn hàng:</th>
-                        <td>$255.30</td>
+                        <td>${total}</td>
                       </tr>
                     </table>
                   </div>
@@ -200,60 +185,60 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </section>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card"></div>
-            <!-- /.card -->
+<%--    </section>--%>
+<%--      <div class="container-fluid">--%>
+<%--        <div class="row">--%>
+<%--          <div class="col-12">--%>
+<%--            <div class="card"></div>--%>
+<%--            <!-- /.card -->--%>
 
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Tất cả đơn hàng</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Mã Khách Hàng</th>
-                    <th>Mã Đơn Hàng</th>
-                    <th>Tổng Tiền</th>
-                    <th>Thời Gian</th>
-                    <th>Tình Trạng</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <a href="../ad_accounts/account.jsp">
-                        0869950090
-                      </a>
-                    </td>
-                    <td>
-                      <a href="./invoices.jsp">
-                        1
-                      </a>
-                    </td>
-                    <td>1300000</td>
-                    <td>13/04/2022</td>
-                    <td>Đã giao</td>
-                  </tr>
-                  </tbody>
+<%--            <div class="card">--%>
+<%--              <div class="card-header">--%>
+<%--                <h3 class="card-title">Tất cả đơn hàng</h3>--%>
+<%--              </div>--%>
+<%--              <!-- /.card-header -->--%>
+<%--              <div class="card-body">--%>
+<%--                <table id="example1" class="table table-bordered table-striped">--%>
+<%--                  <thead>--%>
+<%--                  <tr>--%>
+<%--                    <th>Mã Khách Hàng</th>--%>
+<%--                    <th>Mã Đơn Hàng</th>--%>
+<%--                    <th>Tổng Tiền</th>--%>
+<%--                    <th>Thời Gian</th>--%>
+<%--                    <th>Tình Trạng</th>--%>
+<%--                  </tr>--%>
+<%--                  </thead>--%>
+<%--                  <tbody>--%>
+<%--                  <tr>--%>
+<%--                    <td>--%>
+<%--                      <a href="../ad_accounts/account.jsp">--%>
+<%--                        0869950090--%>
+<%--                      </a>--%>
+<%--                    </td>--%>
+<%--                    <td>--%>
+<%--                      <a href="./invoices.jsp">--%>
+<%--                        1--%>
+<%--                      </a>--%>
+<%--                    </td>--%>
+<%--                    <td>1300000</td>--%>
+<%--                    <td>13/04/2022</td>--%>
+<%--                    <td>Đã giao</td>--%>
+<%--                  </tr>--%>
+<%--                  </tbody>--%>
 
-                  <tfoot></tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
+<%--                  <tfoot></tfoot>--%>
+<%--                </table>--%>
+<%--              </div>--%>
+<%--              <!-- /.card-body -->--%>
+<%--            </div>--%>
+<%--            <!-- /.card -->--%>
+<%--          </div>--%>
+<%--          <!-- /.col -->--%>
+<%--        </div>--%>
+<%--        <!-- /.row -->--%>
+<%--      </div>--%>
+<%--      <!-- /.container-fluid -->--%>
+<%--    </section>--%>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

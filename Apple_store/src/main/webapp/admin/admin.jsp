@@ -310,7 +310,7 @@
 										<tbody>
 											<c:forEach var="i" begin="0" end="${size-1 }">
 												<tr>
-													<td><a href="admin/invoice.html">${list[i].getMaDH()}</a></td>
+													<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 													<td>${listName[i]}</td>
 													<c:choose>
 														<c:when test="${list[i].getMaTrangThai()==1}">
