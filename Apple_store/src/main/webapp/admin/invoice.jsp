@@ -109,8 +109,7 @@
 									<div class="col-sm-4 invoice-col">
 										<b>Hóa Đơn #${donHang.maDH}</b><br> <br> <b>ID
 											đặt hàng:</b> ${khachHang.maKH}<br> <b>Thanh toán:</b>
-										${donHang.thoiGian} <br> <b>Tài khoản:</b> 087589494 Chưa
-										làm chỗ này
+										${donHang.thoiGian} <br> <b>Tài khoản:</b> ${taikhoan.getTenDN()  }
 									</div>
 									<!-- /.col -->
 								</div>
