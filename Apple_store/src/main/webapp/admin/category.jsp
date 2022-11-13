@@ -72,17 +72,14 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                                     <div class="card-body">
                                         <div class="tab">
                                             <c:forEach items="${listlsp}" var="o">
-                                                <button class="tablinks" onclick="openCity(event, '${o.tenLoai}')">${o.tenLoai}</button>
+                                            	<a href="?maloai=${o.maLoai}">
+                                            	<button class="tablinks" onclick="openCity(event, '${o.tenLoai}')">${o.tenLoai}</button>
+                                            	</a>
                                             </c:forEach>
-                                            <!-- <button class="tablinks" onclick="openCity(event, 'iphone')">iPhone</button>
-                  <button class="tablinks" onclick="openCity(event, 'ipad')">iPad</button>
-                  <button class="tablinks" onclick="openCity(event, 'mac')">MAC</button>
-                  <button class="tablinks" onclick="openCity(event, 'apple-watch')">Apple Watch</button>
-                  <button class="tablinks" onclick="openCity(event, 'phu-kien')">Phụ Kiện</button>  -->
                                         </div>
                                         <!-- danh mục con của ip -->
-                                        <c:forEach items="${listlsp}" var="o">
-                                            <div id="${o.tenLoai}" class="tabcontent">
+                                       
+                                            <div class="tabcontent">
                                                 <table id="example1" class="table table-bordered table-striped table-ip">
                                                     <thead>
                                                         <tr>
@@ -91,27 +88,18 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>iphone khoa</td>
+                                                    <c:forEach items="${listdm}" var="o">
+                                                    <tr>
+                                                            <td>
+                                                            	${o.tenDM}
+                                                            </td>
                                                             <td>iphone-14</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>iphone 13</td>
-                                                            <td>iphone-13</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>iphone 12</td>
-                                                            <td>iphone-12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>iphone 11</td>
-                                                            <td>iphone-11</td>
-                                                        </tr>
+                                                    </c:forEach>
                                                     </tbody>
                                                     <tfoot></tfoot>
                                                 </table>
                                             </div>
-                                        </c:forEach>
                                     </div>
                                     <!-- /.card-body -->
                                 </div>
@@ -137,22 +125,5 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         <!-- jQuery -->
         <%@include file="./jqueryScript.jsp"%>
 
-        <!-- js cho danh mục con ne Khoa Dung XOa nha -->
-        <script>
-            function openCity(evt, cityName) {
-                console.log("1");
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-        </script>
     </body>
 </html>

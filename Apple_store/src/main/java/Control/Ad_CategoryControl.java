@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.LoaispDAO;
+import Model.DanhMuc;
+import DAO.SanPhamDAO;
 import Model.LoaiSP;
+import Model.SanPham;
 
 /**
  * Servlet implementation class SearchControl
@@ -21,12 +24,18 @@ public class Ad_CategoryControl extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
+		String maloai=request.getParameter("maloai");
+        String madm=request.getParameter("madm");
 
-		LoaispDAO loaispDAO = new LoaispDAO();
-		List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+        SanPhamDAO sanphamdao = new SanPhamDAO();
+        LoaispDAO loaispDAO = new LoaispDAO();
+        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+        List<DanhMuc> listdm = sanphamdao.getAlldanhmuc(maloai);
+        
+        
+        request.setAttribute("listlsp", listlsp);
+        request.setAttribute("listdm", listdm);
 
-		request.setAttribute("listlsp",listlsp);
-		System.out.print(listlsp);
 		request.getRequestDispatcher("/admin/category.jsp").forward(request, response);
 
 	}
