@@ -1,5 +1,3 @@
-
-
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -33,7 +31,7 @@
   <%@include file="./ad_header.jsp"%>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
- <%@include file="./sidebar.jsp"%>
+  <%@include file="./sidebar.jsp"%>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -45,7 +43,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="${root}admin/admin.jsp">Home</a></li>
+              <li class="breadcrumb-item"><a href="${root}Ad_TaoBaiViet">Home</a></li>
               <li class="breadcrumb-item active">Tất cả bài viết</li>
             </ol>
           </div>
@@ -73,41 +71,22 @@
                   <thead>
                   <tr>
                     <th>Tiêu đề</th>
-                    <th>Tác giả</th>
-                    <th>Chuyên mục</th>
-                    <th>Thẻ</th>
+                    <%--                    <th>Tác giả</th>--%>
+                    <%--                    <th>Chuyên mục</th>--%>
+                    <%--                    <th>Thẻ</th>--%>
                     <th>Thời gian</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Chương trình khách hàng thân thiết</td>
-                    <td>Admin</td>
-                    <td>khach-hang</td>
-                    <td>uu-dai-khach-hang</td>
-                    <td>10/10/2022</td>
-                  </tr>
-                  <tr>
-                    <td>Chương trình WorkShop</td>
-                    <td>Admin</td>
-                    <td>work-shop</td>
-                    <td>work-shop</td>
-                    <td>10/10/2022</td>
-                  </tr>
-                  <tr>
-                    <td>iPhone 13 Pro trở nên "hot" sau khi iPhone 14 ra mắt, đây là lý do</td>
-                    <td>Admin</td>
-                    <td>tin-tuc</td>
-                    <td>uu-dai-khach-hang</td>
-                    <td>09/10/2022</td>
-                  </tr>
-                  <tr>
-                    <td>Chương trình khách hàng thân thiết</td>
-                    <td>Admin</td>
-                    <td>khach-hang</td>
-                    <td>uu-dai-khach-hang</td>
-                    <td>10/10/2022</td>
-                  </tr>
+                  <c:forEach items="${listBaiViet}" var="l">
+                    <tr>
+                      <td>${l.tieuDeBV}</td>
+                        <%--                    <td>Admin</td>--%>
+                        <%--                    <td>khach-hang</td>--%>
+                        <%--                    <td>uu-dai-khach-hang</td>--%>
+                      <td>${l.ngayTao}</td>
+                    </tr>
+                  </c:forEach>
                   </tbody>
                   <tfoot></tfoot>
                 </table>

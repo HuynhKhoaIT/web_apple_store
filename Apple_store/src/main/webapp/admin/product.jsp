@@ -1,5 +1,3 @@
-
-
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -33,7 +31,7 @@
   <%@include file="./ad_header.jsp"%>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
-  
+
   <%@include file="./sidebar.jsp"%>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -64,7 +62,7 @@
               <div class="card-header">
                 <h3 class="card-title">Tất cả sản phẩm</h3>
                 <div class="card-add">
-                  <a href="../admin/add_product.jsp" class="">
+                  <a href="Ad_AddProductControl" class="">
                     <p>Thêm sản phẩm</p>
                   </a>
                 </div>
@@ -81,66 +79,23 @@
                     <th>Số lượng</th>
                     <!-- <th>Ngày nhập</th> -->
                   </tr>
-                  grade</th>
-                  </tr>
+
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>001</td>
-                    <td>iphone 13 pro max xanh lục</td>
-                    <td>25000000</td>
-                    <td>iphone-13</td>
-                    <td>30</td>
-                  </tr>
-                  <tr>
-                    <td>002</td>
-                    <td>iphone 13 pro max tím</td>
-                    <td>27000000</td>
-                    <td>iphone-13</td>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <td>003</td>
-                    <td>iphone 13 pro max hồng</td>
-                    <td>28000000</td>
-                    <td>iphone-13</td>
-                    <td>23</td>
-                  </tr>
-                  <tr>
-                    <td>004</td>
-                    <td>iphone 13 pro  đen</td>
-                    <td>25000000</td>
-                    <td>iphone-13</td>
-                    <td>30</td>
-                  </tr>
-                  <tr>
-                    <td>005</td>
-                    <td>iphone 13 pro xanh dương</td>
-                    <td>25000000</td>
-                    <td>iphone-13</td>
-                    <td>20</td>
-                  </tr>
-                  <tr>
-                    <td>006</td>
-                    <td>iphone 13 pro trắng</td>
-                    <td>24000000</td>
-                    <td>iphone-13</td>
-                    <td>35</td>
-                  </tr>
-                  <tr>
-                    <td>007</td>
-                    <td>iphone 12 pro xanh lục</td>
-                    <td>18000000</td>
-                    <td>iphone-12</td>
-                    <td>17</td>
-                  </tr>
-                  <tr>
-                    <td>008</td>
-                    <td>iphone 12 pro max hồng lục</td>
-                    <td>20000000</td>
-                    <td>iphone-12</td>
-                    <td>10</td>
-                  </tr>
+                  <c:forEach var="l" items="${listSanPham}">
+                    <tr>
+                      <td><a href="ProductDetailControl?maSP=${l.maSP}">${l.maSP}</a></td>
+                      <td>${l.tenSP}</td>
+                      <td>${l.giaKhuyenMai}</td>
+                      <c:forEach var="d" items="${listDanhMuc}">
+                        <c:if test="${d.maDM == l.maDM}">
+                          <td>${d.tenDM}</td>
+                        </c:if>
+                      </c:forEach>
+                      <td>${l.soLuong}</td>
+                    </tr>
+                  </c:forEach>
+
                   </tbody>
                   <tfoot>
                   </tfoot>
