@@ -71,6 +71,10 @@ public class ProcessControl extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+
         // increase decrease
         SanPhamDAO dao = new SanPhamDAO();
         List<SanPham> list = dao.getAll();

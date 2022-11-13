@@ -19,7 +19,9 @@ import Model.SanPham;
 public class SanPhamControl extends HttpServlet{
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
 
         String maloai=request.getParameter("maloai");
         String madm=request.getParameter("madm");
