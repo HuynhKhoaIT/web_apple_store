@@ -23,23 +23,19 @@ import Model.SanPham;
 /**
  * Servlet implementation class SearchControl
  */
-@WebServlet(urlPatterns = {"/admin/add_category"})
+@WebServlet(name = "Ad_AddCategory", value = "/Ad_AddCategory")
 public class Ad_AddCategory extends HttpServlet {
-	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
-		request.setCharacterEncoding("UTF-8");
-        LoaispDAO loaispDAO = new LoaispDAO();
-        List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-        
-        
-        request.setAttribute("listlsp", listlsp);
 
-		request.getRequestDispatcher("/admin/add_category.jsp").forward(request, response);
-
-	}
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		processRequest(req, resp);
+		resp.setContentType("text/html;charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		LoaispDAO loaispDAO = new LoaispDAO();
+		List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+
+		req.setAttribute("listlsp", listlsp);
+
+		req.getRequestDispatcher("/admin/add_category.jsp").forward(req, resp);
 	}
 	 @Override
 	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,7 +43,7 @@ public class Ad_AddCategory extends HttpServlet {
 	        response.setCharacterEncoding("UTF-8");
 	        response.setContentType("text/html; charset=UTF-8");
 
-	        String maLoai = request.getParameter("maloai");
+	        String maLoai = request.getParameter("maLoai");
 	        String tenDM = request.getParameter("tendanhmuc");
 	        String tenSLug = request.getParameter("tenslug");
 	        
@@ -55,7 +51,7 @@ public class Ad_AddCategory extends HttpServlet {
 	        danhmucDAO.addDanhMuc(maLoai, tenDM, tenSLug);
 	        
 	        
-	        response.sendRedirect("Ad_AddCategoryControl");
+	       // response.sendRedirect("Ad_AddCategoryControl");
 
 	    }
 	

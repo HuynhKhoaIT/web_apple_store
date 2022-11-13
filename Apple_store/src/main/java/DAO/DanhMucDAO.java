@@ -51,7 +51,7 @@ public class DanhMucDAO {
     }
 	public void addDanhMuc(String MaLoai, String TenDM, String DuongDan)
 	{
-		String query = "insert into SanPham(MaLoai,TenDM,DuongDan) Values(?,?,?);";
+		String query = "insert into DanhMuc(MaLoai,TenDM,DuongDan) Values(?,?,?);";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);

@@ -64,19 +64,18 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="Ad_AddCategory" method="post">
                 <div class="card-body">
                   <div class="form-group">
-                  
                     <label>Danh mục cha</label>
-                    <select class="custom-select form-control-border" id="exampleSelectBorder">
+                    <select class="custom-select form-control-border" id="exampleSelectBorder" name="maLoai">
 	                  <%--   <c:forEach items="${listlsp}" var="o">
 	                     	<a href="?maloai=${o.maLoai}">
 	                     		<option>${o.tenLoai}</option>
 	                     	</a>
 	                     </c:forEach> --%>
 	                     <c:forEach items="${listlsp}" var="l">
-	                       <option value="${l.maLoai}" ${l.maLoai == maLoai ? 'selected' : ''}>${l.tenLoai}</option>
+	                       <option value="${l.maLoai}">${l.tenLoai}</option>
 	                   </c:forEach>
                     </select>
                   </div>
