@@ -1441,7 +1441,25 @@
 	}
 }
 
+.no-products{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no-products button{
+    padding: 10px 14px;
+    background: #0664f9;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+}
 
+.container button:hover{
+    background: #0339b3;
+    cursor: pointer;
+}
 /* blog */
 
 #title-blog p{

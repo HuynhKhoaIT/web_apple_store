@@ -182,7 +182,22 @@
                </div>
             </div>
             <div class="subcontainer" id="cart-empty" style="display: none">
-               <h1> Không có hàng trong giỏ </h1>
+               <div class="container no-products">
+				    <div class="row">
+				        <div class="col-md-6">
+				            <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" alt="">
+				        </div>
+				    </div>
+				    <div class="row title-content" style="text-align: center ;">
+			            <div class="title-2 mg"  style="margin: 10px 0 ;">
+			                <h2>Không có sản phẩm nào!</h2>
+			            </div>
+			            <a href="${root}" >
+			                <button style="margin: 10px 0 ;" >Tiếp Tục Mua Hàng</button>
+			            </a>
+				    </div>
+				   
+			   </div>
             </div>
             <script>
                var check = document.getElementsByClassName('items').length
