@@ -64,7 +64,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="Ad_AddCategory" method="post">
+              <form action="${root}Ad_AddCategory" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label>Danh mục cha</label>

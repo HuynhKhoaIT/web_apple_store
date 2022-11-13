@@ -1,14 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-        
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="${root}admin" class="brand-link">
-      <img src="${root}asset/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Apple Store</span>
+        <img src="${root}asset/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Apple Store</span>
     </a>
     <div class="sidebar">
-      <nav class="mt-2">
+        <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Sản phẩm -->
                 <li class="nav-item">
@@ -21,13 +21,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/product.jsp" class="nav-link">
+                            <a href="${root}Ad_ProductControl" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tất cả sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/add_product.jsp" class="nav-link">
+                            <a href="${root}Ad_AddProductControl" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm sản phẩm</p>
                             </a>
@@ -51,7 +51,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/user.jsp" class="nav-link">
+                            <a href="${root}Ad_UserControl" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tất cả khách hàng</p>
                             </a>
@@ -69,7 +69,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/order.jsp" class="nav-link">
+                            <a href="${root}AllOrder" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tất cả đơn hàng</p>
                             </a>
@@ -98,21 +98,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/add_blog.jsp" class="nav-link">
+                            <a href="${root}Ad_Blog" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Viết bài mới</p>
                             </a>
                         </li>
-<!--                         <li class="nav-item">
-                            <a href="/Apple_store/admin/chuyen_muc.jsp" class="nav-link">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Chuyên mục</p>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </div>
-     
-  </aside>
+
+</aside>
