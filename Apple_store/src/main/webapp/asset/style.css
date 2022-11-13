@@ -1424,6 +1424,441 @@
 	}
 }
 
+/* DN-DK */
+
+.modal-login {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.modal-login.open {
+    display: flex;
+}
+
+.modal-container-login {
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 60px);
+    min-height: 600px;
+    position: relative;
+    animation: signModal ease 0.7s;
+}
+
+.modal-header-login {
+    background: #000;
+    height: 120px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.brg-img{
+    background: url(./images/logo-fstu-aar.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90px;
+}
+
+.modal-close-login:hover {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.modal-close-login {
+    position: absolute;
+    color: #fff;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-body-login {
+    padding: 16px;
+}
+
+.modal-label-login {
+    display: block;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.invalid {
+    color: rgb(255, 0, 0);
+}
+
+.invalid .input-log{
+    border: 1px solid rgb(255, 0, 0);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.input-log{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.login:hover{
+    opacity: 0.8;
+}
+
+.login{
+    background: #000;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.modal-footer-login{
+    padding: 16px;
+    text-align: center;
+
+}
+
+
+.modal-footer-login a{
+    color: #2196F3;
+}
+
+.form-message {
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.or {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.text-danger{
+	color: red;
+	font-size: 15px;
+}
+
+@keyframes signModal {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btt-sign_up:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+.btt-sign_up
+{
+    color: #fff;
+    background-color: #000;
+    padding: 13px 24px;
+    display: inline-block;
+}
+
+.modal-sign_up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.modal-sign_up.open {
+    display: flex;
+}
+
+.modal-container-sign_up {
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 60px);
+    min-height: 800px;
+    position: relative;
+    animation: signModal ease 0.7s;
+}
+
+.modal-header-sign_up {
+    background: #000;
+    height: 120px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.brg-img{
+    background: url(./images/logo-fstu-aar.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90px;
+}
+
+.modal-close-sign_up:hover {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.modal-close-sign_up {
+    position: absolute;
+    color: #fff;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-body-sign_up {
+    padding: 16px;
+}
+
+.modal-label-sign_up {
+    display: block;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.invalid {
+    color: rgb(255, 0, 0);
+}
+
+.invalid .input-sign{
+    border: 1px solid rgb(255, 0, 0);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.input-sign{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.sign-up:hover{
+    opacity: 0.8;
+}
+
+.sign-up{
+    background: #000;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.modal-footer-sign_up{
+    padding: 16px;
+    text-align: center;
+
+}
+
+
+.modal-footer-sign_up a{
+    color: #2196F3;
+}
+
+.form-message {
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+@keyframes signModal {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-verify {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.modal-verify.open {
+    display: flex;
+}
+
+.modal-container-verify {
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 60px);
+    min-height: 800px;
+    position: relative;
+    animation: signModal ease 0.7s;
+}
+
+.modal-header-verify {
+    background: #000;
+    height: 120px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.brg-img{
+    background: url(./images/logo-fstu-aar.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90px;
+}
+
+.modal-close-verify:hover {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.modal-close-verify {
+    position: absolute;
+    color: #fff;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-body-sign_up {
+    padding: 16px;
+}
+
+.modal-label-sign_up {
+    display: block;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.invalid {
+    color: rgb(255, 0, 0);
+}
+
+.invalid .input-verify{
+    border: 1px solid rgb(255, 0, 0);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.input-verify{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.verify:hover{
+    opacity: 0.8;
+}
+
+.verify{
+    background: #000;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.modal-footer-sign_up{
+    padding: 16px;
+    text-align: center;
+
+}
+
+
+.modal-footer-sign_up a{
+    color: #2196F3;
+}
+
+.form-message {
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+@keyframes signModal {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DN-DK */
+
+
+
+
 @keyframes openMenu{
   from {
  	transform: translateX(-100%);
