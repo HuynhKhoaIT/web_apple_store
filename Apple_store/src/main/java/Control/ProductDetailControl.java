@@ -3,6 +3,7 @@ package Control;
 import DAO.AnhSPDAO;
 import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
+import DAO.DanhMucDAO;
 import DAO.ThongSoKyThuatDAO;
 import Model.AnhSanPham;
 import Model.LoaiSP;
@@ -24,14 +25,16 @@ public class ProductDetailControl extends HttpServlet {
         SanPhamDAO sanPhamDAO = new SanPhamDAO();
         ThongSoKyThuatDAO tsktdao =new ThongSoKyThuatDAO();
         AnhSPDAO anhSPDAO = new AnhSPDAO();
+        DanhMucDAO doanhmucDAO = new DanhMucDAO();
+        LoaispDAO loaispDAO = new LoaispDAO();
         String  id_raw =   request.getParameter("maSP");
         int id = Integer.parseInt(id_raw);
-        String maloai = sanPhamDAO.getmaloaibymasp(id_raw);
-        String tenloai = sanPhamDAO.gettenloai(maloai);
+        String maloai = loaispDAO.getmaloaibymasp(id_raw);
+        String tenloai = loaispDAO.gettenloai(maloai);
         String tensp =sanPhamDAO.gettensp(id_raw);
         SanPham sanPham = sanPhamDAO.getProductById(id);
         List<AnhSanPham> listAnhSP= anhSPDAO.getAnhSPByID(id);
-        LoaispDAO loaispDAO = new LoaispDAO();
+
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
         List<ThongSoKyThuatSanPham> listtskt = tsktdao.getTSKTbymaSP(id_raw);
         List<SanPham>  listsplq= sanPhamDAO.getAllsanphamtop4theodm(maloai);

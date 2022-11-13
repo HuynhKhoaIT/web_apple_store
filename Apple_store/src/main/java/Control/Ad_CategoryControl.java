@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.LoaispDAO;
+import DAO.DanhMucDAO;
 import Model.DanhMuc;
 import DAO.SanPhamDAO;
 import Model.LoaiSP;
@@ -29,9 +30,9 @@ public class Ad_CategoryControl extends HttpServlet {
 
         SanPhamDAO sanphamdao = new SanPhamDAO();
         LoaispDAO loaispDAO = new LoaispDAO();
+        DanhMucDAO danhmucDAO = new DanhMucDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-        List<DanhMuc> listdm = sanphamdao.getAlldanhmuc(maloai);
-        
+        List<DanhMuc> listdm = danhmucDAO.getAlldanhmuc(maloai);
         
         request.setAttribute("listlsp", listlsp);
         request.setAttribute("listdm", listdm);

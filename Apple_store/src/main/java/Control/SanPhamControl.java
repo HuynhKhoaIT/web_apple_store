@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
+import DAO.DanhMucDAO;
 import Model.DanhMuc;
 import Model.LoaiSP;
 import Model.SanPham;
@@ -42,10 +43,11 @@ public class SanPhamControl extends HttpServlet{
         }
         SanPhamDAO sanphamdao = new SanPhamDAO();
         LoaispDAO loaispDAO = new LoaispDAO();
+        DanhMucDAO danhmucdao = new DanhMucDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
         List<SanPham> listsp;
         List<DanhMuc> listdm;
-        String ml =sanphamdao.getmaloai(madm);
+        String ml =loaispDAO.getmaloai(madm);
         String tl ;
         if(madm==null || madmInt ==0)
         {
@@ -61,8 +63,8 @@ public class SanPhamControl extends HttpServlet{
             {
                 listsp = sanphamdao.getSortSPGiamTheoMaLoai(maloai);
             }
-        	listdm = sanphamdao.getAlldanhmuc(maloai);
-        	tl =sanphamdao.gettenloai(maloai);
+        	listdm = danhmucdao.getAlldanhmuc(maloai);
+        	tl =loaispDAO.gettenloai(maloai);
         }
         else
         {
@@ -78,8 +80,8 @@ public class SanPhamControl extends HttpServlet{
             {
                 listsp = sanphamdao.getSortSPGiamByDM(madm);
             }
-        	listdm = sanphamdao.getAlldanhmuc(ml);
-        	tl =sanphamdao.gettenloai(ml);
+        	listdm = danhmucdao.getAlldanhmuc(ml);
+        	tl =loaispDAO.gettenloai(ml);
         } 
         
 //        if(sort!=null && madm==null) {
