@@ -1,8 +1,10 @@
 package Control;
 
+import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
 import Model.Cart;
 import Model.Item;
+import Model.LoaiSP;
 import Model.SanPham;
 
 import javax.servlet.ServletException;
@@ -151,6 +153,10 @@ public class ProcessControl extends HttpServlet {
                 }
 //            Cart cart=new Cart(out,list);
                 cart=new Cart(out,list);
+                LoaispDAO loaispDAO = new LoaispDAO();
+                List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+                request.setAttribute("listlsp",listlsp);
                 request.setAttribute("cart",cart);
                 request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
             }
