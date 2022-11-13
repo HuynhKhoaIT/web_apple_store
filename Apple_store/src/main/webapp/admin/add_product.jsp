@@ -56,6 +56,7 @@
             </div>
         </form>
       <form method="post" action="Ad_AddProductControl" id="AddProductForm" enctype="multipart/form-data">
+          <input type="hidden" value="${maLoai}" name="maLoai">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
@@ -239,7 +240,7 @@
 <%--                  <form>--%>
                     <div class="form-group">
                       <label>Màn hình</label>
-                      <input type="text" class="form-control" name="namhinhMAC">
+                      <input type="text" class="form-control" name="manhinhMAC">
                     </div>
                     <div class="form-group">
                       <label>Camera Selfie</label>

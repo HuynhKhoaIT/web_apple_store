@@ -50,7 +50,9 @@ public class Ad_AddProductControl extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
+
         //common
+        String maLoai = request.getParameter("maLoai");
         String maDM = request.getParameter("maDM");
         String tensanpham = request.getParameter("tensanpham");
         String motasanpham = request.getParameter("motasanpham");
@@ -80,7 +82,7 @@ public class Ad_AddProductControl extends HttpServlet {
         String xuatxuIPAD = request.getParameter("xuatxuIPAD");
         String thoigianramatIPAD = request.getParameter("thoigianramatIPAD");
         //MAC
-        String namhinhMAC = request.getParameter("namhinhMAC");
+        String manhinhMAC = request.getParameter("manhinhMAC");
         String cameraselfieMAC = request.getParameter("cameraselfieMAC");
         String cpuMAC = request.getParameter("cpuMAC");
         String ramMAC = request.getParameter("ramMAC");
@@ -119,7 +121,23 @@ public class Ad_AddProductControl extends HttpServlet {
         sanPhamDAO.addSanPham(maDM,tensanpham,motasanpham,giagoc,giabanthuong,giakhuyenmai,soluong,anh);
         SanPham sanPham = sanPhamDAO.getNewSP();
         ThongSoKyThuatSanPhamDAO thongSoKyThuatSanPhamDAO = new ThongSoKyThuatSanPhamDAO();
-        thongSoKyThuatSanPhamDAO.AddThongSoKyThuatIP(sanPham,manhinhIP,camerasauIP,camereselfieIP,bonhotrongIP,cpuIP,hedieuhanhIP,xuatxuIP,thoigianramatIP);
+        if(maLoai.equals("1")) // iphone
+        {
+            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatIP(sanPham,manhinhIP,camerasauIP,camereselfieIP,bonhotrongIP,cpuIP,hedieuhanhIP,xuatxuIP,thoigianramatIP);
+        }
+        else if(maLoai.equals("2")) // ipad
+        {
+            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatIPAD(sanPham,manhinhIPAD,camerasauIPAD,cameraselfieIPAD,bonhotrongIPAD,ramIPAD,cpuIPAD,gpuIPAD,hedieuhanhIPAD,
+                    xuatxuIPAD,thoigianramatIPAD);
+        }
+        else if(maLoai.equals("3")) {//applewatch
+            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatWATCH(sanPham,manhinhWATCH,chatlieuWATCH,hedieuhanhWATCH,thoigiansudungpinWATCH,xuatxuWATCH,thoigianramatWATCH);
+        }
+        else if(maLoai.equals("4")){ //mac
+            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatMAC(sanPham,manhinhMAC,cameraselfieMAC,cpuMAC,ramMAC,ocungMAC,dohoaMAC,hedieuhanhMAC,trongluongMAC,kichthuocMAC,
+                    xuatxuMAC,thoigianramatMAC);
+        }
+
 
         response.sendRedirect("Ad_AddProductControl");
 
