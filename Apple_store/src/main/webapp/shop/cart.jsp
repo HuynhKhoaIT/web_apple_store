@@ -28,7 +28,7 @@
          <c:set var="items" value="${listlsp}" scope="request"/>
          <jsp:include page="./header2.jsp" />
          <div class="content">
-            <div class="subcontainer">
+            <div class="subcontainer" id="cart-not-empty">
                <div class="subheading">
                   <h3 class="inline-block">
                      GIỎ HÀNG CỦA BẠN
@@ -36,7 +36,7 @@
                   </h3>
                   <a href="http://localhost:8080/Apple_store" class="float-right home-link">Mua thêm sản phẩm khác</a>
                </div>
-               <div class="container">
+               <div class="container" >
                   <div class="list-items">
                      <c:set var="o" value="${requestScope.cart}"/>
                      <c:set var="tt" value="0"/>
@@ -181,6 +181,17 @@
                   </form>
                </div>
             </div>
+            <div class="subcontainer" id="cart-empty" style="display: none">
+               <h1> Không có hàng trong giỏ </h1>
+            </div>
+            <script>
+               var check = document.getElementsByClassName('items').length
+               if(check == 0)
+               {
+                  document.getElementById('cart-not-empty').style.display="none";
+                  document.getElementById('cart-empty').style.display = "block"
+               }
+            </script>
          </div>
       </div>
       <script src="${root}asset/js/cart.js"></script>
