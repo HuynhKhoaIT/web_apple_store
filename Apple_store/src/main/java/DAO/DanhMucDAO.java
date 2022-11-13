@@ -49,5 +49,22 @@ public class DanhMucDAO {
         }
         return list;
     }
+	public void addDanhMuc(String MaLoai, String TenDM, String DuongDan)
+	{
+		String query = "insert into SanPham(MaLoai,TenDM,DuongDan) Values(?,?,?);";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
 
+			ps.setString(1,MaLoai);
+			ps.setString(2,TenDM);
+			ps.setString(3,DuongDan);
+			
+
+			ps.executeUpdate();
+		}
+		catch (Exception e) {
+		}
+
+	}
 }

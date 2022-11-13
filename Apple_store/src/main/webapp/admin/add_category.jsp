@@ -67,22 +67,26 @@
               <form>
                 <div class="card-body">
                   <div class="form-group">
+                  
                     <label>Danh mục cha</label>
                     <select class="custom-select form-control-border" id="exampleSelectBorder">
-	                    <c:forEach items="${listlsp}" var="o">
+	                  <%--   <c:forEach items="${listlsp}" var="o">
 	                     	<a href="?maloai=${o.maLoai}">
 	                     		<option>${o.tenLoai}</option>
 	                     	</a>
-	                     </c:forEach>
+	                     </c:forEach> --%>
+	                     <c:forEach items="${listlsp}" var="l">
+	                       <option value="${l.maLoai}" ${l.maLoai == maLoai ? 'selected' : ''}>${l.tenLoai}</option>
+	                   </c:forEach>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputName1">Tên danh mục</label>
-                    <input type="text" class="form-control" id="exampleInputName1" />
+                    <input type="text" class="form-control" id="exampleInputName1" name="tendanhmuc" />
                   </div>
                   <div class="form-group">
                     <label for="exampleInputSlug1">Đường dẫn</label>
-                    <input type="text" class="form-control" id="exampleInputSlug1" />
+                    <input type="text" class="form-control" id="exampleInputSlug1" name="tenslug" />
                   </div>
                 </div>
                 <!-- /.card-body -->
