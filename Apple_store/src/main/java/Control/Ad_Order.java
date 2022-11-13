@@ -13,9 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
+import Model.KhachHang;
  
 @WebServlet(name = "Ad_AllOrder", value = "/AllOrder")
-public class Ad_AllOrder extends HttpServlet {
+public class Ad_Order extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -23,15 +24,10 @@ public class Ad_AllOrder extends HttpServlet {
 		List<DonHang> list = new ArrayList<DonHang>();
 		DonHangDAO dao=new DonHangDAO();
 		list=dao.loadAllOrder();
-		List<String> listName = new ArrayList<String>();
-		for (DonHang o : list) {
-			KhachHangDAO d = new KhachHangDAO();
-			listName.add(d.getKhachHangByMaKH(o.getMaKH()).getTenKH());
-		}
-		request.setAttribute("size",listName.size());
-		request.setAttribute("listName",listName);
+		
+		request.setAttribute("size",list.size());
 		request.setAttribute("list",list);
-		request.getRequestDispatcher("/admin/admin_AllOrder.jsp").forward(request, response);
+		request.getRequestDispatcher("/admin/order.jsp").forward(request, response);
 	} 
 
 	/**
