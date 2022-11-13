@@ -3,7 +3,7 @@
         
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="${root}admin/admin.jsp" class="brand-link">
+    <a href="${root}admin" class="brand-link">
       <img src="${root}asset/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Apple Store</span>
     </a>
@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Apple_store/admin/category.jsp" class="nav-link">
+                            <a href="/Apple_store/admin/category" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh mục</p>
                             </a>

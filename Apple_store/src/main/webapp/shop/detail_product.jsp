@@ -34,9 +34,9 @@
                             <a href="../../index.jsp">Trang chủ</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="../product/iphone.jsp">iphone</a>
+                            <a href="loaisp?maloai=${ml}">${tl}</a>
                         </li>
-                        <li class="breadcrumb-item">iPhone 13 128gb</li>
+                        <li class="breadcrumb-item">${tensp}</li>
                     </ol>
                 </div>
             </div>
@@ -171,51 +171,20 @@
 		                <div class="row no-gutter title">
 		                    <span>Sản phẩm khác</span>
 		                </div>
-		                <div class="row no-gutter pro-list">
+		                <div class="row no-gutter pro-list">		                   
+		                    <c:forEach items="${listsplq}" var="o" >
 		                    <div class="col-md-3 col-6">
-		                        <a href="/" class="product-item">
+		                        <a href="ProductDetailControl?maSP=${o.maSP}" class="product-item">
 		                            <div class="product-img">
-		                                <img src="../../asset/img/ip13%20slider%203.webp" alt="">
+		                                <img src="${o.anh}" alt="">
 		                            </div>
 		                            <div class="product-info">
-		                                <div class="product-name">iPhone 14 Pro Max</div>
-		                                <div class="product-price">2000000đ</div>
+		                                <div class="product-name">${o.tenSP}</div>
+		                                <div class="product-price">${o.giaBanThuong}đ</div>
 		                            </div>
 		                        </a>
 		                    </div>
-		                    <div class="col-md-3 col-6">
-		                        <a href="/" class="product-item">
-		                            <div class="product-img">
-		                                <img src="../../asset/img/ip13%20slider%202.webp" alt="">
-		                            </div>
-		                            <div class="product-info">
-		                                <div class="product-name">iPhone 14 Pro Max</div>
-		                                <div class="product-price">2000000đ</div>
-		                            </div>
-		                        </a>
-		                    </div>
-		                    <div class="col-md-3 col-6">
-		                        <a href="/" class="product-item">
-		                            <div class="product-img">
-		                                <img src="../../asset/img/ip%2013%20slider%20.webp" alt="">
-		                            </div>
-		                            <div class="product-info">
-		                                <div class="product-name">iPhone 14 Pro Max</div>
-		                                <div class="product-price">2000000đ</div>
-		                            </div>
-		                        </a>
-		                    </div>
-		                    <div class="col-md-3 col-6">
-		                        <a href="/" class="product-item">
-		                            <div class="product-img">
-		                                <img src="../../asset/img/ip%2013%20slider%205.webp" alt="">
-		                            </div>
-		                            <div class="product-info">
-		                                <div class="product-name">iPhone 14 Pro Max</div>
-		                                <div class="product-price">2000000đ</div>
-		                            </div>
-		                        </a>
-		                    </div>
+		                    </c:forEach>
 		                </div>
 	                </div>
                 </div>
@@ -234,54 +203,12 @@
                                 <div class="row no-gutter properties-content">
                                     <div class="properties">
                                         <table class="table-box">
+                                        <c:forEach items="${listtskt}" var="o" >
                                             <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
+                                                <td class="td-name">${o.maTSKT }</td>
+                                                <td class="td-content">${o.mota}</td>
                                             </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-name">name</td>
-                                                <td class="td-content">chi tiết</td>
-                                            </tr>
+                                           </c:forEach> 
                                         </table>
                                     </div>
                                 </div>
@@ -296,7 +223,7 @@
                         <div class="row no-gutter">
                             <div class="col-9">
                                 <div class="content">
-                                    <p style="text-align: justify;"><strong><a href="https://fptshop.com.vn/dien-thoai/iphone-11-64gb" target="_blank">iPhone 11</a> với 6 phiên bản màu sắc, camera có khả năng chụp ảnh vượt trội, thời lượng pin cực dài và bộ vi xử lý mạnh nhất từ trước đến nay sẽ mang đến trải nghiệm tuyệt vời dành cho bạn.</strong></p>
+                                    <p style="text-align: justify;"><strong><a href="" target="_blank">${tensp}</a> với 6 phiên bản màu sắc, camera có khả năng chụp ảnh vượt trội, thời lượng pin cực dài và bộ vi xử lý mạnh nhất từ trước đến nay sẽ mang đến trải nghiệm tuyệt vời dành cho bạn.</strong></p>
                                     <p style="text-align: center;"><strong><img alt="Điện thoại iPhone 11 chính hãng" class="Điện thoại iPhone 11 chính hãng" src="http://fptshop.com.vn/Uploads/images/2015/Tin-Tuc/QuanLNH2/iphone-11-1.jpg" title="Điện thoại iPhone 11 chính hãng" data-pagespeed-url-hash="234210219" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></strong></p>
                                     <h3 style="text-align: justify;"><strong>Rực rỡ sắc màu, thể hiện cá tính</strong></h3>
                                     <p style="text-align: justify;">Có tới 6 sự lựa chọn màu sắc cho iPhone 11 64GB, bao gồm Tím, Vàng, Xanh lục, Đen, Trắng và Đỏ, tha hồ để bạn lựa chọn màu phù hợp với sở thích, cá tính riêng của bản thân. Vẻ đẹp của iPhone 11 đến từ thiết kế cao cấp khi được làm từ khung nhôm nguyên khối và mặt lưng liền lạc với một tấm kính duy nhất. Ở mặt trước, bạn sẽ được chiêm ngưỡng màn hình Liquid Retina lớn 6,1 inch, màu sắc vô cùng chân thực. Tất cả tạo nên chiếc <a href="https://fptshop.com.vn/dien-thoai">điện thoại</a> tràn đầy hứng khởi.</p>

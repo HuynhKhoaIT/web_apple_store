@@ -75,7 +75,7 @@
              <c:forEach items="${requestScope.items}" var="o">
                  <li><a href="http://localhost:8080/Apple_store/loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
              </c:forEach>
-            <li><a href="#" class="nav-sub">Tin Tức</a></li>
+            <li><a href="${root}shop/blog.jsp" class="nav-sub">Tin Tức</a></li>
           </ul>
           <div class="header-call">
             <div class="call-btn">
@@ -107,7 +107,7 @@
                <c:forEach items="${listlsp}" var="o" >
                 <li><a class="b-b-600" href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
             	</c:forEach>
-                   <li class="b-b-600"><a href="/tin-tuc">Tin tức - Thủ thuật</a></li>
+                   <li class="b-b-600"><a href="${root}shop/blog.jsp">Tin tức</a></li>
                    <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
                </ul>
            </div>

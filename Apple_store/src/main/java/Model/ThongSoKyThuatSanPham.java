@@ -2,13 +2,13 @@ package Model;
 
 public class ThongSoKyThuatSanPham {
     int MaSP;
-    int MaTSKT;
+    String MaTSKT;
     String Mota;
 
     public ThongSoKyThuatSanPham() {
     }
 
-    public ThongSoKyThuatSanPham(int maSP, int maTSKT, String mota) {
+    public ThongSoKyThuatSanPham(int maSP, String maTSKT, String mota) {
         MaSP = maSP;
         MaTSKT = maTSKT;
         Mota = mota;
@@ -22,11 +22,11 @@ public class ThongSoKyThuatSanPham {
         MaSP = maSP;
     }
 
-    public int getMaTSKT() {
+    public String getMaTSKT() {
         return MaTSKT;
     }
 
-    public void setMaTSKT(int maTSKT) {
+    public void setMaTSKT(String maTSKT) {
         MaTSKT = maTSKT;
     }
 
