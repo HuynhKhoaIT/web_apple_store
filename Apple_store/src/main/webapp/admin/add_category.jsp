@@ -69,11 +69,11 @@
                   <div class="form-group">
                     <label>Danh mục cha</label>
                     <select class="custom-select form-control-border" id="exampleSelectBorder">
-                      <option>iphone</option>
-                      <option>ipad</option>
-                      <option>mac</option>
-                      <option>apple-watch</option>
-                      <option>phu-kien</option>
+	                    <c:forEach items="${listlsp}" var="o">
+	                     	<a href="?maloai=${o.maLoai}">
+	                     		<option>${o.tenLoai}</option>
+	                     	</a>
+	                     </c:forEach>
                     </select>
                   </div>
                   <div class="form-group">

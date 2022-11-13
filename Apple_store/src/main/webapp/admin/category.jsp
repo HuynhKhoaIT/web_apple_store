@@ -63,7 +63,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                                     <div class="card-header">
                                         <h3 class="card-title">Tất cả danh mục</h3>
                                         <div class="card-add">
-                                            <a href="../admin/add_category.jsp" class="">
+                                            <a href="../admin/add_category" class="">
                                                 <p>Thêm danh mục</p>
                                             </a>
                                         </div>

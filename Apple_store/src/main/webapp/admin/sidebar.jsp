@@ -103,12 +103,12 @@
                                 <p>Viết bài mới</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+<!--                         <li class="nav-item">
                             <a href="/Apple_store/admin/chuyen_muc.jsp" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Chuyên mục</p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
             </ul>
