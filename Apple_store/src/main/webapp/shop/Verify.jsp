@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<c:url value="/" var="root" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Verify</title>
-<link rel="stylesheet" href="Verify.css">
+<link rel="stylesheet" href="${root}asset/style.css">
 </head>
 <body>
 	<!-- Verify  -->
