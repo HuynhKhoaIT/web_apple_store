@@ -33,7 +33,7 @@ public class ViewShop extends HttpServlet {
 		List<LoaiSP> listlsp = sanphamdao.getAllloaisp();
 		BaiVietDAO baiVietDAO = new BaiVietDAO();
 
-		List<BaiViet> listBaiViet = baiVietDAO.getAllBaiViet();
+		List<BaiViet> listBaiViet = baiVietDAO.getAllBaiVietTop4();
 		request.setAttribute("listBaiViet", listBaiViet);
 
 		request.setAttribute("listNew", list);

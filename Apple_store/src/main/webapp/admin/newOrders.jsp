@@ -90,10 +90,10 @@
 													<td>${list[i].getThoiGian()}</td>
 													<c:choose>
 														<c:when test="${list[i].getMaTrangThai()==1}">
-															<td><span class="badge badge-success">Shipped</span></td>
+															<td><span class="badge badge-success">Chưa xác nhận</span></td>
 														</c:when>
 														<c:otherwise>
-															<td><span class="badge badge-success">Shipping</span></td>
+															<td><span class="badge badge-success">Đã Xác Nhận</span></td>
 														</c:otherwise>
 													</c:choose>
 												

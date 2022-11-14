@@ -95,7 +95,7 @@ public class DonHangDAO {
     }
 
 public List<DonHang> loadTop10Order() {
-		String querry = "select top 10 * from DonHang order by MaDH desc ";
+		String querry = "select top 10 * from DonHang where MaTrangThai = 1 ";
 		List<DonHang> list = new ArrayList<DonHang>();
 		try {
 
@@ -187,5 +187,22 @@ public List<DonHang> loadTop10Order() {
 		} catch (Exception e) {
 		}
 		return total;
+	}
+	public void trangthai(String maDH)
+	{
+		String querry = "UPDATE DonHang\r\n"
+				+ "SET MaTrangThai = 2\r\n"
+				+ "WHERE MaDH = ?; ";
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setString(1, maDH);
+			ps.executeUpdate();
+			
+
+		} catch (Exception e) {
+		}
+	
 	}
 }

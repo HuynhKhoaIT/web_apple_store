@@ -174,7 +174,7 @@
                         <td>$5.00</td>
                       </tr>
                       <tr>
-                        <th>Tổng đơn hàng:</th>
+                        <th>Tổng đơn hàng:</th> 
                         <td>$255.30</td>
                       </tr>
                     </table>

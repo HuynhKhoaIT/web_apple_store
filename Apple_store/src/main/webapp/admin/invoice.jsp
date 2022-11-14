@@ -130,7 +130,6 @@
 											<tbody>
 												<c:forEach var="i" begin="0" end="${size-1 }">
 													<tr>
-
 														<td>${listDetail[i].getSoLuong()}</td>
 														<td>${listSP[i].getTenSP()}</td>
 														<td>${listSP[i].getMaSP()}</td>
@@ -155,14 +154,7 @@
 													<th style="width: 50%">Tổng tiền:</th>
 													<td>${donHang.getTongTien()} VND</td>
 												</tr>
-												<tr>
-													<th>phí ship:</th>
-													<td>50.000 VND</td>
-												</tr>
-												<tr>
-													<th>Tổng đơn hàng:</th>
-													<td>${donHang.getTongTien() + 50000} VND</td>
-												</tr>
+
 											</table>
 										</div>
 									</div>
@@ -176,9 +168,12 @@
 										<a href="invoice-print.html" rel="noopener" target="_blank"
 											class="btn btn-default"><i class="fas fa-print"></i>
 											Print</a>
-										<button type="button" class="btn btn-success float-right">
-											Xác nhận đơn hàng</button>
-
+										<form action="Ad_invoice" method="post">
+										<input type="hidden" value= "${donHang.maDH}" name = "maDH" />
+											<button type="submit" class="btn btn-success float-right">
+												Xác nhận đơn hàng
+											</button>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -190,7 +185,7 @@
 				</div>
 				<!-- /.container-fluid -->
 			</section>
-			<section>
+			<%-- <section>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12">
@@ -244,7 +239,7 @@
 				<!-- /.row -->
 			</div>
 			<!-- /.container-fluid -->
-			</section>
+			</section> --%>
 			<!-- /.content -->
 		</div>
 		<!-- /.content-wrapper -->

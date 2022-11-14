@@ -71,7 +71,7 @@
 							<div class="icon">
 								<i class="ion ion-bag"></i>
 							</div>
-							<a href="/Apple_store/admin/newOrders.jsp"
+							<a href="/Apple_store/newOrder"
 							   class="small-box-footer">Thêm thông tin <i
 									class="fas fa-arrow-circle-right"></i></a>
 						</div>
@@ -104,7 +104,7 @@
 							<div class="icon">
 								<i class="ion ion-person-add"></i>
 							</div>
-							<a href="/Apple_store/admin/user.jsp" class="small-box-footer">Thêm
+							<a href="/Apple_store/Ad_UserControl" class="small-box-footer">Thêm
 								thông tin <i class="fas fa-arrow-circle-right"></i>
 							</a>
 						</div>
@@ -128,7 +128,7 @@
 				</div>
 				<!-- /.row -->
 
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-12 col-sm-6 col-md-3">
 						<div class="info-box">
 								<span class="info-box-icon bg-info elevation-1"><i
@@ -139,11 +139,11 @@
 									class="info-box-number"> 10 <small>%</small>
 									</span>
 							</div>
-							<!-- /.info-box-content -->
+							/.info-box-content
 						</div>
-						<!-- /.info-box -->
+						/.info-box
 					</div>
-					<!-- /.col -->
+					/.col
 					<div class="col-12 col-sm-6 col-md-3">
 						<div class="info-box mb-3">
 								<span class="info-box-icon bg-danger elevation-1"><i
@@ -153,13 +153,13 @@
 								<span class="info-box-text">Likes</span> <span
 									class="info-box-number">41,410</span>
 							</div>
-							<!-- /.info-box-content -->
+							/.info-box-content
 						</div>
-						<!-- /.info-box -->
+						/.info-box
 					</div>
-					<!-- /.col -->
+					/.col
 
-					<!-- fix for small devices only -->
+					fix for small devices only
 					<div class="clearfix hidden-md-up"></div>
 
 					<div class="col-12 col-sm-6 col-md-3">
@@ -171,11 +171,11 @@
 								<span class="info-box-text">Sales</span> <span
 									class="info-box-number">760</span>
 							</div>
-							<!-- /.info-box-content -->
+							/.info-box-content
 						</div>
-						<!-- /.info-box -->
+						/.info-box
 					</div>
-					<!-- /.col -->
+					/.col
 					<div class="col-12 col-sm-6 col-md-3">
 						<div class="info-box mb-3">
 								<span class="info-box-icon bg-warning elevation-1"><i
@@ -185,12 +185,12 @@
 								<span class="info-box-text">New Members</span> <span
 									class="info-box-number">2,000</span>
 							</div>
-							<!-- /.info-box-content -->
+							/.info-box-content
 						</div>
-						<!-- /.info-box -->
+						/.info-box
 					</div>
-					<!-- /.col -->
-				</div>
+					/.col
+				</div> -->
 				<!-- /.row -->
 
 				<div class="row">
