@@ -70,7 +70,7 @@
           <div class="sec-icon">
             <i class="ti-user"></i>
             <div class="icon-text">
-            <button class="js-login">Tài Khoản</button>
+            <button class="js-login">Đăng nhập</button>
             </div>
       </c:if>
           </div>
