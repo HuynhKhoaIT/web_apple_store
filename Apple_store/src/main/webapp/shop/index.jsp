@@ -31,7 +31,7 @@
                     <div class="container">
                         <div class="container-item">
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=1">
                                     <div class="item-title">iPhone</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/iphone.webp" alt="" />
@@ -43,7 +43,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=2">
                                     <div class="item-title">iPad</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/ipad.webp" alt="" />
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=4">
                                     <div class="item-title">Mac</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/mac.webp" alt="" />
@@ -67,7 +67,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=3">
                                     <div class="item-title">Apple Watch</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/Apple-watch.webp" alt="" />
@@ -79,7 +79,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=5">
                                     <div class="item-title">Phụ Kiện</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/airtag.webp" alt="" />
