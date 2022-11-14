@@ -226,7 +226,7 @@
 							<!-- /.card-header -->
 							<div class="card-footer">
 								<div class="row">
-									<div class="col-sm-3 col-6">
+									<div class="col-sm-4 col-6">
 										<div class="description-block border-right">
 												<span class="description-percentage text-success"><i
 														class="fas fa-caret-up"></i> 17%</span>
@@ -236,7 +236,7 @@
 										<!-- /.description-block -->
 									</div>
 									<!-- /.col -->
-									<div class="col-sm-3 col-6">
+									<div class="col-sm-4 col-6">
 										<div class="description-block border-right">
 												<span class="description-percentage text-warning"><i
 														class="fas fa-caret-left"></i> 0%</span>
@@ -246,7 +246,7 @@
 										<!-- /.description-block -->
 									</div>
 									<!-- /.col -->
-									<div class="col-sm-3 col-6">
+									<div class="col-sm-4 col-6">
 										<div class="description-block border-right">
 												<span class="description-percentage text-success"><i
 														class="fas fa-caret-up"></i> 20%</span>
@@ -256,15 +256,15 @@
 										<!-- /.description-block -->
 									</div>
 									<!-- /.col -->
-									<div class="col-sm-3 col-6">
+									<!-- <div class="col-sm-3 col-6">
 										<div class="description-block">
 												<span class="description-percentage text-danger"><i
 														class="fas fa-caret-down"></i> 18%</span>
 											<h5 class="description-header">1200</h5>
 											<span class="description-text">MỤC TIÊU HOÀN THÀNH</span>
 										</div>
-										<!-- /.description-block -->
-									</div>
+										/.description-block
+									</div> -->
 								</div>
 								<!-- /.row -->
 							</div>
@@ -313,10 +313,10 @@
 											<td>${listName[i]}</td>
 											<c:choose>
 												<c:when test="${list[i].getMaTrangThai()==1}">
-													<td><span class="badge badge-success">Shipped</span></td>
+													<td><span class="badge badge-success">Chưa Xác Nhận</span></td>
 												</c:when>
 												<c:otherwise>
-													<td><span class="badge badge-success">Shipping</span></td>
+													<td><span class="badge badge-success">Đã Xác Nhận</span></td>
 												</c:otherwise>
 											</c:choose>
 											<td>

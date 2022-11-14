@@ -10,10 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import DAO.ChiTietDonHangDAO;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import DAO.SanPhamDAO;
+import Model.ChiTietDonHang;
 import Model.DonHang;
+import Model.SanPham;
 
 @WebServlet(name = "Ad_PageControl", value = "/admin")
 public class Ad_PageControl extends HttpServlet {
@@ -33,8 +36,20 @@ public class Ad_PageControl extends HttpServlet {
 			KhachHangDAO d = new KhachHangDAO();
 			listName.add(d.getKhachHangByMaKH(o.getMaKH()).getTenKH());
 		} 
-		
-		int totalChiPhi=new SanPhamDAO().TotalChiPhi();
+		List<ChiTietDonHang> chititet = new ArrayList<ChiTietDonHang>();
+		int totalChiPhi=0;
+		for (DonHang o : list) {
+			
+			ChiTietDonHangDAO d=new ChiTietDonHangDAO();
+			chititet=d.getChiTietSanPhamID(o.getMaDH());
+			for(ChiTietDonHang i:chititet)
+			{
+				SanPham SP=new SanPham();
+				SanPhamDAO a=new SanPhamDAO();
+				SP=a.getProductById(i.getMaSP());
+				totalChiPhi=totalChiPhi+i.getSoLuong()*SP.getGiaGoc();
+			}
+		}
 		int total=new DonHangDAO().totalPriceAllOrder();
 		
 		
@@ -44,6 +59,7 @@ public class Ad_PageControl extends HttpServlet {
 		request.setAttribute("listName",listName);
 		request.setAttribute("list",list);
 		request.getRequestDispatcher("/admin/admin.jsp").forward(request, response);
+
 	}
 
 	
