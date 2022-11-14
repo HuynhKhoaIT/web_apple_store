@@ -56,12 +56,23 @@
       </div>
 
       <div class="header-user col-md-2">
+      <c:if test="${sessionScope.acc!=null}">
         <a href="${root}user/user.jsp" class="user">
+          <div class="sec-icon">
+            <i class="ti-user"></i>
+            <div class="icon-text">
+            <button>Tài Khoản</button>
+            </div>
+          </div>
+        </a>
+      </c:if>
+      <c:if test="${sessionScope.acc==null}">
           <div class="sec-icon">
             <i class="ti-user"></i>
             <div class="icon-text">
             <button class="js-login">Tài Khoản</button>
             </div>
+      </c:if>
           </div>
         </a>
       </div>

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import Conn.ConnectJDBC;
+import Connection.ConnectJDBC;
 
 import entity.Users;
 
@@ -14,8 +14,8 @@ public class DAO {
 	ResultSet rs = null;
 	
 	public Users login(String username, String pass) {
-		String query = "select * from UsersData\r\n"
-				+ "where username = ? and pass = ? and isVerify = '1' ";
+		String query = "select * from KhachHang\r\n"
+				+ "where TenTK = ? and MK = ? and IsVerify = '1' ";
 		
 		try {
 			conn = new ConnectJDBC().getConnection();
@@ -32,9 +32,10 @@ public class DAO {
 						rs.getString(5),
 						rs.getString(6),
 						rs.getString(7),
-						rs.getInt(8),
+						rs.getString(8),
 						rs.getInt(9),
-						rs.getInt(10));
+						rs.getInt(10),
+						rs.getInt(11));
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -45,8 +46,8 @@ public class DAO {
 	
 	public Users CheckAccountExist(String username) {
 		
-		String query = "select * from UsersData\r\n"
-				+ "where username = ?";
+		String query = "select * from KhachHang\r\n"
+				+ "where TenTK = ?";
 		
 		try {
 			conn = new ConnectJDBC().getConnection();
@@ -62,9 +63,10 @@ public class DAO {
 						rs.getString(5),
 						rs.getString(6),
 						rs.getString(7),
-						rs.getInt(8),
+						rs.getString(8),
 						rs.getInt(9),
-						rs.getInt(10));
+						rs.getInt(10),
+						rs.getInt(11));
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -75,8 +77,8 @@ public class DAO {
 	
 	public Users sign(String name, String username, String email, String phone, String pass, String repass, int isVerify) {
 		
-		String query = "Insert into UsersData\r\n"
-				+ "Values (?, ?, ?, ?, ?, ?, ?, '1', '0')";
+		String query = "insert into KhachHang\r\n"
+				+ "values (?, ?, ?, ?, '0', ?, ?, ?, '1', '0')";
 		
 		try {
 			conn = new ConnectJDBC().getConnection();
@@ -98,7 +100,7 @@ public class DAO {
 	
 	public Users CheckIsVerifyExist(int isVerify) {
 
-		String query = "select * from UsersData\r\n" + "where isVerify = ?";
+		String query = "select * from KhachHang\r\n" + "where IsVerify = ?";
 
 		try {
 			conn = new ConnectJDBC().getConnection();
@@ -107,8 +109,17 @@ public class DAO {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				return new Users(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getInt(8), rs.getInt(9), rs.getInt(10));
+				return new Users(rs.getInt(1), 
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getString(6),
+						rs.getString(7),
+						rs.getString(8),
+						rs.getInt(9),
+						rs.getInt(10),
+						rs.getInt(11));
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -118,9 +129,9 @@ public class DAO {
 	}
 	
 	public void update(int isVerify) {
-		String query = "Update UsersData\r\n"
-				+ "set isVerify = '1'\r\n"
-				+ "where isVerify = ?;";
+		String query = "Update KhachHang\r\n"
+				+ "set IsVerify = '1'\r\n"
+				+ "where IsVerify = ?;";
 		try {
 			conn = new ConnectJDBC().getConnection();
 			ps = conn.prepareStatement(query);
@@ -132,8 +143,8 @@ public class DAO {
 	}
 	
 	public void delete(int isVerify) {
-		String query = "delete from UsersData\r\n"
-				+ "where isVerify = ? ;";
+		String query = "delete from KhachHang\r\n"
+				+ "where IsVerify = ? ;";
 		try {
 			conn = new ConnectJDBC().getConnection();
 			ps = conn.prepareStatement(query);

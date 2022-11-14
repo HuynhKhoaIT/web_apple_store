@@ -1,4 +1,4 @@
-package Controll;
+package Control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -63,7 +63,7 @@ public class SignControll extends HttpServlet {
 			}
 			else {
 				dao.sign(fullname, username, email, phone, passmd5, repassmd5, veri);
-				request.getRequestDispatcher("Verify.jsp").forward(request, response);
+				request.getRequestDispatcher("shop/Verify.jsp").forward(request, response);
 			}
 		} else {
 			request.setAttribute("mess", "Exsit User");

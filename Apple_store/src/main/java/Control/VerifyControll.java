@@ -1,4 +1,4 @@
-package Controll;
+package Control;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -36,11 +36,11 @@ public class VerifyControll extends HttpServlet {
 		DAO dao = new DAO();
 		Users a = dao.CheckIsVerifyExist(verify);
 		if (a == null) {
-			request.getRequestDispatcher("Verify.jsp").forward(request, response);
+			request.getRequestDispatcher("shop/Verify.jsp").forward(request, response);
 		}
 		else {
 			dao.update(verify);
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("shop/index.jsp").forward(request, response);
 		}
 	}
 

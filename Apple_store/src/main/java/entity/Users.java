@@ -10,6 +10,7 @@ public class Users {
 	private String phone;
 	private String pass;
 	private String repass;
+	private String address;
 	private int isVerify;
 	private int isUser;
 	private int isAdmin;
@@ -18,13 +19,14 @@ public class Users {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Users(int id, String name, String username, String email, String phone, String pass, String repass, int isVerify, int isUser, int isAdmin) {
+	public Users(int id, String name, String username, String email, String phone, String address, String pass, String repass, int isVerify, int isUser, int isAdmin) {
 		
 		this.id = id;
 		this.name = name;
 		this.username = username;
 		this.email = email;
 		this.phone = phone;
+		this.address = address;
 		this.pass = pass;
 		this.repass = repass;
 		this.isVerify = isVerify;
@@ -33,6 +35,15 @@ public class Users {
 		
 	}
 	
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -103,8 +114,8 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", name=" + name + ", username=" + username + ", email=" + email + ", phone=" + phone
-				+ ", pass=" + pass + ", repass=" + repass + ", isVerify=" + isVerify + ", isUser=" + isUser
-				+ ", isAdmin=" + isAdmin + "]";
+				+ ", pass=" + pass + ", repass=" + repass + ", address=" + address + ", isVerify=" + isVerify
+				+ ", isUser=" + isUser + ", isAdmin=" + isAdmin + "]";
 	}
 	
 	
