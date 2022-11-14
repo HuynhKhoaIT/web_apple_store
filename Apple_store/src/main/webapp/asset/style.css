@@ -1063,8 +1063,8 @@
 }
 
 #detail .renderboxbtn .action .btn-buy:hover{
-    background: #044dd6;
-    border: 1px solid #044dd6;
+/*     background: #044dd6;
+    border: 1px solid #044dd6; */
     
 }
 #detail .renderboxbtn .action .btn-add{
