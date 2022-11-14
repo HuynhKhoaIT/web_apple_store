@@ -81,7 +81,6 @@
 									<div class="col-12">
 										<h4>
 											<i class="fas fa-globe"></i> AdminLTE, Inc. <small
-												class="float-right">Date: 2/10/2014</small>
 										</h4>
 									</div>
 									<!-- /.col -->
@@ -102,13 +101,12 @@
 										<address>
 											<strong>${khachHang.tenKH}</strong><br>
 											${khachHang.diaChi} <br> Phone: ${khachHang.soDT}<br>
-											Email: huynhkhoa@gmail.com
 										</address>
 									</div>
 									<!-- /.col -->
 									<div class="col-sm-4 invoice-col">
 										<b>Hóa Đơn #${donHang.maDH}</b><br> <br> <b>ID
-											đặt hàng:</b> ${khachHang.maKH}<br> <b>Thanh toán:</b>
+											đặt hàng:</b> ${khachHang.maKH}<br> <b>Ngày đặt hàng:</b>
 										${donHang.thoiGian} <br> <b>Tài khoản:</b> ${taikhoan.getTenDN()  }
 									</div>
 									<!-- /.col -->
@@ -146,7 +144,6 @@
 
 								<div class="row">
 									<div class="col-6">
-										<p class="lead">Amount Due 2/22/2014</p>
 
 										<div class="table-responsive">
 											<table class="table">
@@ -165,7 +162,7 @@
 								<!-- this row will not appear when printing -->
 								<div class="row no-print">
 									<div class="col-12">
-										<a href="invoice-print.html" rel="noopener" target="_blank"
+										<a href="invoice-print.jsp" rel="noopener" target="_blank"
 											class="btn btn-default"><i class="fas fa-print"></i>
 											Print</a>
 										<form action="Ad_invoice" method="post">

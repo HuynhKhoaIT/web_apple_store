@@ -128,7 +128,12 @@ public class ProcessControl extends HttpServlet {
                 Cookie c = new Cookie("cart",txt);
                 c.setMaxAge(2*24*60*60);
                 response.addCookie(c);
+                LoaispDAO loaispDAO = new LoaispDAO();
+                List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
+
+                request.setAttribute("listlsp",listlsp);
                 request.setAttribute("cart",cart);
+                
                 request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
             }
             else if(num == 0)

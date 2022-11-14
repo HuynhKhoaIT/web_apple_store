@@ -94,9 +94,11 @@
                                         </div>
                                     </div>
                                     <div class="product-detai">
-                                        <button class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
+                                       <a href="ProductDetailControl?maSP=${o.maSP}">
+                                        <button  class="btn btn-outline-grayscale" type="button">XEM CHI TIÊT</button>
+                                    </a>
                                     </div>
-
+									
                                 </div>
                                 </c:forEach>
                             </div>

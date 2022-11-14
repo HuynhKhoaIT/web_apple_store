@@ -322,8 +322,6 @@
     background: #0664f9;
     border: none;
     font-size: 21px;
-    height: 45px;
-    width: 250px;
 }
 
 
@@ -1025,6 +1023,7 @@
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 16px;
+    justify-content: space-between;
 }
 
 #detail .colors .item {
@@ -1387,6 +1386,7 @@
         padding-right: 14px  ;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
     }
     #header-top .top-header .sec-icon i{

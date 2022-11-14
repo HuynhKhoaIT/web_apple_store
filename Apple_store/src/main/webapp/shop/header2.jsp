@@ -16,7 +16,7 @@
 	          </div>
 	          <div class="col-md-12 col-6">
 	          	  <a href="http://localhost:8080/Apple_store" class="logo">
-	          	  <img src="${root}asset/img/logo.webp" alt="logo" class="max-width">
+	          	  <img src="${root}asset/img/logoPNG.png" alt="logo" class="max-width">
 	        	  </a>
 	          </div>
 	          <div class="col-1">
@@ -95,7 +95,7 @@
        <div class="mn-content">
            <div class="mn-top flex flex-between">
                <div class="mn-logo">
-                   <a href="/"><img src="${root}asset/img/logo-fstu.webp" alt="logo-fstu" /> </a>
+                   <a href="/"><img src="${root}asset/img/logoPNG.png" alt="logo-fstu" /> </a>
                </div>
                <span class="js-close-menu">
                    <i class="ti-close"> </i>
