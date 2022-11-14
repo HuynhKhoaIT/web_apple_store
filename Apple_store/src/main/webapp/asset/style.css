@@ -808,7 +808,7 @@
 
 .btn-outline-grayscale:hover {
     color: #fff !important;
-    background: #939ca3;
+    background: #939ca3 !important;
     border: 1px solid #939ca3;
 }
 

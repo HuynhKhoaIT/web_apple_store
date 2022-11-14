@@ -28,7 +28,6 @@
 
     <c:set var="danhmuc" value="${maDM}"/>
     <c:set var="loaiSP" value="${maLoai}"/>
-	
     <div id="category">
         <div class="container">
             <ol class="breadcrumb">
@@ -72,13 +71,29 @@
                             <div class="content-sort">
                                 <div class="text">Sắp xếp theo:</div>
                                 <div class="dropdown">
-                                    <button class="btn btn-outline" type="button" data-toggle="dropdown">Mới Nhất
+                                		<!-- <button class="btn btn-outline" type="button" data-toggle="dropdown">Mới Nhất
+                                       			<span class="caret"></span>
+                                    	</button> -->
+                                 	<c:if test="${sort == ''}">
+	                                    	<button class="btn btn-outline" type="button" data-toggle="dropdown">Mới Nhất
+                                       			<span class="caret"></span>
+                                    		</button>
+									</c:if>
+									<c:if test="${sort == -1}">
+	                                    	<button class="btn btn-outline" type="button" data-toggle="dropdown">Giá thấp đến cao
                                         <span class="caret"></span>
                                     </button>
+									</c:if>
+									<c:if test="${sort == 1}">
+	                                    	<button class="btn btn-outline" type="button" data-toggle="dropdown">Giá thấp đến cao
+                                        <span class="caret"></span>
+                                    </button>
+									</c:if>
+                                    
                                     <ul class="dropdown-menu">
                                         <li class="tab-item"><a href="loaisp?sort=0&maloai=${maLoai}&madm=${danhmuc}">Mới Nhất</a></li>
                                         <li class="tab-item"><a href="loaisp?sort=1&maloai=${maLoai}&madm=${danhmuc}">Giá thấp đến cao</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=-1&maloai=${maLoai}&madm=${danhmuc}">Giá cao đến thấp</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=-1&maloai=${maLoai}&madm=${danhmuc}">Giá thấp đến cao</a></li>
                                     </ul>
                                 </div>
                             </div>
