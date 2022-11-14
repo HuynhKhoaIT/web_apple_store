@@ -76,6 +76,11 @@
                       <label>Mô tả sản phẩm</label>
                       <textarea class="form-control tiny" rows="3" placeholder="Enter ..." name="motasanpham"></textarea>
                     </div>
+                      <script type="text/javascript">
+                          tinymce.init({
+                              entity_encoding : "raw"
+                          });
+                      </script>
                     <div class="form-group">
                       <label>Giá gốc</label>
                       <input type="number" min="0" max="100000000" step="1" class="form-control" name="giagoc"/>

@@ -53,6 +53,25 @@ public class BaiVietDAO {
         }
         return list;
     }
+    public BaiViet getBaiVietByID(String id){
+
+        String query = "select * From BaiViet where MaBV = ?";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setString(1,id);
+            rs =ps.executeQuery();
+
+            while(rs.next())
+            {
+               return new BaiViet(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4)
+               ,rs.getDate(5),rs.getDate(6));
+            }
+        }
+        catch (Exception e) {
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
         BaiVietDAO baiVietDAO = new BaiVietDAO();

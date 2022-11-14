@@ -31,7 +31,7 @@
                     <div class="container">
                         <div class="container-item">
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=1">
                                     <div class="item-title">iPhone</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/iphone.webp" alt="" />
@@ -43,7 +43,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=2">
                                     <div class="item-title">iPad</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/ipad.webp" alt="" />
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=4">
                                     <div class="item-title">Mac</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/mac.webp" alt="" />
@@ -67,7 +67,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=3">
                                     <div class="item-title">Apple Watch</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/Apple-watch.webp" alt="" />
@@ -79,7 +79,7 @@
                                 </a>
                             </div>
                             <div class="cate-item">
-                                <a href="">
+                                <a href="loaisp?maloai=5">
                                     <div class="item-title">Phụ Kiện</div>
                                     <div class="item-img">
                                         <img src="${root}asset/img/airtag.webp" alt="" />
@@ -132,91 +132,29 @@
                 <section id="content-blog">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/blog1.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chương trình Workshop
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn1.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chế độ Always On Display của iPhone 14 Pro khác hoàn toàn với các máy Android
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
+                            <c:forEach var="l" items="${listBaiViet}">
+                                <div class="col-md-6 col-sm-12 padding-0-12">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="${l.anh}" alt="" />
+                                            <a href="BlogDetailControl?maBV=${l.maBV}" class="card-btn">
+                                                Tin tức
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <a href="BlogDetailControl?maBV=${l.maBV}">
+                                                <div class="card-title line-clamp-2">
+                                                    ${l.tieuDeBV}
+                                                </div>
+                                                <div class="card-info">
+                                                    <span>Xem ngay</span>
+                                                    <i class="ti-angle-right"></i>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn3.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Chương trình khách hàng thân thiết
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 padding-0-12">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${root}asset/img/bn4.webp" alt="" />
-                                        <a href="" class="card-btn">
-                                            Tin tức
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <a href="">
-                                            <div class="card-title line-clamp-2">
-                                                Hướng dẫn thanh toán trên trang F.Studio
-                                            </div>
-                                            <div class="card-info">
-                                                <span>Xem ngay</span>
-                                                <i class="ti-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </div>
                     </div>
                 </section>

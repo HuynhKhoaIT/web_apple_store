@@ -7,13 +7,11 @@ public class ThongSoKyThuatSanPham {
 
     public ThongSoKyThuatSanPham() {
     }
-
     public ThongSoKyThuatSanPham(int maSP, String maTSKT, String mota) {
         MaSP = maSP;
         MaTSKT = maTSKT;
         Mota = mota;
     }
-
     public int getMaSP() {
         return MaSP;
     }

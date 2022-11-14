@@ -60,7 +60,7 @@
               <div class="card-header">
                 <h3 class="card-title">Tất cả bài viết</h3>
                 <div class="card-add">
-                  <a href="../admin/add_blog.jsp" class="">
+                  <a href="${root}Ad_TaoBaiViet" class="">
                     <p>Thêm bài viết</p>
                   </a>
                 </div>
