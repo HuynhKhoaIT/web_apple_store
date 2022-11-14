@@ -318,6 +318,14 @@
     text-decoration: none;
     text-align: center;
 }
+.detailbtn{
+    background: #0664f9;
+    border: none;
+    font-size: 21px;
+    height: 45px;
+    width: 250px;
+}
+
 
 .card{
     background: #32373d !important;
