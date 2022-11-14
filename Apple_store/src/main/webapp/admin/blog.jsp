@@ -80,7 +80,9 @@
                   <tbody>
                   <c:forEach items="${listBaiViet}" var="l">
                     <tr>
-                      <td>${l.tieuDeBV}</td>
+                      <td>
+                      <a href="${root}/BlogDetailControl?maBV=${l.maBV}">${l.tieuDeBV}</a>
+                      </td>
                         <%--                    <td>Admin</td>--%>
                         <%--                    <td>khach-hang</td>--%>
                         <%--                    <td>uu-dai-khach-hang</td>--%>

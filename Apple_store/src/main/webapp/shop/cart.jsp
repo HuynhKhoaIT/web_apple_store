@@ -162,19 +162,19 @@
                            <div class="btn-container col-md-8">
                               <div>
                                  <button type="button" class="btn" id="next-step" onclick="formvalidate()">
-                                    <strong>Tiếp tục</strong>
+                                    <strong>Đặt Hàng</strong>
                                     <span>(Chọn hình thức nhận hàng)</span>
                                  </button>
                               </div>
-                              <div id="or">
+                              <!-- <div id="or">
                                  <p>Hoặc</p>
-                              </div>
-                              <div>
+                              </div> -->
+                              <!-- <div>
                                  <button type="button" class="btn" id="order-fast" onclick="callServlet('POST')">
                                     <strong>Đặt hàng luôn</strong>
                                     <span>FPT Shop sẽ gọi cho quý khách</span>
                                  </button>
-                              </div>
+                              </div> -->
                            </div>
                         </li>
                      </ul>

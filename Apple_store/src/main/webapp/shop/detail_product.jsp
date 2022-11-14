@@ -145,7 +145,7 @@
                                             <input type="submit" class="detailbtn" value="Thêm vào giỏ hàng" >
                                         </form>
                                         <form action="buy" method="post" class="btn btn-link btn-xl btn-buy col-12">
-                                            <input type="hidden" name = "id" value="${p.maSP}"/>
+                                            <input type="hidden" name = "id" value="${p.maSP}"/>8
                                             <input type="hidden" name = "num" value="1"/>
                                             <input type="hidden" name = "check" value="1"/>
                                             <input class="detailbtn" type="submit" value="Mua ngay" >

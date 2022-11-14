@@ -46,7 +46,9 @@ public class Ad_AddBlog extends HttpServlet {
 
         BaiVietDAO baiVietDAO = new BaiVietDAO();
         baiVietDAO.addBaiViet(tieude,chitiet,anh);
+        response.sendRedirect("Ad_Blog");
+        
 
-        System.out.println("success");
+        
     }
 }

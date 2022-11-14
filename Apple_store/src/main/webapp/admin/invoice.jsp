@@ -124,7 +124,6 @@
 													<th>SL</th>
 													<th>Tên sản phẩm</th>
 													<th>Mã sản phẩm #</th>
-													<th>Mô tả</th>
 													<th>Thành tiền</th>
 												</tr>
 											</thead>
@@ -135,7 +134,6 @@
 														<td>${listDetail[i].getSoLuong()}</td>
 														<td>${listSP[i].getTenSP()}</td>
 														<td>${listSP[i].getMaSP()}</td>
-														<td>${listSP[i].getMoTa()}</td>
 														<td>${listDetail[i].getTongTien()} VND</td>
 													</tr>
 												</c:forEach>
