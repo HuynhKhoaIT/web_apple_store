@@ -44,9 +44,22 @@
                         <div class="menu">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <a href="loaisp?maloai=${ml}" class="swiper-slide active">Tất cả</a>
+                                
+                                	<c:if test="${danhmuc == ''}">
+	                                   <a href="loaisp?maloai=${ml}" class="swiper-slide active">Tất cả</a>
+									</c:if>
+									
+									<c:if test="${danhmuc != ''}">
+	                                   <a href="loaisp?maloai=${ml}" class="swiper-slide">Tất cả</a>
+									</c:if>
+                                    
                                     <c:forEach items="${listdm}" var="o" >
-                                    	<a href="loaisp?madm=${o.maDM}" class="swiper-slide">${o.tenDM}</a>
+	                                    <c:if test="${danhmuc == o.maDM}">
+	                                    	<a href="loaisp?madm=${o.maDM}" class="swiper-slide active">${o.tenDM}</a>
+									    </c:if>
+									    <c:if test="${danhmuc != o.maDM}">
+	                                    	<a href="loaisp?madm=${o.maDM}" class="swiper-slide">${o.tenDM}</a>
+									    </c:if>
                                     </c:forEach>
                                 </div>
                             </div>

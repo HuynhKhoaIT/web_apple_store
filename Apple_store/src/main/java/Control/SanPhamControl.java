@@ -92,10 +92,12 @@ public class SanPhamControl extends HttpServlet{
         System.out.println(listsp);
         request.setAttribute("maDM",madmInt);
         request.setAttribute("maLoai",maLoaiInt);
+        System.out.print(maLoaiInt);
         request.setAttribute("listlsp", listlsp);
         request.setAttribute("listsp", listsp);
         request.setAttribute("listdm", listdm);
         request.setAttribute("ml", ml);
+        System.out.print(ml);
         request.setAttribute("tl", tl);
         request.getRequestDispatcher("/shop/product.jsp").forward(request, response);
         

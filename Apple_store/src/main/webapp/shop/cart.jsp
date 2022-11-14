@@ -184,8 +184,8 @@
             <div class="subcontainer" id="cart-empty" style="display: none">
                <div class="container no-products">
 				    <div class="row">
-				        <div class="col-md-6">
-				            <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" alt="">
+				        <div >
+				            <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" alt="" style="width: 100% ;">
 				        </div>
 				    </div>
 				    <div class="row title-content" style="text-align: center ;">
