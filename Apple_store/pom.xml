@@ -12,6 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-war-plugin>3.3.2</maven-war-plugin>
+		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <junit.version>5.8.2</junit.version>
@@ -45,17 +47,25 @@
 		<dependency>
 	    	<groupId>com.microsoft.sqlserver</groupId>
 	    	<artifactId>mssql-jdbc</artifactId>
-	    	<version>9.2.1.jre8</version>
+	    	<version>9.4.1.jre8</version>
 		</dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+			<plugins>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven-war-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin}</version>
+					<configuration>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+	</build>
 </project>

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.BaiVietDAO;
 import DAO.NewProductDAO;
 import DAO.LoaispDAO;
 import Model.BaiViet;
@@ -31,10 +30,10 @@ public class ViewShop extends HttpServlet {
 		LoaispDAO sanphamdao = new LoaispDAO();
 		List<SanPham> list = newproducdao.newProduct();
 		List<LoaiSP> listlsp = sanphamdao.getAllloaisp();
-		BaiVietDAO baiVietDAO = new BaiVietDAO();
-
-		List<BaiViet> listBaiViet = baiVietDAO.getAllBaiVietTop4();
-		request.setAttribute("listBaiViet", listBaiViet);
+//		BaiVietDAO baiVietDAO = new BaiVietDAO();
+//
+//		List<BaiViet> listBaiViet = baiVietDAO.getAllBaiVietTop4();
+//		request.setAttribute("listBaiViet", listBaiViet);
 
 		request.setAttribute("listNew", list);
 		request.setAttribute("listlsp", listlsp);
