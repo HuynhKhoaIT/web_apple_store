@@ -18,7 +18,7 @@ import Model.ChiTietDonHang;
 import Model.DonHang;
 import Model.SanPham;
 
-@WebServlet(name = "Ad_PageControl", value = "/admin")
+@WebServlet(name = "Ship_PageControl", value = "/shiper")
 public class Ad_PageControl extends HttpServlet {
 	
 	@Override
@@ -58,7 +58,7 @@ public class Ad_PageControl extends HttpServlet {
 		request.setAttribute("size",listName.size());
 		request.setAttribute("listName",listName);
 		request.setAttribute("list",list);
-		request.getRequestDispatcher("/admin/admin.jsp").forward(request, response);
+		request.getRequestDispatcher("/shipper/admin.jsp").forward(request, response);
 
 	}
 
