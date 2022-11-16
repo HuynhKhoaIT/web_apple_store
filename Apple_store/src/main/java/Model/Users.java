@@ -1,7 +1,7 @@
 package Model;
 
 public class Users {
-	private int id;
+	private int MaKH;
 	private String TenKH;
 	private String TenTK;
 	private String Email;
@@ -13,32 +13,30 @@ public class Users {
 	private int IsUser;
 	private int IsAdmin;
 	private int IsShiper;
-	
 	public Users() {
-		
+		super();
 	}
-	
-	public Users(int id, String TenKH, String TenTK, String Email, String Phone, String DiaChi, String MK, String NNMK,
-			int IsVerify, int IsUser, int IsAdmin, int IsShiper) {
-		this.id = id;
-		this.TenKH = TenKH;
-		this.TenTK = TenTK;
-		this.Email = Email;
-		this.Phone = Phone;
-		this.DiaChi = DiaChi;
-		this.MK = MK;
-		this.NNMK = NNMK;
-		this.IsVeify = IsVerify;
-		this.IsUser = IsUser;
-		this.IsAdmin = IsAdmin;
-		this.IsShiper = IsShiper;
+	public Users(int maKH, String tenKH, String tenTK, String email, String phone, String diaChi, String mK,
+			String nNMK, int isVeify, int isUser, int isAdmin, int isShiper) {
+		super();
+		MaKH = maKH;
+		TenKH = tenKH;
+		TenTK = tenTK;
+		Email = email;
+		Phone = phone;
+		DiaChi = diaChi;
+		MK = mK;
+		NNMK = nNMK;
+		IsVeify = isVeify;
+		IsUser = isUser;
+		IsAdmin = isAdmin;
+		IsShiper = isShiper;
 	}
-	
-	public int getId() {
-		return id;
+	public int getMaKH() {
+		return MaKH;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setMaKH(int maKH) {
+		MaKH = maKH;
 	}
 	public String getTenKH() {
 		return TenKH;
@@ -73,8 +71,8 @@ public class Users {
 	public String getMK() {
 		return MK;
 	}
-	public void setMK(String mk) {
-		MK = mk;
+	public void setMK(String mK) {
+		MK = mK;
 	}
 	public String getNNMK() {
 		return NNMK;
@@ -100,21 +98,17 @@ public class Users {
 	public void setIsAdmin(int isAdmin) {
 		IsAdmin = isAdmin;
 	}
-	
 	public int getIsShiper() {
 		return IsShiper;
 	}
-
 	public void setIsShiper(int isShiper) {
 		IsShiper = isShiper;
 	}
-
 	@Override
 	public String toString() {
-		return "Users [id=" + id + ", TenKH=" + TenKH + ", TenTK=" + TenTK + ", Email=" + Email + ", Phone=" + Phone
+		return "Users [MaKH=" + MaKH + ", TenKH=" + TenKH + ", TenTK=" + TenTK + ", Email=" + Email + ", Phone=" + Phone
 				+ ", DiaChi=" + DiaChi + ", MK=" + MK + ", NNMK=" + NNMK + ", IsVeify=" + IsVeify + ", IsUser=" + IsUser
 				+ ", IsAdmin=" + IsAdmin + ", IsShiper=" + IsShiper + "]";
 	}
-	
 	
 }

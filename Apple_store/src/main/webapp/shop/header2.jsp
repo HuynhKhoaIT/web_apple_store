@@ -60,7 +60,7 @@
       	<a href="${root}shop/user.jsp" class="user">
           <div class="sec-icon">
             <i class="ti-user"></i>
-            <div class="icon-text">Hello</div>
+            <div class="icon-text">${sessionScope.acc.tenKH}</div>
           </div>
         </a>
       </c:if>
