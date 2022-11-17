@@ -1,22 +1,24 @@
 package Model;
 
 public class SanPham {
-    int MaSP;
-    int MaDM;
-    String TenSP;
-    String MoTa;
-    int GiaGoc;
-    int GiaBanThuong;
-    int GiaKhuyenMai;
-    int SoLuong;
-    String Anh;
+	int MaSP;
+	int MaDM;
+	String TenSP;
+	String MoTa;
+	int GiaGoc;
+	int GiaBanThuong;
+	int GiaKhuyenMai;
+	int SoLuong;
+	String Anh;
 
-    public SanPham() {
-    }
-    
-	public SanPham(int maSP, int maDM, String tenSP, String moTa, int giaGoc, int giaBanThuong, int giaKhuyenMai,
-			int soLuong, String anh) {
-		super();
+	String MoTaNgan;
+
+	int isDeteted;
+
+	public SanPham() {
+	}
+
+	public SanPham(int maSP, int maDM, String tenSP, String moTa, int giaGoc, int giaBanThuong, int giaKhuyenMai, int soLuong, String anh, String moTaNgan, int isDeteted) {
 		MaSP = maSP;
 		MaDM = maDM;
 		TenSP = tenSP;
@@ -26,6 +28,8 @@ public class SanPham {
 		GiaKhuyenMai = giaKhuyenMai;
 		SoLuong = soLuong;
 		Anh = anh;
+		MoTaNgan = moTaNgan;
+		this.isDeteted = isDeteted;
 	}
 
 	public int getMaSP() {
@@ -100,12 +104,36 @@ public class SanPham {
 		Anh = anh;
 	}
 
+	public String getMoTaNgan() {
+		return MoTaNgan;
+	}
+
+	public void setMoTaNgan(String moTaNgan) {
+		MoTaNgan = moTaNgan;
+	}
+
+	public int getIsDeteted() {
+		return isDeteted;
+	}
+
+	public void setIsDeteted(int isDeteted) {
+		this.isDeteted = isDeteted;
+	}
+
 	@Override
 	public String toString() {
-		return "SanPham [MaSP=" + MaSP + ", MaDM=" + MaDM + ", TenSP=" + TenSP + ", MoTa=" + MoTa + ", GiaGoc=" + GiaGoc
-				+ ", GiaBanThuong=" + GiaBanThuong + ", GiaKhuyenMai=" + GiaKhuyenMai + ", SoLuong=" + SoLuong
-				+ ", Anh=" + Anh + "]";
+		return "SanPham{" +
+				"MaSP=" + MaSP +
+				", MaDM=" + MaDM +
+				", TenSP='" + TenSP + '\'' +
+				", MoTa='" + MoTa + '\'' +
+				", GiaGoc=" + GiaGoc +
+				", GiaBanThuong=" + GiaBanThuong +
+				", GiaKhuyenMai=" + GiaKhuyenMai +
+				", SoLuong=" + SoLuong +
+				", Anh='" + Anh + '\'' +
+				", MoTaNgan='" + MoTaNgan + '\'' +
+				", isDeteted=" + isDeteted +
+				'}';
 	}
-	
-    
 }

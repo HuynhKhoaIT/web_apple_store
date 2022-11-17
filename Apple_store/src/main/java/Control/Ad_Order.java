@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
-import Model.KhachHang;
  
 @WebServlet(name = "Ad_AllOrder", value = "/AllOrder")
 public class Ad_Order extends HttpServlet {

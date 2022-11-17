@@ -29,8 +29,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -124,8 +127,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -144,8 +150,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -163,7 +172,7 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4)));
+					list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3)));
 				}
 		}
 			catch (Exception e) {
@@ -190,8 +199,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -207,8 +219,12 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				return new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9));
+				return new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11));
+
 			}
 
 		}catch (Exception e){
@@ -232,8 +248,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -252,8 +271,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -274,8 +296,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -295,8 +320,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -318,8 +346,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -377,8 +408,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				return new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9));
+				return new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11));
 			}
 		}
 		catch (Exception e) {

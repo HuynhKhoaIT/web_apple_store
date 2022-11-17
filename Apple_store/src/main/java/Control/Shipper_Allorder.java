@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
-import Model.KhachHang;
  
 @WebServlet(urlPatterns = {"/shipper/allorder"})
 public class Shipper_Allorder extends HttpServlet {

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
-import Model.KhachHang;
+import Model.Users;
 
 /**
  * Servlet implementation class User_OrderControl
@@ -26,7 +26,7 @@ public class User_OrderControl extends HttpServlet {
 			throws ServletException, IOException {
 		int maTK = 1;
 		KhachHangDAO dao = new KhachHangDAO();
-		KhachHang khachHang = new KhachHang();
+		Users khachHang = new Users();
 		khachHang = dao.getKhachHangByMaTK(maTK);
 
 		DonHangDAO dHangDAO = new DonHangDAO();

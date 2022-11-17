@@ -4,12 +4,7 @@ import DAO.ChiTietDonHangDAO;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import DAO.SanPhamDAO;
-import DAO.TaiKhoanDAO;
-import Model.ChiTietDonHang;
-import Model.DonHang;
-import Model.KhachHang;
-import Model.SanPham;
-import Model.TaiKhoan;
+import Model.*;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -32,12 +27,12 @@ public class Ad_InvoiceControl extends HttpServlet {
 		DonHang donHang = donHangDAO.getDonHangByMaDH(maDH);
 
 		KhachHangDAO khachHangDAO = new KhachHangDAO();
-		KhachHang khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
+		Users khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
 
-		TaiKhoan taiKhoan = new TaiKhoan();
-		TaiKhoanDAO taiKhoanDAO=new TaiKhoanDAO();
-		taiKhoan=taiKhoanDAO.getTaiKhoanByMaTK(khachHang.getMaTK());
-		
+//		TaiKhoan taiKhoan = new TaiKhoan();
+//		TaiKhoanDAO taiKhoanDAO=new TaiKhoanDAO();
+//		taiKhoan=taiKhoanDAO.getTaiKhoanByMaTK(khachHang.getMaKH());
+//
 		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();
 		List<ChiTietDonHang> list = dao.getChiTietSanPhamID(Integer.parseInt(maDH));
 
@@ -49,7 +44,7 @@ public class Ad_InvoiceControl extends HttpServlet {
 		}
 		
 	
-		request.setAttribute("taikhoan", taiKhoan);
+//		request.setAttribute("taikhoan", taiKhoan);
 		request.setAttribute("khachHang", khachHang);
 		request.setAttribute("donHang", donHang);
 		request.setAttribute("size", list.size());

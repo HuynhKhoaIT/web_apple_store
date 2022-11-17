@@ -3,7 +3,6 @@ package Control;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
-import Model.KhachHang;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -1,7 +1,7 @@
 package DAO;
 
 import Connection.ConnectJDBC;
-import Model.KhachHang;
+import Model.Users;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,9 +15,9 @@ public class KhachHangDAO {
     PreparedStatement ps =null;
     ResultSet rs = null;
 
-    public List<KhachHang> getAllKhachHang()
+    public List<Users> getAllKhachHang()
     {
-        List<KhachHang> list = new ArrayList<>();
+        List<Users> list = new ArrayList<>();
         String query = "Select * From KhachHang";
         try {
             conn =new ConnectJDBC().getConnection();
@@ -25,15 +25,18 @@ public class KhachHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                list.add(new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-                        rs.getDate(5),rs.getString(6),rs.getString(7)));
+                list.add(new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12)));
             }
         }
         catch (Exception e) {
         }
         return list;
     }
-    public KhachHang getKhachHangByID(String id){
+    public Users getKhachHangByID(String id){
         String query = "Select * From KhachHang where MaKH = ?";
         try {
             conn =new ConnectJDBC().getConnection();
@@ -42,16 +45,19 @@ public class KhachHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                return new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-                        rs.getDate(5),rs.getString(6),rs.getString(7));
+                return new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12));
             }
         }
         catch (Exception e) {
         }
         return null;
     }
-    public KhachHang getKhachHangByPhone(String sdt){
-        String query = "Select * From KhachHang where SoDT = ?";
+    public Users getKhachHangByPhone(String sdt){
+        String query = "Select * From KhachHang where Phone = ?";
         try {
             conn =new ConnectJDBC().getConnection();
             ps =conn.prepareStatement(query);
@@ -59,8 +65,11 @@ public class KhachHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                return new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-                        rs.getDate(5),rs.getString(6),rs.getString(7));
+                return new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12));
             }
         }
         catch (Exception e) {
@@ -84,7 +93,7 @@ public class KhachHangDAO {
     }
 
     
-    public KhachHang getKhachHangByMaKH(int MaKH){
+    public Users getKhachHangByMaKH(int MaKH){
 		String query = "Select * From KhachHang where MaKH = ?";
         try {
             conn =new ConnectJDBC().getConnection();
@@ -93,8 +102,11 @@ public class KhachHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                return new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-                        rs.getDate(5),rs.getString(6),rs.getString(7));
+                return new Users(rs.getInt(1),
+                    rs.getString(2),rs.getString(3),
+                    rs.getString(4),rs.getString(5),rs.getString(6),
+                    rs.getString(7),rs.getString(8),
+                    rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12));
             }
         }
         catch (Exception e) {
@@ -102,7 +114,7 @@ public class KhachHangDAO {
         return null;
 
     }
-    public KhachHang getKhachHangByMaTK(int MaTK){
+    public Users getKhachHangByMaTK(int MaTK){
 		String query = "Select * From KhachHang where MaTK = ?";
         try {
             conn =new ConnectJDBC().getConnection();
@@ -111,8 +123,11 @@ public class KhachHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                return new KhachHang(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-                        rs.getDate(5),rs.getString(6),rs.getString(7));
+                return new Users(rs.getInt(1),
+                    rs.getString(2),rs.getString(3),
+                    rs.getString(4),rs.getString(5),rs.getString(6),
+                    rs.getString(7),rs.getString(8),
+                    rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12));
             }
         }
         catch (Exception e) {
@@ -146,13 +161,10 @@ public class KhachHangDAO {
 
     public static void main(String[] args) {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
-        List<KhachHang> listKhachHang = khachHangDAO.getAllKhachHang();
-        for(KhachHang o :listKhachHang){
-            System.out.println(o);
-        }
-        KhachHang khachHang = khachHangDAO.getKhachHangByPhone("2222222222");
-        System.out.println(khachHang);
-        khachHangDAO.addKhachHang("Khoa","QuanNgai","9999999999");
+        Users KhachHang = khachHangDAO.getKhachHangByPhone("0585858714");
+        System.out.println(KhachHang);
     }
+
+
 
 }

@@ -4,15 +4,14 @@ public class DanhMuc {
     int MaDM;
     int MaLoai;
     String TenDM;
-    String DuongDan;
 
-    public DanhMuc() {
-    }
-    public DanhMuc(int maDM, int maLoai, String tenDM, String duongDan) {
+    public DanhMuc(int maDM, int maLoai, String tenDM) {
         MaDM = maDM;
         MaLoai = maLoai;
         TenDM = tenDM;
-        DuongDan = duongDan;
+    }
+
+    public DanhMuc() {
     }
 
     public int getMaDM() {
@@ -39,21 +38,14 @@ public class DanhMuc {
         TenDM = tenDM;
     }
 
-    public String getDuongDan() {
-        return DuongDan;
-    }
-
-    public void setDuongDan(String duongDan) {
-        DuongDan = duongDan;
-    }
-
     @Override
     public String toString() {
         return "DanhMuc{" +
                 "MaDM=" + MaDM +
                 ", MaLoai=" + MaLoai +
                 ", TenDM='" + TenDM + '\'' +
-                ", DuongDan='" + DuongDan + '\'' +
                 '}';
     }
 }
+
+

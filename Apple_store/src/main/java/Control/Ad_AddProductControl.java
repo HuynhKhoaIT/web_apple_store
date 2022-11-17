@@ -117,27 +117,8 @@ public class Ad_AddProductControl extends HttpServlet {
         SanPhamDAO sanPhamDAO = new SanPhamDAO();
         sanPhamDAO.addSanPham(maDM,tensanpham,motasanpham,giagoc,giabanthuong,giakhuyenmai,soluong,anh);
         SanPham sanPham = sanPhamDAO.getNewSP();
-        ThongSoKyThuatSanPhamDAO thongSoKyThuatSanPhamDAO = new ThongSoKyThuatSanPhamDAO();
         AnhSPDAO anhSPDAO = new AnhSPDAO();
         anhSPDAO.addAnhSP(sanPham.getMaSP(),anh);
-
-        if(maLoai.equals("1")) // iphone
-        {
-            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatIP(sanPham,manhinhIP,camerasauIP,camereselfieIP,bonhotrongIP,cpuIP,hedieuhanhIP,xuatxuIP,thoigianramatIP);
-        }
-        else if(maLoai.equals("2")) // ipad
-        {
-            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatIPAD(sanPham,manhinhIPAD,camerasauIPAD,cameraselfieIPAD,bonhotrongIPAD,ramIPAD,cpuIPAD,gpuIPAD,hedieuhanhIPAD,
-                    xuatxuIPAD,thoigianramatIPAD);
-        }
-        else if(maLoai.equals("3")) {//applewatch
-            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatWATCH(sanPham,manhinhWATCH,chatlieuWATCH,hedieuhanhWATCH,thoigiansudungpinWATCH,xuatxuWATCH,thoigianramatWATCH);
-        }
-        else if(maLoai.equals("4")){ //mac
-            thongSoKyThuatSanPhamDAO.AddThongSoKyThuatMAC(sanPham,manhinhMAC,cameraselfieMAC,cpuMAC,ramMAC,ocungMAC,dohoaMAC,hedieuhanhMAC,trongluongMAC,kichthuocMAC,
-                    xuatxuMAC,thoigianramatMAC);
-        }
-
 
         response.sendRedirect("Ad_AddProductControl");
 

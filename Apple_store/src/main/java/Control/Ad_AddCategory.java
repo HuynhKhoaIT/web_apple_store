@@ -16,7 +16,6 @@ import javax.servlet.http.Part;
 import DAO.LoaispDAO;
 import DAO.DanhMucDAO;
 import DAO.SanPhamDAO;
-import DAO.ThongSoKyThuatSanPhamDAO;
 import Model.LoaiSP;
 import Model.SanPham;
 
@@ -45,10 +44,9 @@ public class Ad_AddCategory extends HttpServlet {
 
 	        String maLoai = request.getParameter("maLoai");
 	        String tenDM = request.getParameter("tendanhmuc");
-	        String tenSLug = request.getParameter("tenslug");
 	        
 	        DanhMucDAO danhmucDAO = new DanhMucDAO();
-	        danhmucDAO.addDanhMuc(maLoai, tenDM, tenSLug);
+	        danhmucDAO.addDanhMuc(maLoai, tenDM);
 	        
 	        
 	       response.sendRedirect("http://localhost:8080/Apple_store/admin/category");
