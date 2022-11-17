@@ -73,8 +73,12 @@
                       <input type="text" class="form-control" placeholder="Enter name" name="tensanpham">
                     </div>
                     <div class="form-group">
+                      <label>Mô tả ngắn</label>
+                      <textarea class="form-control tiny" placeholder="Enter ..." name="motangan"></textarea>
+                    </div>
+                    <div class="form-group">
                       <label>Mô tả sản phẩm</label>
-                      <textarea class="form-control tiny" rows="3" placeholder="Enter ..." name="motasanpham"></textarea>
+                      <textarea class="form-control tiny" placeholder="Enter ..." name="motasanpham"></textarea>
                     </div>
                       <script type="text/javascript">
                           tinymce.init({
