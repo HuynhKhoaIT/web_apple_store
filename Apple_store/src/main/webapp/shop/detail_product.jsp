@@ -147,7 +147,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="renderboxbtn">
                                     <div class="action" style="display:flex">
                                         <form action="buy" method="post" class="btn btn-link btn-xl btn-buy col-12">

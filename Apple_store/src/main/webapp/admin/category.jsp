@@ -95,7 +95,7 @@
                                                 </td>
                                                 <td>
                                                         ${o.tenDM}
-                                                </td>                                                        </tr>
+                                                </td> /tr>
                                         </c:forEach>
                                         </tbody>
                                         <tfoot></tfoot>

@@ -186,6 +186,69 @@
             <div class="row">
                <div >
                   <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" alt="" style="width: 100% ;">
+                  </div>
+                  <form action="" class="cus-form thong-tin" id="form-order" onsubmit="return formvalidate();">
+                     <p class="sub-title">Thông tin khách hàng</p>
+                     <ul class="form">
+                        <li class="row">
+                           <p class="title-2 col-md-4">Họ và tên: <sup>*</sup></p>
+                           <div class="col-md-8">
+                              <input class="input" type="text" placeholder="Nhập họ và tên" id="name" onblur="checkName()" name="name" />
+                              <small id="name_empty"></small>
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row">
+                           <p class="title-2 col-md-4">Số điện thoại: <sup>*</sup></p>
+                           <div class="col-md-8 ">
+                              <input class="input" type="text" placeholder="Số điện thoại" id="phone"  onblur="checkPhone()" name ="phone" />
+                              <small id="phone_empty"></small>
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row" class="email">
+                           <p class="title-2 col-md-4">
+                              Email:
+                              <span class="inline-block">(không bắt buộc)</span>
+                           </p>
+                           <div class="col-md-8">
+                              <input class="input" type="email" placeholder="Email" class="email" id="email" onblur="checkEmail()" name="email"/>
+                              <small id="email_empty"></small>
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row" class="email">
+                           <p class="title-2 col-md-4">Địa chỉ: <sup>*</sup></p>
+                           <div class="col-md-8">
+                              <input class="input" type="text" placeholder="Địa chỉ nhận hàng" class="address" id="address" onblur="checkAddress()" name="address"/>
+                              <small id="address_empty"></small>
+                           </div>
+                           <div class="clear"></div>
+                        </li>
+                        <li class="row">
+                           <div class="col-md-4">
+                           </div>
+                           <div class="btn-container col-md-8">
+                              <div>
+                                 <button type="button" class="btn" id="next-step" onclick="formvalidate()">
+                                    <strong>Đặt Hàng</strong>
+                                    <span>(Chọn hình thức nhận hàng)</span>
+                                 </button>
+                              </div>
+                              <!-- <div id="or">
+                                 <p>Hoặc</p>
+                              </div> -->
+                              <!-- <div>
+                                 <button type="button" class="btn" id="order-fast" onclick="callServlet('POST')">
+                                    <strong>Đặt hàng luôn</strong>
+                                    <span>FPT Shop sẽ gọi cho quý khách</span>
+                                 </button>
+                              </div> -->
+                           </div>
+                        </li>
+                     </ul>
+                  </form>
+
                </div>
             </div>
             <div class="row title-content" style="text-align: center ;">

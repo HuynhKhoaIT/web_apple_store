@@ -4,28 +4,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="${root}asset/css/cart.css" />
-	<link rel="stylesheet" href="${root}asset/style.css">
-	<link rel="stylesheet"
-		  href="${root}asset/font/themify-icons/themify-icons.css" />
-	<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-			rel="stylesheet">
-	<link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
-	<!-- Latest compiled JavaScript -->
-	<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-	<title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="${root}asset/css/cart.css" />
+<link rel="stylesheet" href="${root}asset/style.css">
+<link rel="stylesheet"
+	href="${root}asset/font/themify-icons/themify-icons.css" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Document</title>
 </head>
 <body>
 <div class="main">
 	<c:set var="items" value="${listlsp}" scope="request" />
 	<jsp:include page="./header2.jsp" />
-
-
 
 	<!-- /.row -->
 	<div class="content">
@@ -152,14 +150,31 @@
 								</div>
 							</div>
 						</div>
+		
+		<!-- /.row -->
+		 <div class="content">
+        <div class="pro-container">
+            <div class="user-profile">
+                <div class="subnav">
+                    <div class="avatar-user navcard" style="background: #000;">
+                        <img src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer" alt="User">
+                    </div>
+                    <ul style="padding-left: 0px;">
+                        <li class="js-content-btn font-bold"><a>Thông tin cá nhân</a></li>
+                        <li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
+                        <li class="js-orders-btn"><a>Đơn hàng</a></li>
+                        <li class="js-logout-btn"><a>Đăng xuất</a></li>
+                    </ul>
 
-
+                </div>
+                <div class="tab-content js-content-tab">
+                 
 					</div>
-
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
+
 	</div>
 
 	<%@include file="./footer2.jsp"%>

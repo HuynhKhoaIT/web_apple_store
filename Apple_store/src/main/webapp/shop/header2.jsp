@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="header-cart col-md-2">
-                    <a href="show" class="cart">
+                    <a href="${root}show" class="cart">
                         <div class="sec-icon align-items-center">
                             <i class="ti-shopping-cart"></i>
                             <div class="icon-text">Giỏ hàng</div>
