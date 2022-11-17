@@ -158,7 +158,6 @@ public class KhachHangDAO {
 		} catch (Exception e) {
 		}
 	}
-
     public static void main(String[] args) {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
         Users KhachHang = khachHangDAO.getKhachHangByPhone("0585858714");

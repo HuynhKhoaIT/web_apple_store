@@ -195,7 +195,7 @@ a{
 
 .items .col-md-9{
     display: flex;
-    
+
 }
 .items .items-amount{
     margin-left: -4px;
@@ -203,6 +203,10 @@ a{
 .items-amount .wrapper{
     width: 100%;
     display: flex;
+}
+
+.items-amount .wrapper a:hover{
+    text-decoration: none;
 }
 
 
@@ -231,7 +235,7 @@ a{
     margin-bottom: 5px;
 }
 .wrapper > span {
-   	width: 30px;
+    width: 30px;
     height: 30px;
     font-size: 16px;
     line-height: 30px;
@@ -529,9 +533,8 @@ a.float-right.home-link {
 }
 
 .pro-btn-container{
-    position: absolute;
-    bottom: 15px;
-    right: 35px;
+    display: flex;
+    justify-content: flex-end;
 }
 .pro-btn-container .save{
     color: #fff;
@@ -558,51 +561,51 @@ a.float-right.home-link {
 }
 
 @media (max-width: 480px) {
-	.subcontainer{
-	    width: 100%;
-	    margin-left: auto;
-	    margin-right: auto ;
-	}
-	.input{
-    	width: 100%;
-	}
-	.items .col-md-9{
-	    display: flex;
-	    flex-direction: column;
-	}
-	.items .items-price .discount{
-    display: none;
- 	}
- 	
- 	.items .items-price{
-	    display: flex;  
-	    justify-content: space-between;
-	}
+    .subcontainer{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto ;
+    }
+    .input{
+        width: 100%;
+    }
+    .items .col-md-9{
+        display: flex;
+        flex-direction: column;
+    }
+    .items .items-price .discount{
+        display: none;
+    }
 
-	 .items .items-price .end-price{
-	    display: flex;
-	    align-items: center;
-	    margin-right: 10px;
-	}
-	
-	.items .items-price .price{
-	    display: flex;
-	    align-items: center;
-	}
-	
-	.form .btn-container {
-	    height: 53px;
-	    display: flex;
-	    justify-content: space-between;
-	    flex-direction: column;
-	}
-	button#next-step {
-	    width: 100%;
-	}
-	.btn-container #or{
-		display: none;
-	}
-	button#order-fast {
-	    width: 100%;
-	}
+    .items .items-price{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .items .items-price .end-price{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .items .items-price .price{
+        display: flex;
+        align-items: center;
+    }
+
+    .form .btn-container {
+        height: 53px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    button#next-step {
+        width: 100%;
+    }
+    .btn-container #or{
+        display: none;
+    }
+    button#order-fast {
+        width: 100%;
+    }
 }

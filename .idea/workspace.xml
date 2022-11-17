@@ -10,49 +10,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="gio hang">
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/LoginControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SignUpControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/VerifyControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/LoginDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SignUpDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/MD5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/SendMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/cssacc/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/cssacc/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/font/icomoon/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/signup.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/verify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/CNPM.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AccountControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AccountControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_ProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_ProductControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_UserControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProductDetailControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProductDetailControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_AccountControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_AccountControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_CustomerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_CustomerControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_OrderControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/User_OrderControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DanhMucDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DanhMucDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/ItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/NewProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/NewProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SearchDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/TaiKhoanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/TaiKhoanDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/ThongSoKyThuatDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/ThongSoKyThuatSanPhamDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/AnhSanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/AnhSanPham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/BaiViet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/BaiViet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/ChiTietDonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/ChiTietDonHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DanhMuc.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DanhMuc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/KhachHang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/LoaiTaiKhoan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/SanPham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/TaiKhoan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/ThongSoKyThuat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/ThongSoKyThuatSanPham.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/TrangThai.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/TrangThai.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/header2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/header2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +92,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/OnlineStoreWEPR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/HCMUTE/Nam3-HK1/CNPM/moi7/Apple_store/src/main/webapp/shop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,15 +103,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi7\Apple_store\src\main\webapp\shop" />
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi7\Apple_store\src\main\webapp\asset" />
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi7\Apple_store\src\main\webapp\asset\font" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi5\Apple_store\src\main\java\Connection" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi1\Apple_store\src\main\webapp\pages\ad_accounts" />
-      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi1\Apple_store\src\main\webapp\pages\detail_product" />
-      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi1\Apple_store\src\main\webapp\pages\cart" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Control" />
-      <recent name="DAO" />
       <recent name="Model" />
+      <recent name="DAO" />
+      <recent name="Control" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.65">
@@ -335,7 +325,11 @@
       <workItem from="1668693416508" duration="1177000" />
       <workItem from="1668694664435" duration="201000" />
       <workItem from="1668695143521" duration="1240000" />
-      <workItem from="1668696529269" duration="2933000" />
+      <workItem from="1668696529269" duration="3032000" />
+      <workItem from="1668700460689" duration="361000" />
+      <workItem from="1668701824288" duration="2104000" />
+      <workItem from="1668704235484" duration="31000" />
+      <workItem from="1668705097334" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -372,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668359649377</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="thay doi DB">
+      <created>1668699868257</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668699868257</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +396,8 @@
     <MESSAGE value="Them Bai viet" />
     <MESSAGE value="gio hang" />
     <MESSAGE value="bai viet" />
-    <option name="LAST_COMMIT_MESSAGE" value="bai viet" />
+    <MESSAGE value="thay doi DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="thay doi DB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -414,6 +416,11 @@
           <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java</url>
           <line>53</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/SignUpControl.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

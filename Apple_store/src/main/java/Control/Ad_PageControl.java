@@ -1,6 +1,6 @@
 package Control;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,26 +20,26 @@ import Model.SanPham;
 
 @WebServlet(name = "Ad_PageControl", value = "/admin")
 public class Ad_PageControl extends HttpServlet {
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
-		
+
 		List<DonHang> list = new ArrayList<DonHang>();
 		DonHangDAO dao=new DonHangDAO();
 		list=dao.loadTop10Order();
 		System.out.print(list.size());
-		
+
 		List<String> listName = new ArrayList<String>();
 		for (DonHang o : list) {
 			KhachHangDAO d = new KhachHangDAO();
 			listName.add(d.getKhachHangByMaKH(o.getMaKH()).getTenKH());
-		} 
+		}
 		List<ChiTietDonHang> chititet = new ArrayList<ChiTietDonHang>();
 		int totalChiPhi=0;
 		for (DonHang o : list) {
-			
+
 			ChiTietDonHangDAO d=new ChiTietDonHangDAO();
 			chititet=d.getChiTietSanPhamID(o.getMaDH());
 			for(ChiTietDonHang i:chititet)
@@ -51,8 +51,8 @@ public class Ad_PageControl extends HttpServlet {
 			}
 		}
 		int total=new DonHangDAO().totalPriceAllOrder();
-		
-		
+
+
 		request.setAttribute("totalChiPhi",totalChiPhi);
 		request.setAttribute("total",total);
 		request.setAttribute("size",listName.size());
@@ -62,10 +62,10 @@ public class Ad_PageControl extends HttpServlet {
 
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
