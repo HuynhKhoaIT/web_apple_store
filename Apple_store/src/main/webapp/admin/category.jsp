@@ -83,18 +83,19 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                                                 <table id="example1" class="table table-bordered table-striped table-ip">
                                                     <thead>
                                                         <tr>
+                                                        	<th>Mã danh mục</th>
                                                             <th>Tên danh mục</th>
-                                                            <th>đường dẫn</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                     <c:forEach items="${listdm}" var="o">
                                                     <tr>
+                                                    		<td>
+                                                            	${o.maDM}
+                                                            </td>  
                                                             <td>
                                                             	${o.tenDM}
-                                                            </td>
-                                                            <td>iphone-14</td>
-                                                        </tr>
+                                                            </td>                                                        </tr>
                                                     </c:forEach>
                                                     </tbody>
                                                     <tfoot></tfoot>

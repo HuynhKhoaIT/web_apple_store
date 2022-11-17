@@ -56,7 +56,7 @@
       </div>
 
       <div class="header-user col-md-2">
-        <a href="${root}user/user.jsp" class="user">
+        <a href="${root}shop/user.jsp" class="user">
           <div class="sec-icon">
             <i class="ti-user"></i>
             <div class="icon-text">Tài Khoản</div>

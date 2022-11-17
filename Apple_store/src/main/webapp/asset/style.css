@@ -102,7 +102,7 @@
     background: transparent;
     border: none;
     width: 476px;
-    padding: 8px;
+    padding: 4px;
 
 }
 
@@ -1467,6 +1467,14 @@
 .container button:hover{
     background: #0339b3;
     cursor: pointer;
+}
+
+.renderboxbtn input.detailbtn {
+    display: block;
+    margin: 8px auto;
+}
+.thong-tin li{
+    margin-bottom: 10px;
 }
 /* blog */
 

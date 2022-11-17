@@ -205,6 +205,10 @@ a{
     display: flex;
 }
 
+.items-amount .wrapper a:hover{
+	text-decoration: none;
+}
+
 
 .items{
     width: 100%;
@@ -529,9 +533,8 @@ a.float-right.home-link {
 }
 
 .pro-btn-container{
-    position: absolute;
-    bottom: 15px;
-    right: 35px;
+    display: flex;
+    justify-content: flex-end;
 }
 .pro-btn-container .save{
     color: #fff;

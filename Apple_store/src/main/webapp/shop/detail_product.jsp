@@ -110,7 +110,7 @@
                                 <input hidden="" type="text" name="product-sku" id="product-sku" value="00773146">
                                 <input hidden="" type="text" name="product-url" id="product-url" value="iphone-13-128gb">
                                 <input hidden="" type="text" name="nameproduct" id="name-product" value="iPhone 13 128GB">
-                                <div class="colors select-color">
+                               <!--  <div class="">
                                     <div class="item active" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="1639" data-id="641711" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641711/tra-gop" data-sku="00773146" data-varian="641711" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="1639" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
                                         <span style="background-color:#FADDD7"></span>
                                         <div>Hồng</div>
@@ -135,7 +135,19 @@
                                         <span style="background-color:#FAF6F2"></span>
                                         <div>Trắng</div>
                                     </div>
-                                </div>
+                                </div> -->
+                                
+                                <div class="thong-so">
+					                <div class="container">
+					                    <div class="row">
+					                    	<h3>Thông số kỹ thuật</h3>
+					                    	<div class="detail-tskt">
+			                                    mô tả
+			                                </div>
+					                    </div>
+					                </div>
+					            </div>
+					            
                                 <div class="renderboxbtn">
                                     <div class="action" style="display:flex">
                                         <form action="buy" method="post" class="btn btn-link btn-xl btn-buy col-12">
@@ -190,7 +202,7 @@
                 </div>
                 </div>
             </div>
-            <div class="detail-properties">
+            <%-- <div class="detail-properties">
                 <div class="container">
                     <div class="properties-detail">
                         <div class="row no-gutter">
@@ -216,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --%>
             <div class="detail-post">
                 <div class="container">
                     <div class="post-text">

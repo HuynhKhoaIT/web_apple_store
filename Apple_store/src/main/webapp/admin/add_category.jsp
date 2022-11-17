@@ -83,10 +83,6 @@
                     <label for="exampleInputName1">Tên danh mục</label>
                     <input type="text" class="form-control" id="exampleInputName1" name="tendanhmuc" />
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputSlug1">Đường dẫn</label>
-                    <input type="text" class="form-control" id="exampleInputSlug1" name="tenslug" />
-                  </div>
                 </div>
                 <!-- /.card-body -->
 
