@@ -24,7 +24,7 @@ public class DanhMucDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4)));
+                list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3)));
             }
         }
         catch (Exception e) {
@@ -42,23 +42,22 @@ public class DanhMucDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4)));
+                list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3)));
             }
         }
         catch (Exception e) {
         }
         return list;
     }
-	public void addDanhMuc(String MaLoai, String TenDM, String DuongDan)
+	public void addDanhMuc(String MaLoai, String TenDM)
 	{
-		String query = "insert into DanhMuc(MaLoai,TenDM,DuongDan) Values(?,?,?);";
+		String query = "insert into DanhMuc(MaLoai,TenDM) Values(?,?);";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
 
 			ps.setString(1,MaLoai);
 			ps.setString(2,TenDM);
-			ps.setString(3,DuongDan);
 			
 
 			ps.executeUpdate();

@@ -6,14 +6,14 @@ public class ChiTietDonHang {
     int SoLuong;
     int TongTien;
 
-    public ChiTietDonHang() {
-    }
-
     public ChiTietDonHang(int maDH, int maSP, int soLuong, int tongTien) {
         MaDH = maDH;
         MaSP = maSP;
         SoLuong = soLuong;
         TongTien = tongTien;
+    }
+
+    public ChiTietDonHang() {
     }
 
     public int getMaDH() {

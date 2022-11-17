@@ -1,7 +1,6 @@
 package DAO;
 
 import Model.Item;
-import Model.KhachHang;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

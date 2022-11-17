@@ -10,9 +10,6 @@ public class BaiViet {
     private Date ngayTao;
     private Date ngayCapNhat;
 
-    public BaiViet() {
-    }
-
     public BaiViet(int maBV, String tieuDeBV, String noiDung, String anh, Date ngayTao, Date ngayCapNhat) {
         this.maBV = maBV;
         this.tieuDeBV = tieuDeBV;
@@ -20,6 +17,9 @@ public class BaiViet {
         this.anh = anh;
         this.ngayTao = ngayTao;
         this.ngayCapNhat = ngayCapNhat;
+    }
+
+    public BaiViet() {
     }
 
     public int getMaBV() {
@@ -46,17 +46,16 @@ public class BaiViet {
         this.noiDung = noiDung;
     }
 
-
-    public Date getNgayTao() {
-        return ngayTao;
-    }
-
     public String getAnh() {
         return anh;
     }
 
     public void setAnh(String anh) {
         this.anh = anh;
+    }
+
+    public Date getNgayTao() {
+        return ngayTao;
     }
 
     public void setNgayTao(Date ngayTao) {
@@ -77,7 +76,7 @@ public class BaiViet {
                 "maBV=" + maBV +
                 ", tieuDeBV='" + tieuDeBV + '\'' +
                 ", noiDung='" + noiDung + '\'' +
-                ", anh=" + anh +
+                ", anh='" + anh + '\'' +
                 ", ngayTao=" + ngayTao +
                 ", ngayCapNhat=" + ngayCapNhat +
                 '}';

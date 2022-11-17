@@ -3,11 +3,9 @@ package Control;
 import DAO.AnhSPDAO;
 import DAO.LoaispDAO;
 import DAO.SanPhamDAO;
-import DAO.ThongSoKyThuatDAO;
 import Model.AnhSanPham;
 import Model.LoaiSP;
 import Model.SanPham;
-import Model.ThongSoKyThuatSanPham;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +25,6 @@ public class ProductDetailControl extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
 
         SanPhamDAO sanPhamDAO = new SanPhamDAO();
-        ThongSoKyThuatDAO tsktdao =new ThongSoKyThuatDAO();
         AnhSPDAO anhSPDAO = new AnhSPDAO();
         String  id_raw =   request.getParameter("maSP");
         int id = Integer.parseInt(id_raw);
@@ -38,7 +35,6 @@ public class ProductDetailControl extends HttpServlet {
         List<AnhSanPham> listAnhSP= anhSPDAO.getAnhSPByID(id);
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-        List<ThongSoKyThuatSanPham> listtskt = tsktdao.getTSKTbymaSP(id_raw);
         List<SanPham>  listsplq= sanPhamDAO.getAllsanphamtop4theodm(maloai);
 
         request.setAttribute("listlsp",listlsp);
@@ -46,7 +42,6 @@ public class ProductDetailControl extends HttpServlet {
         request.setAttribute("tensp",tensp);
         request.setAttribute("tl",tenloai);
         request.setAttribute("listAnhSP",listAnhSP);
-        request.setAttribute("listtskt",listtskt);
         request.setAttribute("listsplq",listsplq);
         request.setAttribute("SanPham",sanPham);
         request.getRequestDispatcher("/shop/detail_product.jsp").forward(request,response);

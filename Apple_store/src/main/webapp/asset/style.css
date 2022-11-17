@@ -1,4 +1,4 @@
-    *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -28,11 +28,11 @@
 }
 
 #main{
-	font-size: 16px;
+    font-size: 16px;
 }
 
 #header{
-	font-size: 16px;
+    font-size: 16px;
 }
 
 /* .container{
@@ -45,7 +45,7 @@
 } */
 
 #header-top {
-	display: flex;
+    display: flex;
     align-items: center;
     min-height: 72px;
     background-color: black;
@@ -53,7 +53,7 @@
 }
 
 .align-items-center{
-	align-items: center;
+    align-items: center;
 }
 
 
@@ -213,7 +213,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 #content .container-pro .pro-add{
     display: flex;
@@ -256,7 +256,7 @@
     padding-bottom: 24px;
     height: 200px;
     width: 200px;
-    
+
 }
 #content-cate{
     padding-bottom: 20px;
@@ -826,8 +826,8 @@
 }
 
 #category .title-h2{
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* ----------------------------------- */
@@ -1063,15 +1063,15 @@
 }
 
 #detail .renderboxbtn .action .btn-buy:hover{
-/*     background: #044dd6;
-    border: 1px solid #044dd6; */
-    
+    /*     background: #044dd6;
+        border: 1px solid #044dd6; */
+
 }
 #detail .renderboxbtn .action .btn-add{
-	
+
 }
 #detail .renderboxbtn .action .btn-add:hover{
-	color: #fff;
+    color: #fff;
     background: #939ca3;
     border: 1px solid #939ca3;
 }
@@ -1201,7 +1201,7 @@
     margin-bottom: 40px;
 }
 .model{
-	position: fixed;
+    position: fixed;
     z-index: 9997;
     top: 0;
     bottom: 0;
@@ -1209,7 +1209,7 @@
     left: 0;
     background: rgba(0, 0 , 0, 0.4);
     display: none;
-    
+
 }
 .side-menu {
     padding: 0;
@@ -1232,7 +1232,7 @@
     animation: openMenu 0.5s ease;
 }
 .model.open{
-	display: flex;
+    display: flex;
 }
 .side-menu .mn-content {
     background: #212529;
@@ -1282,7 +1282,7 @@
 #detail .post-text .row .col-9{
 }
 @media (min-width: 768px){
-	#header-top .user-1,
+    #header-top .user-1,
     #header-top .cart-1,
     #header-top .menu{
         display: none;
@@ -1326,32 +1326,32 @@
         max-width: calc(100%/2.5);
     }
     #content .container-pro .pro-list li{
-    	width:50%;
+        width:50%;
     }
 }
-@media (min-width: 481px) 
-  and (max-width: 767px) {
-	#content-pro,
+@media (min-width: 481px)
+and (max-width: 767px) {
+    #content-pro,
     #header-bot,
     .category{
         display: none;
     }
     .form-search {
-  	  margin-top: 12px;
+        margin-top: 12px;
     }
     #header-top .user,
     #header-top .cart{
         display: none;
     }
     .container {
-    	max-width: 100% !important;
-	}
-	#header-top .top-header {
-	    padding-right: 14px;
-	    display: flex;
-	    flex-direction: row;
-	    justify-content: space-between;
-	}
+        max-width: 100% !important;
+    }
+    #header-top .top-header {
+        padding-right: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 
@@ -1413,44 +1413,44 @@
         max-width: calc(100%/2.5);
     }
     #detail .mySwiper{
-    	display: none;
+        display: none;
     }
-    
-	#detail .name{
-	    text-align: center;
-	    
-	}
-	
-	#detail .price{
-	    justify-content: center;
-	}
-	#detail .colors{
-		column-gap: 2px;
-	}
-	#detail .renderboxbtn .action{
-	    flex-direction: column;
-	}
+
+    #detail .name{
+        text-align: center;
+
+    }
+
+    #detail .price{
+        justify-content: center;
+    }
+    #detail .colors{
+        column-gap: 2px;
+    }
+    #detail .renderboxbtn .action{
+        flex-direction: column;
+    }
 }
 
 @keyframes openMenu{
-  from {
- 	transform: translateX(-100%);
-  }
-  to {
-  transform: translateX(0);
-}
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 @keyframes closeMenu {
-	from {
-	transform: translateX(0);
-	}
-	to {
-	transform: translateX(-100%);
-	}
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .no-products{
-	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1526,10 +1526,10 @@ img.avatar-blog {
 }
 
 .title2-blog a{
-   color: #000;
-   text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 /* detail blog */
 .detail-content img{
-	width: 100%;
+    width: 100%;
 }

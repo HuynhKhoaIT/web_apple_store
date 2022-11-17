@@ -4,12 +4,12 @@ public class TrangThai {
     int MaTrangThai;
     String TenTrangThai;
 
-    public TrangThai() {
-    }
-
     public TrangThai(int maTrangThai, String tenTrangThai) {
         MaTrangThai = maTrangThai;
         TenTrangThai = tenTrangThai;
+    }
+
+    public TrangThai() {
     }
 
     public int getMaTrangThai() {
@@ -26,13 +26,5 @@ public class TrangThai {
 
     public void setTenTrangThai(String tenTrangThai) {
         TenTrangThai = tenTrangThai;
-    }
-
-    @Override
-    public String toString() {
-        return "TrangThai{" +
-                "MaTrangThai=" + MaTrangThai +
-                ", TenTrangThai='" + TenTrangThai + '\'' +
-                '}';
     }
 }

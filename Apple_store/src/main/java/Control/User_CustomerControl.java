@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.text.ParseException;
 import java.text.SimpleDateFormat; 
 import DAO.KhachHangDAO;
-import Model.KhachHang;
+import Model.Users;
 
 /**
  * Servlet implementation class CustomerControl
@@ -25,7 +25,7 @@ public class User_CustomerControl extends HttpServlet {
 		/* int maTK=Integer.parseInt(request.getParameter("maTK")); */
 		int maTK=1;
 		KhachHangDAO dao=new KhachHangDAO();
-		KhachHang khachHang=new KhachHang();
+		Users khachHang=new Users();
 		khachHang=dao.getKhachHangByMaTK(maTK);
 		request.setAttribute("kh", khachHang);
 		request.getRequestDispatcher("/shop/CustomerInfo.jsp").forward(request, response);
