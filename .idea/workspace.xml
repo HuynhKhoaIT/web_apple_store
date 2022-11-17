@@ -12,9 +12,10 @@
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="gio hang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/CNPM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SanPhamControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,10 +243,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SanPhamDAO" />
         <item itemvalue="Application.KhachHangDAO" />
         <item itemvalue="Application.AnhSPDAO" />
         <item itemvalue="Application.ConnectJDBC" />
-        <item itemvalue="Application.SanPhamDAO" />
         <item itemvalue="Application.SanPhamDAO" />
       </list>
     </recent_temporary>
@@ -304,6 +305,10 @@
       <workItem from="1668704235484" duration="31000" />
       <workItem from="1668705097334" duration="1169000" />
       <workItem from="1668706747386" duration="1171000" />
+      <workItem from="1668708672622" duration="752000" />
+      <workItem from="1668709428090" duration="4000" />
+      <workItem from="1668709560807" duration="152000" />
+      <workItem from="1668709933840" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -398,11 +403,6 @@
           <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java</url>
           <line>53</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/SignUpControl.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,24 +23,24 @@ public class SanPhamControl extends HttpServlet{
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
-        String maloai=request.getParameter("maloai");
-        String madm=request.getParameter("madm");
-        String sort_raw = request.getParameter("sort");
+        String maloai=request.getParameter("maloai"); //1
+        String madm=request.getParameter("madm"); //0
+        String sort_raw = request.getParameter("sort"); //1
 
         int maLoaiInt = 0;
         if(maloai!=null)
         {
-            maLoaiInt = Integer.parseInt(maloai);
+            maLoaiInt = Integer.parseInt(maloai); //1
         }
         int madmInt = 0;
         if(madm!=null)
         {
-            madmInt = Integer.parseInt(madm);
+            madmInt = Integer.parseInt(madm); //0
         }
         int sort = 0;
         if(sort_raw!=null)
         {
-            sort = Integer.parseInt(sort_raw);
+            sort = Integer.parseInt(sort_raw);//1
         }
         SanPhamDAO sanphamdao = new SanPhamDAO();
         LoaispDAO loaispDAO = new LoaispDAO();

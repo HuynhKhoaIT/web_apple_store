@@ -150,33 +150,11 @@
 								</div>
 							</div>
 						</div>
-		
-		<!-- /.row -->
-		 <div class="content">
-        <div class="pro-container">
-            <div class="user-profile">
-                <div class="subnav">
-                    <div class="avatar-user navcard" style="background: #000;">
-                        <img src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer" alt="User">
-                    </div>
-                    <ul style="padding-left: 0px;">
-                        <li class="js-content-btn font-bold"><a>Thông tin cá nhân</a></li>
-                        <li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
-                        <li class="js-orders-btn"><a>Đơn hàng</a></li>
-                        <li class="js-logout-btn"><a>Đăng xuất</a></li>
-                    </ul>
-
-                </div>
-                <div class="tab-content js-content-tab">
-                 
 					</div>
 				</div>
 			</div>
-			<div class="clear"></div>
 		</div>
-
 	</div>
-
 	<%@include file="./footer2.jsp"%>
 </div>
 <script>
