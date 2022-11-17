@@ -10,14 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="gio hang">
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/CNPM.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/HCMUTE/Nam3-HK1/CNPM/moi5/Apple_store/src/main/java/Connection",
+    "last_opened_file_path": "C:/Users/admin/Documents/OnlineStoreWEPR",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -252,6 +245,7 @@
       <workItem from="1668384146325" duration="2627000" />
       <workItem from="1668386922474" duration="386000" />
       <workItem from="1668387613087" duration="731000" />
+      <workItem from="1668666060621" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
