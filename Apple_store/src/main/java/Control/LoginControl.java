@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionContext;
 
 import DAO.LoginDAO;
+import Model.MD5;
 import Model.Users;
 
 /**
@@ -46,8 +47,11 @@ public class LoginControl extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
+		MD5 lib = new MD5();
+		String passMD5 = lib.md5(password);
+		
 		LoginDAO dao = new LoginDAO();
-		Users a = dao.login(username, password);
+		Users a = dao.login(username, passMD5);
 		 if(a == null) {
 			 request.setAttribute("mess", "Sai tên đăng nhập hoặc mật khẩu");
 			 request.getRequestDispatcher("/shop/login.jsp").forward(request, response);

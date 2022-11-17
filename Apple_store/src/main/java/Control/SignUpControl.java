@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.SignUpDAO;
+import Model.MD5;
 import Model.Users;
 
 /**
@@ -43,10 +44,14 @@ public class SignUpControl extends HttpServlet {
 		String password = request.getParameter("password");
 		String repassword = request.getParameter("repassword");
 		
+		MD5 lib = new MD5();
+		String passMD5 = lib.md5(password);
+		String repassMD5 = lib.md5(repassword);
+		
 		SignUpDAO dao = new SignUpDAO();
 		Users a = dao.CheckUserExist(username);
 		if(a==null) {
-			dao.signup(fullname, username, email, phone, password, repassword);
+			dao.signup(fullname, username, email, phone, passMD5, repassMD5);
 			response.sendRedirect("http://localhost:8080/Apple_store");
 		}
 		else {
