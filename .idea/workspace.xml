@@ -10,38 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="gio hang">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/LoginControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/SignUpControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/VerifyControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/LoginDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SignUpDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/SendMail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/cssacc/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/cssacc/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/font/icomoon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/signup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/verify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/CNPM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/detail_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/header2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/header2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="long2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -329,7 +302,8 @@
       <workItem from="1668700460689" duration="361000" />
       <workItem from="1668701824288" duration="2104000" />
       <workItem from="1668704235484" duration="31000" />
-      <workItem from="1668705097334" duration="349000" />
+      <workItem from="1668705097334" duration="1169000" />
+      <workItem from="1668706747386" duration="1171000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -373,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668699868257</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cap nhat lai phu hop voi database moi, them chuc nang dang nhap dang ky da co xac thuc mail">
+      <created>1668705619472</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668705619472</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +378,8 @@
     <MESSAGE value="gio hang" />
     <MESSAGE value="bai viet" />
     <MESSAGE value="thay doi DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="thay doi DB" />
+    <MESSAGE value="cap nhat lai phu hop voi database moi, them chuc nang dang nhap dang ky da co xac thuc mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="cap nhat lai phu hop voi database moi, them chuc nang dang nhap dang ky da co xac thuc mail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

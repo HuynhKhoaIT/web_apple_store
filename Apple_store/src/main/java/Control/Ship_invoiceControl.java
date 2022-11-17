@@ -5,7 +5,10 @@ import DAO.ChiTietDonHangDAO;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import DAO.SanPhamDAO;
-import Model.*;
+import Model.ChiTietDonHang;
+import Model.DonHang;
+import Model.SanPham;
+import Model.Users;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -29,22 +32,22 @@ public class Ship_invoiceControl extends HttpServlet {
 
 		KhachHangDAO khachHangDAO = new KhachHangDAO();
 		Users khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
-
+//
 //		TaiKhoan taiKhoan = new TaiKhoan();
 //		TaiKhoanDAO taiKhoanDAO=new TaiKhoanDAO();
-//		taiKhoan=taiKhoanDAO.getTaiKhoanByMaTK(khachHang.getMaKH() );
-//
+//		taiKhoan=taiKhoanDAO.getTaiKhoanByMaTK(khachHang.getMaTK());
+
 		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();
 		List<ChiTietDonHang> list = dao.getChiTietSanPhamID(Integer.parseInt(maDH));
 
-		
+
 
 		for (ChiTietDonHang o : list) {
 			SanPhamDAO d = new SanPhamDAO();
 			listSP.add(d.getProductById(o.getMaSP()));
 		}
-		
-	
+
+
 //		request.setAttribute("taikhoan", taiKhoan);
 		request.setAttribute("khachHang", khachHang);
 		request.setAttribute("donHang", donHang);
