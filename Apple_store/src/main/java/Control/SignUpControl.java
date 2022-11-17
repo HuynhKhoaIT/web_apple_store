@@ -6,9 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.SignUpDAO;
 import Model.MD5;
+import Model.SendMail;
 import Model.Users;
 
 /**
@@ -30,7 +32,7 @@ public class SignUpControl extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		doPost(request, response);
 	}
 
 	/**
@@ -51,8 +53,29 @@ public class SignUpControl extends HttpServlet {
 		SignUpDAO dao = new SignUpDAO();
 		Users a = dao.CheckUserExist(username);
 		if(a==null) {
-			dao.signup(fullname, username, email, phone, passMD5, repassMD5);
-			response.sendRedirect("http://localhost:8080/Apple_store");
+			
+			int veri = lib.getRandom();
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("fullname", fullname);
+			session.setAttribute("username", username);
+			session.setAttribute("email", email);
+			session.setAttribute("phone", phone);
+			session.setAttribute("password", passMD5);
+			session.setAttribute("repassword", repassMD5);
+			session.setAttribute("verify", veri);
+			
+			
+			SendMail sm = new SendMail();
+			Boolean test = sm.sendMail(email, veri, fullname);
+			
+			if(test == false) {
+				request.setAttribute("mess", "Email không chính xác");
+				request.getRequestDispatcher("/shop/signup.jsp").forward(request, response);
+			}
+			else {
+				response.sendRedirect("/Apple_store/shop/verify.jsp");
+			}
 		}
 		else {
 			request.setAttribute("mess", "Tài khoản đã tồn tại");
