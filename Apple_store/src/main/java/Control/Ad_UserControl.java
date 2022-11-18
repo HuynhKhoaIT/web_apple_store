@@ -23,7 +23,8 @@ public class Ad_UserControl extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
 
         KhachHangDAO khachHangDAO = new KhachHangDAO();
-        List<Users> listKH = khachHangDAO.getAllKhachHang();
+        String isuser=request.getParameter("isuser");
+        List<Users> listKH = khachHangDAO.getAllKhachHangbyisuser(isuser);
 
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();

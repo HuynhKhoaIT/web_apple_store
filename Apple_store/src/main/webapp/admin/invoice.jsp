@@ -100,7 +100,7 @@
 										Đến
 										<address>
 											<strong>${khachHang.tenKH}</strong><br>
-											${khachHang.diaChi} <br> Phone: ${khachHang.soDT}<br>
+											${khachHang.diaChi} <br> Phone: ${khachHang.phone}<br>
 										</address>
 									</div>
 									<!-- /.col -->

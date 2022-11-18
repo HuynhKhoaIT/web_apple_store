@@ -36,6 +36,28 @@ public class KhachHangDAO {
         }
         return list;
     }
+    public List<Users> getAllKhachHangbyisuser(String isuser)
+    {
+        List<Users> list = new ArrayList<>();
+        String query = "Select * From KhachHang Where IsUser=? and IsAdmin=0 and IsShiper=0";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setString(1,isuser);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                list.add(new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12)));
+            }
+        }
+        catch (Exception e) {
+        }
+        return list;
+    }
     public Users getKhachHangByID(String id){
         String query = "Select * From KhachHang where MaKH = ?";
         try {
@@ -160,8 +182,8 @@ public class KhachHangDAO {
 	}
     public static void main(String[] args) {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
-        Users KhachHang = khachHangDAO.getKhachHangByPhone("0585858714");
-        System.out.println(KhachHang);
+        List<Users> listKH = khachHangDAO.getAllKhachHangbyisuser("1");
+        System.out.println(listKH);
     }
 
 

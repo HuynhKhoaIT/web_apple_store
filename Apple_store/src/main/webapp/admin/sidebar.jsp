@@ -51,13 +51,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="${root}Ad_UserControl" class="nav-link">
+                            <a href="${root}Ad_UserControl?isuser=1" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Khách hàng thân thiết</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="${root}Ad_UserControl" class="nav-link">
+                            <a href="${root}Ad_UserControl?isuser=0" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Khách hàng vãng lai</p>
                             </a>

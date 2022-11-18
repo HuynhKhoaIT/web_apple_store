@@ -75,7 +75,7 @@
                             Địa chỉ: ${o.diaChi}
                           </li>
                           <li class="small">
-                            <span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT:${o.soDT}
+                            <span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT:${o.phone}
                           </li>
                         </ul>
                       </div>
