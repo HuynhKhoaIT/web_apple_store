@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import DAO.LoginDAO;
 import DAO.SignUpDAO;
+import Model.Users;
 
 /**
  * Servlet implementation class VerifyControl
@@ -30,7 +32,7 @@ public class VerifyControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(request, response);
+		request.getRequestDispatcher("/shop/verify.jsp").forward(request, response);
 	}
 
 	/**
@@ -41,8 +43,7 @@ public class VerifyControl extends HttpServlet {
 		int verify = Integer.parseInt(veri);
 		
 		HttpSession session = request.getSession();
-		int i = Integer.parseInt(session.getAttribute("verify").toString());
-		
+		int i = (int)session.getAttribute("verify");
 		if(verify == i) {
 			SignUpDAO dao = new SignUpDAO();
 			String fullname = session.getAttribute("fullname").toString();

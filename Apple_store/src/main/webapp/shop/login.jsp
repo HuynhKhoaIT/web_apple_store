@@ -53,7 +53,7 @@
                     <div class="control__indicator"></div>
                   </label>
                   <span class="ml-auto"><a href="#" class="forgot-pass">Quên mật khẩu</a></span>
-                  <span class="ml-auto"><a href="${root}shop/signup.jsp" class="forgot-pass">Chưa có tài khoản</a></span> 
+                  <span class="ml-auto"><a href="/Apple_store/shop/signup" class="forgot-pass">Chưa có tài khoản</a></span> 
                 </div>
 
                 <button class="btn btn-block py-2 btn-primary" type="submit" >Đăng nhập</button>

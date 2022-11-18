@@ -32,7 +32,7 @@ public class SignUpControl extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request, response);
+		request.getRequestDispatcher("/shop/signup.jsp").forward(request, response);
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class SignUpControl extends HttpServlet {
 				request.getRequestDispatcher("/shop/signup.jsp").forward(request, response);
 			}
 			else {
-				response.sendRedirect("/Apple_store/shop/verify.jsp");
+				response.sendRedirect("/Apple_store/shop/verify");
 			}
 		}
 		else {
