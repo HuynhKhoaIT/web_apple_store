@@ -76,7 +76,7 @@ public class DonHangDAO {
                 list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
                         rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
             }
         }
         catch (Exception e) {
@@ -96,7 +96,7 @@ public class DonHangDAO {
                 return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12));
+						rs.getString(7),rs.getDate(8),rs.getInt(9));
             }
         }
         catch (Exception e) {
@@ -116,7 +116,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 
@@ -137,7 +137,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 
@@ -182,7 +182,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 
