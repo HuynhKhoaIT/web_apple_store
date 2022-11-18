@@ -8,10 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import Model.Cart;
 import Model.Item;
-import Model.KhachHang;
-import Model.SanPham;
 import DAO.*;
 import com.paypal.base.rest.PayPalRESTException;
 
