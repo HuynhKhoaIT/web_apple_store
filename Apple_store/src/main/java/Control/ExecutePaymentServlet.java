@@ -11,7 +11,7 @@ import com.paypal.api.payments.*;
 import com.paypal.base.rest.PayPalRESTException;
 import DAO.*;
 import Model.Cart;
-import Model.KhachHang;
+import Model.Users;
 import Model.SanPham;
 
 @WebServlet("/execute_payment")
@@ -67,7 +67,7 @@ public class ExecutePaymentServlet extends HttpServlet {
 			if (khachHangDAO.getKhachHangByPhone(phone_raw) == null) {
 				khachHangDAO.addKhachHang(name_raw, address_raw, phone_raw);
 			}
-			KhachHang khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
+			Users khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
 
 			DonHangDAO donHangDAO = new DonHangDAO();
 			donHangDAO.addOrder(khachHang, cart);
