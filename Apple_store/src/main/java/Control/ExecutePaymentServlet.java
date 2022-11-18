@@ -29,7 +29,7 @@ public class ExecutePaymentServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		String paymentId = request.getParameter("paymentId");
 		String payerId = request.getParameter("PayerID");
-
+		String email = request.getParameter("email");
 		String name_raw = request.getParameter("name");
 		String phone_raw = request.getParameter("phone");
 		String address_raw = request.getParameter("address");
@@ -65,12 +65,12 @@ public class ExecutePaymentServlet extends HttpServlet {
 			KhachHangDAO khachHangDAO = new KhachHangDAO();
 
 			if (khachHangDAO.getKhachHangByPhone(phone_raw) == null) {
-				khachHangDAO.addKhachHang(name_raw, address_raw, phone_raw);
+				khachHangDAO.addKhachHang(name_raw, address_raw, phone_raw,email);
 			}
 			Users khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
 
 			DonHangDAO donHangDAO = new DonHangDAO();
-			donHangDAO.addOrder(khachHang, cart);
+			donHangDAO.addOrder(khachHang, cart,name_raw,  phone_raw,email,address_raw);
 			Cookie c = new Cookie("cart", "");
 			c.setMaxAge(0);
 			response.addCookie(c);
