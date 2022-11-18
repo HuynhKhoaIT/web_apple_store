@@ -14,10 +14,10 @@ public class DonHangDAO {
     Connection conn=null;
     PreparedStatement ps =null;
     ResultSet rs = null;
-    public void addOrder(Users khachHang, Cart cart){
+    public void addOrder(Users khachHang, Cart cart,String name,String phone, String email,String address){
         LocalDate curDate = LocalDate.now();
         String date = curDate.toString();
-        String query = "Insert into DonHang(MaKH,TongTien,ThoiGian,MaTrangThai) values(?,?,?,?);";
+        String query = "Insert into DonHang(MaKH,TongTien,ThoiGian,MaTrangThai,DiaChi,PhuongThucThanhToan,TenNguoiNhan,SoDienThoai,Email) values(?,?,?,?,?,?,?,?,?);";
         try {
             conn =new ConnectJDBC().getConnection();
             ps =conn.prepareStatement(query);
@@ -25,6 +25,11 @@ public class DonHangDAO {
             ps.setInt(2,cart.getTotalMoney());
             ps.setString(3,date);
             ps.setInt(4,1);
+			ps.setString(5,address);
+			ps.setString(6,"0");
+			ps.setString(7,name);
+			ps.setString(8,phone);
+			ps.setString(9,email);
             ps.executeUpdate();
             // lay id order vua tao ra
             String query1 = "Select top 1 MaDH from DonHang order by MaDH desc";
@@ -71,7 +76,7 @@ public class DonHangDAO {
                 list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
                         rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
             }
         }
         catch (Exception e) {
@@ -89,9 +94,9 @@ public class DonHangDAO {
             while(rs.next())
             {
                 return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
-					rs.getDate(5),
-					rs.getInt(6),
-					rs.getString(7),rs.getDate(8),rs.getInt(9));
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12));
             }
         }
         catch (Exception e) {
@@ -111,7 +116,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 
@@ -132,7 +137,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 
@@ -177,7 +182,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 

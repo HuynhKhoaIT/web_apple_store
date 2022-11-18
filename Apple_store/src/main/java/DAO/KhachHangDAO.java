@@ -77,15 +77,19 @@ public class KhachHangDAO {
         return null;
 
     }
-    public void addKhachHang(String tenKH, String DiaChi,String SoDT){
-        String query = "INSERT INTO KhachHang (TenKH, DiaChi, SoDT)\n" +
-                "VALUES (?,?,?);";
+    public void addKhachHang(String tenKH, String DiaChi,String SoDT,String Email){
+        String query = "INSERT INTO KhachHang (TenKH, DiaChi,Phone,Email,isUser,IsAdmin,IsShiper)\n" +
+                "VALUES (?,?,?,?,?,?,?);";
         try {
             conn =new ConnectJDBC().getConnection();
             ps =conn.prepareStatement(query);
             ps.setString(1,tenKH);
             ps.setString(2,DiaChi);
             ps.setString(3,SoDT);
+            ps.setString(4,Email);
+            ps.setString(5,"0");
+            ps.setString(6,"0");
+            ps.setString(7,"0");
             ps.executeUpdate();
         }
         catch (Exception e) {
