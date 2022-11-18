@@ -5,6 +5,7 @@ public class Item {
     private  int quantity;
     private int price;
 
+    private String nameSP;
     public Item() {
     }
 
@@ -14,7 +15,20 @@ public class Item {
         this.price = price;
     }
 
-    public SanPham getProduct() {
+    public Item(String nameSP, int quantity, int price) {
+        this.nameSP = nameSP;
+        this.quantity = quantity;
+        this.price = price;
+    }
+    public String getNameSP() {
+		return nameSP;
+	}
+
+	public void setNameSP(String nameSP) {
+		this.nameSP = nameSP;
+	}
+
+	public SanPham getProduct() {
         return product;
     }
 
