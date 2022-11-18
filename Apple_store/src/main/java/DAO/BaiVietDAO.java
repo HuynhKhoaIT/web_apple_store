@@ -11,7 +11,6 @@ import Connection.ConnectJDBC;
 import Model.BaiViet;
 import Model.Cart;
 import Model.DanhMuc;
-import Model.KhachHang;
 
 public class BaiVietDAO {
     Connection conn=null;

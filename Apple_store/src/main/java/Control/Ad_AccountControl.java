@@ -3,7 +3,7 @@ package Control;
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
-import Model.KhachHang;
+import Model.Users;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -23,18 +23,15 @@ public class Ad_AccountControl extends HttpServlet {
 
         KhachHangDAO khachHangDAO = new KhachHangDAO();
 
-        KhachHang khachHang = khachHangDAO.getKhachHangByID(maKH);
+        Users khachHang = khachHangDAO.getKhachHangByID(maKH);
 
         DonHangDAO donHangDAO = new DonHangDAO();
         List<DonHang> listDonHang = donHangDAO.getAllDonHangByMaKH(maKH);
 
-
         request.setAttribute("listDonHang",listDonHang);
         request.setAttribute("khachHang",khachHang);
         request.getRequestDispatcher("/admin/account.jsp").forward(request,response);
-
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -80,7 +80,7 @@
 								<div class="row">
 									<div class="col-12">
 										<h4>
-											<i class="fas fa-globe"></i> AdminLTE, Inc. <small
+											<i class="fas fa-globe"></i> AdminLTE, Inc.
 										</h4>
 									</div>
 									<!-- /.col -->
@@ -108,6 +108,8 @@
 										<b>Hóa Đơn #${donHang.maDH}</b><br> <br> <b>ID
 											đặt hàng:</b> ${khachHang.maKH}<br> <b>Ngày đặt hàng:</b>
 										${donHang.thoiGian} <br> <b>Tài khoản:</b> ${taikhoan.getTenDN()  }
+										<br>
+										<b>Thanh toán: <span>Đã thanh toán/chưa thay toán</span></b>
 									</div>
 									<!-- /.col -->
 								</div>

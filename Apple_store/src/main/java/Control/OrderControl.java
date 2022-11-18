@@ -4,8 +4,8 @@ import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import DAO.SanPhamDAO;
 import Model.Cart;
-import Model.KhachHang;
 import Model.SanPham;
+import Model.Users;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -51,7 +51,7 @@ public class OrderControl extends HttpServlet {
         {
             khachHangDAO.addKhachHang(name_raw,address_raw,phone_raw);
         }
-        KhachHang khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
+        Users khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
 
         DonHangDAO donHangDAO = new DonHangDAO();
         donHangDAO.addOrder(khachHang,cart);

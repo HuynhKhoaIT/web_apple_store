@@ -14,7 +14,7 @@ public class DonHangDAO {
     Connection conn=null;
     PreparedStatement ps =null;
     ResultSet rs = null;
-    public void addOrder(KhachHang khachHang, Cart cart){
+    public void addOrder(Users khachHang, Cart cart){
         LocalDate curDate = LocalDate.now();
         String date = curDate.toString();
         String query = "Insert into DonHang(MaKH,TongTien,ThoiGian,MaTrangThai) values(?,?,?,?);";
@@ -68,8 +68,10 @@ public class DonHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDate(4),
-                        rs.getInt(5)));
+                list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+                        rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
             }
         }
         catch (Exception e) {
@@ -86,7 +88,10 @@ public class DonHangDAO {
             rs =ps.executeQuery();
             while(rs.next())
             {
-                return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDate(4), rs.getInt(5));
+                return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+					rs.getDate(5),
+					rs.getInt(6),
+					rs.getString(7),rs.getDate(8),rs.getInt(9));
             }
         }
         catch (Exception e) {
@@ -103,7 +108,10 @@ public List<DonHang> loadTop10Order() {
 			ps = conn.prepareStatement(querry);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 
@@ -121,7 +129,10 @@ public List<DonHang> loadTop10Order() {
 			ps = conn.prepareStatement(querry);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 
@@ -163,7 +174,10 @@ public List<DonHang> loadTop10Order() {
 			ps.setInt(1, MaKH);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				list.add(new DonHang(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDate(4), rs.getInt(5)));
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9)));
 
 			}
 

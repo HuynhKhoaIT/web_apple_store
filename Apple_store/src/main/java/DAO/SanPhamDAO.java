@@ -29,8 +29,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -124,8 +127,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -144,8 +150,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -163,7 +172,7 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4)));
+					list.add(new DanhMuc(rs.getInt(1),rs.getInt(2),rs.getString(3)));
 				}
 		}
 			catch (Exception e) {
@@ -190,8 +199,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -207,8 +219,12 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				return new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9));
+				return new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11));
+
 			}
 
 		}catch (Exception e){
@@ -232,8 +248,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -252,8 +271,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -274,8 +296,11 @@ public class SanPhamDAO
 				rs =ps.executeQuery();
 				while(rs.next())
 				{
-					list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+					list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+							rs.getString(3),rs.getString(4),
+							rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+							rs.getString(9), rs.getString(10),
+							rs.getInt(11)));
 				}
 		}
 			catch (Exception e) {
@@ -286,8 +311,8 @@ public class SanPhamDAO
 	{
 
 		List<SanPham> list = new ArrayList<>();
-		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh NGAY \n" +
-				"FROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong asc ";
+		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh, SanPham.MoTaNgan,SanPham.isDeleted\n" +
+				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong asc ";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -295,8 +320,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -309,8 +337,8 @@ public class SanPhamDAO
 
 
 		List<SanPham> list = new ArrayList<>();
-		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh NGAY \n" +
-				"FROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong DESC ";
+		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh, SanPham.MoTaNgan,SanPham.isDeleted\n" +
+				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong DESC ";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -318,8 +346,11 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				list.add(new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9)));
+				list.add(new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11)));
 			}
 		}
 		catch (Exception e) {
@@ -377,19 +408,16 @@ public class SanPhamDAO
 			rs =ps.executeQuery();
 			while(rs.next())
 			{
-				return new SanPham(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getString(4),
-						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9));
+				return new SanPham(rs.getInt(1),rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),
+						rs.getString(9), rs.getString(10),
+						rs.getInt(11));
 			}
 		}
 		catch (Exception e) {
 		}
 		return null;
-	}
-
-	public static void main(String[] args) {
-		SanPhamDAO sanPhamDAO = new SanPhamDAO();
-		sanPhamDAO.addSanPham("1","test ","<p>1</p>","1","1","1","1","Screenshot 2022-11-11 212612.png");
-		System.out.println("Success");
 	}
 public int TotalChiPhi() {
 		List<ChiTietDonHang> list = new ArrayList<ChiTietDonHang>();
@@ -411,6 +439,14 @@ public int TotalChiPhi() {
 			}
 		}
 		return total;
+	}
+
+	public static void main(String[] args) {
+		SanPhamDAO sanPhamDAO = new SanPhamDAO();
+		List<SanPham> list = sanPhamDAO.getSortSPGiamTheoMaLoai("1");
+		for (SanPham o:list){
+			System.out.println(o);
+		}
 	}
 }
 	

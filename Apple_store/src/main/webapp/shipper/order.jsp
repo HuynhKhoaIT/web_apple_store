@@ -77,7 +77,6 @@
 									<table id="example1" class="table table-bordered table-striped">
 										<thead>
 											<tr>
-												<th>Mã Khách Hàng</th>
 												<th>Mã Đơn Hàng</th>
 												<th>Tổng Tiền</th>
 												<th>Thời Gian</th>
@@ -88,8 +87,7 @@
 											<c:forEach var="i" begin="0" end="${size-1 }">
 												<tr>
 
-													<td><a href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
-													<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
+													<td><a href="Ship_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 													<td>${list[i].getTongTien()}</td>
 													<td>${list[i].getThoiGian()}</td>
 													<c:choose>

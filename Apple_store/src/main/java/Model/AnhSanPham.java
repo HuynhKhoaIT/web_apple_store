@@ -5,15 +5,6 @@ public class AnhSanPham {
     int MaSP;
     String Anh;
 
-    public AnhSanPham() {
-    }
-
-    public AnhSanPham(int maAnhSP, int maSP, String anh) {
-        MaAnhSP = maAnhSP;
-        MaSP = maSP;
-        Anh = anh;
-    }
-
     public int getMaAnhSP() {
         return MaAnhSP;
     }
@@ -35,6 +26,15 @@ public class AnhSanPham {
     }
 
     public void setAnh(String anh) {
+        Anh = anh;
+    }
+
+    public AnhSanPham() {
+    }
+
+    public AnhSanPham(int maAnhSP, int maSP, String anh) {
+        MaAnhSP = maAnhSP;
+        MaSP = maSP;
         Anh = anh;
     }
 

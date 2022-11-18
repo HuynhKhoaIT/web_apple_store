@@ -55,7 +55,7 @@
                                                 <img src="${a.anh}" />
                                             </div>
                                         </c:forEach>
-<%--                                      o day ne kiem dau the--%>
+                                        <%--                                      o day ne kiem dau the--%>
                                     </div>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
@@ -110,30 +110,41 @@
                                 <input hidden="" type="text" name="product-sku" id="product-sku" value="00773146">
                                 <input hidden="" type="text" name="product-url" id="product-url" value="iphone-13-128gb">
                                 <input hidden="" type="text" name="nameproduct" id="name-product" value="iPhone 13 128GB">
-                                <div class="colors select-color">
-                                    <div class="item active" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="1639" data-id="641711" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641711/tra-gop" data-sku="00773146" data-varian="641711" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="1639" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#FADDD7"></span>
-                                        <div>Hồng</div>
-                                    </div>
-                                    <div class="item " data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="1583" data-id="663983" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_663983" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/663983/tra-gop" data-sku="00800302" data-varian="663983" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="1583" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#394C38"></span>
-                                        <div>Xanh lá</div>
-                                    </div>
-                                    <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="774" data-id="641706" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641706" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641706/tra-gop" data-sku="00773149" data-varian="641706" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="774" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#276787"></span>
-                                        <div>Xanh</div>
-                                    </div>
-                                    <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="548" data-id="629153" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_629153" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/629153/tra-gop" data-sku="00773147" data-varian="629153" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="548" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#232A31"></span>
-                                        <div>Đen</div>
-                                    </div>
-                                    <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="286" data-id="641705" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641705" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641705/tra-gop" data-sku="00773148" data-varian="641705" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="286" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#f0142d"></span>
-                                        <div>Đỏ</div>
-                                    </div>
-                                    <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="225" data-id="641704" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641704" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641704/tra-gop" data-sku="00773150" data-varian="641704" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="225" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
-                                        <span style="background-color:#FAF6F2"></span>
-                                        <div>Trắng</div>
+                                <!--  <div class="">
+                                     <div class="item active" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="1639" data-id="641711" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641711" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641711/tra-gop" data-sku="00773146" data-varian="641711" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="1639" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#FADDD7"></span>
+                                         <div>Hồng</div>
+                                     </div>
+                                     <div class="item " data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="1583" data-id="663983" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_663983" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/663983/tra-gop" data-sku="00800302" data-varian="663983" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="1583" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#394C38"></span>
+                                         <div>Xanh lá</div>
+                                     </div>
+                                     <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="774" data-id="641706" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641706" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641706/tra-gop" data-sku="00773149" data-varian="641706" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="774" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#276787"></span>
+                                         <div>Xanh</div>
+                                     </div>
+                                     <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="548" data-id="629153" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_629153" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/629153/tra-gop" data-sku="00773147" data-varian="629153" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="548" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#232A31"></span>
+                                         <div>Đen</div>
+                                     </div>
+                                     <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="286" data-id="641705" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641705" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641705/tra-gop" data-sku="00773148" data-varian="641705" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="286" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#f0142d"></span>
+                                         <div>Đỏ</div>
+                                     </div>
+                                     <div class="item" data-price="18990000.0000" data-pricemarket="24990000.0000" data-stock="225" data-id="641704" data-urlbuy="/gio-hang-v2/them-vao-don-hang?product=36690_1_641704" data-urltragop="https://fptshop.com.vn/dien-thoai/iphone-13-128gb/641704/tra-gop" data-sku="00773150" data-varian="641704" data-productid="36690" ,="" data-productname="iPhone 13 128GB" data-catenameascii="iphone" data-isbusiness="False" data-isnerverbusiness="False" data-iscommingsoon="False" data-ispreorder="False" data-isinstallment="True" data-stockquantity="225" data-priceonline="18990000.0000" data-producturl="iphone-13-128gb">
+                                         <span style="background-color:#FAF6F2"></span>
+                                         <div>Trắng</div>
+                                     </div>
+                                 </div> -->
+
+                                <div class="thong-so">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h3>Thông số kỹ thuật</h3>
+                                            <div class="detail-tskt">
+                                                mô tả
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="renderboxbtn">
@@ -166,31 +177,31 @@
         <div class="detail-content">
             <div class="other-products">
                 <div class="container">
-                <div class="row">
-	                <div class="card-body">
-		                <div class="row no-gutter title">
-		                    <span>Sản phẩm khác</span>
-		                </div>
-		                <div class="row no-gutter pro-list">		                   
-		                    <c:forEach items="${listsplq}" var="o" >
-		                    <div class="col-md-3 col-6">
-		                        <a href="ProductDetailControl?maSP=${o.maSP}" class="product-item">
-		                            <div class="product-img">
-		                                <img src="${o.anh}" alt="">
-		                            </div>
-		                            <div class="product-info">
-		                                <div class="product-name">${o.tenSP}</div>
-		                                <div class="product-price">${o.giaBanThuong}đ</div>
-		                            </div>
-		                        </a>
-		                    </div>
-		                    </c:forEach>
-		                </div>
-	                </div>
-                </div>
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="row no-gutter title">
+                                <span>Sản phẩm khác</span>
+                            </div>
+                            <div class="row no-gutter pro-list">
+                                <c:forEach items="${listsplq}" var="o" >
+                                    <div class="col-md-3 col-6">
+                                        <a href="ProductDetailControl?maSP=${o.maSP}" class="product-item">
+                                            <div class="product-img">
+                                                <img src="${o.anh}" alt="">
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-name">${o.tenSP}</div>
+                                                <div class="product-price">${o.giaBanThuong}đ</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="detail-properties">
+            <%-- <div class="detail-properties">
                 <div class="container">
                     <div class="properties-detail">
                         <div class="row no-gutter">
@@ -208,7 +219,7 @@
                                                 <td class="td-name">${o.maTSKT }</td>
                                                 <td class="td-content">${o.mota}</td>
                                             </tr>
-                                           </c:forEach> 
+                                           </c:forEach>
                                         </table>
                                     </div>
                                 </div>
@@ -216,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --%>
             <div class="detail-post">
                 <div class="container">
                     <div class="post-text">
