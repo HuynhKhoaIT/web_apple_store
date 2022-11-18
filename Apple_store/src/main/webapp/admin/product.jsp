@@ -77,6 +77,8 @@
                     <th>Giá bán</th>
                     <th>Danh mục</th>
                     <th>Số lượng</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
                     <!-- <th>Ngày nhập</th> -->
                   </tr>
 
@@ -93,6 +95,8 @@
                         </c:if>
                       </c:forEach>
                       <td>${l.soLuong}</td>
+                      <td><a href="#">Sửa</a></td>
+                      <td><a href="#" style="color: red;">Xóa</a></td>
                     </tr>
                   </c:forEach>
 

@@ -415,6 +415,7 @@
 
 #footer #footer-middle{
     background: #32373d;
+    padding: 12px 0;
 }
 
 #footer #footer-middle .footer-content{
@@ -1533,3 +1534,20 @@ img.avatar-blog {
 .detail-content img{
     width: 100%;
 }
+
+
+/* cart */
+.btn-cart{
+    background: #0664f9;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.btn-cart:hover{
+    background: blue;
+    color: #fff;
+}
+

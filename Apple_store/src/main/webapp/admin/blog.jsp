@@ -71,10 +71,9 @@
                   <thead>
                   <tr>
                     <th>Tiêu đề</th>
-                    <%--                    <th>Tác giả</th>--%>
-                    <%--                    <th>Chuyên mục</th>--%>
-                    <%--                    <th>Thẻ</th>--%>
                     <th>Thời gian</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -83,10 +82,9 @@
                       <td>
                       <a href="${root}/BlogDetailControl?maBV=${l.maBV}">${l.tieuDeBV}</a>
                       </td>
-                        <%--                    <td>Admin</td>--%>
-                        <%--                    <td>khach-hang</td>--%>
-                        <%--                    <td>uu-dai-khach-hang</td>--%>
                       <td>${l.ngayTao}</td>
+                      <td><a href="#">Sửa</a></td>
+                      <td><a href="#" style="color: red;">Xóa</a></td>
                     </tr>
                   </c:forEach>
                   </tbody>

@@ -69,7 +69,7 @@
                <div class="row">
                   <div class="category-item col-4">
                      <div class="title">Sản Phẩm</div>
-                     <ul>
+                     <ul class="p-0">
                         <li><a href="">iPhone</a></li>
                         <li><a href="">iPad</a></li>
                         <li><a href="">Mac</a></li>
@@ -79,7 +79,7 @@
                   </div>
                   <div class="category-item col-4">
                      <div class="title">Chính sách</div>
-                     <ul>
+                     <ul class="p-0">
                         <li><a href="">Chính sách bảo mật</a></li>
                         <li><a href="">Chính sách đổi trả sản phẩm</a></li>
                         <li><a href="">Chính sách bảo hành</a></li>
@@ -89,7 +89,7 @@
                   </div>
                   <div class="category-item col-4">
                      <div class="title">Về chúng tôi</div>
-                     <ul>
+                     <ul class="p-0">
                         <li><a href="">Giới thiệu</a></li>
                         <li><a href="">Tin tức - Thủ thuật</a></li>
                         <li><a href="">Hệ thống cửa hàng</a></li>

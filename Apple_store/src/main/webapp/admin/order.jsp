@@ -78,6 +78,7 @@
 										<thead>
 											<tr>
 												<th>Mã Khách Hàng</th>
+												<th>Loại Khách Hàng</th>
 												<th>Mã Đơn Hàng</th>
 												<th>Tổng Tiền</th>
 												<th>Thời Gian</th>
@@ -89,6 +90,7 @@
 												<tr>
 
 													<td><a href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
+													<td>vãng lai or thành viên</td>
 													<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 													<td>${list[i].getTongTien()}</td>
 													<td>${list[i].getThoiGian()}</td>
@@ -99,8 +101,7 @@
 														<c:otherwise>
 															<td><span class="badge badge-success">Đã Xác Nhận</span></td>
 														</c:otherwise>
-													</c:choose>
-												
+													</c:choose>													
 												</tr>
 											</c:forEach>
 										</tbody>

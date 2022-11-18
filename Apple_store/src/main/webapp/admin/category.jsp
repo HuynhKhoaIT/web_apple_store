@@ -85,6 +85,8 @@
                                         <tr>
                                             <th>Mã danh mục</th>
                                             <th>Tên danh mục</th>
+                                            <th>Sửa</th>
+                                            <th>Xóa</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -95,7 +97,10 @@
                                                 </td>
                                                 <td>
                                                         ${o.tenDM}
-                                                </td> /tr>
+                                                </td> 
+                                                <td><a href="#">Sửa</a></td>
+                      							<td><a href="#" style="color: red;">Xóa</a></td>
+                                            </tr>
                                         </c:forEach>
                                         </tbody>
                                         <tfoot></tfoot>

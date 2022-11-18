@@ -194,7 +194,7 @@
                   <h2>Không có sản phẩm nào!</h2>
                </div>
                <a href="${root}" >
-                  <button style="margin: 10px 0 ;" >Tiếp Tục Mua Hàng</button>
+                  <button class="btn-cart" style="margin: 10px 0 ;" >Tiếp Tục Mua Hàng</button>
                </a>
             </div>
 
