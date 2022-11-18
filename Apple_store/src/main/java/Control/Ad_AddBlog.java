@@ -22,7 +22,6 @@ public class Ad_AddBlog extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         request.getRequestDispatcher("/admin/add_blog.jsp").forward(request,response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");

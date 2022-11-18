@@ -38,8 +38,6 @@ public class OrderControl extends HttpServlet {
             }
         }
         Cart cart = new Cart(txt,list);
-//        HttpSession session = request.getSession();
-//        KhachHang khachHang = (KhachHang) session.getAttribute("account");
         String name_raw = request.getParameter("name");
         String phone_raw = request.getParameter("phone");
         String email_raw = request.getParameter("email");
@@ -47,14 +45,26 @@ public class OrderControl extends HttpServlet {
 
         KhachHangDAO khachHangDAO = new KhachHangDAO();
 
-        if(khachHangDAO.getKhachHangByPhone(phone_raw)==null)
+        HttpSession session = request.getSession();
+        Users users = (Users)session.getAttribute("acc");
+
+        Users khachHang;
+
+
+        if(users == null)
         {
-            khachHangDAO.addKhachHang(name_raw,address_raw,phone_raw);
+            if(khachHangDAO.getKhachHangByPhone(phone_raw) == null){
+                khachHangDAO.addKhachHang(name_raw,address_raw,phone_raw,email_raw);
+            }
+            khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
+
         }
-        Users khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
+        else {
+            khachHang = users;
+        }
 
         DonHangDAO donHangDAO = new DonHangDAO();
-        donHangDAO.addOrder(khachHang,cart);
+        donHangDAO.addOrder(khachHang,cart,name_raw,phone_raw,email_raw,address_raw);
         Cookie c = new Cookie("cart","");
         c.setMaxAge(0);
         response.addCookie(c);

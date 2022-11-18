@@ -5,13 +5,11 @@ import DAO.SanPhamDAO;
 import Model.Cart;
 import Model.LoaiSP;
 import Model.SanPham;
+import Model.Users;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -22,6 +20,12 @@ public class CartControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
+
+        HttpSession session = request.getSession();
+        Users users = (Users)session.getAttribute("acc");
+        if(users!=null){
+            System.out.println(users.getMaKH());
+        }
 
         SanPhamDAO dao = new SanPhamDAO();
         List<SanPham> list = dao.getAll();
@@ -37,8 +41,9 @@ public class CartControl extends HttpServlet {
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
 
+        request.setAttribute("user",users);
+
         request.setAttribute("listlsp",listlsp);
-        System.out.println(txt);
         Cart cart = new Cart(txt,list);
         cart.getItems().size();
         request.setAttribute("cart",cart);
