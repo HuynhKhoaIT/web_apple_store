@@ -22,6 +22,7 @@ public class Ad_AddProductControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
+
         String maLoai = request.getParameter("maLoai");
         String action = request.getParameter("action");
         if(action == null)

@@ -20,6 +20,10 @@ public class User_PageControl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
 		HttpSession session = request.getSession();
 		Users users = (Users) session.getAttribute("acc");
 		
@@ -29,6 +33,11 @@ public class User_PageControl extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
 		int MaKH = Integer.parseInt(request.getParameter("MaKH"));
 
 		String TenKH = request.getParameter("TenKH");

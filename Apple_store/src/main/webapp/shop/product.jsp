@@ -80,7 +80,7 @@
                                     		</button>
 									</c:if>
 									<c:if test="${sort == -1}">
-	                                    	<button class="btn btn-outline" type="button" data-toggle="dropdown">Giá thấp đến cao
+	                                    	<button class="btn btn-outline" type="button" data-toggle="dropdown">Giá cao đến thấp
                                         <span class="caret"></span>
                                     </button>
 									</c:if>
@@ -89,10 +89,9 @@
                                         <span class="caret"></span>
                                     </button>
 									</c:if>
-                                    
                                     <ul class="dropdown-menu">
                                         <li class="tab-item"><a href="loaisp?sort=0&maloai=${maLoai}&madm=${danhmuc}">Mới Nhất</a></li>
-                                        <li class="tab-item"><a href="loaisp?sort=1&maloai=${maLoai}&madm=${danhmuc}">Giá thấp đến cao</a></li>
+                                        <li class="tab-item"><a href="loaisp?sort=1&maloai=${maLoai}&madm=${danhmuc}">Giá cao đến thấp</a></li>
                                         <li class="tab-item"><a href="loaisp?sort=-1&maloai=${maLoai}&madm=${danhmuc}">Giá thấp đến cao</a></li>
                                     </ul>
                                 </div>

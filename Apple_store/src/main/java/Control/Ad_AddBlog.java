@@ -60,6 +60,7 @@ public class Ad_AddBlog extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
+
         String maBV = request.getParameter("maBV");
         String tieude = request.getParameter("tieude");
         String chitiet = request.getParameter("chitiet");

@@ -23,7 +23,10 @@ public class Ship_invoiceControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
 		List<SanPham> listSP = new ArrayList<SanPham>();
 		String maDH = request.getParameter("maDH");
 

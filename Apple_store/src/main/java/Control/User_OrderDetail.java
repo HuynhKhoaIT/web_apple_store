@@ -20,7 +20,10 @@ public class User_OrderDetail extends HttpServlet {
        
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
 		int MaDH = Integer.parseInt(request.getParameter("id"));
 		List<ChiTietDonHang> list = new ArrayList<ChiTietDonHang>();
 		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();

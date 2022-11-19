@@ -62,49 +62,49 @@ public class DonHangDAO {
         catch (Exception e) {
         }
     }
-    public List<DonHang> getAllDonHangByMaKH(String id)
-    {
-        List<DonHang> list = new ArrayList<>();
-        String query = "Select * From DonHang where MaKH = ?";
-        try {
-            conn =new ConnectJDBC().getConnection();
-            ps =conn.prepareStatement(query);
-            ps.setString(1,id);
-            rs =ps.executeQuery();
-            while(rs.next())
-            {
-                list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
-						rs.getDate(5),
-                        rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
-            }
-        }
-        catch (Exception e) {
-        }
-        return list;
-    }
-    public DonHang getDonHangByMaDH(String id)
-    {
-        String query = "Select * From DonHang where MaDH = ?";
-        try {
-            conn =new ConnectJDBC().getConnection();
-            ps =conn.prepareStatement(query);
-            ps.setString(1,id);
-            rs =ps.executeQuery();
-            while(rs.next())
-            {
-                return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+	public List<DonHang> getAllDonHangByMaKH(String id)
+	{
+		List<DonHang> list = new ArrayList<>();
+		String query = "Select * From DonHang where MaKH = ?";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+			ps.setString(1,id);
+			rs =ps.executeQuery();
+			while(rs.next())
+			{
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9));
-            }
-        }
-        catch (Exception e) {
-        }
-        return null;
-    }
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+			}
+		}
+		catch (Exception e) {
+		}
+		return list;
+	}
+	public DonHang getDonHangByMaDH(String id)
+	{
+		String query = "Select * From DonHang where MaDH = ?";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+			ps.setString(1,id);
+			rs =ps.executeQuery();
+			while(rs.next())
+			{
+				return new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12));
+			}
+		}
+		catch (Exception e) {
+		}
+		return null;
+	}
 
-public List<DonHang> loadTop10Order() {
+	public List<DonHang> loadTop10Order() {
 		String querry = "select top 10 * from DonHang where MaTrangThai = 1 ";
 		List<DonHang> list = new ArrayList<DonHang>();
 		try {
@@ -116,7 +116,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 
@@ -137,7 +137,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 
@@ -167,8 +167,8 @@ public List<DonHang> loadTop10Order() {
 		} catch (Exception e) {
 		}
 	}
-	
-	
+
+
 	public List<DonHang> loadOrderByMaKH(int MaKH) {
 		String querry = "select * from DonHang where MaKH=?";
 		List<DonHang> list = new ArrayList<DonHang>();
@@ -182,7 +182,7 @@ public List<DonHang> loadTop10Order() {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
 						rs.getDate(5),
 						rs.getInt(6),
-						rs.getString(7),rs.getDate(8),rs.getInt(9)));
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
 
 			}
 

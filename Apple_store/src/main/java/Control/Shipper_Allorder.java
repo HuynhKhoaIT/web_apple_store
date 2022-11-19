@@ -18,8 +18,10 @@ import Model.DonHang;
 public class Shipper_Allorder extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+
 		List<DonHang> list = new ArrayList<DonHang>();
 		DonHangDAO dao=new DonHangDAO();
 		list=dao.loadAllOrder();
