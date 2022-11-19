@@ -224,4 +224,9 @@ public List<DonHang> loadTop10Order() {
 		}
 	
 	}
+
+	public static void main(String[] args) {
+		DonHangDAO donHangDAO = new DonHangDAO();
+		System.out.println(donHangDAO.getDonHangByMaDH("1"));
+	}
 }

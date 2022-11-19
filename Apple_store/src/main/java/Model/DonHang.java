@@ -142,6 +142,9 @@ public class DonHang {
                 ", DiaChi='" + DiaChi + '\'' +
                 ", NgayNhanHang=" + NgayNhanHang +
                 ", PhuongThucThanhToan=" + PhuongThucThanhToan +
+                ", TenNguoiNhan='" + TenNguoiNhan + '\'' +
+                ", SoDienThoai='" + SoDienThoai + '\'' +
+                ", Email='" + Email + '\'' +
                 '}';
     }
 }

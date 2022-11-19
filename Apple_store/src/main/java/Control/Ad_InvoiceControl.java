@@ -29,10 +29,6 @@ public class Ad_InvoiceControl extends HttpServlet {
 		KhachHangDAO khachHangDAO = new KhachHangDAO();
 		Users khachHang = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaKH()));
 
-//		TaiKhoan taiKhoan = new TaiKhoan();
-//		TaiKhoanDAO taiKhoanDAO=new TaiKhoanDAO();
-//		taiKhoan=taiKhoanDAO.getTaiKhoanByMaTK(khachHang.getMaKH());
-//
 		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();
 		List<ChiTietDonHang> list = dao.getChiTietSanPhamID(Integer.parseInt(maDH));
 

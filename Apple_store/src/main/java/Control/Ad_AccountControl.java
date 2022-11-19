@@ -2,7 +2,9 @@ package Control;
 
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
+import DAO.TrangThaiDAO;
 import Model.DonHang;
+import Model.TrangThai;
 import Model.Users;
 
 import javax.servlet.*;
@@ -28,6 +30,11 @@ public class Ad_AccountControl extends HttpServlet {
         DonHangDAO donHangDAO = new DonHangDAO();
         List<DonHang> listDonHang = donHangDAO.getAllDonHangByMaKH(maKH);
 
+        TrangThaiDAO trangThaiDAO = new TrangThaiDAO();
+        List<TrangThai> listTrangThai = trangThaiDAO.getAllTrangThai();
+
+
+        request.setAttribute("listTrangThai",listTrangThai);
         request.setAttribute("listDonHang",listDonHang);
         request.setAttribute("khachHang",khachHang);
         request.getRequestDispatcher("/admin/account.jsp").forward(request,response);

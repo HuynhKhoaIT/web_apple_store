@@ -378,9 +378,10 @@ public class SanPhamDAO
 //		}
 //
 //	}
-	public void addSanPham(String MaDM,String TenSP, String MoTa, String GiaGoc, String GiaBanThuong,String GiaKhuyenMai,String SoLuong,String Anh)
+	public void addSanPham(String MaDM,String TenSP, String MoTa, String GiaGoc, String GiaBanThuong,String GiaKhuyenMai,
+						   String SoLuong,String Anh,String MoTaNgan)
 	{
-		String query = "insert into SanPham(MaDM,TenSP,MoTa,GiaGoc,GiaBanThuong,GiaKhuyenMai,SoLuong,Anh) Values(?,?,?,?,?,?,?,?);";
+		String query = "insert into SanPham(MaDM,TenSP,MoTa,GiaGoc,GiaBanThuong,GiaKhuyenMai,SoLuong,Anh,isDeleted,MoTaNgan) Values(?,?,?,?,?,?,?,?,?,?);";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -393,13 +394,58 @@ public class SanPhamDAO
 			ps.setString(6,GiaKhuyenMai);
 			ps.setString(7,SoLuong);
 			ps.setString(8,Anh);
+			ps.setString(9,"0");
+			ps.setString(10,MoTaNgan);
 
 			ps.executeUpdate();
 		}
 		catch (Exception e) {
 		}
-
 	}
+	public void updateSanPham(String MaDM,String TenSP, String MoTa, String GiaGoc, String GiaBanThuong,String GiaKhuyenMai,
+							  String SoLuong,String Anh,String MoTaNgan,String maSP)
+	{
+		String query = "UPDATE SanPham\n" +
+				"SET MaDM = ?,TenSP =?, MoTa=?,MoTaNgan=?,GiaGoc=?,GiaBanThuong=?,GiaKhuyenMai=?,SoLuong=?,Anh=?,isDeleted=?\n" +
+				"WHERE MaSP = ?;";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+
+			ps.setString(1,MaDM);
+			ps.setString(2,TenSP);
+			ps.setString(3,MoTa);
+			ps.setString(4,MoTaNgan);
+			ps.setString(5,GiaGoc);
+			ps.setString(6,GiaBanThuong);
+			ps.setString(7,GiaKhuyenMai);
+			ps.setString(8,SoLuong);
+			ps.setString(9,Anh);
+			ps.setString(10,"0");
+			ps.setString(11,maSP);
+			ps.executeUpdate();
+		}
+		catch (Exception e) {
+		}
+	}
+	public  void deleteSP(String maSP)
+	{
+		String query = "UPDATE SanPham\n" +
+				"SET isDeleted=?\n" +
+				"WHERE MaSP = ?;";
+		try {
+			conn =new ConnectJDBC().getConnection();
+			ps =conn.prepareStatement(query);
+
+			ps.setString(1,"1");
+			ps.setString(2,maSP);
+
+			ps.executeUpdate();
+		}
+		catch (Exception e) {
+		}
+	}
+
 	public SanPham getNewSP(){
 		String query = "Select top 1 * from SanPham order by MaSP desc";
 		try {

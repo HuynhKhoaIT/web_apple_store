@@ -18,7 +18,7 @@ public class KhachHangDAO {
     public List<Users> getAllKhachHang()
     {
         List<Users> list = new ArrayList<>();
-        String query = "Select * From KhachHang";
+        String query = "Select * From KhachHang where (IsAdmin = 0 and IsShiper = 0 )";
         try {
             conn =new ConnectJDBC().getConnection();
             ps =conn.prepareStatement(query);
@@ -36,6 +36,49 @@ public class KhachHangDAO {
         }
         return list;
     }
+    public List<Users> getAllKhachHangQuen()
+    {
+        List<Users> list = new ArrayList<>();
+        String query = "Select * From KhachHang where (IsAdmin = 0 and IsShiper = 0 and IsUser = 1)";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                list.add(new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12)));
+            }
+        }
+        catch (Exception e) {
+        }
+        return list;
+    }
+    public List<Users> getAllKhachHangLa()
+    {
+        List<Users> list = new ArrayList<>();
+        String query = "Select * From KhachHang where (IsAdmin = 0 and IsShiper = 0 and IsUser = 0)";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            rs =ps.executeQuery();
+            while(rs.next())
+            {
+                list.add(new Users(rs.getInt(1),
+                        rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getString(6),
+                        rs.getString(7),rs.getString(8),
+                        rs.getInt(9),rs.getInt(10), rs.getInt(11),rs.getInt(12)));
+            }
+        }
+        catch (Exception e) {
+        }
+        return list;
+    }
+
     public Users getKhachHangByID(String id){
         String query = "Select * From KhachHang where MaKH = ?";
         try {
@@ -164,7 +207,7 @@ public class KhachHangDAO {
 	}
     public static void main(String[] args) {
         KhachHangDAO khachHangDAO = new KhachHangDAO();
-        Users KhachHang = khachHangDAO.getKhachHangByPhone("0585858714");
+        Users KhachHang = khachHangDAO.getKhachHangByID("1");
         System.out.println(KhachHang);
     }
 

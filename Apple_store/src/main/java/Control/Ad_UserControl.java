@@ -18,12 +18,22 @@ public class Ad_UserControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
         KhachHangDAO khachHangDAO = new KhachHangDAO();
-        List<Users> listKH = khachHangDAO.getAllKhachHang();
+        String u = request.getParameter("u");
+        List<Users> listKH;
+        if(u.equals("1"))
+        {
+            listKH = khachHangDAO.getAllKhachHangQuen();
+        }
+        else {
+            listKH = khachHangDAO.getAllKhachHangLa();
+        }
+
 
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
