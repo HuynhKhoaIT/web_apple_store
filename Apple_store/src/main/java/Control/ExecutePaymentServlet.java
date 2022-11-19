@@ -18,7 +18,7 @@ import Model.SanPham;
 public class ExecutePaymentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ExecutePaymentServlet() {
+	public ExecutePaymentServlet() { 
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -55,13 +55,11 @@ public class ExecutePaymentServlet extends HttpServlet {
 			if (arr != null) {
 				for (Cookie o : arr) {
 					if (o.getName().equals("cart")) {
-						txt += o.getValue();
+						txt += o.getValue(); 
 					}
 				}
 			}
 			Cart cart = new Cart(txt, list);
-//	        HttpSession session = request.getSession();
-//	        KhachHang khachHang = (KhachHang) session.getAttribute("account");
 
 			KhachHangDAO khachHangDAO = new KhachHangDAO();
 			HttpSession session = request.getSession();
@@ -80,7 +78,7 @@ public class ExecutePaymentServlet extends HttpServlet {
 			}
 
 			DonHangDAO donHangDAO = new DonHangDAO();
-			donHangDAO.addOrder(khachHang, cart, name_raw, phone_raw, email, address_raw);
+			donHangDAO.addOrderPayPal(khachHang, cart, name_raw, phone_raw, email, address_raw);
 			Cookie c = new Cookie("cart", "");
 			c.setMaxAge(0);
 			response.addCookie(c);
