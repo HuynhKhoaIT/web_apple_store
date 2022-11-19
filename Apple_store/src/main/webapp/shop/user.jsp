@@ -37,7 +37,11 @@
 						<li class="js-content-btn font-bold"><a>Thông tin cá nhân</a></li>
 						<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
 						<li class="js-orders-btn"><a>Đơn hàng</a></li>
-						<li class="js-logout-btn"><a>Đăng xuất</a></li>
+						<form action="logout" method="POST">
+							<li class="js-logout-btn">
+								<button type="submit" style="margin: 0;background-color: #000;color: #fff;padding: 9px 58px;" >Đăng xuất</button>
+							</li>
+						</form>
 					</ul>
 
 				</div>
