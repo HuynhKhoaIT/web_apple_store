@@ -14,16 +14,12 @@ import Model.Users;
 /**
  * Servlet implementation class UserPageControl
  */
-@WebServlet(name = "User_PageControl", value = "/UserPage")
+@WebServlet(name = "User_PageControl", value = "/shop/UserPage") 
 public class User_PageControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+ 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-
 		HttpSession session = request.getSession();
 		Users users = (Users) session.getAttribute("acc");
 		
@@ -33,11 +29,6 @@ public class User_PageControl extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-
 		int MaKH = Integer.parseInt(request.getParameter("MaKH"));
 
 		String TenKH = request.getParameter("TenKH");
