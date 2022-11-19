@@ -16,7 +16,7 @@ import Model.Users;
 /**
  * Servlet implementation class User_PasswordControl
  */
-@WebServlet("/PasswordChange")
+@WebServlet("/shop/PasswordChange")
 public class User_PasswordControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,11 +27,6 @@ public class User_PasswordControl extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-
 		HttpSession session = request.getSession();
 		Users users = (Users) session.getAttribute("acc");
 		String oldPass=request.getParameter("oldPass");
@@ -49,7 +44,7 @@ public class User_PasswordControl extends HttpServlet {
 			response.sendRedirect("UserPage");
 			
 		}
-		else { 
+		else {
 			if(newPass1.equals(newPass2)) {
 				MD5 lib2 = new MD5();
 				String passMD5_2= lib2.md5(newPass1);
