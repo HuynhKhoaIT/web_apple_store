@@ -130,7 +130,7 @@
 						</div>
 					</div>
 					<form action="paypal" class="cus-form thong-tin" id="form-order"
-						onsubmit="return formvalidate();" method="post">
+						 method="post">
 						<p class="sub-title">Thông tin khách hàng</p>
 						<ul class="form">
 							<li class="row">
