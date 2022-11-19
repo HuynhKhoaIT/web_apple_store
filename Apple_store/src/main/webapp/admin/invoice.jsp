@@ -99,8 +99,11 @@
 									<div class="col-sm-4 invoice-col">
 										Đến
 										<address>
-											<strong>${khachHang.tenKH}</strong><br>
-											${khachHang.diaChi} <br> Phone: ${khachHang.soDT}<br>
+											<strong>${donHang.tenNguoiNhan}</strong>
+											<br>
+											${donHang.diaChi}
+											<br>
+											Phone: ${donHang.soDienThoai}<br>
 										</address>
 									</div>
 									<!-- /.col -->
@@ -126,7 +129,7 @@
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" begin="0" end="${size-1 }">
+												<c:forEach var="i" begin="0" end="${size-1}">
 													<tr>
 														<td>${listDetail[i].getSoLuong()}</td>
 														<td>${listSP[i].getTenSP()}</td>

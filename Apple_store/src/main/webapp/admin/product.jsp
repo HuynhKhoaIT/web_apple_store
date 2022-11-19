@@ -95,8 +95,8 @@
                         </c:if>
                       </c:forEach>
                       <td>${l.soLuong}</td>
-                      <td><a href="#">Sửa</a></td>
-                      <td><a href="#" style="color: red;">Xóa</a></td>
+                      <td><a href="Ad_AddProductControl?maSP=${l.maSP}&action=modify">Sửa</a></td>
+                      <td><a href="Ad_AddProductControl?maSP=${l.maSP}&action=delete" style="color: red;">Xóa</a></td>
                     </tr>
                   </c:forEach>
 

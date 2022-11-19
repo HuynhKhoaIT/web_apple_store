@@ -52,6 +52,13 @@
 	    	<artifactId>mssql-jdbc</artifactId>
 	    	<version>9.2.1.jre8</version>
 		</dependency>
+        <dependency>
+            <groupId>com.paypal.sdk</groupId>
+            <artifactId>rest-api-sdk</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+        <!-- Thanks for using https://jar-download.com -->
+
         <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
 
         <dependency>

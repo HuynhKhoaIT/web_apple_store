@@ -69,8 +69,8 @@
                       <h2 class="lead"><b>${khachHang.tenKH}</b></h2>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Địa chỉ: ${khachHang.diaChi}</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT: ${khachHang.soDT}</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-gmail"></i></span> Email: huynhkhoa.itc@gmail.com</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT: ${khachHang.phone}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-gmail"></i></span> Email: ${khachHang.email}</li>
                       </ul>
                     </div>
                   </div>
@@ -97,9 +97,12 @@
                 </td>
                 <td> ${l.tongTien} </td>
                 <td> ${l.thoiGian} </td>
-                <td>Đã giao</td>
+                  <c:forEach var="tt" items="${listTrangThai}">
+                    <c:if test="${tt.maTrangThai == l.maTrangThai}">
+                      <td>${tt.tenTrangThai}</td>
+                    </c:if>
+                  </c:forEach>
               </tr>
-
             </c:forEach>
 
             </tbody>

@@ -67,25 +67,25 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form id="addBlogForm" action="${root}Ad_TaoBaiViet" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="maBV" value="${baiViet.maBV}">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputName1">Tiêu đề</label>
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter name" name="tieude"/>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter name" name="tieude" value="${baiViet.tieuDeBV}"/>
                   </div>
                   <div class="form-group">
                     <label>Chi tiết</label>
-                    <textarea class="form-control tiny" rows="3" placeholder="Enter ..." name="chitiet"></textarea>
+                    <textarea class="form-control tiny" rows="3" placeholder="Enter ..." name="chitiet">${baiViet.noiDung}</textarea>
                   </div>
                   <div class="form-group">
-                    <label for="myfile">Ảnh bài viết</label>
+                    <label>Ảnh bài viết</label>
                     <form action="/action_page.php">
-                      <input type="file" id="myfile" name="image" /><br />
-                      <br />
+                      <input type="file" name="image"/><br><br>
+                      <input type="hidden" value="${baiViet.anh}" name="oldImage">
                     </form>
                   </div>
                 </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary" form="addBlogForm">Đăng</button>
                 </div>

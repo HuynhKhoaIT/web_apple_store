@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-
 @WebServlet(name = "Ad_AddProductControl", value = "/Ad_AddProductControl")
 @MultipartConfig(fileSizeThreshold = 1024*1024*2,
         maxFileSize = 1024*1024*10,
@@ -23,32 +22,58 @@ public class Ad_AddProductControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
-
         String maLoai = request.getParameter("maLoai");
-
-        if(maLoai==null || maLoai.equals(""))
+        String action = request.getParameter("action");
+        if(action == null)
         {
-            maLoai = "1";
+            action ="";
         }
-        LoaispDAO loaispDAO = new LoaispDAO();
-        List<LoaiSP> listLoaiSP = loaispDAO.getAllloaisp();
+        String maSP;
+        SanPham sanPham;
+        int maDM;
 
-        DanhMucDAO danhMucDAO = new DanhMucDAO();
-        List<DanhMuc> listDanhMuc = danhMucDAO.getDanhMucByMaLoai(maLoai);
-        request.setAttribute("maLoai",maLoai);
+        if(action.equals("delete"))
+        {
+            maSP = request.getParameter("maSP");
+            SanPhamDAO sanPhamDAO = new SanPhamDAO();
+            sanPhamDAO.deleteSP(maSP);
+            response.sendRedirect("Ad_ProductControl");
+        }
+        else {
+            if(action.equals("modify"))
+            {
+                maSP = request.getParameter("maSP");
+                SanPhamDAO sanPhamDAO = new SanPhamDAO();
+                sanPham = sanPhamDAO.getProductById(Integer.parseInt(maSP));
+            }
+            else
+            {
+                sanPham = new SanPham();
+                if(maLoai==null || maLoai.equals(""))
+                {
+                    maLoai = "1";
+                }
+            }
+            LoaispDAO loaispDAO = new LoaispDAO();
+            List<LoaiSP> listLoaiSP = loaispDAO.getAllloaisp();
+            DanhMucDAO danhMucDAO = new DanhMucDAO();
+//            List<DanhMuc> listDanhMuc = danhMucDAO.getDanhMucByMaLoai(maLoai);
+            List<DanhMuc> listDanhMuc = danhMucDAO.getAllDanhMuc();
 
-        request.setAttribute("listDanhMuc",listDanhMuc);
-        request.setAttribute("listLoaiSP",listLoaiSP);
-        request.getRequestDispatcher("/admin/add_product.jsp").forward(request,response);
+            request.setAttribute("sanPham",sanPham);
+            request.setAttribute("maLoai",maLoai);
+            request.setAttribute("listDanhMuc",listDanhMuc);
+            request.setAttribute("listLoaiSP",listLoaiSP);
+            request.getRequestDispatcher("/admin/add_product.jsp").forward(request,response);
+        }
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
-
-
         //common
+        String maSP = request.getParameter("maSP");
         String maLoai = request.getParameter("maLoai");
         String maDM = request.getParameter("maDM");
         String tensanpham = request.getParameter("tensanpham");
@@ -57,70 +82,38 @@ public class Ad_AddProductControl extends HttpServlet {
         String giabanthuong = request.getParameter("giabanthuong");
         String giakhuyenmai = request.getParameter("giakhuyenmai");
         String soluong = request.getParameter("soluong");
-
-        // iphone
-        String manhinhIP = request.getParameter("manhinhIP");
-        String camerasauIP = request.getParameter("camerasauIP");
-        String camereselfieIP = request.getParameter("camereselfieIP");
-        String bonhotrongIP = request.getParameter("bonhotrongIP");
-        String cpuIP = request.getParameter("cpuIP");
-        String hedieuhanhIP = request.getParameter("hedieuhanhIP");
-        String xuatxuIP = request.getParameter("xuatxuIP");
-        String thoigianramatIP = request.getParameter("thoigianramatIP");
-        //ipad
-        String manhinhIPAD = request.getParameter("manhinhIPAD");
-        String camerasauIPAD = request.getParameter("camerasauIPAD");
-        String cameraselfieIPAD = request.getParameter("cameraselfieIPAD");
-        String bonhotrongIPAD = request.getParameter("bonhotrongIPAD");
-        String ramIPAD = request.getParameter("ramIPAD");
-        String cpuIPAD = request.getParameter("cpuIPAD");
-        String gpuIPAD = request.getParameter("gpuIPAD");
-        String hedieuhanhIPAD = request.getParameter("hedieuhanhIPAD");
-        String xuatxuIPAD = request.getParameter("xuatxuIPAD");
-        String thoigianramatIPAD = request.getParameter("thoigianramatIPAD");
-        //MAC
-        String manhinhMAC = request.getParameter("manhinhMAC");
-        String cameraselfieMAC = request.getParameter("cameraselfieMAC");
-        String cpuMAC = request.getParameter("cpuMAC");
-        String ramMAC = request.getParameter("ramMAC");
-        String ocungMAC = request.getParameter("ocungMAC");
-        String dohoaMAC = request.getParameter("dohoaMAC");
-        String hedieuhanhMAC = request.getParameter("hedieuhanhMAC");
-        String trongluongMAC = request.getParameter("trongluongMAC");
-        String kichthuocMAC = request.getParameter("kichthuocMAC");
-        String xuatxuMAC = request.getParameter("xuatxuMAC");
-        String thoigianramatMAC = request.getParameter("thoigianramatMAC");
-        //WATCH
-        String manhinhWATCH = request.getParameter("manhinhWATCH");
-        String chatlieuWATCH = request.getParameter("chatlieuWATCH");
-        String hedieuhanhWATCH = request.getParameter("hedieuhanhWATCH");
-        String thoigiansudungpinWATCH = request.getParameter("thoigiansudungpinWATCH");
-        String xuatxuWATCH = request.getParameter("xuatxuWATCH");
-        String thoigianramatWATCH = request.getParameter("thoigianramatWATCH");
-
-
+        String oldImage = request.getParameter("oldImage");
+        String motangan = request.getParameter("motangan");
         Part part = request.getPart("image");
-        String realPath = request.getServletContext().getRealPath("/uploads");
-        String filename
-                = Paths.get(part.getSubmittedFileName()).getFileName().toString();
-
-        if(!Files.exists(Paths.get(realPath))){
-            Files.createDirectories(Paths.get(realPath));
+        String mess="";
+        String anh;
+        if(part.getSubmittedFileName()==null || part.getSubmittedFileName().equals("")){
+            anh = oldImage;
+        }else{
+            String realPath = request.getServletContext().getRealPath("/uploads");
+            String filename
+                    = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+            if(!Files.exists(Paths.get(realPath))){
+                Files.createDirectories(Paths.get(realPath));
+            }
+            part.write(realPath+"/"+filename);
+            anh = "uploads/"+filename;
         }
-        part.write(realPath+"/"+filename);
-
-        String anh = "uploads/"+filename;
-
-//        request.setAttribute("filename","uploads/"+filename);
-//
-//        request.getRequestDispatcher("/test.jsp").forward(request,response);
         SanPhamDAO sanPhamDAO = new SanPhamDAO();
-        sanPhamDAO.addSanPham(maDM,tensanpham,motasanpham,giagoc,giabanthuong,giakhuyenmai,soluong,anh);
-        SanPham sanPham = sanPhamDAO.getNewSP();
-        AnhSPDAO anhSPDAO = new AnhSPDAO();
-        anhSPDAO.addAnhSP(sanPham.getMaSP(),anh);
-
-        response.sendRedirect("Ad_AddProductControl");
-
+        if(maSP.equals("") || maSP == null || maSP.equals("0"))
+        {
+            sanPhamDAO.addSanPham(maDM,tensanpham,motasanpham,giagoc,giabanthuong,giakhuyenmai,soluong,anh,motangan);
+            SanPham sanPham = sanPhamDAO.getNewSP();
+            AnhSPDAO anhSPDAO = new AnhSPDAO();
+            anhSPDAO.addAnhSP(sanPham.getMaSP(),anh);
+        }
+        else {
+            sanPhamDAO.updateSanPham(maDM,tensanpham,motasanpham,giagoc,giabanthuong,giakhuyenmai,soluong,anh,motangan,maSP);
+            SanPham sanPham = sanPhamDAO.getProductById(Integer.parseInt(maSP));
+            AnhSPDAO anhSPDAO = new AnhSPDAO();
+            anhSPDAO.deleteAnhSP(sanPham.getMaSP(),oldImage);
+            anhSPDAO.addAnhSP(sanPham.getMaSP(),anh);
+        }
+        response.sendRedirect("Ad_ProductControl");
     }
 }

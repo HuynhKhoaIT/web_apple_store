@@ -41,11 +41,25 @@ public class AnhSPDAO {
             ps.setInt(1,id);
             ps.setString(2,anh);
             ps.executeUpdate();
-
         }
         catch (Exception e) {
         }
     }
+    public void deleteAnhSP(int id, String anh)
+    {
+        String query = "DELETE FROM AnhSanPham WHERE MaSP = ? and Anh=?; ";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            ps.setInt(1,id);
+            ps.setString(2,anh);
+            ps.executeUpdate();
+        }
+        catch (Exception e) {
+        }
+    }
+
+
     public static void main(String[] args) {
         AnhSPDAO anhSPDAO = new AnhSPDAO();
         List<AnhSanPham> list = anhSPDAO.getAnhSPByID(6);

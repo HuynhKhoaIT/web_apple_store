@@ -62,6 +62,7 @@
                 <div class="card-add">
                   <a href="${root}Ad_TaoBaiViet" class="">
                     <p>Thêm bài viết</p>
+                    <p>${mess}</p>
                   </a>
                 </div>
               </div>
@@ -83,8 +84,8 @@
                       <a href="${root}/BlogDetailControl?maBV=${l.maBV}">${l.tieuDeBV}</a>
                       </td>
                       <td>${l.ngayTao}</td>
-                      <td><a href="#">Sửa</a></td>
-                      <td><a href="#" style="color: red;">Xóa</a></td>
+                      <td><a href="Ad_TaoBaiViet?maBV=${l.maBV}&action=modify">Sửa</a></td>
+                      <td><a href="Ad_TaoBaiViet?maBV=${l.maBV}&action=delete" style="color: red;">Xóa</a></td>
                     </tr>
                   </c:forEach>
                   </tbody>
