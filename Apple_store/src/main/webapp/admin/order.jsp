@@ -89,19 +89,32 @@
 											<c:forEach var="i" begin="0" end="${size-1 }">
 												<tr>
 
-													<td><a href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
-													<td>vãng lai or thành viên</td>
-													<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
+													<td><a
+														href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
+													
+													<c:choose>
+
+														<c:when test="${ten[i] == null}">
+															<td>Chưa đăng ký</td>
+														</c:when>
+														<c:otherwise>
+															<td>Thành viên</td>
+														</c:otherwise>
+													</c:choose>
+													<td><a
+														href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 													<td>${list[i].getTongTien()}</td>
 													<td>${list[i].getThoiGian()}</td>
 													<c:choose>
 														<c:when test="${list[i].getMaTrangThai()==1}">
-															<td><span class="badge badge-success">Chưa Xác Nhận</span></td>
+															<td><span class="badge badge-success">Chưa
+																	Xác Nhận</span></td>
 														</c:when>
 														<c:otherwise>
-															<td><span class="badge badge-success">Đã Xác Nhận</span></td>
+															<td><span class="badge badge-success">Đã Xác
+																	Nhận</span></td>
 														</c:otherwise>
-													</c:choose>													
+													</c:choose>
 												</tr>
 											</c:forEach>
 										</tbody>
