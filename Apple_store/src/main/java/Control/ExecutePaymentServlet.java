@@ -25,7 +25,7 @@ public class ExecutePaymentServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		
+
 		response.setContentType("text/html; charset=UTF-8");
 		String paymentId = request.getParameter("paymentId");
 		String payerId = request.getParameter("PayerID");
@@ -63,14 +63,23 @@ public class ExecutePaymentServlet extends HttpServlet {
 //	        KhachHang khachHang = (KhachHang) session.getAttribute("account");
 
 			KhachHangDAO khachHangDAO = new KhachHangDAO();
+			HttpSession session = request.getSession();
+			Users users = (Users) session.getAttribute("acc");
 
-			if (khachHangDAO.getKhachHangByPhone(phone_raw) == null) {
-				khachHangDAO.addKhachHang(name_raw, address_raw, phone_raw,email);
+			Users khachHang;
+
+			if (users == null) {
+				if (khachHangDAO.getKhachHangByPhone(phone_raw) == null) {
+					khachHangDAO.addKhachHang(name_raw, address_raw, phone_raw, email);
+				}
+				khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
+
+			} else {
+				khachHang = users;
 			}
-			Users khachHang = khachHangDAO.getKhachHangByPhone(phone_raw);
 
 			DonHangDAO donHangDAO = new DonHangDAO();
-			donHangDAO.addOrder(khachHang, cart,name_raw,  phone_raw,email,address_raw);
+			donHangDAO.addOrder(khachHang, cart, name_raw, phone_raw, email, address_raw);
 			Cookie c = new Cookie("cart", "");
 			c.setMaxAge(0);
 			response.addCookie(c);
