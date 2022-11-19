@@ -26,13 +26,12 @@ public class ReviewPaymentServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-
 		String paymentId = request.getParameter("paymentId");
 		String payerId = request.getParameter("PayerID");/*
-															 * String name_raw = request.getParameter("name_raw");
-															 * String phone_raw = request.getParameter("phone_raw");
-															 * String address_raw = request.getParameter("address_raw");
-															 */
+		 * String name_raw = request.getParameter("name_raw");
+		 * String phone_raw = request.getParameter("phone_raw");
+		 * String address_raw = request.getParameter("address_raw");
+		 */
 
 
 		try {
@@ -47,9 +46,9 @@ public class ReviewPaymentServlet extends HttpServlet {
 			request.setAttribute("transaction", transaction);
 			request.setAttribute("shippingAddress",
 					shippingAddress);/*
-										 * request.setAttribute("name_raw", name_raw); request.setAttribute("phone_raw",
-										 * phone_raw); request.setAttribute("address_raw", address_raw);
-										 */
+			 * request.setAttribute("name_raw", name_raw); request.setAttribute("phone_raw",
+			 * phone_raw); request.setAttribute("address_raw", address_raw);
+			 */
 			String url = "/shop/ReviewPage.jsp?paymentId=" + paymentId + "&PayerID=" + payerId;
 
 
