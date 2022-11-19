@@ -21,139 +21,134 @@
 <title>Document</title>
 </head>
 <body>
-<div class="main">
-	<c:set var="items" value="${listlsp}" scope="request" />
-	<jsp:include page="./header2.jsp" />
+	<div class="main">
+		<c:set var="items" value="${listlsp}" scope="request" />
+		<jsp:include page="./header2.jsp" />
 
-	<!-- /.row -->
-	<div class="content">
-		<div class="pro-container">
-			<div class="user-profile">
-				<div class="subnav">
-					<div class="avatar-user navcard" style="background: #000;">
-						<img src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer" alt="User">
+		<!-- /.row -->
+		<div class="content">
+			<div class="pro-container">
+				<div class="user-profile">
+					<div class="subnav">
+						<div class="avatar-user navcard" style="background: #000;">
+							<img
+								src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer"
+								alt="User">
+						</div>
+						<ul style="padding-left: 0px;">
+							<li class="js-content-btn font-bold"><a>Thông tin cá
+									nhân</a></li>
+							<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
+							<li class="js-orders-btn"><a>Đơn hàng</a></li>
+							<li class="js-logout-btn"><a>Đăng xuất</a></li>
+						</ul>
+
 					</div>
-					<ul style="padding-left: 0px;">
-						<li class="js-content-btn font-bold"><a>Thông tin cá nhân</a></li>
-						<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
-						<li class="js-orders-btn"><a>Đơn hàng</a></li>
-						<form action="logout" method="POST">
-							<li class="js-logout-btn">
-								<button type="submit" style=" margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
-								Đăng xuất
-								</button>
-							</li>
-						</form>
-					</ul>
-
-				</div>
-				<div class="tab-content js-content-tab">
+					<div class="tab-content js-content-tab">
 
 
-					<form action="" class="cus-form">
-						<ul class="form">
-							<li class="row">
-								<label class="label">Họ và Tên</label>
-								<div  class ="float-right">
-									<input class="input" type="text"  value="${sessionScope.acc.getTenKH()}">
-								</div>
-							</li>
-							<li class="row">
-								<label class="label">Số điện thoại </label>
-								<div  class ="float-right">
-									<input class="input" type="text" value="${sessionScope.acc.getPhone()}" >
-									<div class="note">Vui lòng nhập đúng </div>
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="row" id="email" >
-								<label class="label">Email
+						<form action="UserPage" class="cus-form" method="post">
+							<ul class="form">
+								<li class="row"><label class="label">Họ và Tên</label>
+									<div class="float-right">
+										<input class="input" type="text" name="MaKH" value="${sessionScope.acc.getMaKH()}">
+										<input class="input" type="text" name="TenKH" value="${sessionScope.acc.getTenKH()}">
+									</div></li>
+								<li class="row"><label class="label">Số điện thoại
 								</label>
-								<div  class ="float-right">
-									<input class="input" type="email" value="${sessionScope.acc.getEmail()}" >
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="row">
-								<label class="label">Địa chỉ</label>
-								<div  class ="float-right">
-									<input class="input" type="text"  value="${sessionScope.acc.getDiaChi()}">
-								</div>
-							</li>
-						</ul>
-						<div class="pro-btn-container">
-						<button class="save">Save changes</button>
-						<button class="cancel">Cancel</button>
+									<div class="float-right">
+										<input class="input" type="text" name="phone"
+											value="${sessionScope.acc.getPhone()}">
+										<div class="note">Vui lòng nhập đúng</div>
+									</div>
+									<div class="clear"></div></li>
+								<li class="row" id="email"><label class="label">Email
+								</label>
+									<div class="float-right">
+										<input class="input" type="email" name="email"
+											value="${sessionScope.acc.getEmail()}">
+									</div>
+									<div class="clear"></div></li>
+								<li class="row"><label class="label">Địa chỉ</label>
+									<div class="float-right">
+										<input class="input" type="text" name="DiaChi"
+											value="${sessionScope.acc.getDiaChi()}">
+									</div></li>
+							</ul>
+							<div class="pro-btn-container">
+								<button type="submit" class="save">Save changes</button>
+								<button class="cancel">Cancel</button>
+							</div>
+						</form>
+
 					</div>
-					</form>
-					
-				</div>
-				<div class="tab-password display-off js-password-tab">
-					<form action="" class="cus-form">
-						<ul class="form">
-							<li class="row">
-								<label class="label">Mật khẩu hiện tại</label>
-								<div  class ="float-right">
-									<input class="input password" type="password">
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="row">
-								<label class="label ">Mật khẩu mới</label>
-								<div  class ="float-right">
-									<input class="input  password" type="password">
-									<div class="note-text js-password-info">Long đây</div>
-								</div>
-								<div class="clear"></div>
-							</li>
-							<li class="row">
-								<label class="label">Nhập lại mật khẩu mới</label>
-								<div  class ="float-right">
-									<input class="input password" type="password" >
-									<div class="note">Vui lòng nhập đúng </div>
-								</div>
-								<div class="clear"></div>
-							</li>
-						</ul>
+					<div class="tab-password display-off js-password-tab">
+						<form action="" class="cus-form">
+							<ul class="form">
+								<li class="row"><label class="label">Mật khẩu hiện
+										tại</label>
+									<div class="float-right">
+										<input class="input password" type="password">
+									</div>
+									<div class="clear"></div></li>
+								<li class="row"><label class="label ">Mật khẩu mới</label>
+									<div class="float-right">
+										<input class="input  password" type="password">
+										<div class="note-text js-password-info">Long đây</div>
+									</div>
+									<div class="clear"></div></li>
+								<li class="row"><label class="label">Nhập lại mật
+										khẩu mới</label>
+									<div class="float-right">
+										<input class="input password" type="password">
+										<div class="note">Vui lòng nhập đúng</div>
+									</div>
+									<div class="clear"></div></li>
+							</ul>
 
-						<div class="show-password"><input type="checkbox" onclick="show_password()"> <p>Hiện mật khẩu</p></div>
-
-					</form>
-					<div class="pro-btn-container">
-						<button class="save">Save changes</button>
-						<button class="cancel">Cancel</button>
-					</div>
-				</div>
-				<div class="tab-orders display-off js-orders-tab">
-					<div class="list-items">
-						<div class="items">
-
-							<div class="pic float-left">
-								<p>
-									<img id ="items-pic" src="../../asset/img/ip13-pro-max.jpeg" alt="Sản phẩm">
-								</p>
+							<div class="show-password">
+								<input type="checkbox" onclick="show_password()">
+								<p>Hiện mật khẩu</p>
 							</div>
 
-							<div class="items-info float-left">
-								<div class="items-type float-left">
-									<h3 class="items-name">iPhone 13 128GB</h3>
-									<div class="colors">
-										<span>Color</span>
-										<ul class="ordercolorful">
+						</form>
+						<div class="pro-btn-container">
+							<button class="save">Save changes</button>
+							<button class="cancel">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-orders display-off js-orders-tab">
+						<div class="list-items">
+							<div class="items">
 
-										</ul>
+								<div class="pic float-left">
+									<p>
+										<img id="items-pic" src="../../asset/img/ip13-pro-max.jpeg"
+											alt="Sản phẩm">
+									</p>
+								</div>
+
+								<div class="items-info float-left">
+									<div class="items-type float-left">
+										<h3 class="items-name">iPhone 13 128GB</h3>
+										<div class="colors">
+											<span>Color</span>
+											<ul class="ordercolorful">
+
+											</ul>
+										</div>
 									</div>
-								</div>
 
-								<div class="items-price float-left">
-									<p class = "end-price">19.190.000 đ</p>
-									<p class = "price">24.990.000 đ</p>
-									<p class = "discount inline-block">Giảm -30 %</p>
-								</div>
+									<div class="items-price float-left">
+										<p class="end-price">19.190.000 đ</p>
+										<p class="price">24.990.000 đ</p>
+										<p class="discount inline-block">Giảm -30 %</p>
+									</div>
 
-								<div class="items-amount float-left">
-									<p>Amount: </p>
-									<p>Day: 20/02/2002</p>
+									<div class="items-amount float-left">
+										<p>Amount:</p>
+										<p>Day: 20/02/2002</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -161,44 +156,43 @@
 				</div>
 			</div>
 		</div>
+		<%@include file="./footer2.jsp"%>
 	</div>
-	<%@include file="./footer2.jsp"%>
-</div>
-<script>
-	const content_tab = document.querySelector('.js-content-tab')
-	const password_tab = document.querySelector('.js-password-tab')
-	const orders_tab = document.querySelector('.js-orders-tab')
-	const btn_content = document.querySelector('.js-content-btn')
-	const btn_password = document.querySelector('.js-password-btn')
-	const btn_order = document.querySelector('.js-orders-btn')
-	function show_content() {
-		btn_content.classList.add('font-bold')
-		btn_password.classList.remove('font-bold')
-		btn_order.classList.remove('font-bold')
-		content_tab.classList.remove('display-off')
-		password_tab.classList.add('display-off')
-		orders_tab.classList.add('display-off')
-	}
-	function show_password() {
-		btn_password.classList.add('font-bold')
-		btn_content.classList.remove('font-bold')
-		btn_order.classList.remove('font-bold')
-		password_tab.classList.remove('display-off')
-		content_tab.classList.add('display-off')
-		orders_tab.classList.add('display-off')
-	}
-	function show_orders() {
-		btn_order.classList.add('font-bold')
-		btn_password.classList.remove('font-bold')
-		btn_content.classList.remove('font-bold')
-		orders_tab.classList.remove('display-off')
-		password_tab.classList.add('display-off')
-		content_tab.classList.add('display-off')
-	}
-	btn_content.addEventListener('click', show_content)
-	btn_password.addEventListener('click', show_password)
-	btn_order.addEventListener('click', show_orders)
-</script>
-<script src="./assets/js/main.js"></script>
+	<script>
+		const content_tab = document.querySelector('.js-content-tab')
+		const password_tab = document.querySelector('.js-password-tab')
+		const orders_tab = document.querySelector('.js-orders-tab')
+		const btn_content = document.querySelector('.js-content-btn')
+		const btn_password = document.querySelector('.js-password-btn')
+		const btn_order = document.querySelector('.js-orders-btn')
+		function show_content() {
+			btn_content.classList.add('font-bold')
+			btn_password.classList.remove('font-bold')
+			btn_order.classList.remove('font-bold')
+			content_tab.classList.remove('display-off')
+			password_tab.classList.add('display-off')
+			orders_tab.classList.add('display-off')
+		}
+		function show_password() {
+			btn_password.classList.add('font-bold')
+			btn_content.classList.remove('font-bold')
+			btn_order.classList.remove('font-bold')
+			password_tab.classList.remove('display-off')
+			content_tab.classList.add('display-off')
+			orders_tab.classList.add('display-off')
+		}
+		function show_orders() {
+			btn_order.classList.add('font-bold')
+			btn_password.classList.remove('font-bold')
+			btn_content.classList.remove('font-bold')
+			orders_tab.classList.remove('display-off')
+			password_tab.classList.add('display-off')
+			content_tab.classList.add('display-off')
+		}
+		btn_content.addEventListener('click', show_content)
+		btn_password.addEventListener('click', show_password)
+		btn_order.addEventListener('click', show_orders)
+	</script>
+	<script src="./assets/js/main.js"></script>
 </body>
 </html>
