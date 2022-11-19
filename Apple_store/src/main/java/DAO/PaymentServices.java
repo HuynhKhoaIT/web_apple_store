@@ -11,7 +11,7 @@ public class PaymentServices {
 	private static final String CLIENT_ID = "ARx6yqggvEcdgcf7kjhd60w8EYRobPbkjtRA6vPMEy1A983G1Zd9NzbPf6o5JZTexdFMX80la7leRbag";
 	private static final String CLIENT_SECRET = "EMnkLS6R_RM3VdCIymqPPxvO_8odJ43lD1ZaSrNkp-QdyXKkPRRCKwXbdL7LjS5M429Nygsz6URbiItL";
 	private static final String MODE = "sandbox";
-
+ 
 	public String authorizePayment(String total, List<Item> items) throws PayPalRESTException {
 
 		Payer payer = getPayerInformation();
