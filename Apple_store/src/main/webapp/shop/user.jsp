@@ -37,11 +37,7 @@
 						<li class="js-content-btn font-bold"><a>Thông tin cá nhân</a></li>
 						<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
 						<li class="js-orders-btn"><a>Đơn hàng</a></li>
-						<form action="logout" method="POST">
-							<li class="js-logout-btn">
-								<button type="submit" style="margin: 0;background-color: #000;color: #fff;padding: 9px 58px;" >Đăng xuất</button>
-							</li>
-						</form>
+						<li class="js-logout-btn"><a>Đăng xuất</a></li>
 					</ul>
 
 				</div>
@@ -53,13 +49,13 @@
 							<li class="row">
 								<label class="label">Họ và Tên</label>
 								<div  class ="float-right">
-									<input class="input" type="text"  value="jfkajsf">
+									<input class="input" type="text"  value="${sessionScope.acc.getTenKH()}">
 								</div>
 							</li>
 							<li class="row">
 								<label class="label">Số điện thoại </label>
 								<div  class ="float-right">
-									<input class="input" type="text" value="0123456789" >
+									<input class="input" type="text" value="${sessionScope.acc.getPhone()}" >
 									<div class="note">Vui lòng nhập đúng </div>
 								</div>
 								<div class="clear"></div>
@@ -68,22 +64,23 @@
 								<label class="label">Email
 								</label>
 								<div  class ="float-right">
-									<input class="input" type="email" value="@gmail.com" >
+									<input class="input" type="email" value="${sessionScope.acc.getEmail()}" >
 								</div>
 								<div class="clear"></div>
 							</li>
 							<li class="row">
 								<label class="label">Địa chỉ</label>
 								<div  class ="float-right">
-									<input class="input" type="text"  value="Hồ Chí Minh">
+									<input class="input" type="text"  value="${sessionScope.acc.getDiaChi()}">
 								</div>
 							</li>
 						</ul>
-					</form>
-					<div class="pro-btn-container">
+						<div class="pro-btn-container">
 						<button class="save">Save changes</button>
 						<button class="cancel">Cancel</button>
 					</div>
+					</form>
+					
 				</div>
 				<div class="tab-password display-off js-password-tab">
 					<form action="" class="cus-form">
