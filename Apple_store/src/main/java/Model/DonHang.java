@@ -12,13 +12,38 @@ public class DonHang {
     String DiaChi;
     Date NgayNhanHang;
     int PhuongThucThanhToan;
+    String TenNguoiNhan;
+    String SoDienThoai;
+    String Email;
 
     public DonHang() {
     }
 
-    
+    public String getTenNguoiNhan() {
+        return TenNguoiNhan;
+    }
 
-    public DonHang(int maDH, int maKH, int maGH, int tongTien, Date thoiGian, int maTrangThai, String diaChi, Date ngayNhanHang, int phuongThucThanhToan) {
+    public void setTenNguoiNhan(String tenNguoiNhan) {
+        TenNguoiNhan = tenNguoiNhan;
+    }
+
+    public String getSoDienThoai() {
+        return SoDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        SoDienThoai = soDienThoai;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public DonHang(int maDH, int maKH, int maGH, int tongTien, Date thoiGian, int maTrangThai, String diaChi, Date ngayNhanHang, int phuongThucThanhToan, String tenNguoiNhan, String soDienThoai, String email) {
         MaDH = maDH;
         MaKH = maKH;
         MaGH = maGH;
@@ -28,6 +53,9 @@ public class DonHang {
         DiaChi = diaChi;
         NgayNhanHang = ngayNhanHang;
         PhuongThucThanhToan = phuongThucThanhToan;
+        TenNguoiNhan = tenNguoiNhan;
+        SoDienThoai = soDienThoai;
+        Email = email;
     }
 
     public int getMaDH() {

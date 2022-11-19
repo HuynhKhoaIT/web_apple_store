@@ -10,12 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="Them su xoa san pham">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,6 +337,8 @@
       <workItem from="1668837982370" duration="9256000" />
       <workItem from="1668851518464" duration="2355000" />
       <workItem from="1668863940533" duration="788000" />
+      <workItem from="1668866438219" duration="939000" />
+      <workItem from="1668869223650" duration="507000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>

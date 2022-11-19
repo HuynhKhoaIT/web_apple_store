@@ -38,7 +38,7 @@ public class Ad_AddBlog extends HttpServlet {
             maBV = request.getParameter("maBV");
             BaiVietDAO baiVietDAO = new BaiVietDAO();
             baiVietDAO.deleteBaiViet(maBV);
-            response.sendRedirect("Ad_Blog"); // quay lại bài trang các bài viết
+            response.sendRedirect("Ad_Blog");
         }
         else {
             if(action.equals("modify"))
