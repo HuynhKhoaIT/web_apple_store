@@ -27,27 +27,19 @@ public class AuthorizePaymentServlet extends HttpServlet {
 		String nameSP[] = request.getParameterValues("nameSP");
 		String quantity[] = request.getParameterValues("quantity");
 		String totalPrice[] = request.getParameterValues("totalPrice");
-		int totalString = Integer.parseInt(request.getParameter("total")) / 23000-1;
-
-		System.out.println(totalString);
-
-		for (int i = 0; i < nameSP.length; i++) {
-			System.out.println(nameSP[i]);
-			System.out.println(totalPrice[i]);
-			System.out.println(quantity[i]);
-		}
+		int totalString = Integer.parseInt(request.getParameter("total")) / 23000;
 
 
 		List<Item> items = new ArrayList<Item>();
-
+		int tong=0;
 		for (int i = 0; i < nameSP.length; i++) {
 			items.add(new Item(nameSP[i], Integer.parseInt(quantity[i]), Integer.parseInt(totalPrice[i]) / 23000));
-			System.out.println(Integer.parseInt(totalPrice[i]) / 23000);
+			tong=tong+Integer.parseInt(totalPrice[i]) / 23000;
 		}
 
 		try {
 			PaymentServices paymentServices = new PaymentServices();
-			String approvalLink = paymentServices.authorizePayment(Float.toString(totalString), items);
+			String approvalLink = paymentServices.authorizePayment(Integer.toString(totalString-(totalString-tong)), items);
 
 			response.sendRedirect(approvalLink);
 
