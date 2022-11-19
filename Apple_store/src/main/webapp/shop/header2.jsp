@@ -57,7 +57,7 @@
 
                 <div class="header-user col-md-2">
                     <c:if test="${sessionScope.acc != null}">
-                        <a href="${root}shop/user.jsp" class="user">
+                        <a href="/Apple_store/shop/UserPage" class="user">
                             <div class="sec-icon">
                                 <i class="ti-user"></i>
                                 <div class="icon-text">${sessionScope.acc.tenKH}</div>

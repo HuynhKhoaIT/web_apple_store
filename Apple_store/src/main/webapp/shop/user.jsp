@@ -41,13 +41,13 @@
 										nhân</a></li>
 								<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
 								<li class="js-orders-btn"><a>Đơn hàng</a></li>
-								<!-- <li class="js-logout-btn"><a>Đăng xuất</a></li> -->
-
-								<li class="js-logout-btn">
-									<button type="submit"
-										style="margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
-										Đăng xuất</button>
-								</li>
+								<form action="logout" method="POST">
+									<li class="js-logout-btn">
+										<button type="submit" style=" margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
+										Đăng xuất
+										</button>
+									</li>
+								</form>
 
 							</ul>
 						</form>

@@ -21,14 +21,23 @@ public class User_PageControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		Users users = (Users) session.getAttribute("acc");
-		
-		request.setAttribute("users", users);
-		request.getRequestDispatcher("/shop/user.jsp").forward(request, response);
+		if (session.getAttribute("acc") == null) {
+			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
+		}
+		else {
+			request.getRequestDispatcher("/shop/user.jsp").forward(request, response);
+		}
+		//request.getRequestDispatcher("/shop/user.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		
+		Users users = (Users) session.getAttribute("acc");
+		
+		request.setAttribute("users", users);
+		
 		int MaKH = Integer.parseInt(request.getParameter("MaKH"));
 
 		String TenKH = request.getParameter("TenKH");
@@ -36,8 +45,6 @@ public class User_PageControl extends HttpServlet {
 		String email = request.getParameter("email");
 		String DiaChi = request.getParameter("DiaChi");
 
-		HttpSession session = request.getSession();
-		Users users = (Users) session.getAttribute("acc");
 		
 		users.setTenKH(TenKH);
 		users.setPhone(phone);
