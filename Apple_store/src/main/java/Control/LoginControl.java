@@ -35,8 +35,14 @@ public class LoginControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-
-		request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		if (session.getAttribute("acc") != null) {
+			response.sendRedirect("http://localhost:8080/Apple_store");
+		}
+		else {
+			request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+		}
+		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
 	}
 
 	/**
@@ -62,6 +68,8 @@ public class LoginControl extends HttpServlet {
 		else {
 			HttpSession session = request.getSession();
 			session.setAttribute("acc", a);
+			session.setAttribute("rolead", a.getIsAdmin());
+			session.setAttribute("roleshipper", a.getIsShiper());
 			int user = a.getIsUser();
 			int admin = a.getIsAdmin();
 			int shipper = a.getIsShiper();
