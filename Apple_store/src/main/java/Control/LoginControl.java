@@ -32,7 +32,7 @@ public class LoginControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(request, response);
+		request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
 	}
 
 	/**
@@ -56,7 +56,23 @@ public class LoginControl extends HttpServlet {
 		else {
 			HttpSession session = request.getSession();
 			session.setAttribute("acc", a);
-			response.sendRedirect("http://localhost:8080/Apple_store");
+			int user = a.getIsUser();
+			int admin = a.getIsAdmin();
+			int shipper = a.getIsShiper();
+			if (user==1 && admin == 0 && shipper == 0) {
+				response.sendRedirect("http://localhost:8080/Apple_store");
+			}
+			else if(user == 1 && admin == 1 && shipper == 0) {
+				response.sendRedirect("http://localhost:8080/Apple_store/admin");
+			}
+			else if(user == 1 && admin == 0 && shipper == 1) {
+				response.sendRedirect("http://localhost:8080/Apple_store/shipper");
+			}
+			else {
+				session.removeAttribute("acc");
+				response.sendRedirect("http://localhost:8080/Apple_store");
+			}
+			//response.sendRedirect("http://localhost:8080/Apple_store");
 		}
 	}
 
