@@ -35,13 +35,22 @@
 								src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer"
 								alt="User">
 						</div>
-						<ul style="padding-left: 0px;">
-							<li class="js-content-btn font-bold"><a>Thông tin cá
-									nhân</a></li>
-							<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
-							<li class="js-orders-btn"><a>Đơn hàng</a></li>
-							<li class="js-logout-btn"><a>Đăng xuất</a></li>
-						</ul>
+						<form action="logout" method="POST">
+							<ul style="padding-left: 0px;">
+								<li class="js-content-btn font-bold"><a>Thông tin cá
+										nhân</a></li>
+								<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
+								<li class="js-orders-btn"><a>Đơn hàng</a></li>
+								<!-- <li class="js-logout-btn"><a>Đăng xuất</a></li> -->
+
+								<li class="js-logout-btn">
+									<button type="submit"
+										style="margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
+										Đăng xuất</button>
+								</li>
+
+							</ul>
+						</form>
 
 					</div>
 					<div class="tab-content js-content-tab">
@@ -51,8 +60,10 @@
 							<ul class="form">
 								<li class="row"><label class="label">Họ và Tên</label>
 									<div class="float-right">
-										<input class="input" type="text" name="MaKH" value="${sessionScope.acc.getMaKH()}">
-										<input class="input" type="text" name="TenKH" value="${sessionScope.acc.getTenKH()}">
+										<input class="input" type="text" name="MaKH"
+											value="${sessionScope.acc.getMaKH()}"> <input
+											class="input" type="text" name="TenKH"
+											value="${sessionScope.acc.getTenKH()}">
 									</div></li>
 								<li class="row"><label class="label">Số điện thoại
 								</label>
@@ -83,24 +94,24 @@
 
 					</div>
 					<div class="tab-password display-off js-password-tab">
-						<form action="" class="cus-form">
+						<form action="PasswordChange" class="cus-form" method="post">
 							<ul class="form">
 								<li class="row"><label class="label">Mật khẩu hiện
 										tại</label>
 									<div class="float-right">
-										<input class="input password" type="password">
+										<input class="input password" type="password" name="oldPass">
 									</div>
 									<div class="clear"></div></li>
 								<li class="row"><label class="label ">Mật khẩu mới</label>
 									<div class="float-right">
-										<input class="input  password" type="password">
+										<input class="input  password" type="password" name="newPass1">>
 										<div class="note-text js-password-info">Long đây</div>
 									</div>
 									<div class="clear"></div></li>
 								<li class="row"><label class="label">Nhập lại mật
 										khẩu mới</label>
 									<div class="float-right">
-										<input class="input password" type="password">
+										<input class="input password" type="password" name="newPass2">>
 										<div class="note">Vui lòng nhập đúng</div>
 									</div>
 									<div class="clear"></div></li>
@@ -110,12 +121,12 @@
 								<input type="checkbox" onclick="show_password()">
 								<p>Hiện mật khẩu</p>
 							</div>
-
+							<div class="pro-btn-container">
+								<button type="submit" class="save">Save changes</button>
+								<button class="cancel">Cancel</button>
+							</div>
 						</form>
-						<div class="pro-btn-container">
-							<button class="save">Save changes</button>
-							<button class="cancel">Cancel</button>
-						</div>
+
 					</div>
 					<div class="tab-orders display-off js-orders-tab">
 						<div class="list-items">
