@@ -16,7 +16,7 @@ import Model.DonHang;
  
 @WebServlet(name = "Ad_AllOrder", value = "/AllOrder")
 public class Ad_Order extends HttpServlet {
-	@Override
+	@Override 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
@@ -25,7 +25,15 @@ public class Ad_Order extends HttpServlet {
 		List<DonHang> list = new ArrayList<DonHang>();
 		DonHangDAO dao=new DonHangDAO();
 		list=dao.loadAllOrder();
+		List<String> ten = new ArrayList<String>();
+		for(DonHang o:list)
+		{
+		KhachHangDAO dao2=new KhachHangDAO();
+		String tenTK=dao2.getKhachHangByMaKH(o.getMaKH()).getTenTK();
+		ten.add(tenTK);
+		}
 		
+		request.setAttribute("ten", ten);
 		request.setAttribute("size",list.size());
 		request.setAttribute("list",list);
 		request.getRequestDispatcher("/admin/order.jsp").forward(request, response);
