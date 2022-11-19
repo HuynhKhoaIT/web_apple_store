@@ -9,34 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_sdk_rest_api_sdk_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/TrangThaiDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/asset/img/itemTemp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Apple_store_war_exploded.xml" afterDir="false" />
+    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="Them su xoa san pham">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AccountControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AccountControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddProductControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_UserControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/AuthorizePaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/AuthorizePaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ExecutePaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ExecutePaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ReviewPaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ReviewPaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/AnhSPDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/AnhSPDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/KhachHangDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/BaiVietDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/SanPhamDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Model/DonHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/sidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +335,9 @@
       <workItem from="1668831054182" duration="273000" />
       <workItem from="1668834831785" duration="179000" />
       <workItem from="1668835510243" duration="220000" />
-      <workItem from="1668837982370" duration="5784000" />
+      <workItem from="1668837982370" duration="9256000" />
+      <workItem from="1668851518464" duration="2355000" />
+      <workItem from="1668863940533" duration="788000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -414,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668710532179</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Them su xoa san pham">
+      <created>1668844245374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668844245374</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +428,8 @@
     <MESSAGE value="thay doi DB" />
     <MESSAGE value="cap nhat lai phu hop voi database moi, them chuc nang dang nhap dang ky da co xac thuc mail" />
     <MESSAGE value="Su phan sap xep theo loai san pham" />
-    <option name="LAST_COMMIT_MESSAGE" value="Su phan sap xep theo loai san pham" />
+    <MESSAGE value="Them su xoa san pham" />
+    <option name="LAST_COMMIT_MESSAGE" value="Them su xoa san pham" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,11 +443,6 @@
           <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/BlogDetailControl.java</url>
           <line>21</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

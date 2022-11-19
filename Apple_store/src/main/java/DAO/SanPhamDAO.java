@@ -21,7 +21,7 @@ public class SanPhamDAO
 	public List<SanPham> getAllsanpham(String madm)
 	{
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham Where MaDM=? ";
+		String query = "select * From SanPham Where MaDM=? and isDeleted =0";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
@@ -119,7 +119,7 @@ public class SanPhamDAO
 	public List<SanPham> getAllsanphamtheodm(String maloai)
 	{
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM Where MaLoai=? ";
+		String query = "select * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM Where MaLoai=? and isDeleted=0";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
@@ -142,7 +142,7 @@ public class SanPhamDAO
 	{
 		
 		List<SanPham> list = new ArrayList<>();
-		String query = "select top 4 * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM  Where MaLoai=?  ";
+		String query = "select top 4 * From SanPham inner join DanhMuc on SanPham.MaDM=DanhMuc.MaDM  Where MaLoai=? and isDeleted=0 ";
 		try {
 				conn =new ConnectJDBC().getConnection();
 				ps =conn.prepareStatement(query);
@@ -179,20 +179,12 @@ public class SanPhamDAO
 			}
 		return list;
 	}
-	
-	/*
-	 * public List<LoaiSP> getAllloaisp() { List<LoaiSP> list = new ArrayList<>();
-	 * String query = "select * From LoaiSP"; try { conn =new
-	 * ConnectJDBC().getConnection(); ps =conn.prepareStatement(query); rs
-	 * =ps.executeQuery(); while(rs.next()) { list.add(new
-	 * LoaiSP(rs.getInt(1),rs.getString(2))); } } catch (Exception e) { } return
-	 * list; }
-	 */
+
 	public List<SanPham> getAll()
 	{
 		List<SanPham> list = new ArrayList<>();
 
-		String query = "select *from SanPham  ";
+		String query = "select *from SanPham WHERE isDeleted=0 ";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -239,7 +231,7 @@ public class SanPhamDAO
 	{
 		
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham Where MaDM = ?\r\n"
+		String query = "select * From SanPham Where MaDM = ? and isDeleted=0\r\n"
 				+ "order by GiaBanThuong ASC;\r\n";
 		try {
 				conn =new ConnectJDBC().getConnection();
@@ -263,7 +255,7 @@ public class SanPhamDAO
 	{
 
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham Where MaDM = ?";
+		String query = "select * From SanPham Where MaDM = ? and isDeleted=0";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -287,7 +279,7 @@ public class SanPhamDAO
 	{
 		
 		List<SanPham> list = new ArrayList<>();
-		String query = "select * From SanPham Where MaDM = ?\r\n"
+		String query = "select * From SanPham Where MaDM = ? and isDeleted=0\r\n"
 				+ "order by GiaBanThuong desc;\r\n";
 		try {
 				conn =new ConnectJDBC().getConnection();
@@ -311,8 +303,8 @@ public class SanPhamDAO
 	{
 
 		List<SanPham> list = new ArrayList<>();
-		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh, SanPham.MoTaNgan,SanPham.isDeleted\n" +
-				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong asc ";
+		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh,SanPham.MoTaNgan,SanPham.isDeleted\n" +
+				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? and isDeleted=0 order by GiaBanThuong asc ";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -338,7 +330,7 @@ public class SanPhamDAO
 
 		List<SanPham> list = new ArrayList<>();
 		String query = "SELECT SanPham.MaSP, SanPham.MaDM,SanPham.TenSP,SanPham.MoTa,SanPham.GiaGoc,SanPham.GiaBanThuong,SanPham.GiaKhuyenMai,SanPham.SoLuong,SanPham.Anh, SanPham.MoTaNgan,SanPham.isDeleted\n" +
-				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? order by GiaBanThuong DESC ";
+				"\t\t\t\tFROM SanPham INNER JOIN DanhMuc ON DanhMuc.MaDM = SanPham.MaDM  where MaLoai = ? and isDeleted=0 order by GiaBanThuong DESC ";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -357,27 +349,6 @@ public class SanPhamDAO
 		}
 		return list;
 	}
-//	public void addSanPham(SanPham sanPham)
-//	{
-//		String query = "insert into SanPham(MaDM,TenSP,MoTa,GiaGoc,GiaBanThuong,GiaKhuyenMai,SoLuong,Anh) Values(?,?,?,?,?,?,?,?);";
-//		try {
-//			conn =new ConnectJDBC().getConnection();
-//			ps =conn.prepareStatement(query);
-//			ps.setInt(1,sanPham.getMaDM());
-//			ps.setString(2,sanPham.getTenSP());
-//			ps.setString(3,sanPham.getMoTa());
-//			ps.setInt(4,sanPham.getGiaGoc());
-//			ps.setInt(5,sanPham.getGiaBanThuong());
-//			ps.setInt(6,sanPham.getGiaKhuyenMai());
-//			ps.setInt(7,sanPham.getSoLuong());
-//			ps.setString(8,sanPham.getAnh());
-//
-//			ps.executeUpdate();
-//		}
-//		catch (Exception e) {
-//		}
-//
-//	}
 	public void addSanPham(String MaDM,String TenSP, String MoTa, String GiaGoc, String GiaBanThuong,String GiaKhuyenMai,
 						   String SoLuong,String Anh,String MoTaNgan)
 	{
@@ -447,7 +418,7 @@ public class SanPhamDAO
 	}
 
 	public SanPham getNewSP(){
-		String query = "Select top 1 * from SanPham order by MaSP desc";
+		String query = "Select top 1 * from SanPham where isDeleted=0 order by MaSP desc";
 		try {
 			conn =new ConnectJDBC().getConnection();
 			ps =conn.prepareStatement(query);
@@ -486,7 +457,6 @@ public int TotalChiPhi() {
 		}
 		return total;
 	}
-
 	public static void main(String[] args) {
 		SanPhamDAO sanPhamDAO = new SanPhamDAO();
 		List<SanPham> list = sanPhamDAO.getSortSPGiamTheoMaLoai("1");

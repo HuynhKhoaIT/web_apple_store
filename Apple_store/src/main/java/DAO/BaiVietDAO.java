@@ -34,6 +34,36 @@ public class BaiVietDAO {
 
         }
     }
+    public void updateBaiViet(String tieude, String chitiet, String anh,String maBV) {
+        LocalDate curDate = LocalDate.now();
+        String date = curDate.toString();
+        String query = "UPDATE BaiViet\n" +
+                "SET TieuDeBV = ?,NoiDung=?,Anh=?,NgayCapNhat=?\n" +
+                "WHERE MaBV =?;";
+        try {
+            conn = new ConnectJDBC().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, tieude);
+            ps.setString(2, chitiet);
+            ps.setString(3, anh);
+            ps.setString(4,date);
+            ps.setString(5,maBV);
+            ps.executeUpdate();
+        }catch (Exception e)
+        {
+        }
+    }
+    public void deleteBaiViet(String maBV){
+        String query = "DELETE FROM BaiViet WHERE MaBV=?;;";
+        try {
+            conn = new ConnectJDBC().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, maBV);
+            ps.executeUpdate();
+        }catch (Exception e)
+        {
+        }
+    }
     public List<BaiViet> getAllBaiViet() {
         List<BaiViet> list = new ArrayList<>();
         String query = "select * From BaiViet";
