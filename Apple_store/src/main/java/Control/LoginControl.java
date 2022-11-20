@@ -40,12 +40,12 @@ public class LoginControl extends HttpServlet {
 			response.sendRedirect("http://localhost:8080/Apple_store");
 		}
 		else if(session.getAttribute("newrole") == null && session.getAttribute("newrole2") == null){
-			request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
 		}
-		else if(session.getAttribute("newrole") != null) {
+		else if(session.getAttribute("newrole") != null && session.getAttribute("newrole2") == null) {
 			request.getRequestDispatcher("/shop/loginad.jsp").forward(request, response);
 		}
-		else if(session.getAttribute("newrole2") != null) {
+		else if(session.getAttribute("newrole2") != null && session.getAttribute("newrole") == null) {
 			request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
 		}
 		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
@@ -84,9 +84,11 @@ public class LoginControl extends HttpServlet {
 			}
 			else if(user == 1 && admin == 1 && shipper == 0) {
 				session.removeAttribute("newrole");
+				session.removeAttribute("newrole2");
 				response.sendRedirect("http://localhost:8080/Apple_store/admin");
 			}
 			else if(user == 1 && admin == 0 && shipper == 1) {
+				session.removeAttribute("newrole");
 				session.removeAttribute("newrole2");
 				response.sendRedirect("http://localhost:8080/Apple_store/shipper");
 			}

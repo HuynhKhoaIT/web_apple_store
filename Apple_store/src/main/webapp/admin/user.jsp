@@ -23,7 +23,7 @@
 <body>
 	<div class="main">
 		<c:set var="items" value="${listlsp}" scope="request" />
-		<jsp:include page="./header2.jsp" />
+		<%@include file="./ad_header.jsp"%>
 
 		<!-- /.row -->
 		<div class="content">
@@ -170,7 +170,7 @@
 				</div>
 			</div>
 		</div>
-		<%@include file="./footer2.jsp"%>
+		<%@include file="./ad_footer.jsp"%>
 	</div>
 	<script>
 		const content_tab = document.querySelector('.js-content-tab')
