@@ -1,6 +1,9 @@
 package Control;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
+import Model.DonHang;
 import Model.Users;
 
 /**
@@ -24,7 +29,12 @@ public class User_PageControl extends HttpServlet {
 		if (session.getAttribute("acc") == null) {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
 		}
-		else {
+		else { 
+			Users users = (Users) session.getAttribute("acc");
+			List<DonHang> allOrderDonHangs=new ArrayList<DonHang>();
+			allOrderDonHangs=new DonHangDAO().loadOrderByMaKH(users.getMaKH());
+			
+			request.setAttribute("allOrderDonHangs", allOrderDonHangs);
 			request.getRequestDispatcher("/shop/user.jsp").forward(request, response);
 		}
 		//request.getRequestDispatcher("/shop/user.jsp").forward(request, response);
