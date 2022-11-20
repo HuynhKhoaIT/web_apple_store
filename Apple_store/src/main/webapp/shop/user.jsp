@@ -43,9 +43,9 @@
 								<li class="js-orders-btn"><a>Đơn hàng</a></li>
 								<form action="logout" method="POST">
 									<li class="js-logout-btn">
-										<button type="submit" style=" margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
-										Đăng xuất
-										</button>
+										<button type="submit"
+											style="margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
+											Đăng xuất</button>
 									</li>
 								</form>
 
@@ -57,15 +57,17 @@
 
 
 						<form action="UserPage" class="cus-form" method="post">
+							<input class="input" type="hidden" name="MaKH"
+								value="${sessionScope.acc.getMaKH()}">
+
 							<ul class="form">
-								
+
+
 								<li class="row"><label class="label">Họ và Tên</label>
 									<div class="float-right">
-										<input
-											class="input" type="text" name="TenKH"
+										<input class="input" type="text" name="TenKH"
 											value="${sessionScope.acc.getTenKH()}">
-									</div>
-								</li>
+									</div></li>
 								<li class="row"><label class="label">Số điện thoại
 								</label>
 									<div class="float-right">
@@ -130,45 +132,70 @@
 
 					</div>
 					<div class="tab-orders display-off js-orders-tab">
-						<div class="list-items">
+
+						<div class="items" style="background-color: #CCCCCC;">
+
+							<div class="items-info float-left">
+								<a> Mã đơn hàng</a>
+							</div>
+
+							<div class="items-info float-left">
+								<div class="items-type float-left">
+
+									<h3 class="items-name">Trạng thái</h3>
+
+
+								</div>
+
+								<div class="items-price float-left">
+									<p class="end-price">Tổng tiền</p>
+								</div>
+
+								<div class="items-amount float-left">
+									<p>Thời gian</p>
+								</div>
+							</div>
+						</div>
+						<c:forEach items="${allOrderDonHangs}" var="i">
 							<div class="items">
 
-								<div class="pic float-left">
-									<p>
-										<img id="items-pic" src="../../asset/img/ip13-pro-max.jpeg"
-											alt="Sản phẩm">
-									</p>
+								<div class="items-info float-left">
+									<a href="User_OrderDetail?id=${i.getMaDH()}">${i.getMaDH()}</a>
 								</div>
 
 								<div class="items-info float-left">
 									<div class="items-type float-left">
-										<h3 class="items-name">iPhone 13 128GB</h3>
-										<div class="colors">
-											<span>Color</span>
-											<ul class="ordercolorful">
 
-											</ul>
-										</div>
+
+										<c:choose>
+											<c:when test="${i.getMaTrangThai()==1}">
+												<h3 class="items-name">Chưa xác nhận</h3>
+											</c:when>
+											<c:otherwise>
+												<h3 class="items-name">Đã xác nhận</h3>
+											</c:otherwise>
+										</c:choose>
+
+
 									</div>
 
 									<div class="items-price float-left">
-										<p class="end-price">19.190.000 đ</p>
-										<p class="price">24.990.000 đ</p>
-										<p class="discount inline-block">Giảm -30 %</p>
+										<p class="end-price">${i.getTongTien()}VND</p>
 									</div>
 
 									<div class="items-amount float-left">
-										<p>Amount:</p>
-										<p>Day: 20/02/2002</p>
+										<p>${i.getThoiGian()}</p>
 									</div>
 								</div>
 							</div>
-						</div>
+						</c:forEach>
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<%@include file="./footer2.jsp"%>
+	</div>
+	<%@include file="./footer2.jsp"%>
 	</div>
 	<script>
 		const content_tab = document.querySelector('.js-content-tab')
