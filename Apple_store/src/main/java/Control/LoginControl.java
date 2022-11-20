@@ -41,6 +41,7 @@ public class LoginControl extends HttpServlet {
 		}
 		else if(session.getAttribute("newrole") == null && session.getAttribute("newrole2") == null){
 			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
+
 		}
 		else if(session.getAttribute("newrole") != null && session.getAttribute("newrole2") == null) {
 			request.getRequestDispatcher("/shop/loginad.jsp").forward(request, response);
@@ -69,7 +70,7 @@ public class LoginControl extends HttpServlet {
 		Users a = dao.login(username, passMD5);
 		if(a == null) {
 			request.setAttribute("mess", "Sai tên đăng nhập hoặc mật khẩu");
-			request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
 		}
 		else {
 			HttpSession session = request.getSession();
