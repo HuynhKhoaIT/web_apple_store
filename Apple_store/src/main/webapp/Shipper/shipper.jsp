@@ -65,13 +65,13 @@
 						<!-- small box -->
 						<div class="small-box bg-info">
 							<div class="inner">
-								<h3>150</h3>
+								<h3>${SLCoTheNhanGiao}</h3>
 								<p>Đơn hàng mới</p>
 							</div>
 							<div class="icon">
 								<i class="ion ion-bag"></i>
 							</div>
-							<a href="/Apple_store/newOrder"
+							<a href="/Apple_store/ShiperNewOrder?tt=2"
 							   class="small-box-footer">Thêm thông tin <i
 									class="fas fa-arrow-circle-right"></i></a>
 						</div>
@@ -81,13 +81,13 @@
 						<!-- small box -->
 						<div class="small-box bg-warning">
 							<div class="inner">
-								<h3>44</h3>
-								<p>Danh sách khách hàng</p>
+								<h3>${SLDonHangDaGiao}</h3>
+								<p>Đơn hàng đã giao</p>
 							</div>
 							<div class="icon">
 								<i class="ion ion-person-add"></i>
 							</div>
-							<a href="/Apple_store/Ad_UserControl" class="small-box-footer">Thêm
+							<a href="/Apple_store/ShiperNewOrder?tt=4" class="small-box-footer">Thêm
 								thông tin <i class="fas fa-arrow-circle-right"></i>
 							</a>
 						</div>
@@ -119,30 +119,29 @@
 										<thead>
 											<tr>
 												<th>ID đặt hàng</th>
-												<th>Khách hàng</th>
+												<th>Tên hách hàng</th>
 												<th>Trạng thái</th>
 												<th>Thời gian</th>
 											</tr>
 										</thead>
 										<tbody>
-											<c:forEach var="i" begin="0" end="${size-1 }">
-										<tr>
-											<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
-											<td>${listName[i]}</td>
+										<c:forEach items="${listDangGiao}" var="l">
+
+
+											<td><a href="Ship_invoice?maDH=${l.maDH}">${l.maDH}</a></td>
+											<td>${l.tenNguoiNhan}</td>
 											<c:choose>
-												<c:when test="${list[i].getMaTrangThai()==1}">
-													<td><span class="badge badge-success">Chưa Xác Nhận</span></td>
+												<c:when test="${l.phuongThucThanhToan== 1}">
+													<td><span class="badge badge-success">Đã thanh toán</span></td>
 												</c:when>
 												<c:otherwise>
-													<td><span class="badge badge-success">Đã Xác Nhận</span></td>
+													<td><span class="badge badge-success">Chưa thanh toán</span></td>
 												</c:otherwise>
 											</c:choose>
-											<td>
-												<div class="sparkbar" data-color="#00a65a"
-													 data-height="20">${list[i].getThoiGian()}</div>
-											</td>
-										</tr>
-									</c:forEach>
+											<td>${l.thoiGian}</td>
+
+										</c:forEach>
+
 										</tbody>
 
 										<tfoot></tfoot>
