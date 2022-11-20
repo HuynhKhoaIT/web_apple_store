@@ -50,7 +50,6 @@ public class ProcessControl extends HttpServlet {
         if(cart.getQuantityById(id)!=0){
             if(num == -1 || num == 1)
             {
-//            Cart cart = new Cart(txt,list);
                 try{
                     SanPham p  = dao.getProductById(id);
                     int numStore = p.getSoLuong();
@@ -79,23 +78,17 @@ public class ProcessControl extends HttpServlet {
                 Cookie c = new Cookie("cart",txt);
                 c.setMaxAge(2*24*60*60);
                 response.addCookie(c);
-//                LoaispDAO loaispDAO = new LoaispDAO();
-//                List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
-//
-//                request.setAttribute("listlsp",listlsp);
-//                request.setAttribute("cart",cart);
-//                request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
                 
                 response.sendRedirect("show");
             }
             else if(num == 0)
             {
                 //delete
-                String [] ids = txt.split("#"); // mang nay chua cac item gom {id,soluong}{id,soluong}...
+                String [] ids = txt.split("#");
                 String out="";
-                for(int i = 0; i<ids.length;i++){ // neu co chua nhieu item lay tung item ra
-                    String [] s = ids[i].split(":"); // chia nho ra thanh {id}{soluong}
-                    if(!s[0].equals(id_raw)){ // neu nhu san pham nay khong phai san pham can xoa thi dua no vao chuoi cookie moi
+                for(int i = 0; i<ids.length;i++){
+                    String [] s = ids[i].split(":");
+                    if(!s[0].equals(id_raw)){
                         if(out.isEmpty()){ //
                             out = ids[i]; //
                         }else {
@@ -108,15 +101,10 @@ public class ProcessControl extends HttpServlet {
                     c.setMaxAge(2*24*60*60);
                     response.addCookie(c);
                 }
-//            Cart cart=new Cart(out,list);
                 cart=new Cart(out,list);
                 LoaispDAO loaispDAO = new LoaispDAO();
                 List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
                 response.sendRedirect("show");
-
-//                request.setAttribute("listlsp",listlsp);
-//                request.setAttribute("cart",cart);
-//                request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
             }
         }
         else

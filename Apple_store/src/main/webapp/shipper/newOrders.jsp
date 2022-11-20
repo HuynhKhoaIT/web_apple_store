@@ -65,7 +65,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Đơn hàng có thể giao</h3>
+                                <h3 class="card-title"></h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -86,11 +86,10 @@
                                             <td>${l.tenNguoiNhan}</td>
                                             <c:choose>
                                                 <c:when test="${l.phuongThucThanhToan == 0}">
-                                                    <td><span class="badge badge-success">Chưa
-																	Chưa Thanh Toán</span></td>
+                                                    <td>${l.tongTien}</td>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                                    <td>0</td>
                                                 </c:otherwise>
                                             </c:choose>
                                             <td>${l.thoiGian}</td>

@@ -101,7 +101,7 @@
 					<!-- TABLE: LATEST ORDERS -->
 					<div class="card col-md-12">
 						<div class="card-header border-transparent">
-							<h3 class="card-title">Đơn đặt hàng mới nhất</h3>
+							<h3 class="card-title">Đơn hàng cần giao</h3>
 
 							<div class="card-tools">
 								<button type="button" class="btn btn-tool"
@@ -120,27 +120,28 @@
 											<tr>
 												<th>ID đặt hàng</th>
 												<th>Tên hách hàng</th>
-												<th>Trạng thái</th>
+												<th>Số tiền</th>
 												<th>Thời gian</th>
 											</tr>
 										</thead>
 										<tbody>
 										<c:forEach items="${listDangGiao}" var="l">
+											<tr>
 
 
 											<td><a href="Ship_invoice?maDH=${l.maDH}">${l.maDH}</a></td>
 											<td>${l.tenNguoiNhan}</td>
 											<c:choose>
 												<c:when test="${l.phuongThucThanhToan== 1}">
-													<td><span class="badge badge-success">Đã thanh toán</span></td>
+													<td><span class="badge badge-success">0</span></td>
 												</c:when>
 												<c:otherwise>
-													<td><span class="badge badge-success">Chưa thanh toán</span></td>
+													<td><span class="badge badge-success">${l.tongTien}</span></td>
 												</c:otherwise>
 											</c:choose>
 											<td>${l.thoiGian}</td>
-
 										</c:forEach>
+											</tr>
 
 										</tbody>
 

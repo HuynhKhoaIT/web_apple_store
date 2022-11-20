@@ -35,7 +35,7 @@
 								src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer"
 								alt="User">
 						</div>
-						<form action="logout" method="POST">
+						<form action="${root}logout" method="POST">
 							<ul style="padding-left: 0px;">
 								<li class="js-content-btn font-bold"><a>Thông tin cá
 										nhân</a></li>
