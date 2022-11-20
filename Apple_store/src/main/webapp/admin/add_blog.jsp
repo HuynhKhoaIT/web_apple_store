@@ -66,7 +66,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="addBlogForm" action="${root}Ad_TaoBaiViet" method="post" enctype="multipart/form-data">
+              <form id="addBlogForm" action="Ad_TaoBaiViet" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="maBV" value="${baiViet.maBV}">
                 <div class="card-body">
                   <div class="form-group">

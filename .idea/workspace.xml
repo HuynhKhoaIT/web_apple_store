@@ -9,17 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="">
+    <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="xoa cookie khi dang xuat, cap nhat them thong tin invoice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/LogOutControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/LogOutControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/OrderControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProcessControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ProcessControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/invoices.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/invoices.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/newOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/newOrders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/add_blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/invoices.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/invoices.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,7 +419,7 @@
       <workItem from="1668911065960" duration="19365000" />
       <workItem from="1668931032053" duration="4606000" />
       <workItem from="1668936014939" duration="885000" />
-      <workItem from="1668952561079" duration="8408000" />
+      <workItem from="1668952561079" duration="9654000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -523,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668936813553</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="xoa cookie khi dang xuat, cap nhat them thong tin invoice">
+      <created>1668961091070</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668961091070</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +559,8 @@
     <MESSAGE value="sua order, shipper" />
     <MESSAGE value="sua cac duong dan invoice" />
     <MESSAGE value="so luong giao" />
-    <option name="LAST_COMMIT_MESSAGE" value="so luong giao" />
+    <MESSAGE value="xoa cookie khi dang xuat, cap nhat them thong tin invoice" />
+    <option name="LAST_COMMIT_MESSAGE" value="xoa cookie khi dang xuat, cap nhat them thong tin invoice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

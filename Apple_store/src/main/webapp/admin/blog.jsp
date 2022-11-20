@@ -43,7 +43,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="${root}Ad_TaoBaiViet">Home</a></li>
+              <li class="breadcrumb-item"><a href="${root}admin">Home</a></li>
               <li class="breadcrumb-item active">Tất cả bài viết</li>
             </ol>
           </div>
@@ -60,7 +60,7 @@
               <div class="card-header">
                 <h3 class="card-title">Tất cả bài viết</h3>
                 <div class="card-add">
-                  <a href="${root}Ad_TaoBaiViet" class="">
+                  <a href="${root}admin/Ad_TaoBaiViet" class="">
                     <p>Thêm bài viết</p>
                     <p>${mess}</p>
                   </a>
