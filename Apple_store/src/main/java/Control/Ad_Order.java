@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
+import DAO.TrangThaiDAO;
 import Model.DonHang;
- 
+import Model.TrangThai;
+
 @WebServlet(name = "Ad_AllOrder", value = "/admin/AllOrder")
 public class Ad_Order extends HttpServlet {
 	@Override 
@@ -32,7 +34,11 @@ public class Ad_Order extends HttpServlet {
 		String tenTK=dao2.getKhachHangByMaKH(o.getMaKH()).getTenTK();
 		ten.add(tenTK);
 		}
-		
+
+		TrangThaiDAO trangThaiDAO = new TrangThaiDAO();
+		List<TrangThai> listTrangThai = trangThaiDAO.getAllTrangThai();
+
+		request.setAttribute("listTrangThai",listTrangThai);
 		request.setAttribute("ten", ten);
 		request.setAttribute("size",list.size());
 		request.setAttribute("list",list);

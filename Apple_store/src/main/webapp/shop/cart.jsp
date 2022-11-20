@@ -203,9 +203,6 @@
 										<input type="hidden" name="quantity" value="${i.quantity}" />
 
 									</c:forEach>
-
-
-
 									<div>
 										<button type="submit" class="btn" id="next-step"
 											style="background-color: #ffffff;">

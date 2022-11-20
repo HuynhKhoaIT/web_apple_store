@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectJDBC {
-	
 	private final String serverName = "DESKTOP-B5NMLGI\\LONG";
 	private final String dbName = "AppleStore2";
 	private final String portNumber = "1433";

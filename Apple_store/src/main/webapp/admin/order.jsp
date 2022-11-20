@@ -88,9 +88,7 @@
 										<tbody>
 											<c:forEach var="i" begin="0" end="${size-1 }">
 												<tr>
-
-													<td><a
-														href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
+													<td><a href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
 													
 													<c:choose>
 
@@ -105,16 +103,11 @@
 														href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 													<td>${list[i].getTongTien()}</td>
 													<td>${list[i].getThoiGian()}</td>
-													<c:choose>
-														<c:when test="${list[i].getMaTrangThai()==1}">
-															<td><span class="badge badge-success">Chưa
-																	Xác Nhận</span></td>
-														</c:when>
-														<c:otherwise>
-															<td><span class="badge badge-success">Đã Xác
-																	Nhận</span></td>
-														</c:otherwise>
-													</c:choose>
+													<c:forEach items="${listTrangThai}" var="tt">
+														<c:if test="${tt.maTrangThai == list[i].getMaTrangThai()}">
+													<td><span class="badge badge-success">${tt.tenTrangThai}</span></td>>
+														</c:if>
+													</c:forEach>
 												</tr>
 											</c:forEach>
 										</tbody>
