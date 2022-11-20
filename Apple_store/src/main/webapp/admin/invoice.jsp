@@ -168,7 +168,7 @@
 										<a href="invoice-print.jsp" rel="noopener" target="_blank"
 											class="btn btn-default"><i class="fas fa-print"></i>
 											Print</a>
-										<form action="Ad_invoice" method="post">
+										<form action="${root}Ad_invoice" method="post">
 										<input type="hidden" value= "${donHang.maDH}" name = "maDH" />
 											<button type="submit" class="btn btn-success float-right">
 												Xác nhận đơn hàng

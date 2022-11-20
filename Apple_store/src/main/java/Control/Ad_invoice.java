@@ -29,9 +29,7 @@ public class Ad_invoice extends HttpServlet {
         
         donhangDAO.trangthai(maDH);
         
-        response.sendRedirect("AllOrder");
-
-      
+        response.sendRedirect("/Apple_store/admin/AllOrder");
 
     }
 }

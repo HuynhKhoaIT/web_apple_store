@@ -11,11 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shop/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -417,7 +415,8 @@
       <workItem from="1668879169151" duration="2662000" />
       <workItem from="1668882091242" duration="10000" />
       <workItem from="1668911065960" duration="19365000" />
-      <workItem from="1668931032053" duration="4577000" />
+      <workItem from="1668931032053" duration="4606000" />
+      <workItem from="1668936014939" duration="776000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -503,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668933632978</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="sua order, shipper">
+      <created>1668935632597</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668935632597</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +539,8 @@
     <MESSAGE value="khoi phuc code bi loai" />
     <MESSAGE value="sua lại AuthorizePaymentServlet" />
     <MESSAGE value="phan shiper" />
-    <option name="LAST_COMMIT_MESSAGE" value="phan shiper" />
+    <MESSAGE value="sua order, shipper" />
+    <option name="LAST_COMMIT_MESSAGE" value="sua order, shipper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
