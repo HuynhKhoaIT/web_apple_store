@@ -27,8 +27,10 @@ public class Ship_PageControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
+			session.setAttribute("newrole2", 1);
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
 		}
 		else if (Integer.parseInt(session.getAttribute("roleshipper").toString()) == 0){
