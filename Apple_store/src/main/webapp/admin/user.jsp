@@ -1,212 +1,146 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: admin
+  Date: 18/10/2022
+  Time: 12:53
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:url value="/" var="root" />
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="${root}asset/css/cart.css" />
-<link rel="stylesheet" href="${root}asset/style.css">
-<link rel="stylesheet"
-	href="${root}asset/font/themify-icons/themify-icons.css" />
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-<link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
-<!-- Latest compiled JavaScript -->
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-<title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdminLTE 3 | Contacts</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="${root}plugins/fontawesome-free/css/all.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css" />
 </head>
-<body>
-	<div class="main">
-		<c:set var="items" value="${listlsp}" scope="request" />
-		<%@include file="./ad_header.jsp"%>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <%@include file="./ad_header.jsp"%>
+  <!-- /.navbar -->
 
-		<!-- /.row -->
-		<div class="content">
-			<div class="pro-container">
-				<div class="user-profile">
-					<div class="subnav">
-						<div class="avatar-user navcard" style="background: #000;">
-							<img
-								src="https://flaticons.net/icon.php?slug_category=people&slug_icon=customer"
-								alt="User">
-						</div>
-						<form action="logout" method="POST">
-							<ul style="padding-left: 0px;">
-								<li class="js-content-btn font-bold"><a>Thông tin cá
-										nhân</a></li>
-								<li class="js-password-btn"><a>Thay đổi mật khẩu</a></li>
-								<li class="js-orders-btn"><a>Đơn hàng</a></li>
-								<form action="logout" method="POST">
-									<li class="js-logout-btn">
-										<button type="submit"
-											style="margin: 0; background-color: #000; color: #fff; padding: 10px 58px;">
-											Đăng xuất</button>
-									</li>
-								</form>
+  <!-- Main Sidebar Container -->
+  <%@include file="./sidebar.jsp"%>
 
-							</ul>
-						</form>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Contacts</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../../admin.jsp">Home</a></li>
+              <li class="breadcrumb-item active">Tất cả khách hàng</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </section>
 
-					</div>
-					<div class="tab-content js-content-tab">
+    <!-- Main content -->
+    <section class="content">
+      <!-- Default box -->
+      <div class="card card-solid">
+        <div class="card-body pb-0">
+          <div class="row">
+            <c:forEach var="o" items="${listKhachHang}">
+              <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                <div class="card bg-light d-flex flex-fill">
+                  <div class="card-header text-muted border-bottom-0">
+                    Digital Strategist
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="row">
+                      <div class="col-7">
+                        <h2 class="lead"><b>${o.tenKH}</b></h2>
+                        <ul class="ml-4 mb-0 fa-ul text-muted">
+                          <li class="small">
+                            <span class="fa-li"><i class="fas fa-lg fa-building"></i></span>
+                            Địa chỉ: ${o.diaChi}
+                          </li>
+                          <li class="small">
+                            <span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> SDT:${o.phone}
+                          </li>
+                        </ul>
+                        </div>
+                      <div class="col-5 text-center">
+                        <img src="${root}asset/dist/img/user1-128x128.jpg"  alt="user-avatar" class="img-circle img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="text-right">
+                      <a href="#" class="btn btn-sm bg-teal">
+                        <i class="fas fa-comments"></i>
+                      </a>
+                      <a href="Ad_AccountControl?maKH=${o.maKH}" class="btn btn-sm btn-primary"> <i class="fas fa-user"></i> View Profile </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </c:forEach>
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <nav aria-label="Contacts Page Navigation">
+            <ul class="pagination justify-content-center m-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /.card-footer -->
+      </div>
+      <!-- /.card -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
 
+<%--  <footer class="main-footer">--%>
+<%--    <div class="float-right d-none d-sm-block"><b>Version</b> 3.2.0</div>--%>
+<%--    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.--%>
+<%--  </footer>--%>
+  <%@include file="./ad_footer.jsp"%>
 
-						<form action="UserPage" class="cus-form" method="post">
-							<input class="input" type="hidden" name="MaKH"
-								value="${sessionScope.acc.getMaKH()}">
-								
-							<ul class="form">
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
-
-								<li class="row"><label class="label">Họ và Tên</label>
-									<div class="float-right">
-										<input class="input" type="text" name="TenKH"
-											value="${sessionScope.acc.getTenKH()}">
-									</div></li>
-								<li class="row"><label class="label">Số điện thoại
-								</label>
-									<div class="float-right">
-										<input class="input" type="text" name="phone"
-											value="${sessionScope.acc.getPhone()}">
-										<div class="note">Vui lòng nhập đúng</div>
-									</div>
-									<div class="clear"></div></li>
-								<li class="row" id="email"><label class="label">Email
-								</label>
-									<div class="float-right">
-										<input class="input" type="email" name="email"
-											value="${sessionScope.acc.getEmail()}">
-									</div>
-									<div class="clear"></div></li>
-								<li class="row"><label class="label">Địa chỉ</label>
-									<div class="float-right">
-										<input class="input" type="text" name="DiaChi"
-											value="${sessionScope.acc.getDiaChi()}">
-									</div></li>
-							</ul>
-							<div class="pro-btn-container">
-								<button type="submit" class="save">Save changes</button>
-								<button class="cancel">Cancel</button>
-							</div>
-						</form>
-
-					</div>
-					<div class="tab-password display-off js-password-tab">
-						<form action="PasswordChange" class="cus-form" method="post">
-							<ul class="form">
-								<li class="row"><label class="label">Mật khẩu hiện
-										tại</label>
-									<div class="float-right">
-										<input class="input password" type="password" name="oldPass">
-									</div>
-									<div class="clear"></div></li>
-								<li class="row"><label class="label ">Mật khẩu mới</label>
-									<div class="float-right">
-										<input class="input  password" type="password" name="newPass1">>
-										<div class="note-text js-password-info">Long đây</div>
-									</div>
-									<div class="clear"></div></li>
-								<li class="row"><label class="label">Nhập lại mật
-										khẩu mới</label>
-									<div class="float-right">
-										<input class="input password" type="password" name="newPass2">>
-										<div class="note">Vui lòng nhập đúng</div>
-									</div>
-									<div class="clear"></div></li>
-							</ul>
-
-							<div class="show-password">
-								<input type="checkbox" onclick="show_password()">
-								<p>Hiện mật khẩu</p>
-							</div>
-							<div class="pro-btn-container">
-								<button type="submit" class="save">Save changes</button>
-								<button class="cancel">Cancel</button>
-							</div>
-						</form>
-
-					</div>
-					<div class="tab-orders display-off js-orders-tab">
-						<div class="list-items">
-							<div class="items">
-
-								<div class="pic float-left">
-									<p>
-										<img id="items-pic" src="../../asset/img/ip13-pro-max.jpeg"
-											alt="Sản phẩm">
-									</p>
-								</div>
-
-								<div class="items-info float-left">
-									<div class="items-type float-left">
-										<h3 class="items-name">iPhone 13 128GB</h3>
-										<div class="colors">
-											<span>Color</span>
-											<ul class="ordercolorful">
-
-											</ul>
-										</div>
-									</div>
-
-									<div class="items-price float-left">
-										<p class="end-price">19.190.000 đ</p>
-										<p class="price">24.990.000 đ</p>
-										<p class="discount inline-block">Giảm -30 %</p>
-									</div>
-
-									<div class="items-amount float-left">
-										<p>Amount:</p>
-										<p>Day: 20/02/2002</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<%@include file="./ad_footer.jsp"%>
-	</div>
-	<script>
-		const content_tab = document.querySelector('.js-content-tab')
-		const password_tab = document.querySelector('.js-password-tab')
-		const orders_tab = document.querySelector('.js-orders-tab')
-		const btn_content = document.querySelector('.js-content-btn')
-		const btn_password = document.querySelector('.js-password-btn')
-		const btn_order = document.querySelector('.js-orders-btn')
-		function show_content() {
-			btn_content.classList.add('font-bold')
-			btn_password.classList.remove('font-bold')
-			btn_order.classList.remove('font-bold')
-			content_tab.classList.remove('display-off')
-			password_tab.classList.add('display-off')
-			orders_tab.classList.add('display-off')
-		}
-		function show_password() {
-			btn_password.classList.add('font-bold')
-			btn_content.classList.remove('font-bold')
-			btn_order.classList.remove('font-bold')
-			password_tab.classList.remove('display-off')
-			content_tab.classList.add('display-off')
-			orders_tab.classList.add('display-off')
-		}
-		function show_orders() {
-			btn_order.classList.add('font-bold')
-			btn_password.classList.remove('font-bold')
-			btn_content.classList.remove('font-bold')
-			orders_tab.classList.remove('display-off')
-			password_tab.classList.add('display-off')
-			content_tab.classList.add('display-off')
-		}
-		btn_content.addEventListener('click', show_content)
-		btn_password.addEventListener('click', show_password)
-		btn_order.addEventListener('click', show_orders)
-	</script>
-	<script src="./assets/js/main.js"></script>
+<!-- jQuery -->
+<script src="${root}/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="${root}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="${root}/asset/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${root}/asset/dist/js/demo.js"></script>
 </body>
 </html>
