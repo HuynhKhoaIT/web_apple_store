@@ -114,20 +114,18 @@
 								</button>
 							</div>
 						</div>
-						<!-- /.card-header -->
-						<div class="card-body p-0">
-							<div class="table-responsive">
-								<table class="table m-0">
-									<thead>
-									<tr>
-										<th>ID đặt hàng</th>
-										<th>Khách hàng</th>
-										<th>Trạng thái</th>
-										<th>Thời gian</th>
-									</tr>
-									</thead>
-									<tbody>
-									<c:forEach var="i" begin="0" end="${size-1 }">
+						<div class="card-body">
+									<table id="example1" class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>ID đặt hàng</th>
+												<th>Khách hàng</th>
+												<th>Trạng thái</th>
+												<th>Thời gian</th>
+											</tr>
+										</thead>
+										<tbody>
+											<c:forEach var="i" begin="0" end="${size-1 }">
 										<tr>
 											<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
 											<td>${listName[i]}</td>
@@ -145,20 +143,13 @@
 											</td>
 										</tr>
 									</c:forEach>
-									</tbody>
-								</table>
-							</div>
-							<!-- /.table-responsive -->
-						</div>
-						<!-- /.card-body -->
-						<div class="card-footer clearfix">
-							<a href="javascript:void(0)"
-							   class="btn btn-sm btn-info float-left">Place New Order</a>
-							<a
-									href="<%=request.getContextPath()%>/AllOrder"
-									class="btn btn-sm btn-secondary float-right">View All
-								Orders</a>
-						</div>
+										</tbody>
+
+										<tfoot></tfoot>
+									</table>
+								</div>
+						<!-- /.card-header -->
+						
 						<!-- /.card-footer -->
 					</div>
 					<!-- /.card -->
@@ -181,5 +172,6 @@
 	$.widget.bridge('uibutton', $.ui.button)
 </script>
 <script src="${root}asset/dist/js/adminlte.js"></script>
+<%@include file="./jqueryScript.jsp"%>
 </body>
 </html>
