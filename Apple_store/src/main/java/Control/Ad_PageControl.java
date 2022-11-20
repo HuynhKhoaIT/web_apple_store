@@ -30,6 +30,7 @@ public class Ad_PageControl extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
+			session.setAttribute("newrole", 1);
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
 		}
 		else if (Integer.parseInt(session.getAttribute("rolead").toString()) == 0){

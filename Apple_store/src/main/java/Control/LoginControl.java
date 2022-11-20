@@ -39,8 +39,11 @@ public class LoginControl extends HttpServlet {
 		if (session.getAttribute("acc") != null) {
 			response.sendRedirect("http://localhost:8080/Apple_store");
 		}
-		else {
+		else if(session.getAttribute("newrole")==null){
 			request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+		}
+		else {
+			request.getRequestDispatcher("/shop/loginad.jsp").forward(request, response);
 		}
 		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
 	}

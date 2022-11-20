@@ -9,7 +9,7 @@
       <a href="${root}" class="nav-link">Shop</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="${root}admin" class="nav-link">Home</a>
+      <a href="http://localhost:8080/Apple_store/shipper" class="nav-link">Home</a>
     </li>
   </ul>
 
