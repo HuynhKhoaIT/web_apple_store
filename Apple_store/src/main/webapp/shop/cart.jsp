@@ -77,13 +77,13 @@
 												<form action="process" method="POST">
 													<input type="hidden" name="id" value="${i.product.maSP}" />
 													<input type="hidden" name="num" value="-1" /> <a href="#"
-														onclick="this.parentNode.submit()">-</a>
+														onclick="this.parentNode.submit()"class="p-2">-</a>
 												</form>
 											</span> <span class="inline-block">${i.quantity}</span> <span>
 												<form action="process" method="POST">
 													<input type="hidden" name="id" value="${i.product.maSP}" />
 													<input type="hidden" name="num" value="1" /> <a href="#"
-														onclick="this.parentNode.submit()">+</a>
+														onclick="this.parentNode.submit()" class="p-2">+</a>
 												</form>
 											</span>
 											<%--                           <span><a href="process?num=-1&id=${i.product.maSP}">-</a></span>--%>
@@ -184,8 +184,7 @@
 									<div>
 										<button type="button" class="btn" id="next-step"
 											onclick="formvalidate()">
-											<strong>Đặt Hàng</strong> <span>(Chọn hình thức nhận
-												hàng)</span>
+											<strong>Đặt Hàng</strong> <span>(Thanh Toán Tiền Mặt)</span>
 										</button>
 									</div>
 

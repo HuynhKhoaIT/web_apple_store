@@ -58,12 +58,7 @@
 
 						<form action="UserPage" class="cus-form" method="post">
 							<ul class="form">
-								<li class="row"><label class="label">Mã khách hàng</label>
-									<div class="float-right">
-										<input class="input" type="text" name="MaKH"
-											value="${sessionScope.acc.getMaKH()}">
-									</div>
-								</li>
+								
 								<li class="row"><label class="label">Họ và Tên</label>
 									<div class="float-right">
 										<input

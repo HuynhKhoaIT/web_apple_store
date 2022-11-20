@@ -31,12 +31,12 @@ public class Ship_PageControl extends HttpServlet {
 		if (session.getAttribute("acc") == null) {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
 		}
-		else if (Integer.parseInt(session.getAttribute("roleshipper").toString()) == 0){
-			session.removeAttribute("acc");
-			session.removeAttribute("rolead");
-			session.removeAttribute("roleshipper");
-			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
-		}
+		/*
+		 * else if (Integer.parseInt(session.getAttribute("roleshipper").toString()) ==
+		 * 0){ session.removeAttribute("acc"); session.removeAttribute("rolead");
+		 * session.removeAttribute("roleshipper");
+		 * response.sendRedirect("http://localhost:8080/Apple_store/shop/login"); }
+		 */
 		else {
 			List<DonHang> list = new ArrayList<DonHang>();
 			DonHangDAO dao=new DonHangDAO();
