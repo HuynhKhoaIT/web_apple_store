@@ -47,7 +47,6 @@ public class DonHangDAO {
                     ps2.setInt(4,(i.getQuantity()*i.getPrice()));
                     ps2.executeUpdate();
                 }
-
             }
             // cap nhat lai so luong san pham
             String query3 = "update  SanPham set SoLuong=SoLuong-? where MaSP =?";
@@ -157,9 +156,48 @@ public class DonHangDAO {
 		String querry = "select top 10 * from DonHang where MaTrangThai = 1 ";
 		List<DonHang> list = new ArrayList<DonHang>();
 		try {
-
 			conn = new ConnectJDBC().getConnection();
 			ps = conn.prepareStatement(querry);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+
+			}
+
+		} catch (Exception e) {
+		}
+		return list;
+	}
+	public List<DonHang> getOrderTheoTrangThai(String maTT) {
+		String querry = "select * from DonHang where MaTrangThai = ? ";
+		List<DonHang> list = new ArrayList<DonHang>();
+		try {
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setString(1,maTT);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
+						rs.getDate(5),
+						rs.getInt(6),
+						rs.getString(7),rs.getDate(8),rs.getInt(9),rs.getString(10),rs.getString(11),rs.getString(12)));
+			}
+
+		} catch (Exception e) {
+		}
+		return list;
+	}
+	public List<DonHang> getOrderOfShipper(String maGH, String maTT) {
+		String querry = "select * from DonHang where MaGH = ? and MaTrangThai = ?";
+		List<DonHang> list = new ArrayList<DonHang>();
+		try {
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setString(1,maGH);
+			ps.setString(2,maTT);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				list.add(new DonHang(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),
@@ -267,15 +305,47 @@ public class DonHangDAO {
 			ps = conn.prepareStatement(querry);
 			ps.setString(1, maDH);
 			ps.executeUpdate();
-			
-
 		} catch (Exception e) {
 		}
-	
+	}
+	public void TrangThaiDangGiao(String maDH, String maGH)
+	{
+		String querry = "UPDATE DonHang\r\n"
+				+ "SET MaTrangThai = 3, MaGH = ?\r\n"
+				+ "WHERE MaDH = ?; ";
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setString(1, maGH);
+			ps.setString(2,maDH);
+			ps.executeUpdate();
+		} catch (Exception e) {
+		}
+	}
+	public void TrangThaiDaGiao(String maDH)
+	{
+		LocalDate curDate = LocalDate.now();
+		String date = curDate.toString();
+		String querry = "UPDATE DonHang\r\n"
+				+ "SET MaTrangThai = 4, NgayNhanHang = ?\r\n"
+				+ "WHERE MaDH = ?; ";
+		try {
+
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(querry);
+			ps.setString(1,date);
+			ps.setString(2, maDH);
+			ps.executeUpdate();
+		} catch (Exception e) {
+		}
 	}
 
 	public static void main(String[] args) {
 		DonHangDAO donHangDAO = new DonHangDAO();
-		System.out.println(donHangDAO.getDonHangByMaDH("1"));
+		List<DonHang> list = donHangDAO.getOrderOfShipper("15","3");
+		for (DonHang o:list){
+			System.out.println(o);
+		}
 	}
 }

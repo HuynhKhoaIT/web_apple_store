@@ -22,13 +22,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="${root}shipper/allorder" class="nav-link">
+                            <a href="/Apple_store/ShiperNewOrder?tt=2" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Đơn hàng mới</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="${root}shipper/allorder" class="nav-link">
+                            <a href="/Apple_store/ShiperNewOrder?tt=4" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Đơn hàng đã giao</p>
                             </a>

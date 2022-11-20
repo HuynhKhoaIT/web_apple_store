@@ -36,7 +36,6 @@ public class AuthorizePaymentServlet extends HttpServlet {
 			items.add(new Item(nameSP[i], Integer.parseInt(quantity[i]), Integer.parseInt(totalPrice[i]) / 23000));
 			tong=tong+Integer.parseInt(totalPrice[i]) / 23000;
 		}
-
 		try {
 			PaymentServices paymentServices = new PaymentServices();
 			String approvalLink = paymentServices.authorizePayment(Integer.toString(totalString-(totalString-tong)), items);

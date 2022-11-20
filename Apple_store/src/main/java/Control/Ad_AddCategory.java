@@ -32,7 +32,6 @@ public class Ad_AddCategory extends HttpServlet {
 		LoaispDAO loaispDAO = new LoaispDAO();
 		List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
 
-
 		req.setAttribute("listlsp", listlsp);
 
 		req.getRequestDispatcher("/admin/add_category.jsp").forward(req, resp);

@@ -185,62 +185,7 @@
 				</div>
 				<!-- /.container-fluid -->
 			</section>
-			<%-- <section>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<div class="card"></div>
-						<!-- /.card -->
 
-						<div class="card">
-							<div class="card-header">
-								<h3 class="card-title">Tất cả đơn hàng</h3>
-							</div>
-							<!-- /.card-header -->
-							<div class="card-body">
-								<table id="example1" class="table table-bordered table-striped">
-									<thead>
-										<tr>
-											<th>Mã Khách Hàng</th>
-											<th>Mã Đơn Hàng</th>
-											<th>Tổng Tiền</th>
-											<th>Thời Gian</th>
-											<th>Tình Trạng</th>
-										</tr>
-									</thead>
-									<tbody>
-												<tr>
-
-													<td><a href="Ad_AccountControl?maKH=${donHang.getMaKH()}">${donHang.getMaKH()}</a></td>
-													<td><a href="Ad_invoiceControl?maDH=${donHang.getMaDH()}">${donHang.getMaDH()}</a></td>
-													<td>${donHang.getTongTien()}</td>
-													<td>${donHang.getThoiGian()}</td>
-													<c:choose>
-														<c:when test="${donHang[i].getMaTrangThai()==1}">
-															<td><span class="badge badge-success">Shipped</span></td>
-														</c:when>
-														<c:otherwise>
-															<td><span class="badge badge-success">Shipping</span></td>
-														</c:otherwise>
-													</c:choose>
-												
-												</tr>
-									</tbody>
-
-									<tfoot></tfoot>
-								</table>
-							</div>
-							<!-- /.card-body -->
-						</div>
-						<!-- /.card -->
-					</div>
-					<!-- /.col -->
-				</div>
-				<!-- /.row -->
-			</div>
-			<!-- /.container-fluid -->
-			</section> --%>
-			<!-- /.content -->
 		</div>
 		<!-- /.content-wrapper -->
 		<%@include file="./ad_footer.jsp"%>

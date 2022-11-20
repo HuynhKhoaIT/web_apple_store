@@ -6,12 +6,12 @@ import java.sql.DriverManager;
 
 public class ConnectJDBC {
 	
-	private final String serverName = "DESKTOP-8M4OG13";
-	private final String dbName = "AppleStore";
+	private final String serverName = "DESKTOP-B5NMLGI\\LONG";
+	private final String dbName = "AppleStore2";
 	private final String portNumber = "1433";
 	private final String instance = " ";
 	private final String userID = "sa";
-	private final String password = "123";
+	private final String password = "20110299";
 
 		public Connection getConnection() throws Exception {
 			String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\" + instance + ";databaseName=" + dbName+";encrypt=true;trustServerCertificate=true;";

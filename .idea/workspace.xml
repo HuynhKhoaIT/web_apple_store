@@ -10,7 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27dad115-8cb1-4af1-9972-c49dc1d641d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/ShiperNewOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/shipper.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Connection/ConnectJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddBlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_AddCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_InvoiceControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ad_PageControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/AuthorizePaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/AuthorizePaymentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/CartControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/CartControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_PageControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_PageControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Ship_invoiceControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/Control/Shipper_Allorder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/java/DAO/DonHangDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/Shipper/shipper.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice-print.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice-print.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/admin/invoice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/invoice.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/invoices.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/invoices.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/newOrders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/newOrders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/order.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Apple_store/src/main/webapp/shipper/sidebar.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +84,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/HCMUTE/Nam3-HK1/CNPM/moi11/Apple_store/src/main/webapp/shop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/HCMUTE/Nam3-HK1/CNPM/moi12/Apple_store/src/main/webapp/Shipper&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,11 +98,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi12\Apple_store\src\main\webapp\Shipper" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi11\Apple_store\src\main\webapp\shop" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi11\Apple_store\src\main\webapp\asset\img" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi9\Apple_store\src\main\webapp\asset\img" />
       <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi7\Apple_store\src\main\webapp\shop" />
-      <recent name="E:\HCMUTE\Nam3-HK1\CNPM\moi7\Apple_store\src\main\webapp\asset" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Model" />
@@ -88,33 +110,14 @@
       <recent name="Control" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.65">
-    <configuration name="AnhSPDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DAO.AnhSPDAO" />
-      <module name="Apple_store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnectJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Connection.ConnectJDBC" />
-      <module name="Apple_store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Connection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DonHangDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DAO.DonHangDAO" />
       <module name="Apple_store" />
@@ -153,6 +156,9 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="invoice-print.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Apple_store/admin/invoice-print.jsp">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="web_apple_store" />
@@ -253,13 +259,100 @@
         </option>
       </method>
     </configuration>
+    <configuration name="invoice-print.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/admin/invoice-print.jsp" />
+      <deployment>
+        <artifact name="Apple_store:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Apple_store_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="dc58a6b6-5096-409e-8179-600af0640da4" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53699" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Apple_store:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KhachHangDAO" />
+        <item itemvalue="Tomcat Server.invoice-print.jsp" />
+        <item itemvalue="JavaScript Debug.invoice-print.jsp" />
         <item itemvalue="Application.DonHangDAO" />
+        <item itemvalue="Application.KhachHangDAO" />
         <item itemvalue="Application.SanPhamDAO" />
-        <item itemvalue="Application.AnhSPDAO" />
-        <item itemvalue="Application.ConnectJDBC" />
       </list>
     </recent_temporary>
   </component>
@@ -337,7 +430,11 @@
       <workItem from="1668869223650" duration="507000" />
       <workItem from="1668870000541" duration="3703000" />
       <workItem from="1668873747612" duration="1854000" />
-      <workItem from="1668875915382" duration="92000" />
+      <workItem from="1668875915382" duration="3137000" />
+      <workItem from="1668879169151" duration="2662000" />
+      <workItem from="1668882091242" duration="10000" />
+      <workItem from="1668911065960" duration="19365000" />
+      <workItem from="1668931032053" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="them san pham vao gio hang">
       <created>1667814426369</created>
@@ -409,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668875358378</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sua lại AuthorizePaymentServlet">
+      <created>1668876025910</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668876025910</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +541,8 @@
     <MESSAGE value="Su phan sap xep theo loai san pham" />
     <MESSAGE value="Them su xoa san pham" />
     <MESSAGE value="khoi phuc code bi loai" />
-    <option name="LAST_COMMIT_MESSAGE" value="khoi phuc code bi loai" />
+    <MESSAGE value="sua lại AuthorizePaymentServlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="sua lại AuthorizePaymentServlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

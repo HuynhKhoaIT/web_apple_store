@@ -1,10 +1,7 @@
 package Control;
 
 import DAO.*;
-import Model.BaiViet;
-import Model.DanhMuc;
-import Model.LoaiSP;
-import Model.SanPham;
+import Model.*;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -25,6 +22,8 @@ public class Ad_AddBlog extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
+
+
 
         BaiViet baiViet;
         String maBV="";

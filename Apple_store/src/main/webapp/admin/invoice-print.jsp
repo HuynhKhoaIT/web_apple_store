@@ -39,7 +39,7 @@
         <!-- info row -->
         <div class="row invoice-info">
             <div class="col-sm-4 invoice-col">
-                From
+                Từ
                 <address>
                     <strong>Admin, Inc.</strong><br>
                     795 Folsom Ave, Suite 600<br>

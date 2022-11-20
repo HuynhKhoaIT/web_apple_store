@@ -27,7 +27,7 @@ public class Ad_PageControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		
+
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
 			session.removeAttribute("newrole2");
@@ -45,7 +45,7 @@ public class Ad_PageControl extends HttpServlet {
 			DonHangDAO dao=new DonHangDAO();
 			list=dao.loadTop10Order();
 			System.out.print(list.size());
-	
+
 			List<String> listName = new ArrayList<String>();
 			for (DonHang o : list) {
 				KhachHangDAO d = new KhachHangDAO();
@@ -54,7 +54,7 @@ public class Ad_PageControl extends HttpServlet {
 			List<ChiTietDonHang> chititet = new ArrayList<ChiTietDonHang>();
 			int totalChiPhi=0;
 			for (DonHang o : list) {
-	
+
 				ChiTietDonHangDAO d=new ChiTietDonHangDAO();
 				chititet=d.getChiTietSanPhamID(o.getMaDH());
 				for(ChiTietDonHang i:chititet)
@@ -66,8 +66,8 @@ public class Ad_PageControl extends HttpServlet {
 				}
 			}
 			int total=new DonHangDAO().totalPriceAllOrder();
-	
-	
+
+
 			request.setAttribute("totalChiPhi",totalChiPhi);
 			request.setAttribute("total",total);
 			request.setAttribute("size",listName.size());

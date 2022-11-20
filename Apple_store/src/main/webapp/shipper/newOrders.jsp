@@ -43,7 +43,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>DataTables</h1>
+                        <h1>${title}</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -55,7 +55,6 @@
             </div>
             <!-- /.container-fluid -->
         </section>
-
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
@@ -66,39 +65,38 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Đơn hàng mới</h3>
+                                <h3 class="card-title">Đơn hàng có thể giao</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Mã Khách Hàng</th>
                                         <th>Mã Đơn Hàng</th>
-                                        <th>Tổng Tiền</th>
+                                        <th>Tên Người Nhận</th>
+                                        <th>Tiền Thu</th>
                                         <th>Thời Gian</th>
-                                        <th>Tình Trạng</th>
+                                        <th>Địa Điểm</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    	<c:forEach var="i" begin="0" end="${size-1 }">
-												<tr>
-
-													<td><a href="Ad_AccountControl?maKH=${list[i].getMaKH()}">${list[i].getMaKH()}</a></td>
-													<td><a href="Ad_invoiceControl?maDH=${list[i].getMaDH()}">${list[i].getMaDH()}</a></td>
-													<td>${list[i].getTongTien()}</td>
-													<td>${list[i].getThoiGian()}</td>
-													<c:choose>
-														<c:when test="${list[i].getMaTrangThai()==1}">
-															<td><span class="badge badge-success">Chưa xác nhận</span></td>
-														</c:when>
-														<c:otherwise>
-															<td><span class="badge badge-success">Đã Xác Nhận</span></td>
-														</c:otherwise>
-													</c:choose>
-												
-												</tr>
-											</c:forEach>
+                                    <c:forEach var="l" items="${list}">
+                                        <tr>
+                                            <td><a href="Ship_invoice?maDH=${l.maDH}">${l.maDH}</a></td>
+                                            <td>${l.tenNguoiNhan}</td>
+                                            <c:choose>
+                                                <c:when test="${l.phuongThucThanhToan == 0}">
+                                                    <td><span class="badge badge-success">Chưa
+																	Chưa Thanh Toán</span></td>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <td><span class="badge badge-success">Đã thanh toán</span></td>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <td>${l.thoiGian}</td>
+                                            <td>${l.diaChi}</td>
+                                        </tr>
+                                    </c:forEach>
                                     </tbody>
 
                                     <tfoot></tfoot>

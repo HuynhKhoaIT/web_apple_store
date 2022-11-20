@@ -18,6 +18,7 @@ import DAO.SanPhamDAO;
 import Model.ChiTietDonHang;
 import Model.DonHang;
 import Model.SanPham;
+import Model.Users;
 
 @WebServlet(name = "Ship_PageControl", value = "/shipper")
 public class Ship_PageControl extends HttpServlet {
@@ -27,7 +28,8 @@ public class Ship_PageControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		
+
+
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
 			session.removeAttribute("newrole");
@@ -41,43 +43,28 @@ public class Ship_PageControl extends HttpServlet {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
 		}
 		else {
-			List<DonHang> list = new ArrayList<DonHang>();
-			DonHangDAO dao=new DonHangDAO();
-			list=dao.loadTop10Order();
-			System.out.print(list.size());
-			
-			List<String> listName = new ArrayList<String>();
-			for (DonHang o : list) {
-				KhachHangDAO d = new KhachHangDAO();
-				listName.add(d.getKhachHangByMaKH(o.getMaKH()).getTenKH());
-			} 
-			List<ChiTietDonHang> chititet = new ArrayList<ChiTietDonHang>();
-			int totalChiPhi=0;
-			for (DonHang o : list) {
-				
-				ChiTietDonHangDAO d=new ChiTietDonHangDAO();
-				chititet=d.getChiTietSanPhamID(o.getMaDH());
-				for(ChiTietDonHang i:chititet)
-				{
-					SanPham SP=new SanPham();
-					SanPhamDAO a=new SanPhamDAO();
-					SP=a.getProductById(i.getMaSP());
-					totalChiPhi=totalChiPhi+i.getSoLuong()*SP.getGiaGoc();
-				}
-			}
-			int total=new DonHangDAO().totalPriceAllOrder();
-			
-			
-			request.setAttribute("totalChiPhi",totalChiPhi);
-			request.setAttribute("total",total);
-			request.setAttribute("size",listName.size());
-			request.setAttribute("listName",listName);
-			request.setAttribute("list",list);
+			Users shipper = (Users)session.getAttribute("acc");
+			// don hang dang giao cua shipper :
+
+			DonHangDAO donHangDAO = new DonHangDAO();
+			List<DonHang> listDangGiao = donHangDAO.getOrderOfShipper(String.valueOf(shipper.getMaKH()),"3");
+
+			// So luong don hang moi co the xac nhan de giao
+			List<DonHang> listCoTheNhanGiao  = donHangDAO.getOrderTheoTrangThai("2");
+			int SLCoTheNhanGiao = listCoTheNhanGiao.size();
+
+			// So luong don hang da giao cau Shipper
+			List<DonHang> listDonHangDaGiaoCuaShiper = donHangDAO.getOrderOfShipper(String.valueOf(shipper.getMaKH()),"4");
+			int SLDonHangDaGiao = listDonHangDaGiaoCuaShiper.size();
+
+			request.setAttribute("listDangGiao",listDangGiao);
+			request.setAttribute("SLCoTheNhanGiao",SLCoTheNhanGiao);
+			request.setAttribute("SLDonHangDaGiao",SLDonHangDaGiao);
+
+
 			request.getRequestDispatcher("/Shipper/shipper.jsp").forward(request, response);
 		}
 	}
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
