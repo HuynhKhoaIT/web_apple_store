@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "Ad_invoiceControl", value = "/Ad_invoiceControl")
+@WebServlet(name = "Ad_invoiceControl", value = "/admin/Ad_invoiceControl")
 public class Ad_InvoiceControl extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
