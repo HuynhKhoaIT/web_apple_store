@@ -30,75 +30,27 @@
 	            <div class="row">
 	                <div class="img-blog col-md-6 col-12">
 	                    <div class="blog-main">
-	                        <a href="${root}shop/detail_blog.jsp">
-	                            <img class="avatar-blog" src="${root}asset/img/bn3.webp" alt="">
+	                        <a href="http://localhost:8080/Apple_store/BlogDetailControl?maBV=${baiViet.maBV}">
+	                            <img class="avatar-blog" src="${baiViet.anh}" alt="">
 	                            <div class="title1-blog">
-	                                <h3>Apple Watch Ultra chiếc đồng hồ thông minh không dành cho số đông</h3>
+	                                <h3>${baiViet.tieuDeBV}</h3>
 	                            </div>
 	                        </a>
 	                    </div>
 	                    <div class="blog-item">
 	                        <ul>
+	                        <c:forEach items="${listblog}" var="o" >
 	                            <li>
 	                                <div class="item row">
 	                                    <a class="col-md-4 col-4" href="${root}shop/detail_blog.jsp">
-	                                        <img class="avatar-blog" src="${root}asset/img/bn1.webp" alt="">
+	                                        <img class="avatar-blog" src="${o.anh}" alt="">
 	                                    </a>
 	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a  href="${root}shop/detail_blog.jsp">Giấc mơ iPhone đã có type-C sẽ thành sự thật nhưng có tốt như nhiều người nghĩ?</a>
+	                                        <a  href="http://localhost:8080/Apple_store/BlogDetailControl?maBV=${o.maBV}">${o.tieuDeBV}</a>
 	                                    </div>
 	                                </div>
 	                            </li>
-	                            <li>
-	                                <div class="item  row">
-	                                    <a class="col-md-4 col-4" href="${root}shop/detail_blog.jsp">
-	                                        <img class="avatar-blog" src="${root}asset/img/bn3.webp" alt="">
-	                                    </a>
-	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="${root}shop/detail_blog.jsp">iPhone 14 Pro Max vượt xa các đối thủ Android trong thử nghiệm pin</a>
-	                                    </div>
-	                                </div>
-	                            </li>
-	                            <li>
-	                                <div class="item  row">
-	                                    <a class="col-md-4 col-4" href="#">
-	                                        <img class="avatar-blog" src="${root}asset/img/blog1.webp" alt="">
-	                                    </a>
-	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="#">iPad Gen 10: Nhiều màu sắc, USB-C, màn hình lớn hơn, viền mỏng, vẫn dùng Apple Pencil 1</a>
-	                                    </div>
-	                                </div>
-	                            </li>
-	                            <li>
-	                                <div class="item  row">
-	                                    <a class="col-md-4 col-4" href="#">
-	                                        <img class="avatar-blog" src="${root}asset/img/blog1.webp" alt="">
-	                                    </a>
-	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="#">Tất tần tật những điều cần biết về iPad Pro M2 2022: Hiệu năng siêu mạnh, cải tiến nhiều tính năng</a>
-	                                    </div>
-	                                </div>
-	                            </li>
-	                            <li>
-	                                <div class="item  row">
-	                                    <a class="col-md-4 col-4" href="#">
-	                                        <img class="avatar-blog" src="${root}asset/img/blog1.webp" alt="">
-	                                    </a>
-	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="#">Apple khóa sync iOS 16.0.2 sau khi phát hành iOS 16.0.3</a>
-	                                    </div>
-	                                </div>
-	                            </li>
-	                            <li>
-	                                <div class="item row">
-	                                    <a class="col-md-4 col-4" href="#">
-	                                        <img class="avatar-blog" src="${root}asset/img/blog1.webp" alt="">
-	                                    </a>
-	                                    <div class="title2-blog col-md-8 col-8">
-	                                        <a href="#">Giấc mơ iPhone đã có type-C sẽ thành sự thật nhưng có tốt như nhiều người nghĩ?</a>
-	                                    </div>
-	                                </div>
-	                            </li>
+	                           </c:forEach>
 	                        </ul>
 	                    </div>
 	                </div>

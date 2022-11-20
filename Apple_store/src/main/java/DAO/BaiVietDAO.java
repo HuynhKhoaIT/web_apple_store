@@ -119,14 +119,33 @@ public class BaiVietDAO {
         }
         return null;
     }
+    public BaiViet getBaiViet(){
+
+        String query = "select top 1 * From BaiViet order by MaBV desc";
+        try {
+            conn =new ConnectJDBC().getConnection();
+            ps =conn.prepareStatement(query);
+            rs =ps.executeQuery();
+
+            while(rs.next())
+            {
+               return new BaiViet(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4)
+               ,rs.getDate(5),rs.getDate(6));
+            }
+        }
+        catch (Exception e) {
+        }
+        return null;
+    }
+
 
     public static void main(String[] args) {
         BaiVietDAO baiVietDAO = new BaiVietDAO();
-        List<BaiViet> list = baiVietDAO.getAllBaiViet();
-        for(BaiViet b: list)
-        {
-            System.out.println(b);
-        }
+        BaiViet list = baiVietDAO.getBaiViet();
+        //for(BaiViet b: list)
+        //{
+            System.out.println(list);
+        //}
     }
 
 }
