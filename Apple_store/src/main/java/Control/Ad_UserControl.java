@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Ad_UserControl", value = "/Ad_UserControl")
+@WebServlet(name = "Ad_UserControl", value = "/admin/Ad_UserControl")
 public class Ad_UserControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

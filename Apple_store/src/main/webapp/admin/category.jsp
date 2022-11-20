@@ -63,7 +63,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">Tất cả danh mục</h3>
                                 <div class="card-add">
-                                    <a href="${root}Ad_AddCategory" class="">
+                                    <a href="${root}admin/Ad_AddCategory" class="">
                                         <p>Thêm danh mục</p>
                                     </a>
                                 </div>

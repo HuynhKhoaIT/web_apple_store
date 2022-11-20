@@ -14,7 +14,7 @@ import DAO.DonHangDAO;
 import DAO.KhachHangDAO;
 import Model.DonHang;
  
-@WebServlet(name = "Ad_AllOrder", value = "/AllOrder")
+@WebServlet(name = "Ad_AllOrder", value = "/admin/AllOrder")
 public class Ad_Order extends HttpServlet {
 	@Override 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

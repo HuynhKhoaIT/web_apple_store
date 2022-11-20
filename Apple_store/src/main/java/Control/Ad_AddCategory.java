@@ -22,7 +22,7 @@ import Model.SanPham;
 /**
  * Servlet implementation class SearchControl
  */
-@WebServlet(name = "Ad_AddCategory", value = "/Ad_AddCategory")
+@WebServlet(name = "Ad_AddCategory", value = "/admin/Ad_AddCategory")
 public class Ad_AddCategory extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

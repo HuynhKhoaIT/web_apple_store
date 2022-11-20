@@ -14,7 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-@WebServlet(name = "Ad_TaoBaiViet", value = "/Ad_TaoBaiViet")
+@WebServlet(name = "Ad_TaoBaiViet", value = "/admin/Ad_TaoBaiViet")
 @MultipartConfig(fileSizeThreshold = 1024*1024*2,
         maxFileSize = 1024*1024*10,
         maxRequestSize = 1024*1024*50)

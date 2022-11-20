@@ -16,7 +16,7 @@ import Model.DonHang;
 /**
  * Servlet implementation class Ad_NewOrder
  */
-@WebServlet(name = "Ad_NewOrder", value = "/newOrder")
+@WebServlet(name = "Ad_NewOrder", value = "/admin/newOrder")
 public class Ad_NewOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
