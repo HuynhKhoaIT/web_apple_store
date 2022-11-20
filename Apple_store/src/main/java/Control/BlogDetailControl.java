@@ -24,6 +24,7 @@ public class BlogDetailControl extends HttpServlet {
 
         BaiVietDAO baiVietDAO = new BaiVietDAO();
         BaiViet baiViet = baiVietDAO.getBaiVietByID(maBV);
+        
 
         LoaispDAO loaispDAO = new LoaispDAO();
         List<LoaiSP> listlsp = loaispDAO.getAllloaisp();
