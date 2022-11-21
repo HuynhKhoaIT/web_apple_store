@@ -54,7 +54,7 @@
 					</tbody>
 				</table>
 
-				<a href="<%=request.getContextPath()%>/User_OrderControl"
+				<a href="UserPage"
 					class="btn btn-sm btn-secondary ">Back</a>
 			</div>
 		</div>
