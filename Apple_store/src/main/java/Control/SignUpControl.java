@@ -59,7 +59,7 @@ public class SignUpControl extends HttpServlet {
 		Users b = dao.CheckEmailExist(email);
 		Users c = dao.CheckPhoneExist(phone);
 		
-		if(a==null || b==null || c==null) {
+		if(a==null && b==null && c==null) {
 
 			int veri = lib.getRandom();
 

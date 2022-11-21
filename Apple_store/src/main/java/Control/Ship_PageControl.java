@@ -31,10 +31,11 @@ public class Ship_PageControl extends HttpServlet {
 
 
 		HttpSession session = request.getSession();
-		if (session.getAttribute("acc") == null) {
+		if (session.getAttribute("accship") == null) {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginship");
 		}
 		else if (Integer.parseInt(session.getAttribute("roleshipper").toString()) == 0){
+			session.removeAttribute("accad");
 			session.removeAttribute("acc");
 			session.removeAttribute("rolead");
 			session.removeAttribute("roleshipper");

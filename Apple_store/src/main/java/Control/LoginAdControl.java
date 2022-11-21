@@ -63,7 +63,8 @@ public class LoginAdControl extends HttpServlet {
 			int admin = a.getIsAdmin();
 			int shipper = a.getIsShiper();
 			if(user == 1 && admin == 1 && shipper == 0) {
-				session.setAttribute("acc", a);
+				session.setAttribute("accad", a);
+				session.setAttribute("rolead", a.getIsAdmin());
 				response.sendRedirect("http://localhost:8080/Apple_store/admin");
 			}
 			else {

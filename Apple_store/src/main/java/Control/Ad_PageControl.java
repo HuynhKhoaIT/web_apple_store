@@ -27,12 +27,15 @@ public class Ad_PageControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		
+		
 		HttpSession session = request.getSession();
-		if (session.getAttribute("acc") == null) {
+		if (session.getAttribute("accad") == null) {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginad");
 		}
 		else if (Integer.parseInt(session.getAttribute("rolead").toString()) == 0){
 			session.removeAttribute("acc");
+			session.removeAttribute("accship");
 			session.removeAttribute("rolead");
 			session.removeAttribute("roleshipper");
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginad");

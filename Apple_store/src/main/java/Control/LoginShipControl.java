@@ -61,7 +61,8 @@ public class LoginShipControl extends HttpServlet {
 			int admin = a.getIsAdmin();
 			int shipper = a.getIsShiper();
 			if(user == 1 && admin == 0 && shipper == 1) {
-				session.setAttribute("acc", a);
+				session.setAttribute("accship", a);
+				session.setAttribute("roleshipper", a.getIsShiper());
 				response.sendRedirect("http://localhost:8080/Apple_store/shipper");
 			}
 			else {
