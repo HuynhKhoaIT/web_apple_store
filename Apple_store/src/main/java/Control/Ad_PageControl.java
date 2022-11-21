@@ -30,7 +30,12 @@ public class Ad_PageControl extends HttpServlet {
 		
 		
 		HttpSession session = request.getSession();
+		
+		
+		
 		if (session.getAttribute("accad") == null) {
+			session.removeAttribute("acc");
+			session.removeAttribute("accship");
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginad");
 		}
 		else if (Integer.parseInt(session.getAttribute("rolead").toString()) == 0){
