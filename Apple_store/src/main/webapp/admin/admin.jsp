@@ -71,7 +71,7 @@
 							<div class="icon">
 								<i class="ion ion-bag"></i>
 							</div>
-							<a href="/Apple_store/newOrder"
+							<a href="${root}admin/newOrder"
 							   class="small-box-footer">Thêm thông tin <i
 									class="fas fa-arrow-circle-right"></i></a>
 						</div>
