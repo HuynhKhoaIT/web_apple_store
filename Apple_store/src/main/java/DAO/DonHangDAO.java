@@ -154,7 +154,7 @@ public class DonHangDAO {
 	}
 
 	public List<DonHang> loadTop10Order() {
-		String querry = "select top 10 * from DonHang where MaTrangThai = 1 ";
+		String querry = "select * from DonHang where MaTrangThai = 1 ";
 		List<DonHang> list = new ArrayList<DonHang>();
 		try {
 
@@ -283,7 +283,7 @@ public class DonHangDAO {
 	public int totalPriceAllOrder() {
 		String querry = "select * from DonHang where MaTrangThai=1 ";
 		int total=0;
-		try {
+		try { 
 
 			conn = new ConnectJDBC().getConnection();
 			ps = conn.prepareStatement(querry);
