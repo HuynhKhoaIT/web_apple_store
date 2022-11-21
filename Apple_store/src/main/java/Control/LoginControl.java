@@ -39,14 +39,7 @@ public class LoginControl extends HttpServlet {
 		if (session.getAttribute("acc") != null) {
 			response.sendRedirect("http://localhost:8080/Apple_store");
 		}
-		else if(session.getAttribute("newrole") == null && session.getAttribute("newrole2") == null){
-			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
-
-		}
-		else if(session.getAttribute("newrole") != null && session.getAttribute("newrole2") == null) {
-			request.getRequestDispatcher("/shop/loginad.jsp").forward(request, response);
-		}
-		else if(session.getAttribute("newrole2") != null && session.getAttribute("newrole") == null) {
+		else{
 			request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
 		}
 		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
@@ -83,19 +76,9 @@ public class LoginControl extends HttpServlet {
 			if (user==1 && admin == 0 && shipper == 0) {
 				response.sendRedirect("http://localhost:8080/Apple_store");
 			}
-			else if(user == 1 && admin == 1 && shipper == 0) {
-				session.removeAttribute("newrole");
-				session.removeAttribute("newrole2");
-				response.sendRedirect("http://localhost:8080/Apple_store/admin");
-			}
-			else if(user == 1 && admin == 0 && shipper == 1) {
-				session.removeAttribute("newrole");
-				session.removeAttribute("newrole2");
-				response.sendRedirect("http://localhost:8080/Apple_store/shipper");
-			}
 			else {
-				session.removeAttribute("acc");
-				response.sendRedirect("http://localhost:8080/Apple_store");
+				request.setAttribute("mess", "Bạn phải đăng ký");
+				request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
 			}
 			//response.sendRedirect("http://localhost:8080/Apple_store");
 		}

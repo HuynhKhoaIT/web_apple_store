@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class LoginControl
  */
-@WebServlet("/shop/login")
+@WebServlet("/shop/loginship")
 public class LoginShipControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,24 +32,7 @@ public class LoginShipControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession();
-		if (session.getAttribute("acc") != null) {
-			response.sendRedirect("http://localhost:8080/Apple_store");
-		}
-		else if(session.getAttribute("newrole") == null && session.getAttribute("newrole2") == null){
-			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
-
-		}
-		else if(session.getAttribute("newrole") != null && session.getAttribute("newrole2") == null) {
-			request.getRequestDispatcher("/shop/loginad.jsp").forward(request, response);
-		}
-		else if(session.getAttribute("newrole2") != null && session.getAttribute("newrole") == null) {
-			request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
-		}
-		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
 	}
 
 	/**
@@ -70,32 +53,20 @@ public class LoginShipControl extends HttpServlet {
 		Users a = dao.login(username, passMD5);
 		if(a == null) {
 			request.setAttribute("mess", "Sai tên đăng nhập hoặc mật khẩu");
-			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
 		}
 		else {
 			HttpSession session = request.getSession();
-			session.setAttribute("acc", a);
-			session.setAttribute("rolead", a.getIsAdmin());
-			session.setAttribute("roleshipper", a.getIsShiper());
 			int user = a.getIsUser();
 			int admin = a.getIsAdmin();
 			int shipper = a.getIsShiper();
-			if (user==1 && admin == 0 && shipper == 0) {
-				response.sendRedirect("http://localhost:8080/Apple_store");
-			}
-			else if(user == 1 && admin == 1 && shipper == 0) {
-				session.removeAttribute("newrole");
-				session.removeAttribute("newrole2");
-				response.sendRedirect("http://localhost:8080/Apple_store/admin");
-			}
-			else if(user == 1 && admin == 0 && shipper == 1) {
-				session.removeAttribute("newrole");
-				session.removeAttribute("newrole2");
+			if(user == 1 && admin == 0 && shipper == 1) {
+				session.setAttribute("acc", a);
 				response.sendRedirect("http://localhost:8080/Apple_store/shipper");
 			}
 			else {
-				session.removeAttribute("acc");
-				response.sendRedirect("http://localhost:8080/Apple_store");
+				request.setAttribute("mess", "Bạn phải là shipper");
+				request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
 			}
 			//response.sendRedirect("http://localhost:8080/Apple_store");
 		}

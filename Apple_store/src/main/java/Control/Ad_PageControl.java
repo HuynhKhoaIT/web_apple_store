@@ -28,17 +28,16 @@ public class Ad_PageControl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
+		
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
-			session.removeAttribute("newrole2");
-			session.setAttribute("newrole", 1);
-			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
+			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginad");
 		}
 		else if (Integer.parseInt(session.getAttribute("rolead").toString()) == 0){
 			session.removeAttribute("acc");
 			session.removeAttribute("rolead");
 			session.removeAttribute("roleshipper");
-			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
+			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginad");
 		}
 		else {
 			List<DonHang> list = new ArrayList<DonHang>();

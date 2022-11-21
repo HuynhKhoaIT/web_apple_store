@@ -32,15 +32,13 @@ public class Ship_PageControl extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
-			session.removeAttribute("newrole");
-			session.setAttribute("newrole2", 1);
-			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
+			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginship");
 		}
 		else if (Integer.parseInt(session.getAttribute("roleshipper").toString()) == 0){
 			session.removeAttribute("acc");
 			session.removeAttribute("rolead");
 			session.removeAttribute("roleshipper");
-			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
+			response.sendRedirect("http://localhost:8080/Apple_store/shop/loginship");
 		}
 		else {
 			Users shipper = (Users)session.getAttribute("acc");

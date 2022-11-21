@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class LoginControl
  */
-@WebServlet("/shop/login")
+@WebServlet("/shop/loginad")
 public class LoginAdControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
