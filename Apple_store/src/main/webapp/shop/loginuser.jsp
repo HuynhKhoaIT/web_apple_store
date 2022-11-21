@@ -34,7 +34,7 @@
               <div class="text-center mb-5">
                 <h3 class="text-uppercase">Login to <strong>APPLEStore</strong></h3>
               </div>
-              <form action="login" method="POST" id="form-2">
+              <form action="loginuser" method="POST" id="form-2">
                 <div class="form-group first">
                	  <p class="form-message">${mess}</p>
                   <label for="username">Tên đăng nhập</label>

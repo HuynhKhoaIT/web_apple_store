@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class LoginControl
  */
-@WebServlet("/shop/login")
+@WebServlet("/shop/loginuser")
 public class LoginControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class LoginControl extends HttpServlet {
 			response.sendRedirect("http://localhost:8080/Apple_store");
 		}
 		else{
-			request.getRequestDispatcher("/shop/loginship.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/loginuser.jsp").forward(request, response);
 		}
 		//request.getRequestDispatcher("/shop/login.jsp").forward(request, response);
 	}

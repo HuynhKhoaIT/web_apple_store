@@ -65,7 +65,7 @@
                         </a>
                     </c:if>
                     <c:if test="${sessionScope.acc == null}">
-                        <a href="/Apple_store/shop/login" class="user">
+                        <a href="/Apple_store/shop/loginuser" class="user">
                             <div class="sec-icon">
                                 <i class="ti-user"></i>
                                 <div class="icon-text">Tài Khoản</div>
