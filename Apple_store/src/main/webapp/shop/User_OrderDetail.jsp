@@ -6,12 +6,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="${root}asset/css/cart.css" />
+<link rel="stylesheet" href="${root}asset/style.css">
+<link rel="stylesheet"
+	href="${root}asset/font/themify-icons/themify-icons.css" />
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 <!-- Font Awesome -->
 <link rel="stylaesheet"
 	href="${root}plugins/fontawesome-free/css/all.min.css">
 <!-- Ionicons -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="${root}asset/dist/css/adminlte.min.css">
@@ -47,7 +54,7 @@
 					</tbody>
 				</table>
 
-				<a href="<%=request.getContextPath()%>/User_OrderControl"
+				<a href="UserPage"
 					class="btn btn-sm btn-secondary ">Back</a>
 			</div>
 		</div>

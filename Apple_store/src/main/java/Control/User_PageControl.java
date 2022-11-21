@@ -25,6 +25,9 @@ public class User_PageControl extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
 		if (session.getAttribute("acc") == null) {
 			response.sendRedirect("http://localhost:8080/Apple_store/shop/login");
@@ -42,6 +45,9 @@ public class User_PageControl extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
 		
 		Users users = (Users) session.getAttribute("acc");
