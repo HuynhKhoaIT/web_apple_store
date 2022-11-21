@@ -40,7 +40,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contacts</h1>
+            <h1>Khách hàng</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -63,7 +63,12 @@
               <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                 <div class="card bg-light d-flex flex-fill">
                   <div class="card-header text-muted border-bottom-0">
-                    Digital Strategist
+	                  <c:if test = "${o.isUser == 0}">
+				         <p>Khách hàng vãng lai<p>
+				      </c:if>
+				      <c:if test = "${o.isUser == 1}">
+				         <p>Khách hàng thân thiết<p>
+				      </c:if>
                   </div>
                   <div class="card-body pt-0">
                     <div class="row">
@@ -98,7 +103,7 @@
           </div>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
+        <!-- <div class="card-footer">
           <nav aria-label="Contacts Page Navigation">
             <ul class="pagination justify-content-center m-0">
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -111,7 +116,7 @@
               <li class="page-item"><a class="page-link" href="#">8</a></li>
             </ul>
           </nav>
-        </div>
+        </div> -->
         <!-- /.card-footer -->
       </div>
       <!-- /.card -->

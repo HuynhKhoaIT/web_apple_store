@@ -43,12 +43,12 @@
 						<h1 class="m-0">Dashboard</h1>
 					</div>
 					<!-- /.col -->
-					<div class="col-sm-6">
+					<!-- <div class="col-sm-6">
 						<ol class="breadcrumb float-sm-right">
 							<li class="breadcrumb-item"><a href="#">Home</a></li>
 							<li class="breadcrumb-item active">Dashboard v1</li>
 						</ol>
-					</div>
+					</div> -->
 					<!-- /.col -->
 				</div>
 				<!-- /.row -->
@@ -134,6 +134,7 @@
 								<span class="info-box-icon bg-success elevation-1"><i
 										class="fas fa-shopping-cart"></i></span>
 
+
 							<div class="info-box-content">
 								<span class="info-box-text">Sales</span> <span
 									class="info-box-number">760</span>
@@ -164,7 +165,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Monthly Recap Report</h5>
+								<h5 class="card-title">Báo cáo doanh thu theo tháng</h5>
 
 								<div class="card-tools">
 									<button type="button" class="btn btn-tool"
@@ -299,12 +300,9 @@
 						</div>
 						<!-- /.card-body -->
 						<div class="card-footer clearfix">
-							<a href="javascript:void(0)"
-							   class="btn btn-sm btn-info float-left">Place New Order</a>
 							<a
 									href="<%=request.getContextPath()%>/AllOrder"
-									class="btn btn-sm btn-secondary float-right">View All
-								Orders</a>
+									class="btn btn-sm btn-secondary float-right">Xem tất cả</a>
 						</div>
 						<!-- /.card-footer -->
 					</div>

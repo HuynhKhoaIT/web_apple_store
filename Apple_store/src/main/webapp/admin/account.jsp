@@ -63,7 +63,7 @@
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-3 text-center">
-                      <img src="" alt="user-avatar" class="img-circle img-fluid">
+                      <img src="${root}asset/dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
                     </div>
                     <div class="col-9">
                       <h2 class="lead"><b>${khachHang.tenKH}</b></h2>

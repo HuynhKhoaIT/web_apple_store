@@ -105,7 +105,7 @@
 													<td>${list[i].getThoiGian()}</td>
 													<c:forEach items="${listTrangThai}" var="tt">
 														<c:if test="${tt.maTrangThai == list[i].getMaTrangThai()}">
-													<td><span class="badge badge-success">${tt.tenTrangThai}</span></td>>
+													<td><span class="badge badge-success">${tt.tenTrangThai}</span></td>
 														</c:if>
 													</c:forEach>
 												</tr>

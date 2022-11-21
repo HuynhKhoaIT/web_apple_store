@@ -9,14 +9,14 @@
       <a href="${root}" class="nav-link">Shop</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="${root}admin" class="nav-link">Home</a>
+      <a href="${root}admin" class="nav-link">Admin</a>
     </li>
   </ul>
 
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Navbar Search -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" data-widget="navbar-search" href="#" role="button">
         <i class="fas fa-search"></i>
       </a>
@@ -35,7 +35,7 @@
           </div>
         </form>
       </div>
-    </li>
+    </li> -->
 
     <!-- Messages Dropdown Menu -->
     <%-- <li class="nav-item dropdown">

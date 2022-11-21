@@ -118,7 +118,6 @@
                         <li><a class="b-b-600" href="loaisp?maloai=${o.maLoai}" class="nav-sub">${o.tenLoai}</a></li>
                     </c:forEach>
                     <li class="b-b-600"><a href="${root}blog">Tin tức</a></li>
-                    <li class="b-b-600"><a href="/tin-tuc">Workshop</a></li>
                 </ul>
             </div>
         </div>
