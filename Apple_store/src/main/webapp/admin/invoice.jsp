@@ -65,23 +65,14 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
-							<div class="callout callout-info">
-								<h5>
-									<i class="fas fa-info"></i> Ghi chú:
-								</h5>
-								Trang này đã được cải tiến để in. Bấm vào nút in ở cuối hóa đơn
-								để kiểm tra.
-							</div>
-
-
 							<!-- Main content -->
 							<div class="invoice p-3 mb-3">
 								<!-- title row -->
 								<div class="row">
 									<div class="col-12">
-										<h4>
-											<i class="fas fa-globe"></i> AdminLTE, Inc
-										</h4>
+									<c:if test="${donHang.ngayNhanHang!=null}">	<h4>
+										<i class="fas fa-globe"></i> Ngày giao: ${donHang.ngayNhanHang}
+									</h4></c:if>
 									</div>
 									<!-- /.col -->
 								</div>
@@ -112,6 +103,7 @@
 											đặt hàng:</b> ${khachHang.maKH}<br> <b>Ngày đặt hàng:</b>
 										${donHang.thoiGian} <br> <b>Tài khoản:</b> ${taikhoan.getTenDN()  }
 									</div>
+
 									<!-- /.col -->
 								</div>
 								<!-- /.row -->
@@ -153,8 +145,20 @@
 												<tr>
 													<th style="width: 50%">Tổng tiền:</th>
 													<td>${donHang.getTongTien()} VND</td>
+													<c:if test="${donHang.phuongThucThanhToan == 0}">
+														<td>Tiền mặt</td>
+													</c:if>
+													<c:if test="${donHang.phuongThucThanhToan == 1}">
+														<td>Thanh toán online</td>
+													</c:if>
 												</tr>
-
+												<c:if test="${Shipper != null}">
+													<tr>
+														<th style="width: 50%">Người giao: ID: ${Shipper.maKH}</th>
+														<td>Tên: ${Shipper.tenKH}</td>
+														<td>SĐT: ${Shipper.phone}</td>
+													</tr>
+												</c:if>
 											</table>
 										</div>
 									</div>
@@ -170,10 +174,32 @@
 											Print</a>
 										<form action="${root}Ad_invoice" method="post">
 										<input type="hidden" value= "${donHang.maDH}" name = "maDH" />
-											<button type="submit" class="btn btn-success float-right">
+											<button type="submit" class="btn btn-success float-right" id="changeStatus">
 												Xác nhận đơn hàng
 											</button>
 										</form>
+										<script>
+											var check = ${donHang.maTrangThai};
+											if(check == 2)
+											{
+												document.getElementById("changeStatus").innerHTML = "Đã xác nhận"
+												document.getElementById("changeStatus").type ="button";
+											}
+											if(check == 3)
+											{
+												// document.getElementById("changeStatus").style.visibility= 'hidden';
+												document.getElementById("changeStatus").type ="button";
+												document.getElementById("changeStatus").innerHTML = "Đang giao hàng"
+												document.getElementById("changeStatus").style.background='blue ';
+											}
+											if(check == 4)
+											{
+												// document.getElementById("changeStatus").style.visibility= 'hidden';
+												document.getElementById("changeStatus").type ="button";
+												document.getElementById("changeStatus").innerHTML = "Đã giao hàng"
+												document.getElementById("changeStatus").style.background='red ';
+											}
+										</script>
 									</div>
 								</div>
 							</div>

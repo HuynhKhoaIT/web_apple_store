@@ -69,9 +69,9 @@
               <!-- title row -->
               <div class="row">
                 <div class="col-12">
-                  <h4>
-                    <i class="fas fa-globe"></i> AdminLTE, Inc
-                  </h4>
+                  <c:if test="${donHang.ngayNhanHang!=null}">
+                    <h4><i class="fas fa-globe"></i> Ngày giao: ${donHang.ngayNhanHang}</h4>
+                  </c:if>
                 </div>
                 <!-- /.col -->
               </div>
@@ -141,8 +141,16 @@
                   <div class="table-responsive">
                     <table class="table">
                       <tr>
-                        <th style="width: 50%">Tổng tiền:</th>
-                        <td>${donHang.getTongTien()} VND</td>
+                        <c:if test="${donHang.phuongThucThanhToan == 0}">
+                          <th style="width: 50%">Tổng tiền thu:</th>
+                          <td>${donHang.getTongTien()} VND</td>
+                        </c:if>
+                        <c:if test="${donHang.phuongThucThanhToan == 1}">
+                          <th style="width: 50%">Tổng tiền thu:</th>
+                          <td>0 VND</td>
+                          <td> Đã thanh toán online</td>
+                        </c:if>
+
                       </tr>
 
                     </table>

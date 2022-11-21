@@ -36,11 +36,16 @@ public class Ad_InvoiceControl extends HttpServlet {
 		ChiTietDonHangDAO dao = new ChiTietDonHangDAO();
 		List<ChiTietDonHang> list = dao.getChiTietSanPhamID(Integer.parseInt(maDH));
 
+		if(donHang.getMaGH()!= 0 )
+		{
+			Users Shipper = khachHangDAO.getKhachHangByID(Integer.toString(donHang.getMaGH()));
+			request.setAttribute("Shipper",Shipper);
+		}
 		for (ChiTietDonHang o : list) {
 			SanPhamDAO d = new SanPhamDAO();
 			listSP.add(d.getProductById(o.getMaSP()));
 		}
-//		request.setAttribute("taikhoan", taiKhoan);
+
 		request.setAttribute("khachHang", khachHang);
 		request.setAttribute("donHang", donHang);
 		request.setAttribute("size", list.size());
