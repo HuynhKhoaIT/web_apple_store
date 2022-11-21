@@ -58,14 +58,14 @@
 
                 <button class="btn btn-block py-2 btn-primary" type="submit" >Đăng nhập</button>
 
-                <span class="text-center my-3 d-block">or</span>
+                <!-- <span class="text-center my-3 d-block">or</span>
                 
                 
                 <div class="">
                 <a href="#" class="btn btn-block py-2 btn-facebook">
                   <span class="icon-facebook mr-3"></span> Đăng nhập với Facebook
                 </a>
-                <a href="#" class="btn btn-block py-2 btn-google"><span class="icon-google mr-3"></span> Đăng nhập với google</a>
+                <a href="#" class="btn btn-block py-2 btn-google"><span class="icon-google mr-3"></span> Đăng nhập với google</a> -->
                 </div>
               </form>
             </div>
