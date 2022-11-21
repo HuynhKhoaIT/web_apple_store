@@ -56,7 +56,10 @@ public class SignUpControl extends HttpServlet {
 
 		SignUpDAO dao = new SignUpDAO();
 		Users a = dao.CheckUserExist(username);
-		if(a==null) {
+		Users b = dao.CheckEmailExist(email);
+		Users c = dao.CheckPhoneExist(phone);
+		
+		if(a==null || b==null || c==null) {
 
 			int veri = lib.getRandom();
 

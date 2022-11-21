@@ -42,6 +42,97 @@ public class SignUpDAO {
 
 		return null;
 	}
+	public Users CheckEmailExist(String email) {
+		String query = "select * from KhachHang\r\n"
+				+ "where Email=?";
+
+		try {
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, email);
+			rs = ps.executeQuery();
+
+			while(rs.next()) {
+				return new Users(rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getString(6),
+						rs.getString(7),
+						rs.getString(8),
+						rs.getInt(9),
+						rs.getInt(10),
+						rs.getInt(11),
+						rs.getInt(12));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return null;
+	}
+	
+	public Users CheckPhoneExist(String phone) {
+		String query = "select * from KhachHang\r\n"
+				+ "where Phone=?";
+
+		try {
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, phone);
+			rs = ps.executeQuery();
+
+			while(rs.next()) {
+				return new Users(rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getString(6),
+						rs.getString(7),
+						rs.getString(8),
+						rs.getInt(9),
+						rs.getInt(10),
+						rs.getInt(11),
+						rs.getInt(12));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return null;
+	}
+	public Users CheckVerifyExist(int verify) {
+		String query = "select * from KhachHang\r\n"
+				+ "where IsVerify=?";
+
+		try {
+			conn = new ConnectJDBC().getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, verify);
+			rs = ps.executeQuery();
+
+			while(rs.next()) {
+				return new Users(rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getString(6),
+						rs.getString(7),
+						rs.getString(8),
+						rs.getInt(9),
+						rs.getInt(10),
+						rs.getInt(11),
+						rs.getInt(12));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return null;
+	}
 
 	public void signup(String fullname, String username, String email, String phone, String password, String repassword ) {
 		String query = "insert into KhachHang\r\n"
